@@ -9,8 +9,8 @@ Create Table GruposUsuarios
 (
   ID_GrupoUsuario Int not null Identity(1,1),
   NombreGrupo     Varchar(50) not null,
-  Primary Key(ID_GrupoUsuario) 
-
+  Descripcion     Varchar(50),
+  Primary Key(ID_GrupoUsuario)
 )
 
 Go
@@ -37,6 +37,7 @@ Create Table Usuarios
   Apellido    Varchar(50),
   Usuario     Varchar(50) not null,
   Contraseña  Varchar(300) not null,
+  Estado      Varchar(50) not null,
   ID_Rol      int,
   Primary Key(ID_Usuario),
   Foreign Key(ID_Rol) REFERENCES Roles(ID_Rol)
@@ -111,11 +112,12 @@ inner join Perfiles On Perfiles.ID_Usuario = ad.ID_Usuario
 /* Store procedure de encriptacion con hash sha1 */
 
 CREATE PROCEDURE IngresarUsuario
-  @Nombre  as nvarchar(50),
+  @Nombre   as nvarchar(50),
   @Apellido as nvarchar(50),
-  @Usuario as nvarchar(50),
-  @Pass as nvarchar(300),
-  @ID_Rol as int
+  @Usuario  as nvarchar(50),
+  @Pass     as nvarchar(300),
+  @Estado   as nvarchar(50),
+  @ID_Rol   as int
 AS 
 BEGIN
     DECLARE @hash varchar(4000);
@@ -125,11 +127,11 @@ End
 BEGIN
    Insert Into Usuarios
     (
-        Nombre,Apellido,Usuario,Contraseña,ID_Rol
+        Nombre,Apellido,Usuario,Contraseña,Estado,ID_Rol
     )
     Values
     (
-        @Nombre,@Apellido,@Usuario,@hash,@ID_Rol
+        @Nombre,@Apellido,@Usuario,@hash,@Estado,@ID_Rol
         
       
     )
@@ -141,26 +143,33 @@ Drop procedure IngresarUsuario
 
 /* Ejecutando el Store Proceedure */
    /* Prueba */
-Execute IngresarUsuario 'Jose','Merchol','JM','1234',2
+Execute IngresarUsuario 'pelep','kike','pepe','1234','Activo',3
 
 select * from usuarios
 /* Loging Usuario  */ 
 
+
 Create Procedure LoginUsuario
     @Usuario AS nvarchar(50),
     @Pass AS nvarchar(50),
-    @Result AS bit Output
+    @Result As int Output
 As
      DECLARE @PassWord as Varchar(4000);
      DECLARE @hash varchar(4000);
      SET @hash = HASHBYTES('SHA1', @Pass);  --Pass editada
+     
+     --Declaracion de variable utilizada
+     DECLARE @UserID as int;
+     
 Begin
-    Select @passWord = Contraseña From usuarios Where Usuario = @Usuario
+    Select  @passWord = Contraseña, @UserID = ID_Usuario From usuarios Where Usuario = @Usuario
 End
  
 Begin
     If @hash = @PassWord
-        Set @Result = 1
+         
+          Set @Result = @UserID
+    
     Else
         Set @Result = 0
 End
@@ -173,50 +182,33 @@ Drop procedure LoginUsuario
 /************ Ejecuntando Stored procedure de prueba ********************/
 
   /** Variable  que recibira la salida **/
- Declare @resultadoSalida  as Bit 
+ Declare @resultadoSalida  as int  
     /* Se ejecuta  el store procedure diciendole que la variable dentro del procedore sera instanciada desde fuera como resultado salida */
- Execute LoginUsuario 'Ezequiel','1234',@result = @resultadoSalida OUTPUT
+ Execute LoginUsuario 'kikohh','1234',@result = @resultadoSalida OUTPUT
 
  Select @resultadoSalida as 'resultado'
  go
-
-/*  Actualizando el tipo de dato de la colimna contrase */
- Alter table usuarios
- alter column  Contraseña nvarchar(300) not null
 
 
 /* Stored procedure    Obtener usuario */
 
 Create procedure ObtenerUsuario 
-    @Usuario    AS varchar(50),
-    @Pass       AS varchar(50),
-    @ID_Usuario AS Int          output,
-    @Nombre     AS varchar(50)  output,
-    @Apellido   AS varchar(50)  output,
-    @ID_ROl     AS int          output
     
+    @ID_Usuario AS Int,         
+    @Nombre     AS varchar(50)  output,
+    @Apellido   AS varchar(50)  output
+   
  AS 
-     Declare @ID_UsuarioS AS Int;
-     Declare @NombreS As Varchar(50);
-     Declare @ApellidoS AS Varchar(50);
-     Declare @Id_RolS AS int;
      
-     DECLARE @hash varchar(4000);
-     SET @hash = HASHBYTES('SHA1', @Pass);  --Pass editada
- 
  Begin
-  
- Select  @ID_UsuarioS = ID_Usuario , @NombreS = Nombre , @ApellidoS = Apellido , @ID_ROlS = ID_Rol from Usuarios 
- where usuario = @Usuario  and  Contraseña = @hash
+  Select  @Nombre = Nombre , @Apellido = Apellido from Usuarios 
+  where  ID_Usuario =  @ID_Usuario 
  
  End 
  
  Begin 
  
-  Set @ID_Usuario = @ID_UsuarioS;
-  Set @Nombre = @NombreS;
-  Set @Apellido = @ApellidoS;
-  Set @ID_ROl = @Id_RolS;
+    return 
   
  End
  
@@ -226,18 +218,17 @@ Drop procedure ObtenerUsuario
 /************ Ejecuntando Stored procedure de prueba ********************/
 
   /** Variable  que recibira la salida **/
- Declare @ID_User AS int;
+ 
  Declare @Name      AS varchar(50);
  Declare @LastName    AS varchar(50);
- Declare @ID_R    AS Int;
+
  
     /* Se ejecuta  el store procedure  */
- Execute ObtenerUsuario 'jm','1234',@ID_Usuario = @ID_User OUTPUT , @Nombre = @Name OUTPUT , @Apellido = @LastName OUTPUT , @ID_Rol = @ID_R OUTPUT  
+ Execute ObtenerUsuario 5,@Nombre = @Name OUTPUT , @Apellido = @LastName OUTPUT 
 
- Select @ID_User AS 'ID'
+
  Select @Name     AS 'Nombre'
  Select @LastName   AS 'Apellido'
- Select @ID_R   AS 'ID_Rol'
  go
 
 select * From usuarios 

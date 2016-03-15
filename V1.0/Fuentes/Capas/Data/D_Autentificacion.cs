@@ -51,7 +51,7 @@ namespace Capas.Data
             Comando.Parameters.Add("@Pass", SqlDbType.NVarChar, 50).Value = E_AutentificacionP.contraseña;
 
             
-            SqlParameter Result = new SqlParameter("@Result", SqlDbType.Bit);
+            SqlParameter Result = new SqlParameter("@Result", SqlDbType.Int );
             Result.Direction = ParameterDirection.Output;
             Comando.Parameters.Add(Result);
 

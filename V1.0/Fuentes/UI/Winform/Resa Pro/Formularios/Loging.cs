@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capas.Infraestructura.Entidades;
 using Capas.Negocio;
+using DevExpress.XtraEditors;
 
 
 
@@ -21,7 +22,9 @@ namespace Resa_Pro.Formularios
         //</summary>
 
         #region Variables 
-        private bool Autentificacion;
+    
+
+        private int ID_Usuario;
 
         #endregion
 
@@ -48,8 +51,7 @@ namespace Resa_Pro.Formularios
 
             //Inicializando variables 
 
-            Autentificacion = false;
-
+           
         }
         #endregion
 
@@ -72,17 +74,17 @@ namespace Resa_Pro.Formularios
 
             //llamando el metodo en la capa de negocio
 
-            Autentificacion = N_Autentificaicon.VerificarUsuario(E_Autentificacion);
+            ID_Usuario = N_Autentificaicon.VerificarUsuario(E_Autentificacion);
             
-            if(Autentificacion == true)
+            if(ID_Usuario != 0)
             {
+                MessageBox.Show(Convert.ToString(ID_Usuario));
+                //MainScreen Pantallaprincipal = new MainScreen();
 
-                MainScreen Pantallaprincipal = new MainScreen();
+                //Pantallaprincipal.Show();
 
-                Pantallaprincipal.Show();
-
-                
-
+                XtraMessageBox.Show(Convert.ToString(ID_Usuario));
+             
                
             }
             else

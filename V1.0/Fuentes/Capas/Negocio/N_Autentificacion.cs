@@ -15,7 +15,7 @@ namespace Capas.Negocio
         //</Summary>
 
         #region Variables
-        private bool Autentificacion;
+        private int ID_Usuario;
 
         private int verificacion = 0;
         #endregion
@@ -39,21 +39,12 @@ namespace Capas.Negocio
 
         #region Verificar Usuario
 
-        public bool VerificarUsuario(E_Autentificacion E_AutentificacionP)
+        public int  VerificarUsuario(E_Autentificacion E_AutentificacionP)
         {
 
-           verificacion = D_Autentificacion.VerificarUsuario(E_AutentificacionP);
-
-            if(verificacion == 1)
-            {
-                Autentificacion = true;
-            }
-            else
-            {
-                Autentificacion = false;
-            }
+            ID_Usuario = D_Autentificacion.VerificarUsuario(E_AutentificacionP);
             
-            return Autentificacion;
+            return ID_Usuario;
         }
 
 
