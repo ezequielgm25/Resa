@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resa Pro", "V1.0\Fuentes\UI\Winform\Resa Pro\Resa Pro.csproj", "{FB0CEBD0-5DF2-475C-8C79-1C5C247FB37D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{AD639530-3EAA-40BD-96E1-CA129B63CD49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Capas", "Capas", "{23DB7B4D-4A08-468C-B5B9-40235BE7C003}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WinForm", "WinForm", "{9FB05744-5140-4848-AC25-42C9DD75E3D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile", "Mobile", "{1B7E291A-6E0C-4A45-BCFB-6DF4A003D046}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{F4B5EF0D-F633-414C-869B-815D8229BD81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capas", "V1.0\Fuentes\Capas\Capas.csproj", "{4F8D2628-F15B-4EC2-8E2B-09FFDF6DA5A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB0CEBD0-5DF2-475C-8C79-1C5C247FB37D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB0CEBD0-5DF2-475C-8C79-1C5C247FB37D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB0CEBD0-5DF2-475C-8C79-1C5C247FB37D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB0CEBD0-5DF2-475C-8C79-1C5C247FB37D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F8D2628-F15B-4EC2-8E2B-09FFDF6DA5A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F8D2628-F15B-4EC2-8E2B-09FFDF6DA5A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F8D2628-F15B-4EC2-8E2B-09FFDF6DA5A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F8D2628-F15B-4EC2-8E2B-09FFDF6DA5A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FB0CEBD0-5DF2-475C-8C79-1C5C247FB37D} = {9FB05744-5140-4848-AC25-42C9DD75E3D6}
+		{9FB05744-5140-4848-AC25-42C9DD75E3D6} = {AD639530-3EAA-40BD-96E1-CA129B63CD49}
+		{1B7E291A-6E0C-4A45-BCFB-6DF4A003D046} = {AD639530-3EAA-40BD-96E1-CA129B63CD49}
+		{F4B5EF0D-F633-414C-869B-815D8229BD81} = {AD639530-3EAA-40BD-96E1-CA129B63CD49}
+		{4F8D2628-F15B-4EC2-8E2B-09FFDF6DA5A8} = {23DB7B4D-4A08-468C-B5B9-40235BE7C003}
+	EndGlobalSection
+EndGlobal

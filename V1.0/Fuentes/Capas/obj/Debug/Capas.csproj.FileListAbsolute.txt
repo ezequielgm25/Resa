@@ -1,0 +1,10 @@
+D:\Proyecto construccion\Resa\V1.0\Fuentes\Capas\bin\Debug\Capas.dll
+D:\Proyecto construccion\Resa\V1.0\Fuentes\Capas\bin\Debug\Capas.pdb
+D:\Proyecto construccion\Resa\V1.0\Fuentes\Capas\obj\Debug\Capas.csprojResolveAssemblyReference.cache
+D:\Proyecto construccion\Resa\V1.0\Fuentes\Capas\obj\Debug\Capas.dll
+D:\Proyecto construccion\Resa\V1.0\Fuentes\Capas\obj\Debug\Capas.pdb
+D:\Resa\V1.0\Fuentes\Capas\bin\Debug\Capas.dll
+D:\Resa\V1.0\Fuentes\Capas\bin\Debug\Capas.pdb
+D:\Resa\V1.0\Fuentes\Capas\obj\Debug\Capas.csprojResolveAssemblyReference.cache
+D:\Resa\V1.0\Fuentes\Capas\obj\Debug\Capas.dll
+D:\Resa\V1.0\Fuentes\Capas\obj\Debug\Capas.pdb
