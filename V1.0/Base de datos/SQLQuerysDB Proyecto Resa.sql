@@ -8,8 +8,8 @@ Use ResaDB;
 Create Table GruposUsuarios
 (
   ID_GrupoUsuario Int not null Identity(1,1),
-  NombreGrupo     Varchar(50) not null,
-  Descripcion     Varchar(50),
+  NombreGrupo     NVarchar(50) not null,
+  Descripcion     NVarchar(100),
   Primary Key(ID_GrupoUsuario)
 )
 
@@ -33,12 +33,12 @@ Create Table Roles
 Create Table Usuarios 
 (
   ID_Usuario Int not null Identity(1,1),
-  Nombre      Varchar(50) not null,
-  Apellido    Varchar(50),
-  Usuario     Varchar(50) not null,
-  Contraseña  Varchar(300) not null,
-  Estado      Varchar(50) not null,
-  ID_Rol      int,
+  Nombre      NVarchar(50) not null,
+  Apellido    NVarchar(50),
+  Usuario     NVarchar(50) not null,
+  Contraseña  NVarchar(300) not null,
+  Estado      NVarchar(50) not null,
+  ID_Rol      int not null,
   Primary Key(ID_Usuario),
   Foreign Key(ID_Rol) REFERENCES Roles(ID_Rol)
   On delete cascade
@@ -51,7 +51,7 @@ Create  table Perfiles
 (
   ID_Perfil    Int not null Identity(1,1),
   NombrePerfil Varchar(50) not null,
-  ID_Usuario   Int,
+  ID_Usuario   Int not null,
   Primary key(ID_perfil),
   Foreign Key(ID_Usuario) REFERENCES Usuarios(ID_Usuario)
   On delete cascade
@@ -67,7 +67,7 @@ Create Table Opciones
  ID_Opcion int not null Identity(1,1),
  Opcion    Varchar(50) not null, 
  Estado    Bit not null,
- ID_Perfil int
+ ID_Perfil int not null,
  Primary Key(ID_Opcion),
  Foreign Key(ID_Perfil) REFERENCES Perfiles(ID_Perfil) 
  On delete cascade
@@ -83,7 +83,7 @@ Create Table Funciones
   ID_Funcion Int not null Identity(1,1),
   Funcion    Varchar(50) not null,
   Estado     Bit not null, 
-  ID_Opcion  int ,
+  ID_Opcion  int  not null,
   Primary Key(ID_Funcion),
   Foreign Key(ID_Opcion) REFERENCES Opciones(ID_Opcion)
    On delete cascade
@@ -94,7 +94,6 @@ GO
 
 /********** Probando Base de datos nivel de seguridad *****************************/
 
-use ResaDB
 Select Nombre,Apellido ,NombreRol , NombrePerfil , Opcion , NombreGrupo from GruposUsuarios As ad 
 inner join Roles On ad.ID_GrupoUsuario = Roles.ID_GrupoUsuario 
 inner join usuarios on usuarios.ID_Rol = Roles.ID_Rol
@@ -143,23 +142,25 @@ Drop procedure IngresarUsuario
 
 /* Ejecutando el Store Proceedure */
    /* Prueba */
-Execute IngresarUsuario 'pelep','kike','pepe','1234','Activo',3
+Execute IngresarUsuario 'Juan','Ramirez','JuanRM','1234','Activo',3
+select *  from usuarios
 
 select * from usuarios
 /* Loging Usuario  */ 
 
-
+----------------------------------------------------------------------------`
 Create Procedure LoginUsuario
+
     @Usuario AS nvarchar(50),
     @Pass AS nvarchar(50),
     @Result As int Output
+    
 As
      DECLARE @PassWord as Varchar(4000);
      DECLARE @hash varchar(4000);
      SET @hash = HASHBYTES('SHA1', @Pass);  --Pass editada
      
-     --Declaracion de variable utilizada
-     DECLARE @UserID as int;
+     DECLARE @UserID as Int;--Declaracion de variable utilizada
      
 Begin
     Select  @passWord = Contraseña, @UserID = ID_Usuario From usuarios Where Usuario = @Usuario
@@ -175,20 +176,23 @@ Begin
 End
  
 Go
+-------------------------------------------------------------------------------------------
 
 /*********  Eliminando Stored Procedure *************/
+----------------------------------------------------
 Drop procedure LoginUsuario
-
+-----------------------------------------------------
 /************ Ejecuntando Stored procedure de prueba ********************/
 
   /** Variable  que recibira la salida **/
  Declare @resultadoSalida  as int  
     /* Se ejecuta  el store procedure diciendole que la variable dentro del procedore sera instanciada desde fuera como resultado salida */
- Execute LoginUsuario 'kikohh','1234',@result = @resultadoSalida OUTPUT
+ Execute LoginUsuario 'JuanRM','1234',@result = @resultadoSalida OUTPUT
 
  Select @resultadoSalida as 'resultado'
  go
 
+---------------------------------------------------------------------
 
 /* Stored procedure    Obtener usuario */
 
@@ -196,12 +200,14 @@ Create procedure ObtenerUsuario
     
     @ID_Usuario AS Int,         
     @Nombre     AS varchar(50)  output,
-    @Apellido   AS varchar(50)  output
-   
+    @Apellido   AS varchar(50)  output,
+    @Rol        AS Varchar(50)  output
+       
  AS 
      
  Begin
-  Select  @Nombre = Nombre , @Apellido = Apellido from Usuarios 
+  Select  @Nombre = Nombre , @Apellido = Apellido , @Rol = R.NombreRol from Usuarios as U
+  inner join Roles as R on U.ID_Rol = R.ID_Rol
   where  ID_Usuario =  @ID_Usuario 
  
  End 
@@ -213,22 +219,24 @@ Create procedure ObtenerUsuario
  End
  
  Go
---------------------- 
+ /*******************************************************************************************/
+----------------------------------------------------
 Drop procedure ObtenerUsuario
+-----------------------------------------------------
 /************ Ejecuntando Stored procedure de prueba ********************/
 
   /** Variable  que recibira la salida **/
  
- Declare @Name      AS varchar(50);
- Declare @LastName    AS varchar(50);
 
+ Declare @Name        AS varchar(50);
+ Declare @LastName    AS varchar(50);
+ Declare @Rol         As varchar(50);
  
     /* Se ejecuta  el store procedure  */
- Execute ObtenerUsuario 5,@Nombre = @Name OUTPUT , @Apellido = @LastName OUTPUT 
+ Execute ObtenerUsuario 1,@Nombre = @Name OUTPUT , @Apellido = @LastName OUTPUT , @Rol = @Rol OUTPUT
 
-
- Select @Name     AS 'Nombre'
+ Select @Name       AS 'Nombre'
  Select @LastName   AS 'Apellido'
+ Select @Rol        As 'Rol'
  go
-
-select * From usuarios 
+/************************************************************************/ 

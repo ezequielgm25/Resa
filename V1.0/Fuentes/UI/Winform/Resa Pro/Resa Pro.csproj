@@ -48,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.CodeRush.Common, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.CodeRush.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.CodeRush.Interop, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
@@ -81,6 +82,9 @@
     </Reference>
     <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.UI, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>

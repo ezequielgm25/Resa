@@ -24,6 +24,7 @@ namespace Capas.Data
         private int FilasAfectadas = 0;
 
         private Conexion conexion;
+
         #endregion
 
         #region Contructor 
@@ -38,13 +39,14 @@ namespace Capas.Data
 
         public int  VerificarUsuario(E_Autentificacion E_AutentificacionP)
         {
-
+            
             StoredProcedure = "LoginUsuario";
 
-            SqlCommand Comando = new SqlCommand(StoredProcedure, ResaConexion);
+            SqlCommand Comando = new SqlCommand(StoredProcedure,conexion.resaconexion );
+            
+            // Conectar a la base de datos
 
-            //conexion.Conectar();
-            ResaConexion.Open();
+             conexion.Conectar();
             
             Comando.CommandType = CommandType.StoredProcedure;
             Comando.Parameters.Add("@Usuario", SqlDbType.NVarChar, 50).Value = E_AutentificacionP.usuario;
@@ -63,7 +65,7 @@ namespace Capas.Data
             Autentificacion = Convert.ToInt32(Comando.Parameters["@Result"].Value);
 
             //Cerrando la conexion 
-            ResaConexion.Close();
+            conexion.Desconectar();
          
             //Devolviendo el resultado 
             return Autentificacion;

@@ -48,6 +48,7 @@
     <Compile Include="Infraestructura\Entidades\E_Usuario.cs" />
     <Compile Include="Infraestructura\Entidades\E_Autentificacion.cs" />
     <Compile Include="Negocio\N_Autentificacion.cs" />
+    <Compile Include="Negocio\N_Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\Conexion.cs" />
   </ItemGroup>

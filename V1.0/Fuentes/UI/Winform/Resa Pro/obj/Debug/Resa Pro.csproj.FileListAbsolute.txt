@@ -498,3 +498,5 @@ D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\de\Resa Pro.resources.dll
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\es\Resa Pro.resources.dll
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\ja\Resa Pro.resources.dll
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\ru\Resa Pro.resources.dll
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\DevExpress.XtraCharts.v15.2.UI.dll
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\DevExpress.XtraCharts.v15.2.UI.xml

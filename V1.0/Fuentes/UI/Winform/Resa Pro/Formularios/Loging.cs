@@ -23,7 +23,6 @@ namespace Resa_Pro.Formularios
 
         #region Variables 
     
-
         private int ID_Usuario;
 
         #endregion
@@ -53,8 +52,26 @@ namespace Resa_Pro.Formularios
 
            
         }
+
+        public Loging(Form form)
+        {
+
+            form.Close();
+
+            InitializeComponent();
+
+            //Inicializando las instancias 
+
+            E_Autentificacion = new E_Autentificacion();
+
+            N_Autentificaicon = new N_Autentificacion();
+
+            //Inicializando variables 
+        }
+
         #endregion
 
+        #region Cancelar
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
 
@@ -63,6 +80,9 @@ namespace Resa_Pro.Formularios
 
         }
 
+        #endregion
+
+        #region Iniciar Sesion
         private void BtnIniciarSesion_Click(object sender, EventArgs e)
         {
 
@@ -78,20 +98,23 @@ namespace Resa_Pro.Formularios
             
             if(ID_Usuario != 0)
             {
-                MessageBox.Show(Convert.ToString(ID_Usuario));
-                //MainScreen Pantallaprincipal = new MainScreen();
 
-                //Pantallaprincipal.Show();
+               
+                MainScreen Pantallaprincipal = new MainScreen(ID_Usuario);
+                this.Hide();
+                Pantallaprincipal.ShowDialog();
+                this.Close();
+                
 
-                XtraMessageBox.Show(Convert.ToString(ID_Usuario));
-             
+            
                
             }
             else
             {
-
-                MessageBox.Show("Usuario o pass incorrectos");
+                XtraMessageBox.Show("Usuario o Contraseña incorrectos");
+               
             }
+            #endregion
 
         }
     }

@@ -21,16 +21,25 @@ namespace Capas.Data
 
         //Conexion Que extraera El String Del XMl  AppConfig.XML
 
-        protected SqlConnection ResaConexion;
+        private  SqlConnection ResaConexion;
+
+
 
         private bool Brecha;
 
-
+ 
         public bool brecha
         {
             get { return Brecha; }
             set { Brecha = value; }
 
+
+        }
+
+        public SqlConnection resaconexion
+        {
+            get { return ResaConexion; }
+            set { ResaConexion = value; }
 
         }
 

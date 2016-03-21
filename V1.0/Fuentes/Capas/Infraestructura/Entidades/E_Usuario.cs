@@ -23,7 +23,7 @@ namespace Capas.Infraestructura.Entidades
 
         private string Contraseña;
 
-        private int ID_Rol;
+        private String Rol;
 
 
         #endregion
@@ -42,7 +42,7 @@ namespace Capas.Infraestructura.Entidades
             set { Nombre = value; }
         }
 
-        public string apeliido
+        public string apellido
         {
             get { return Apellido; }
             set { Apellido = value; }
@@ -60,10 +60,10 @@ namespace Capas.Infraestructura.Entidades
             set { Contraseña = value; }
         }
         
-        public int id_rol
+        public string rol
         {
-            get { return ID_Rol;  }
-            set { ID_Rol = value; }
+            get { return Rol;  }
+            set { Rol = value; }
         }
 
         #endregion
