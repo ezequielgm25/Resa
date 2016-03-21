@@ -11,13 +11,11 @@ using DevExpress.XtraBars;
 
 namespace Resa_Pro.Formularios
 {
-    public partial class CrearSalonF : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class ActualizarSalon : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public CrearSalonF()
+        public ActualizarSalon()
         {
             InitializeComponent();
         }
-
-        
     }
 }

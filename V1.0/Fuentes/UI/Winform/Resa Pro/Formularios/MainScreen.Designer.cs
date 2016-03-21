@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraScheduler.TimeRuler timeRuler1 = new DevExpress.XtraScheduler.TimeRuler();
-            DevExpress.XtraScheduler.TimeRuler timeRuler2 = new DevExpress.XtraScheduler.TimeRuler();
-            DevExpress.XtraScheduler.TimeRuler timeRuler3 = new DevExpress.XtraScheduler.TimeRuler();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
+            DevExpress.XtraScheduler.TimeRuler timeRuler4 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraScheduler.TimeRuler timeRuler5 = new DevExpress.XtraScheduler.TimeRuler();
+            DevExpress.XtraScheduler.TimeRuler timeRuler6 = new DevExpress.XtraScheduler.TimeRuler();
             this.RMainScreen = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.rgbiSkins = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.printPreviewItem1 = new DevExpress.XtraScheduler.UI.PrintPreviewItem();
@@ -82,12 +83,19 @@
             this.barItemFecha = new DevExpress.XtraBars.BarStaticItem();
             this.BarButtonCerrarSesion = new DevExpress.XtraBars.BarButtonItem();
             this.BarStaticINombreU = new DevExpress.XtraBars.BarStaticItem();
+            this.BBSalones = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.calendarToolsRibbonPageCategory1 = new DevExpress.XtraScheduler.UI.CalendarToolsRibbonPageCategory();
             this.schedulerControl1 = new DevExpress.XtraScheduler.SchedulerControl();
             this.schedulerStorage1 = new DevExpress.XtraScheduler.SchedulerStorage(this.components);
             this.appointmentRibbonPage1 = new DevExpress.XtraScheduler.UI.AppointmentRibbonPage();
             this.actionsRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.ActionsRibbonPageGroup();
             this.optionsRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.OptionsRibbonPageGroup();
+            this.ribbonPagesOSistema = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
+            this.RPSalones = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.RPGSalones = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.RPSolicitudes = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.RPEventos = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.fileRibbonPage1 = new DevExpress.XtraScheduler.UI.FileRibbonPage();
             this.printRibbonPageGroup1 = new DevExpress.XtraScheduler.UI.PrintRibbonPageGroup();
             this.homeRibbonPage1 = new DevExpress.XtraScheduler.UI.HomeRibbonPage();
@@ -167,12 +175,15 @@
             this.barStaticItemRol,
             this.barItemFecha,
             this.BarButtonCerrarSesion,
-            this.BarStaticINombreU});
+            this.BarStaticINombreU,
+            this.BBSalones,
+            this.barButtonItem3});
             this.RMainScreen.Location = new System.Drawing.Point(0, 0);
-            this.RMainScreen.MaxItemId = 51;
+            this.RMainScreen.MaxItemId = 53;
             this.RMainScreen.Name = "RMainScreen";
             this.RMainScreen.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
-            this.calendarToolsRibbonPageCategory1});
+            this.calendarToolsRibbonPageCategory1,
+            this.ribbonPagesOSistema});
             this.RMainScreen.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.fileRibbonPage1,
             this.homeRibbonPage1,
@@ -479,6 +490,20 @@
             this.BarStaticINombreU.Name = "BarStaticINombreU";
             this.BarStaticINombreU.TextAlignment = System.Drawing.StringAlignment.Near;
             // 
+            // BBSalones
+            // 
+            this.BBSalones.Caption = "Salones";
+            this.BBSalones.Id = 51;
+            this.BBSalones.Name = "BBSalones";
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Salones";
+            this.barButtonItem3.Id = 52;
+            this.barButtonItem3.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.LargeGlyph")));
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            // 
             // calendarToolsRibbonPageCategory1
             // 
             this.calendarToolsRibbonPageCategory1.Control = this.schedulerControl1;
@@ -498,11 +523,11 @@
             this.schedulerControl1.Storage = this.schedulerStorage1;
             this.schedulerControl1.TabIndex = 2;
             this.schedulerControl1.Text = "schedulerControl1";
-            this.schedulerControl1.Views.DayView.TimeRulers.Add(timeRuler1);
+            this.schedulerControl1.Views.DayView.TimeRulers.Add(timeRuler4);
             this.schedulerControl1.Views.FullWeekView.Enabled = true;
-            this.schedulerControl1.Views.FullWeekView.TimeRulers.Add(timeRuler2);
+            this.schedulerControl1.Views.FullWeekView.TimeRulers.Add(timeRuler5);
             this.schedulerControl1.Views.WeekView.Enabled = false;
-            this.schedulerControl1.Views.WorkWeekView.TimeRulers.Add(timeRuler3);
+            this.schedulerControl1.Views.WorkWeekView.TimeRulers.Add(timeRuler6);
             // 
             // appointmentRibbonPage1
             // 
@@ -526,6 +551,38 @@
             this.optionsRibbonPageGroup1.ItemLinks.Add(this.toggleRecurrenceItem1);
             this.optionsRibbonPageGroup1.ItemLinks.Add(this.changeAppointmentReminderItem1);
             this.optionsRibbonPageGroup1.Name = "optionsRibbonPageGroup1";
+            // 
+            // ribbonPagesOSistema
+            // 
+            this.ribbonPagesOSistema.Name = "ribbonPagesOSistema";
+            this.ribbonPagesOSistema.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.RPSalones,
+            this.RPSolicitudes,
+            this.RPEventos});
+            this.ribbonPagesOSistema.Text = "Opciones del sistema";
+            // 
+            // RPSalones
+            // 
+            this.RPSalones.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.RPGSalones});
+            this.RPSalones.Name = "RPSalones";
+            this.RPSalones.Text = "Salones";
+            // 
+            // RPGSalones
+            // 
+            this.RPGSalones.ItemLinks.Add(this.barButtonItem3);
+            this.RPGSalones.Name = "RPGSalones";
+            this.RPGSalones.Text = "Gestionar Salones";
+            // 
+            // RPSolicitudes
+            // 
+            this.RPSolicitudes.Name = "RPSolicitudes";
+            this.RPSolicitudes.Text = "Solicitudes";
+            // 
+            // RPEventos
+            // 
+            this.RPEventos.Name = "RPEventos";
+            this.RPEventos.Text = "Eventos";
             // 
             // fileRibbonPage1
             // 
@@ -808,5 +865,12 @@
         private DevExpress.XtraBars.BarButtonItem BarButtonCerrarSesion;
         private DevExpress.XtraBars.BarStaticItem BarStaticINombreU;
         private DevExpress.XtraBars.Ribbon.GalleryDropDown galleryDropDown1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPagesOSistema;
+        private DevExpress.XtraBars.Ribbon.RibbonPage RPSalones;
+        private DevExpress.XtraBars.Ribbon.RibbonPage RPSolicitudes;
+        private DevExpress.XtraBars.Ribbon.RibbonPage RPEventos;
+        private DevExpress.XtraBars.BarButtonItem BBSalones;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup RPGSalones;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
     }
 }

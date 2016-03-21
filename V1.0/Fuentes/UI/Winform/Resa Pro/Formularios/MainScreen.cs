@@ -94,5 +94,16 @@ namespace Resa_Pro.Formularios
 
         }
         #endregion
+
+        /* Click en la opcion de salones de ver salones */
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+            Salones salones = new Salones();
+
+            salones.ShowDialog();
+
+
+        }
     }
 }

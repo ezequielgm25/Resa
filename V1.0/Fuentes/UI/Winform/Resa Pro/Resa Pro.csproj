@@ -97,6 +97,7 @@
     <Reference Include="DevExpress.XtraScheduler.v15.2.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v15.2.Extensions, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v15.2, Version=15.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -147,6 +148,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\ActualizarSalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ActualizarSalon.Designer.cs">
+      <DependentUpon>ActualizarSalon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\CrearSalonF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,11 +184,23 @@
     <Compile Include="Formularios\OutlookAppointmentForm.Designer.cs">
       <DependentUpon>OutlookAppointmentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Salones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Salones.Designer.cs">
+      <DependentUpon>Salones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Splash.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\VerSalon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\VerSalon.Designer.cs">
+      <DependentUpon>VerSalon.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\VisualizarSalonF.cs">
       <SubType>Form</SubType>
@@ -191,6 +210,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\ActualizarSalon.resx">
+      <DependentUpon>ActualizarSalon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\CrearSalonF.resx">
       <DependentUpon>CrearSalonF.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,8 +241,14 @@
     <EmbeddedResource Include="Formularios\OutlookAppointmentForm.ru.resx">
       <DependentUpon>OutlookAppointmentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Salones.resx">
+      <DependentUpon>Salones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\VerSalon.resx">
+      <DependentUpon>VerSalon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\VisualizarSalonF.resx">
       <DependentUpon>VisualizarSalonF.cs</DependentUpon>
@@ -283,6 +311,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagenes\FondoLoging.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Salon icono.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

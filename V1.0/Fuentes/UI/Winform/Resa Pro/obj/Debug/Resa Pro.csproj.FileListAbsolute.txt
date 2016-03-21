@@ -500,3 +500,6 @@ D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\ja\Resa Pro.resources.dll
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\ru\Resa Pro.resources.dll
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\DevExpress.XtraCharts.v15.2.UI.dll
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\DevExpress.XtraCharts.v15.2.UI.xml
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.Salones.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.ActualizarSalon.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.VerSalon.resources
