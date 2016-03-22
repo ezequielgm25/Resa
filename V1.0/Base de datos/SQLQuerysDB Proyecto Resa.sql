@@ -1,4 +1,3 @@
-
 Create Database ResaDB;
 
 Use ResaDB;
@@ -219,9 +218,10 @@ Create procedure ObtenerUsuario
  End
  
  Go
+ 
  /*******************************************************************************************/
 ----------------------------------------------------
-Drop procedure ObtenerUsuario
+Drop procedure ObtenerUsuario   /*Para eliminar el storedprocedure*/
 -----------------------------------------------------
 /************ Ejecuntando Stored procedure de prueba ********************/
 
