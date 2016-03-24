@@ -141,11 +141,13 @@ Create Table Salones
   
   /*  Crear Salon  */       /* - - - - - - - - - - - - - - - - - */
   
-  CREATE PROCEDURE CrearSalon    
+  CREATE PROCEDURE CrearSalon
+  
   @Nombre    as nvarchar(100),
   @Ubicacion as nvarchar(100),
   @Capacidad as Int,
-  @Estado    as nvarchar(100)
+  @Estado    as nvarchar(100),
+  @ID_Salon  as int output 
 AS 
 BEGIN
    Insert Into Salones
@@ -156,6 +158,10 @@ BEGIN
     (
         @Nombre,@Ubicacion,@Capacidad,@Estado
     )
+   
+END 
+Begin 
+  set @ID_Salon = @@IDENTITY;
 END
 GO
 
@@ -164,7 +170,12 @@ GO
 Drop procedure CrearSalon
 
 /* Prueba Stored procedure */
-execute CrearSalon 'La cuevita','En higuey ',200,'activo'
+Declare @ID_Salon as int;
+
+execute CrearSalon 'La cuevikkta','En higuey ',200,'activo',@ID_Salon = @ID_Salon OUTPUT
+   
+   Select @ID_Salon as 'ID'
+   
    
 Select * from Salones
 
@@ -260,14 +271,14 @@ Create Procedure obtenerSalon
 Create Procedure ObtenerSalones
 AS
 begin
-Select Nombre, Ubicacion,  Capacidad, Estado from salones
+Select ID_Salon As 'ID', Nombre, Ubicacion, Capacidad, Estado FROM Salones
 end
 Go
 /* Eliminar el stored procedure*/
 drop procedure ObtenerSalones
 
 /*  Prueba del stored Procedure */
-create table #data( Nombre NVarchar(100),Ubicacion Nvarchar(100),Capacidad Int, Estado Nvarchar(100))
+create table #data(ID_Salon Int, Nombre NVarchar(100),Ubicacion Nvarchar(100),Capacidad Int, Estado Nvarchar(100))
 
 insert into #data exec dbo.ObtenerSalones
 select * from #data
@@ -303,8 +314,11 @@ BEGIN
 /*Probando */
 Drop procedure AgregarServicio
 /*****/
-execute AgregarServicio 'hjhjh','Bailarines profecionales',2
+execute AgregarServicio 'hjhjh','Bailarines profecionales',5
 
+select * from Salones
+
+select * from Servicios
 /*********************************************************/
 /* Stored procedure Eliminar Servicio */   /* - - - - - - - - - - - - - - - - - */
 CREATE PROCEDURE EliminarServicio
@@ -330,7 +344,7 @@ Create Procedure ObtenerServicios
 @ID_Salon as int
 AS
 begin
-Select Servicio, Descripcion from Servicios where ID_Salon = @ID_Salon
+Select ID_Servicio AS 'ID', Servicio, Descripcion from Servicios where ID_Salon = @ID_Salon
 end
 Go
 
@@ -405,13 +419,14 @@ Create Procedure ObtenerInventarios
 @ID_Salon as int 
 AS
 begin
-Select Inventario from Inventarios where ID_Salon = @ID_Salon
+Select ID_Inventario as 'ID',Inventario from Inventarios where ID_Salon = @ID_Salon
 end
 Go
 /* Eliminando Procedure */
 drop procedure ObtenerInventarios
 /*   */
 Select * from Inventarios
+
 
 /* Prueba*/
 create table #data( Inventario NVarchar(100))

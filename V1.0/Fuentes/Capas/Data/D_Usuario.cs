@@ -20,6 +20,7 @@ namespace Capas.Data
 
         E_Usuario e_usuario = new E_Usuario();
 
+        private Conexion conexion;
         #endregion
 
         #region  Variables
@@ -28,7 +29,7 @@ namespace Capas.Data
 
         private int FilasAfectadas = 0;
 
-        private Conexion conexion;
+        
         #endregion
 
         #region Contructor

@@ -32,18 +32,17 @@
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.GCSalones = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.SBCrear = new DevExpress.XtraEditors.SimpleButton();
             this.SBActualizar = new DevExpress.XtraEditors.SimpleButton();
             this.SBEliminar = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
+            this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GCSalones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
+            this.gridSplitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbon
@@ -72,27 +71,31 @@
             this.ribbonStatusBar1.Ribbon = this.ribbon;
             this.ribbonStatusBar1.Size = new System.Drawing.Size(690, 27);
             // 
-            // gridControl1
+            // GCSalones
             // 
-            this.gridControl1.Location = new System.Drawing.Point(0, 108);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.ribbon;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(690, 309);
-            this.gridControl1.TabIndex = 2;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.GCSalones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GCSalones.Location = new System.Drawing.Point(0, 0);
+            this.GCSalones.MainView = this.gridView1;
+            this.GCSalones.MenuManager = this.ribbon;
+            this.GCSalones.Name = "GCSalones";
+            this.GCSalones.Size = new System.Drawing.Size(690, 351);
+            this.GCSalones.TabIndex = 2;
+            this.GCSalones.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.GCSalones.DoubleClick += new System.EventHandler(this.GCSalones_DoubleClick);
             // 
             // gridView1
             // 
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.GCSalones;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // SBCrear
             // 
             this.SBCrear.Image = ((System.Drawing.Image)(resources.GetObject("SBCrear.Image")));
             this.SBCrear.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.SBCrear.Location = new System.Drawing.Point(162, 433);
+            this.SBCrear.Location = new System.Drawing.Point(146, 421);
             this.SBCrear.Name = "SBCrear";
             this.SBCrear.Size = new System.Drawing.Size(75, 52);
             this.SBCrear.TabIndex = 3;
@@ -103,7 +106,7 @@
             // 
             this.SBActualizar.Image = ((System.Drawing.Image)(resources.GetObject("SBActualizar.Image")));
             this.SBActualizar.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.SBActualizar.Location = new System.Drawing.Point(290, 433);
+            this.SBActualizar.Location = new System.Drawing.Point(282, 421);
             this.SBActualizar.Name = "SBActualizar";
             this.SBActualizar.Size = new System.Drawing.Size(75, 52);
             this.SBActualizar.TabIndex = 6;
@@ -114,48 +117,32 @@
             // 
             this.SBEliminar.Image = ((System.Drawing.Image)(resources.GetObject("SBEliminar.Image")));
             this.SBEliminar.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.SBEliminar.Location = new System.Drawing.Point(419, 433);
+            this.SBEliminar.Location = new System.Drawing.Point(422, 421);
             this.SBEliminar.Name = "SBEliminar";
             this.SBEliminar.Size = new System.Drawing.Size(75, 52);
             this.SBEliminar.TabIndex = 7;
             this.SBEliminar.Text = "Eliminar";
+            this.SBEliminar.Click += new System.EventHandler(this.SBEliminar_Click);
             // 
-            // labelControl1
+            // gridSplitContainer1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(25, 77);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(32, 13);
-            this.labelControl1.TabIndex = 8;
-            this.labelControl1.Text = "Buscar";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(67, 74);
-            this.textEdit1.MenuManager = this.ribbon;
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(170, 20);
-            this.textEdit1.TabIndex = 9;
-            // 
-            // simpleButton4
-            // 
-            this.simpleButton4.Location = new System.Drawing.Point(267, 77);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton4.TabIndex = 10;
-            this.simpleButton4.Text = "Buscar";
+            this.gridSplitContainer1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gridSplitContainer1.Grid = this.GCSalones;
+            this.gridSplitContainer1.Location = new System.Drawing.Point(0, 49);
+            this.gridSplitContainer1.Name = "gridSplitContainer1";
+            this.gridSplitContainer1.Panel1.Controls.Add(this.GCSalones);
+            this.gridSplitContainer1.Size = new System.Drawing.Size(690, 351);
+            this.gridSplitContainer1.TabIndex = 10;
             // 
             // Salones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(690, 518);
-            this.Controls.Add(this.simpleButton4);
-            this.Controls.Add(this.textEdit1);
-            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.SBEliminar);
             this.Controls.Add(this.SBActualizar);
             this.Controls.Add(this.SBCrear);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.gridSplitContainer1);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbon);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
@@ -168,9 +155,10 @@
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Salones";
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GCSalones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
+            this.gridSplitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,14 +168,12 @@
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl GCSalones;
         private DevExpress.XtraEditors.SimpleButton SBCrear;
         private DevExpress.XtraEditors.SimpleButton SBActualizar;
         private DevExpress.XtraEditors.SimpleButton SBEliminar;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
     }
 }

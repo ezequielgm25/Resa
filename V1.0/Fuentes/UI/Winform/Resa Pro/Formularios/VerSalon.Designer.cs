@@ -31,30 +31,32 @@
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.LBLEstadoS = new System.Windows.Forms.Label();
+            this.LBLCapacidadS = new System.Windows.Forms.Label();
+            this.LBLUbicacionS = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.LBLNombreS = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CGServicios = new DevExpress.XtraEditors.GroupControl();
+            this.GCServicios = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.CGInventarios = new DevExpress.XtraEditors.GroupControl();
+            this.GCInventarios = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
-            this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
-            this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CGServicios)).BeginInit();
+            this.CGServicios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GCServicios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CGInventarios)).BeginInit();
+            this.CGInventarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GCInventarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,13 +81,14 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.label8);
-            this.groupControl1.Controls.Add(this.label7);
-            this.groupControl1.Controls.Add(this.label6);
-            this.groupControl1.Controls.Add(this.label5);
-            this.groupControl1.Controls.Add(this.label4);
+            this.groupControl1.Controls.Add(this.pictureEdit1);
+            this.groupControl1.Controls.Add(this.LBLEstadoS);
+            this.groupControl1.Controls.Add(this.LBLCapacidadS);
+            this.groupControl1.Controls.Add(this.LBLUbicacionS);
             this.groupControl1.Controls.Add(this.label3);
             this.groupControl1.Controls.Add(this.label2);
+            this.groupControl1.Controls.Add(this.label5);
+            this.groupControl1.Controls.Add(this.LBLNombreS);
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl1.Location = new System.Drawing.Point(0, 49);
@@ -94,139 +97,162 @@
             this.groupControl1.TabIndex = 2;
             this.groupControl1.Text = "Informacion";
             // 
-            // label1
+            // pictureEdit1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre:";
+            this.pictureEdit1.EditValue = global::Resa_Pro.Properties.Resources.Salon_icono;
+            this.pictureEdit1.Location = new System.Drawing.Point(540, 38);
+            this.pictureEdit1.MenuManager = this.ribbon;
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit1.Size = new System.Drawing.Size(101, 112);
+            this.pictureEdit1.TabIndex = 14;
             // 
-            // label2
+            // LBLEstadoS
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ubicacion:";
+            this.LBLEstadoS.AutoSize = true;
+            this.LBLEstadoS.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLEstadoS.Location = new System.Drawing.Point(115, 136);
+            this.LBLEstadoS.Name = "LBLEstadoS";
+            this.LBLEstadoS.Size = new System.Drawing.Size(81, 14);
+            this.LBLEstadoS.TabIndex = 13;
+            this.LBLEstadoS.Text = "-EstadoSalon-";
+            // 
+            // LBLCapacidadS
+            // 
+            this.LBLCapacidadS.AutoSize = true;
+            this.LBLCapacidadS.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLCapacidadS.Location = new System.Drawing.Point(115, 105);
+            this.LBLCapacidadS.Name = "LBLCapacidadS";
+            this.LBLCapacidadS.Size = new System.Drawing.Size(98, 14);
+            this.LBLCapacidadS.TabIndex = 12;
+            this.LBLCapacidadS.Text = "-CapacidadSalon-";
+            // 
+            // LBLUbicacionS
+            // 
+            this.LBLUbicacionS.AutoSize = true;
+            this.LBLUbicacionS.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLUbicacionS.Location = new System.Drawing.Point(115, 76);
+            this.LBLUbicacionS.Name = "LBLUbicacionS";
+            this.LBLUbicacionS.Size = new System.Drawing.Size(95, 14);
+            this.LBLUbicacionS.TabIndex = 11;
+            this.LBLUbicacionS.Text = "-UbicacionSalon-";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 105);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(52, 134);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Capacidad:";
+            this.label3.Size = new System.Drawing.Size(57, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Estado:";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 134);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Estado:";
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.Controls.Add(this.gridControl1);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupControl2.Location = new System.Drawing.Point(0, 221);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(300, 241);
-            this.groupControl2.TabIndex = 3;
-            this.groupControl2.Text = "Servicios";
-            // 
-            // groupControl3
-            // 
-            this.groupControl3.Controls.Add(this.gridControl2);
-            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupControl3.Location = new System.Drawing.Point(346, 221);
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(300, 241);
-            this.groupControl3.TabIndex = 4;
-            this.groupControl3.Text = "Inventarios";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(30, 105);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Capacidad:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(102, 38);
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(37, 74);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "-NombreSalon-";
+            this.label5.Size = new System.Drawing.Size(73, 16);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Ubicacion:";
             // 
-            // label6
+            // LBLNombreS
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(102, 74);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "-UbicacionSalon-";
+            this.LBLNombreS.AutoSize = true;
+            this.LBLNombreS.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLNombreS.Location = new System.Drawing.Point(115, 41);
+            this.LBLNombreS.Name = "LBLNombreS";
+            this.LBLNombreS.Size = new System.Drawing.Size(87, 14);
+            this.LBLNombreS.TabIndex = 4;
+            this.LBLNombreS.Text = "-NombreSalon-";
             // 
-            // label7
+            // label1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(102, 105);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "-CapacidadSalon-";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(48, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nombre:";
             // 
-            // label8
+            // CGServicios
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(102, 134);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "-EstadoSalon-";
+            this.CGServicios.Controls.Add(this.GCServicios);
+            this.CGServicios.Dock = System.Windows.Forms.DockStyle.Left;
+            this.CGServicios.Location = new System.Drawing.Point(0, 221);
+            this.CGServicios.Name = "CGServicios";
+            this.CGServicios.Size = new System.Drawing.Size(300, 241);
+            this.CGServicios.TabIndex = 3;
+            this.CGServicios.Text = "Servicios";
             // 
-            // gridControl1
+            // GCServicios
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 20);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.ribbon;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(296, 219);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.GCServicios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GCServicios.Location = new System.Drawing.Point(2, 20);
+            this.GCServicios.MainView = this.gridView1;
+            this.GCServicios.MenuManager = this.ribbon;
+            this.GCServicios.Name = "GCServicios";
+            this.GCServicios.Size = new System.Drawing.Size(296, 219);
+            this.GCServicios.TabIndex = 0;
+            this.GCServicios.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.GCServicios;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
-            // gridControl2
+            // CGInventarios
             // 
-            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.Location = new System.Drawing.Point(2, 20);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.MenuManager = this.ribbon;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(296, 219);
-            this.gridControl2.TabIndex = 1;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.CGInventarios.Controls.Add(this.GCInventarios);
+            this.CGInventarios.Dock = System.Windows.Forms.DockStyle.Right;
+            this.CGInventarios.Location = new System.Drawing.Point(346, 221);
+            this.CGInventarios.Name = "CGInventarios";
+            this.CGInventarios.Size = new System.Drawing.Size(300, 241);
+            this.CGInventarios.TabIndex = 4;
+            this.CGInventarios.Text = "Inventarios";
+            // 
+            // GCInventarios
+            // 
+            this.GCInventarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GCInventarios.Location = new System.Drawing.Point(2, 20);
+            this.GCInventarios.MainView = this.gridView2;
+            this.GCInventarios.MenuManager = this.ribbon;
+            this.GCInventarios.Name = "GCInventarios";
+            this.GCInventarios.Size = new System.Drawing.Size(296, 219);
+            this.GCInventarios.TabIndex = 1;
+            this.GCInventarios.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
             // gridView2
             // 
-            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.GridControl = this.GCInventarios;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // VerSalon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 489);
-            this.Controls.Add(this.groupControl3);
-            this.Controls.Add(this.groupControl2);
+            this.Controls.Add(this.CGInventarios);
+            this.Controls.Add(this.CGServicios);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
@@ -243,13 +269,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
-            this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-            this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CGServicios)).EndInit();
+            this.CGServicios.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GCServicios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CGInventarios)).EndInit();
+            this.CGInventarios.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GCInventarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -261,19 +288,20 @@
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LBLNombreS;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.GroupControl CGServicios;
+        private DevExpress.XtraGrid.GridControl GCServicios;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.GroupControl CGInventarios;
+        private DevExpress.XtraGrid.GridControl GCInventarios;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
+        private System.Windows.Forms.Label LBLEstadoS;
+        private System.Windows.Forms.Label LBLCapacidadS;
+        private System.Windows.Forms.Label LBLUbicacionS;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.GroupControl groupControl3;
-        private DevExpress.XtraGrid.GridControl gridControl2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private System.Windows.Forms.Label label5;
     }
 }
