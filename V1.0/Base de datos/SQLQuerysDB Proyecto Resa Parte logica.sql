@@ -1,5 +1,7 @@
 Use ResaDB;
+
 /*Drop database ResaDB;*/
+
 
 /* Creando las tablas y procedimientos de la parte logica del sistema */
 
@@ -57,9 +59,9 @@ Create Table Salones
   (
    ID_Solicitud    Int not null Identity(1,1),
    Fecha           SmallDateTime not null,
-   Aprobacion      bit not null,
-   Usuario         nvarchar(60),
-   FechaAprobacion SmallDateTime not null,
+   Aprobacion      Nvarchar(30) not null,
+   Usuario         Nvarchar(60) not null,
+   FechaAprobacion SmallDateTime,
    ID_Salon        int not null,
    primary Key(ID_Solicitud),
    Foreign key(ID_Salon) REFERENCES Salones(ID_Salon)
@@ -69,8 +71,8 @@ Create Table Salones
   )
   
   Go
-  
-
+ 
+ 
   /* Tabla de Eventos*/
   
       Create Table Eventos

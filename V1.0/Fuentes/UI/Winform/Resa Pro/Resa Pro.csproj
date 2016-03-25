@@ -53,6 +53,7 @@
     <Reference Include="DevExpress.CodeRush.Core, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.CodeRush.Interop, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.CodeRush.StructuralParser, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.CodeRush.UserControls, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.CodeRush.VSCore, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.Data.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <SpecificVersion>False</SpecificVersion>
@@ -63,6 +64,7 @@
     <Reference Include="DevExpress.DXCore.Controls.XtraBars.v6.3, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.DXCore.Controls.XtraEditors.v6.3, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.DXCore.Controls.XtraTreeList.v6.3, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
+    <Reference Include="DevExpress.DXCore.Controls.XtraVerticalGrid.v6.3, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.DXCore.Decompiler, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.DXCore.Localization, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
     <Reference Include="DevExpress.DXCore.MetaData, Version=15.2.5.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d" />
@@ -154,17 +156,23 @@
     <Compile Include="Formularios\ActualizarSalon.Designer.cs">
       <DependentUpon>ActualizarSalon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\ActualizarSolicitudesF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ActualizarSolicitudesF.Designer.cs">
+      <DependentUpon>ActualizarSolicitudesF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\CrearSalonF.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\CrearSalonF.Designer.cs">
       <DependentUpon>CrearSalonF.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\CrearSolicitudF.cs">
+    <Compile Include="Formularios\AgregarSolicitud.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\CrearSolicitudF.Designer.cs">
-      <DependentUpon>CrearSolicitudF.cs</DependentUpon>
+    <Compile Include="Formularios\AgregarSolicitud.Designer.cs">
+      <DependentUpon>AgregarSolicitud.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Loging.cs">
       <SubType>Form</SubType>
@@ -178,17 +186,17 @@
     <Compile Include="Formularios\MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\OutlookAppointmentForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\OutlookAppointmentForm.Designer.cs">
-      <DependentUpon>OutlookAppointmentForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Salones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Salones.Designer.cs">
       <DependentUpon>Salones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Solicitudes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Solicitudes.Designer.cs">
+      <DependentUpon>Solicitudes.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Splash.cs">
       <SubType>Form</SubType>
@@ -202,22 +210,25 @@
     <Compile Include="Formularios\VerSalon.Designer.cs">
       <DependentUpon>VerSalon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\VisualizarSalonF.cs">
+    <Compile Include="Formularios\VerSolicitud.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\VisualizarSalonF.Designer.cs">
-      <DependentUpon>VisualizarSalonF.cs</DependentUpon>
+    <Compile Include="Formularios\VerSolicitud.Designer.cs">
+      <DependentUpon>VerSolicitud.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\ActualizarSalon.resx">
       <DependentUpon>ActualizarSalon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ActualizarSolicitudesF.resx">
+      <DependentUpon>ActualizarSolicitudesF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\CrearSalonF.resx">
       <DependentUpon>CrearSalonF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\CrearSolicitudF.resx">
-      <DependentUpon>CrearSolicitudF.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\AgregarSolicitud.resx">
+      <DependentUpon>AgregarSolicitud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Loging.resx">
       <DependentUpon>Loging.cs</DependentUpon>
@@ -225,24 +236,11 @@
     <EmbeddedResource Include="Formularios\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\OutlookAppointmentForm.de.resx">
-      <DependentUpon>OutlookAppointmentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\OutlookAppointmentForm.es.resx">
-      <DependentUpon>OutlookAppointmentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\OutlookAppointmentForm.ja.resx">
-      <DependentUpon>OutlookAppointmentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\OutlookAppointmentForm.resx">
-      <DependentUpon>OutlookAppointmentForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\OutlookAppointmentForm.ru.resx">
-      <DependentUpon>OutlookAppointmentForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Salones.resx">
       <DependentUpon>Salones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Solicitudes.resx">
+      <DependentUpon>Solicitudes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
@@ -250,8 +248,8 @@
     <EmbeddedResource Include="Formularios\VerSalon.resx">
       <DependentUpon>VerSalon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\VisualizarSalonF.resx">
-      <DependentUpon>VisualizarSalonF.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\VerSolicitud.resx">
+      <DependentUpon>VerSolicitud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

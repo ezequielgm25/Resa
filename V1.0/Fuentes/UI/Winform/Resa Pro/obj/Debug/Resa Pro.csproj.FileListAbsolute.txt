@@ -483,23 +483,15 @@ D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Properties.Resources
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa Pro.csproj.GenerateResource.Cache
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa Pro.exe.licenses
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.CrearSalonF.resources
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.CrearSolicitudF.resources
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.VisualizarSalonF.resources
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.OutlookAppointmentForm.resources
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.OutlookAppointmentForm.de.resources
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.OutlookAppointmentForm.es.resources
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.OutlookAppointmentForm.ja.resources
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.OutlookAppointmentForm.ru.resources
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\de\Resa Pro.resources.dll
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\es\Resa Pro.resources.dll
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\ja\Resa Pro.resources.dll
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\ru\Resa Pro.resources.dll
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\de\Resa Pro.resources.dll
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\es\Resa Pro.resources.dll
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\ja\Resa Pro.resources.dll
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\ru\Resa Pro.resources.dll
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\DevExpress.XtraCharts.v15.2.UI.dll
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\DevExpress.XtraCharts.v15.2.UI.xml
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.Salones.resources
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.ActualizarSalon.resources
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.VerSalon.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.Solicitudes.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.AgregarSolicitud.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\DevExpress.CodeRush.UserControls.dll
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\DevExpress.DXCore.Controls.XtraVerticalGrid.v6.3.dll
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\DevExpress.CodeRush.UserControls.xml
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.ActualizarSolicitudesF.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.VerSolicitud.resources

@@ -11,11 +11,16 @@ using DevExpress.XtraBars;
 
 namespace Resa_Pro.Formularios
 {
-    public partial class VisualizarSalonF : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class VerSolicitud : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public VisualizarSalonF()
+        public VerSolicitud()
         {
             InitializeComponent();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

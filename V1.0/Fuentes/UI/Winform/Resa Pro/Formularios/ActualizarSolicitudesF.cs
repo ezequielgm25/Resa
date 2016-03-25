@@ -11,9 +11,9 @@ using DevExpress.XtraBars;
 
 namespace Resa_Pro.Formularios
 {
-    public partial class CrearSolicitudF : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class ActualizarSolicitudesF : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public CrearSolicitudF()
+        public ActualizarSolicitudesF()
         {
             InitializeComponent();
         }
