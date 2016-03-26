@@ -495,3 +495,7 @@ D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\DevExpress.DXCore.Controls.Xt
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\DevExpress.CodeRush.UserControls.xml
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.ActualizarSolicitudesF.resources
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.VerSolicitud.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.CrearEvento.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.Eventos.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.ActualizarEvento.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.VerEvento.resources

@@ -257,6 +257,83 @@ namespace Capas.Data
 
         #endregion
 
+        #region Aprobar Solicitud 
+
+        public int AprobarSolicitud(int ID_Solicitud , String Usuario)
+        {
+            int filasAfectadas = 0;
+
+            int ID = 0;
+
+            StoredProcedure = "AprobarSolicitud";
+
+            SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            // Conectar a la base de datos
+
+            conexion.Conectar();
+
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.Parameters.Add("@ID_Solicitud", SqlDbType.Int).Value = ID_Solicitud;
+            Comando.Parameters.Add("@Usuario", SqlDbType.NVarChar, 60).Value = Usuario;
+            Comando.Parameters.Add("@FechaAprobacion", SqlDbType.NVarChar, 30).Value = Convert.ToString(DateTime.Now);
+          
+            //Variable devuelta ID_Salon
+
+            //Se ejecuta el  Query y se asignan las filas afectas
+            FilasAfectadas = Comando.ExecuteNonQuery();
+
+            //Cerrando la conexion 
+            conexion.Desconectar();
+
+            //Devolviendo el resultado 
+          
+
+            return FilasAfectadas;
+        }
+
+
+        #endregion
+
+        #region Desaprobar Solicitud
+
+        public int DesaprobarSolicitud(int ID_Solicitud, String Usuario)
+        {
+            int filasAfectadas = 0;
+
+            int ID = 0;
+
+            StoredProcedure = "DesaprobarSolicitud";
+
+            SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            // Conectar a la base de datos
+
+            conexion.Conectar();
+
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.Parameters.Add("@ID_Solicitud", SqlDbType.Int).Value = ID_Solicitud;
+            Comando.Parameters.Add("@Usuario", SqlDbType.NVarChar, 60).Value = Usuario;
+            Comando.Parameters.Add("@FechaAprobacion", SqlDbType.NVarChar, 30).Value = Convert.ToString(DateTime.Now);
+
+            //Variable devuelta ID_Salon
+
+            //Se ejecuta el  Query y se asignan las filas afectas
+            FilasAfectadas = Comando.ExecuteNonQuery();
+
+            //Cerrando la conexion 
+            conexion.Desconectar();
+
+            //Devolviendo el resultado 
+
+
+            return FilasAfectadas;
+
+
+        }
+
+
+        #endregion
 
     }
 }

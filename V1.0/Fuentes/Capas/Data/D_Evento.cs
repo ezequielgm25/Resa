@@ -269,6 +269,28 @@ namespace Capas.Data
         #endregion
 
 
+        #region  Obtener Eventos 
+        public DataTable ObtenerEventos()
+        {
+            StoredProcedure = "ObtenerEventos";
+
+            SqlCommand comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            comando.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter DataAD = new SqlDataAdapter(comando);
+
+            DataTable DataT = new DataTable();
+
+            DataT.Clear();
+
+            DataAD.Fill(DataT);
+
+            return DataT;
+
+        }
+        #endregion
+
 
 
     }

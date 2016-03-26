@@ -1,6 +1,6 @@
 ﻿namespace Resa_Pro.Formularios
 {
-    partial class ActualizarSolicitudesF
+    partial class ActualizarEvento
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActualizarSolicitudesF));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActualizarEvento));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.GCSalon = new DevExpress.XtraEditors.GroupControl();
@@ -84,7 +84,7 @@
             this.ribbon.MaxItemId = 1;
             this.ribbon.Name = "ribbon";
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbon.Size = new System.Drawing.Size(1002, 49);
+            this.ribbon.Size = new System.Drawing.Size(1014, 49);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // ribbonStatusBar
@@ -92,7 +92,7 @@
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 492);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1002, 27);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1014, 27);
             // 
             // GCSalon
             // 
@@ -101,7 +101,7 @@
             this.GCSalon.Location = new System.Drawing.Point(0, 49);
             this.GCSalon.Name = "GCSalon";
             this.GCSalon.Size = new System.Drawing.Size(244, 443);
-            this.GCSalon.TabIndex = 4;
+            this.GCSalon.TabIndex = 5;
             this.GCSalon.Text = "Salon";
             // 
             // GCSalones
@@ -115,7 +115,7 @@
             this.GCSalones.TabIndex = 2;
             this.GCSalones.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.GCSalones.Click += new System.EventHandler(this.GCSalones_Click_1);
+            this.GCSalones.Click += new System.EventHandler(this.GCSalones_Click);
             // 
             // gridView1
             // 
@@ -141,7 +141,7 @@
             this.GCDetallesEvento.Location = new System.Drawing.Point(244, 49);
             this.GCDetallesEvento.Name = "GCDetallesEvento";
             this.GCDetallesEvento.Size = new System.Drawing.Size(410, 443);
-            this.GCDetallesEvento.TabIndex = 5;
+            this.GCDetallesEvento.TabIndex = 6;
             this.GCDetallesEvento.Text = "Detalles del evento";
             // 
             // groupControl1
@@ -281,8 +281,8 @@
             this.GCOrganizador.Dock = System.Windows.Forms.DockStyle.Top;
             this.GCOrganizador.Location = new System.Drawing.Point(654, 49);
             this.GCOrganizador.Name = "GCOrganizador";
-            this.GCOrganizador.Size = new System.Drawing.Size(348, 239);
-            this.GCOrganizador.TabIndex = 8;
+            this.GCOrganizador.Size = new System.Drawing.Size(360, 239);
+            this.GCOrganizador.TabIndex = 9;
             this.GCOrganizador.Text = "Organizador";
             // 
             // LBLNombreSalon
@@ -351,18 +351,18 @@
             // 
             this.SBActualizar.Image = ((System.Drawing.Image)(resources.GetObject("SBActualizar.Image")));
             this.SBActualizar.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.SBActualizar.Location = new System.Drawing.Point(791, 371);
+            this.SBActualizar.Location = new System.Drawing.Point(791, 349);
             this.SBActualizar.Name = "SBActualizar";
             this.SBActualizar.Size = new System.Drawing.Size(75, 59);
-            this.SBActualizar.TabIndex = 9;
+            this.SBActualizar.TabIndex = 10;
             this.SBActualizar.Text = "Actualizar";
             this.SBActualizar.Click += new System.EventHandler(this.SBActualizar_Click);
             // 
-            // ActualizarSolicitudesF
+            // ActualizarEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 519);
+            this.ClientSize = new System.Drawing.Size(1014, 519);
             this.Controls.Add(this.SBActualizar);
             this.Controls.Add(this.GCOrganizador);
             this.Controls.Add(this.GCDetallesEvento);
@@ -373,11 +373,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ActualizarSolicitudesF";
+            this.Name = "ActualizarEvento";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "Actualizar Solicitudes";
+            this.Text = "Actualizar evento";
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GCSalon)).EndInit();
             this.GCSalon.ResumeLayout(false);

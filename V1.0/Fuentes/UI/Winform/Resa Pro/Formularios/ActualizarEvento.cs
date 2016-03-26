@@ -11,12 +11,13 @@ using DevExpress.XtraBars;
 using Capas.Negocio;
 using Capas.Infraestructura.Entidades;
 
+
 namespace Resa_Pro.Formularios
 {
-    public partial class ActualizarSolicitudesF : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class ActualizarEvento : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         //<Summary>
-        //interfaz donde se manejara la  Actualizacion de una solicitud 
+        // Interfaz donde se actualizara un evento 
         //</Summary>
 
         #region Declaraciones
@@ -40,9 +41,8 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-
-        #region Constructor
-        public ActualizarSolicitudesF(int ID_Solicitud, String Nombre_Salon)
+        #region Contructor 
+        public ActualizarEvento(int ID_Solicitud, String Nombre_Salon)
         {
             InitializeComponent();
 
@@ -91,16 +91,15 @@ namespace Resa_Pro.Formularios
             #endregion
 
 
-
         }
+
+
 
         #endregion
 
         #region  Asignar al lbl de salon seleccionado
-
-        private void GCSalones_Click_1(object sender, EventArgs e)
+        private void GCSalones_Click(object sender, EventArgs e)
         {
-
 
             #region Completando el label que indicara el registro seleccionado
 
@@ -178,36 +177,40 @@ namespace Resa_Pro.Formularios
 
 
 
+
+
+
+
         #endregion
 
 
-        #region Validacion de las Fechas 
+        #region  validacion de las fechas para no repeticion en los salones
         private void DateEditTInicio_EditValueChanged(object sender, EventArgs e)
         {
             // Verificar Si la data del Grid control
 
 
-                DateTime FechaInicial;
-                DateTime FechaFinal;
+            DateTime FechaInicial;
+            DateTime FechaFinal;
 
 
-                if (!string.IsNullOrEmpty(DateEditTInicio.Text))
+            if (!string.IsNullOrEmpty(DateEditTInicio.Text))
+            {
+                if (!string.IsNullOrEmpty(DateEditTFinal.Text))
                 {
-                    if (!string.IsNullOrEmpty(DateEditTFinal.Text))
+
+
+                    FechaInicial = DateEditTInicio.DateTime;
+                    FechaFinal = DateEditTFinal.DateTime;
+
+                    if (FechaInicial >= FechaFinal)
                     {
+                        MessageBox.Show("Hay discordancia en las fechas");
 
-
-                        FechaInicial = DateEditTInicio.DateTime;
-                        FechaFinal = DateEditTFinal.DateTime;
-
-                        if (FechaInicial >= FechaFinal)
-                        {
-                            MessageBox.Show("Hay discordancia en las fechas");
-
-                            DateEditTFinal.Text = null;
-                        }
-                        else
-                        {
+                        DateEditTFinal.Text = null;
+                    }
+                    else
+                    {
 
                         //VErifica si el ID cambio para verificar si la fecha esta disponible en el salon
                         if (e_Salon.nombre != Convert.ToString(gridView1.GetFocusedRowCellValue("Nombre")) || DateEditTInicio.DateTime != Convert.ToDateTime(e_Evento.tiempo_Inicio) || DateEditTFinal.DateTime != Convert.ToDateTime(e_Evento.tiempo_Final))
@@ -234,86 +237,87 @@ namespace Resa_Pro.Formularios
 
                         }
 
-                        }
-
                     }
-
 
                 }
 
 
+            }
+
+
         }
 
+
+
+        //DataEdit Fechca Final 
         private void DateEditTFinal_EditValueChanged(object sender, EventArgs e)
         {
 
             // Verificar Si la data del Grid control
-            
-
-                DateTime FechaInicial;
-                DateTime FechaFinal;
 
 
-                if (!string.IsNullOrEmpty(DateEditTInicio.Text))
+            DateTime FechaInicial;
+            DateTime FechaFinal;
+
+
+            if (!string.IsNullOrEmpty(DateEditTInicio.Text))
+            {
+                if (!string.IsNullOrEmpty(DateEditTFinal.Text))
                 {
-                    if (!string.IsNullOrEmpty(DateEditTFinal.Text))
+
+                    FechaInicial = DateEditTInicio.DateTime;
+                    FechaFinal = DateEditTFinal.DateTime;
+
+                    if (FechaInicial >= FechaFinal)
                     {
+                        MessageBox.Show("Hay discordancia en las fechas");
 
-                        FechaInicial = DateEditTInicio.DateTime;
-                        FechaFinal = DateEditTFinal.DateTime;
-
-                        if (FechaInicial >= FechaFinal)
-                        {
-                            MessageBox.Show("Hay discordancia en las fechas");
-
-                            DateEditTFinal.Text = null;
-
-                        }
-                        else
-                        {
-                            if (e_Salon.nombre != Convert.ToString(gridView1.GetFocusedRowCellValue("Nombre")) || DateEditTInicio.DateTime != Convert.ToDateTime(e_Evento.tiempo_Inicio) || DateEditTFinal.DateTime != Convert.ToDateTime(e_Evento.tiempo_Final))
-                            {
-                                int Resultado;
-                                int ID_Salon = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
-
-                                Resultado = n_Evento.VerificarFechas(DateEditTInicio.DateTime, DateEditTFinal.DateTime, ID_Salon);
-
-                                if (Resultado == 1)
-                                {
-                                    MessageBox.Show("El Tiempo Seleccionado ya esta en uso ");
-
-                                    DateEditTInicio.ResetText();
-                                    DateEditTFinal.ResetText();
-
-                                }
-                                else
-                                {
-
-                                }
-
-                            }
-                        }
+                        DateEditTFinal.Text = null;
 
                     }
+                    else
+                    {
+                        if (e_Salon.nombre != Convert.ToString(gridView1.GetFocusedRowCellValue("Nombre")) || DateEditTInicio.DateTime != Convert.ToDateTime(e_Evento.tiempo_Inicio) || DateEditTFinal.DateTime != Convert.ToDateTime(e_Evento.tiempo_Final))
+                        {
+                            int Resultado;
+                            int ID_Salon = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
 
+                            Resultado = n_Evento.VerificarFechas(DateEditTInicio.DateTime, DateEditTFinal.DateTime, ID_Salon);
+
+                            if (Resultado == 1)
+                            {
+                                MessageBox.Show("El Tiempo Seleccionado ya esta en uso ");
+
+                                DateEditTInicio.ResetText();
+                                DateEditTFinal.ResetText();
+
+                            }
+                            else
+                            {
+
+                            }
+
+                        }
+                    }
 
                 }
 
-     
+
+            }
 
         }
+
+
 
 
 
         #endregion
 
-        #region Actualizar Solicitud 
+        #region Actualizar Evento
         private void SBActualizar_Click(object sender, EventArgs e)
         {
-
-
             //<Summary>
-            //Se  Actualiza  una solicitud con todas las caracteristicas correspondientes a la misma 
+            //Se  Actualiza  un Evento  con todas  sus caracteristicas correspondientes a la misma 
             //</Summary>
 
             //Variables
@@ -344,13 +348,13 @@ namespace Resa_Pro.Formularios
 
                 e_Solicitud.fecha = Convert.ToString(DateTime.Now);
                 e_Solicitud.fechaAprobacion = Convert.ToString(DateTime.Now);
-             
+
                 //Actualizando  la solicitud
-                    FilasAfectadas = n_Solicitud.ActualizarSolicitud(e_Solicitud);
+                FilasAfectadas = n_Solicitud.ActualizarSolicitud(e_Solicitud);
 
                 if (FilasAfectadas == 0)
                 {
-                    MessageBox.Show("Ocurrio un error al Actualizar la solicitud ");
+                    MessageBox.Show("Ocurrio un error al Actualizar el Evento ");
                 }
                 else
                 {
@@ -365,15 +369,15 @@ namespace Resa_Pro.Formularios
                     e_Evento.descripcion = TBDescripcionE.Text;
                     e_Evento.tiempo_Inicio = Convert.ToString(Fechainicial);
                     e_Evento.tiempo_Final = Convert.ToString(FechaFinal);
-                  
+
 
                     //Actualizando la Solicitud 
-                     
+
                     FilasAfectadas = n_Evento.ActualizarEvento(e_Evento);
 
                     if (FilasAfectadas == 0)
                     {
-                        MessageBox.Show("Ocurrio un error al Actualizar la solicitud ");
+                        MessageBox.Show("Ocurrio un error al Actualizar el evento");
                     }
                     else
                     {
@@ -381,18 +385,18 @@ namespace Resa_Pro.Formularios
                         e_Organizador.nombre = TBNombreO.Text;
                         e_Organizador.descripcion = TBDescripcionO.Text;
                         e_Organizador.correoElectronico = TBCorreoO.Text;
-                        
+
                         //Guardando la solicitud y esperando el Id 
 
-                        FilasAfectadas= n_Organizador.ActualizarOrganizador(e_Organizador);
+                        FilasAfectadas = n_Organizador.ActualizarOrganizador(e_Organizador);
 
                         if (FilasAfectadas == 0)
                         {
-                            MessageBox.Show("Ocurrio un error al Actualizar la solicitud ");
+                            MessageBox.Show("Ocurrio un error al Actualizar el evento");
                         }
                         else
                         {
-                            MessageBox.Show("La solicitud se Actualizo correctamente");
+                            MessageBox.Show("El evento  se Actualizo correctamente");
 
                             this.Close();
                         }
@@ -405,9 +409,8 @@ namespace Resa_Pro.Formularios
 
             }
 
-
-
         }
+
 
         #endregion
     }

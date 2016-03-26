@@ -71,6 +71,7 @@
             this.GCSolicitudes.TabIndex = 2;
             this.GCSolicitudes.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.GCSolicitudes.DoubleClick += new System.EventHandler(this.GCSolicitudes_DoubleClick);
             // 
             // gridView1
             // 
@@ -131,6 +132,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Solicitudes";
+           
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GCSolicitudes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

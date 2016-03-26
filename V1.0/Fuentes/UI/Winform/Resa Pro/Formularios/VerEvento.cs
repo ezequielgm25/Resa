@@ -13,10 +13,11 @@ using Capas.Infraestructura.Entidades;
 
 namespace Resa_Pro.Formularios
 {
-    public partial class VerSolicitud : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class VerEvento : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+
         //<Summary>
-        // Interfaz donde se visualizara  las caracteristicas de una  solicitud
+        // Interfaz donde se visualizara  las caracteristicas de un evento
         //</Summary>
 
 
@@ -40,8 +41,7 @@ namespace Resa_Pro.Formularios
         N_Organizador n_Organizador = new N_Organizador();
 
         #endregion
-
-        public VerSolicitud(int ID_Solicitud, string Nombre_Salon)
+        public VerEvento(int ID_Solicitud , string Nombre_Salon)
         {
             InitializeComponent();
 
@@ -53,9 +53,6 @@ namespace Resa_Pro.Formularios
             //Asignando los datos a los controles 
 
             AsignarDatos(e_Solicitud.id_Solicitud, e_Salon.nombre);
-
-
-
         }
 
 
@@ -102,62 +99,11 @@ namespace Resa_Pro.Formularios
 
 
 
-       
+
 
         }
         #endregion
 
-
-
-        #region Aprobar Solicitud 
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-
-
-
-            int FilaAfectada = n_Solicitud.AprobarSolicitud(e_Solicitud.id_Solicitud, "Fulanito");
-
-            if(FilaAfectada == 0)
-            {
-                MessageBox.Show("Ocurrio un error al aprobar la solicitud ");
-            }
-            else
-            {
-                MessageBox.Show("Solcitud aprobada Satifactoriamente");
-
-                AsignarDatos(e_Solicitud.id_Solicitud, e_Salon.nombre);
-            }
-            
-
-        }
-
-
-
-        #endregion
-
-        #region Desaprobar Solicitud
-        private void SBDesaprobar_Click(object sender, EventArgs e)
-        {
-
-            int FilaAfectada = n_Solicitud.DesaprobarSolicitud(e_Solicitud.id_Solicitud, "Fulanito");
-
-            if (FilaAfectada == 0)
-            {
-                MessageBox.Show("Ocurrio un error al desaprobar la solicitud ");
-            }
-            else
-            {
-                MessageBox.Show("Solcitud fue desaprobada Satifactoriamente");
-                AsignarDatos(e_Solicitud.id_Solicitud, e_Salon.nombre);
-
-            }
-
-
-
-
-        }
-
-        #endregion
+      
     }
 }

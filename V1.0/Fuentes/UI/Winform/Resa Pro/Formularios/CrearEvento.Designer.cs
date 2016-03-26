@@ -1,6 +1,6 @@
 ﻿namespace Resa_Pro.Formularios
 {
-    partial class ActualizarSolicitudesF
+    partial class CrearEvento
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActualizarSolicitudesF));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearEvento));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.GCSalon = new DevExpress.XtraEditors.GroupControl();
@@ -57,7 +57,7 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.TBNombreO = new System.Windows.Forms.TextBox();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.SBActualizar = new DevExpress.XtraEditors.SimpleButton();
+            this.SBGuardar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GCSalon)).BeginInit();
             this.GCSalon.SuspendLayout();
@@ -84,15 +84,15 @@
             this.ribbon.MaxItemId = 1;
             this.ribbon.Name = "ribbon";
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbon.Size = new System.Drawing.Size(1002, 49);
+            this.ribbon.Size = new System.Drawing.Size(1038, 49);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 492);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 496);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1002, 27);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1038, 27);
             // 
             // GCSalon
             // 
@@ -100,7 +100,7 @@
             this.GCSalon.Dock = System.Windows.Forms.DockStyle.Left;
             this.GCSalon.Location = new System.Drawing.Point(0, 49);
             this.GCSalon.Name = "GCSalon";
-            this.GCSalon.Size = new System.Drawing.Size(244, 443);
+            this.GCSalon.Size = new System.Drawing.Size(244, 447);
             this.GCSalon.TabIndex = 4;
             this.GCSalon.Text = "Salon";
             // 
@@ -111,7 +111,7 @@
             this.GCSalones.MainView = this.gridView1;
             this.GCSalones.MenuManager = this.ribbon;
             this.GCSalones.Name = "GCSalones";
-            this.GCSalones.Size = new System.Drawing.Size(240, 421);
+            this.GCSalones.Size = new System.Drawing.Size(240, 425);
             this.GCSalones.TabIndex = 2;
             this.GCSalones.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -140,7 +140,7 @@
             this.GCDetallesEvento.Dock = System.Windows.Forms.DockStyle.Left;
             this.GCDetallesEvento.Location = new System.Drawing.Point(244, 49);
             this.GCDetallesEvento.Name = "GCDetallesEvento";
-            this.GCDetallesEvento.Size = new System.Drawing.Size(410, 443);
+            this.GCDetallesEvento.Size = new System.Drawing.Size(410, 447);
             this.GCDetallesEvento.TabIndex = 5;
             this.GCDetallesEvento.Text = "Detalles del evento";
             // 
@@ -151,7 +151,7 @@
             this.groupControl1.Controls.Add(this.labelControl4);
             this.groupControl1.Controls.Add(this.DateEditTInicio);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupControl1.Location = new System.Drawing.Point(2, 276);
+            this.groupControl1.Location = new System.Drawing.Point(2, 280);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(406, 165);
             this.groupControl1.TabIndex = 8;
@@ -205,7 +205,7 @@
             this.DateEditTInicio.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
             this.DateEditTInicio.Size = new System.Drawing.Size(131, 20);
             this.DateEditTInicio.TabIndex = 10;
-            this.DateEditTInicio.EditValueChanged += new System.EventHandler(this.DateEditTInicio_EditValueChanged);
+            this.DateEditTInicio.EditValueChanged += new System.EventHandler(this.DateEditTInicio_EditValueChanged_1);
             // 
             // TBTopicoE
             // 
@@ -281,7 +281,7 @@
             this.GCOrganizador.Dock = System.Windows.Forms.DockStyle.Top;
             this.GCOrganizador.Location = new System.Drawing.Point(654, 49);
             this.GCOrganizador.Name = "GCOrganizador";
-            this.GCOrganizador.Size = new System.Drawing.Size(348, 239);
+            this.GCOrganizador.Size = new System.Drawing.Size(384, 239);
             this.GCOrganizador.TabIndex = 8;
             this.GCOrganizador.Text = "Organizador";
             // 
@@ -347,23 +347,23 @@
             this.labelControl6.TabIndex = 9;
             this.labelControl6.Text = "Nombre:";
             // 
-            // SBActualizar
+            // SBGuardar
             // 
-            this.SBActualizar.Image = ((System.Drawing.Image)(resources.GetObject("SBActualizar.Image")));
-            this.SBActualizar.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.SBActualizar.Location = new System.Drawing.Point(791, 371);
-            this.SBActualizar.Name = "SBActualizar";
-            this.SBActualizar.Size = new System.Drawing.Size(75, 59);
-            this.SBActualizar.TabIndex = 9;
-            this.SBActualizar.Text = "Actualizar";
-            this.SBActualizar.Click += new System.EventHandler(this.SBActualizar_Click);
+            this.SBGuardar.Image = ((System.Drawing.Image)(resources.GetObject("SBGuardar.Image")));
+            this.SBGuardar.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.SBGuardar.Location = new System.Drawing.Point(812, 362);
+            this.SBGuardar.Name = "SBGuardar";
+            this.SBGuardar.Size = new System.Drawing.Size(90, 60);
+            this.SBGuardar.TabIndex = 9;
+            this.SBGuardar.Text = "Marcar evento";
+            this.SBGuardar.Click += new System.EventHandler(this.SBGuardar_Click);
             // 
-            // ActualizarSolicitudesF
+            // CrearEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 519);
-            this.Controls.Add(this.SBActualizar);
+            this.ClientSize = new System.Drawing.Size(1038, 523);
+            this.Controls.Add(this.SBGuardar);
             this.Controls.Add(this.GCOrganizador);
             this.Controls.Add(this.GCDetallesEvento);
             this.Controls.Add(this.GCSalon);
@@ -373,11 +373,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ActualizarSolicitudesF";
+            this.Name = "CrearEvento";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "Actualizar Solicitudes";
+            this.Text = "Crear Evento";
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GCSalon)).EndInit();
             this.GCSalon.ResumeLayout(false);
@@ -431,6 +431,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private System.Windows.Forms.TextBox TBNombreO;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.SimpleButton SBActualizar;
+        private DevExpress.XtraEditors.SimpleButton SBGuardar;
     }
 }

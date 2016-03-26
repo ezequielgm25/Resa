@@ -150,6 +150,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\ActualizarEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ActualizarEvento.Designer.cs">
+      <DependentUpon>ActualizarEvento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\ActualizarSalon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,12 @@
     <Compile Include="Formularios\ActualizarSolicitudesF.Designer.cs">
       <DependentUpon>ActualizarSolicitudesF.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\CrearEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CrearEvento.Designer.cs">
+      <DependentUpon>CrearEvento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\CrearSalonF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +185,12 @@
     </Compile>
     <Compile Include="Formularios\AgregarSolicitud.Designer.cs">
       <DependentUpon>AgregarSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Eventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Eventos.Designer.cs">
+      <DependentUpon>Eventos.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Loging.cs">
       <SubType>Form</SubType>
@@ -204,6 +222,12 @@
     <Compile Include="Formularios\Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\VerEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\VerEvento.Designer.cs">
+      <DependentUpon>VerEvento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\VerSalon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,17 +242,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\ActualizarEvento.resx">
+      <DependentUpon>ActualizarEvento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ActualizarSalon.resx">
       <DependentUpon>ActualizarSalon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ActualizarSolicitudesF.resx">
       <DependentUpon>ActualizarSolicitudesF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CrearEvento.resx">
+      <DependentUpon>CrearEvento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\CrearSalonF.resx">
       <DependentUpon>CrearSalonF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AgregarSolicitud.resx">
       <DependentUpon>AgregarSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Eventos.resx">
+      <DependentUpon>Eventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Loging.resx">
       <DependentUpon>Loging.cs</DependentUpon>
@@ -244,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\VerEvento.resx">
+      <DependentUpon>VerEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\VerSalon.resx">
       <DependentUpon>VerSalon.cs</DependentUpon>

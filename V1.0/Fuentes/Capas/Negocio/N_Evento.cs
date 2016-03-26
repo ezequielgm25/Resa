@@ -96,5 +96,15 @@ namespace Capas.Negocio
 
         #endregion
 
+
+        #region Obtener Eventos 
+        public DataTable ObtenerEventos()
+        {
+            DataT = d_Evento.ObtenerEventos();
+
+            return DataT;
+        }
+
+        #endregion
     }
 }

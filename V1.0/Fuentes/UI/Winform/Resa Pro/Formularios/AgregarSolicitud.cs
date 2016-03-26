@@ -115,7 +115,7 @@ namespace Resa_Pro.Formularios
                 //Asignando los datos  a la entida de solicitud 
 
                 e_Solicitud.fecha = Convert.ToString(DateTime.Now);
-                e_Solicitud.usuario = "----";
+                e_Solicitud.usuario = "No aprobada";
                 e_Solicitud.aprobacion = "No aprobada";
                 e_Solicitud.fechaAprobacion = Convert.ToString(DateTime.Now);
                 e_Solicitud.id_Salon = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
@@ -208,7 +208,7 @@ namespace Resa_Pro.Formularios
                     FechaInicial = DateEditTInicio.DateTime ;
                     FechaFinal = DateEditTFinal.DateTime;
 
-                    if (FechaInicial > FechaFinal)
+                    if (FechaInicial >= FechaFinal)
                     {
                         MessageBox.Show("Hay discordancia en las fechas");
 
@@ -261,7 +261,7 @@ namespace Resa_Pro.Formularios
                     FechaInicial = DateEditTInicio.DateTime;
                     FechaFinal = DateEditTFinal.DateTime;
 
-                    if (FechaInicial > FechaFinal)
+                    if (FechaInicial >= FechaFinal)
                     {
                         MessageBox.Show("Hay discordancia en las fechas");
 
@@ -318,7 +318,7 @@ namespace Resa_Pro.Formularios
                     FechaInicial = DateEditTInicio.DateTime;
                     FechaFinal = DateEditTFinal.DateTime;
 
-                    if (FechaInicial > FechaFinal)
+                    if (FechaInicial >= FechaFinal)
                     {
                         MessageBox.Show("Hay discordancia en las fechas");
 

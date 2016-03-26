@@ -25,7 +25,7 @@ namespace Resa_Pro.Formularios
         E_Solicitud e_Solicitud = new E_Solicitud();
 
 
-         #endregion
+        #endregion
 
 
 
@@ -145,5 +145,46 @@ namespace Resa_Pro.Formularios
         }
 
         #endregion
+
+
+        #region Ver Solicitudes
+        private void GCSolicitudes_DoubleClick(object sender, EventArgs e)
+        {
+            //<Summary>
+            // Se Visualizara una solicitud 
+            //</Summary>
+
+
+            int ID_Solicitud = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
+            string Nombre_Salon = Convert.ToString(gridView1.GetFocusedRowCellValue("Salon"));
+
+            if (ID_Solicitud != 0)
+            {
+
+                VerSolicitud AS_Form = new VerSolicitud(ID_Solicitud, Nombre_Salon);
+
+                AS_Form.ShowDialog();
+
+                //Actualizar el grid 
+
+                GCSolicitudes.DataSource = n_Solicitud.ObtenerSolicitudes();
+            }
+
+            else
+            {
+                MessageBox.Show(" No hay una solicitud seleccionada");
+            }
+
+        }
+
+
+
+
+
+
+
+        #endregion
+
     }
+
 }

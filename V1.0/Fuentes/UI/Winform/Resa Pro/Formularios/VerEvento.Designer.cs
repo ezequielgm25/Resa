@@ -1,6 +1,6 @@
 ﻿namespace Resa_Pro.Formularios
 {
-    partial class VerSolicitud
+    partial class VerEvento
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerSolicitud));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -62,8 +61,6 @@
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.SBAprobar = new DevExpress.XtraEditors.SimpleButton();
-            this.SBDesaprobar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -82,15 +79,15 @@
             this.ribbon.MaxItemId = 1;
             this.ribbon.Name = "ribbon";
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbon.Size = new System.Drawing.Size(1141, 49);
+            this.ribbon.Size = new System.Drawing.Size(1148, 49);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 371);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 422);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1141, 27);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1148, 27);
             // 
             // groupControl1
             // 
@@ -107,8 +104,8 @@
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(0, 49);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(332, 322);
-            this.groupControl1.TabIndex = 2;
+            this.groupControl1.Size = new System.Drawing.Size(332, 373);
+            this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Informacion  de la solicitud";
             // 
             // LBLSalon
@@ -208,8 +205,8 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl2.Location = new System.Drawing.Point(332, 49);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(392, 322);
-            this.groupControl2.TabIndex = 3;
+            this.groupControl2.Size = new System.Drawing.Size(392, 373);
+            this.groupControl2.TabIndex = 4;
             this.groupControl2.Text = "informacion del solicitante";
             // 
             // LBLTiempoF
@@ -319,8 +316,8 @@
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupControl3.Location = new System.Drawing.Point(724, 49);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(417, 192);
-            this.groupControl3.TabIndex = 4;
+            this.groupControl3.Size = new System.Drawing.Size(424, 192);
+            this.groupControl3.TabIndex = 5;
             this.groupControl3.Text = "Informacion del evento";
             // 
             // LBLCorreoO
@@ -371,35 +368,11 @@
             this.labelControl12.TabIndex = 5;
             this.labelControl12.Text = "Nombre:";
             // 
-            // SBAprobar
-            // 
-            this.SBAprobar.Image = ((System.Drawing.Image)(resources.GetObject("SBAprobar.Image")));
-            this.SBAprobar.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.SBAprobar.Location = new System.Drawing.Point(957, 276);
-            this.SBAprobar.Name = "SBAprobar";
-            this.SBAprobar.Size = new System.Drawing.Size(75, 57);
-            this.SBAprobar.TabIndex = 5;
-            this.SBAprobar.Text = "Aprobar";
-            this.SBAprobar.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
-            // SBDesaprobar
-            // 
-            this.SBDesaprobar.Image = ((System.Drawing.Image)(resources.GetObject("SBDesaprobar.Image")));
-            this.SBDesaprobar.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.SBDesaprobar.Location = new System.Drawing.Point(831, 277);
-            this.SBDesaprobar.Name = "SBDesaprobar";
-            this.SBDesaprobar.Size = new System.Drawing.Size(75, 56);
-            this.SBDesaprobar.TabIndex = 6;
-            this.SBDesaprobar.Text = "Desaprobar";
-            this.SBDesaprobar.Click += new System.EventHandler(this.SBDesaprobar_Click);
-            // 
-            // VerSolicitud
+            // VerEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1141, 398);
-            this.Controls.Add(this.SBDesaprobar);
-            this.Controls.Add(this.SBAprobar);
+            this.ClientSize = new System.Drawing.Size(1148, 449);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
@@ -409,11 +382,11 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "VerSolicitud";
+            this.Name = "VerEvento";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "Ver solicitud";
+            this.Text = "Ver evento";
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -434,12 +407,23 @@
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbon;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraEditors.LabelControl LBLSalon;
+        private DevExpress.XtraEditors.LabelControl LBLUsuario;
+        private DevExpress.XtraEditors.LabelControl LBLFechaAprobacion;
+        private DevExpress.XtraEditors.LabelControl LBLEstado;
+        private DevExpress.XtraEditors.LabelControl LBLFecha;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraEditors.LabelControl LBLTiempoF;
+        private DevExpress.XtraEditors.LabelControl LBLTiempoI;
+        private DevExpress.XtraEditors.LabelControl LBLTopico;
+        private DevExpress.XtraEditors.LabelControl LBLTipoE;
+        private DevExpress.XtraEditors.LabelControl LBLTituloE;
+        private System.Windows.Forms.Label LBLDescripcioinE;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.LabelControl labelControl10;
         private DevExpress.XtraEditors.LabelControl labelControl9;
@@ -447,24 +431,11 @@
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.GroupControl groupControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl14;
-        private DevExpress.XtraEditors.LabelControl labelControl13;
-        private DevExpress.XtraEditors.LabelControl labelControl12;
-        private DevExpress.XtraEditors.SimpleButton SBAprobar;
-        private DevExpress.XtraEditors.LabelControl LBLSalon;
-        private DevExpress.XtraEditors.LabelControl LBLUsuario;
-        private DevExpress.XtraEditors.LabelControl LBLFechaAprobacion;
-        private DevExpress.XtraEditors.LabelControl LBLEstado;
-        private DevExpress.XtraEditors.LabelControl LBLFecha;
-        private DevExpress.XtraEditors.LabelControl LBLTiempoF;
-        private DevExpress.XtraEditors.LabelControl LBLTiempoI;
-        private DevExpress.XtraEditors.LabelControl LBLTopico;
-        private DevExpress.XtraEditors.LabelControl LBLTipoE;
-        private DevExpress.XtraEditors.LabelControl LBLTituloE;
-        private System.Windows.Forms.Label LBLDescripcioinE;
         private DevExpress.XtraEditors.LabelControl LBLCorreoO;
         private DevExpress.XtraEditors.LabelControl LBLNombreO;
         private System.Windows.Forms.Label LBLDescripcionO;
-        private DevExpress.XtraEditors.SimpleButton SBDesaprobar;
+        private DevExpress.XtraEditors.LabelControl labelControl14;
+        private DevExpress.XtraEditors.LabelControl labelControl13;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
     }
 }

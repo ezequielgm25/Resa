@@ -46,7 +46,6 @@ namespace Capas.Negocio
 
         #endregion
 
-
         #region Crear Solicitudes
         public int CrearSolicitud(E_Solicitud e_So)
         {
@@ -61,7 +60,6 @@ namespace Capas.Negocio
 
 
         #endregion
-
 
         #region obtenerSolicitud
         public E_Solicitud ObtenerSolicitud(int ID_Solicitud)
@@ -105,7 +103,36 @@ namespace Capas.Negocio
         }
 
 
-        #endregion 
+        #endregion
+
+
+        #region Aprobar Solcisitud 
+        public int AprobarSolicitud(int ID_Solicitud, String usuario)
+        {
+            int FilasAfectada = 0;
+
+            FilasAfectada = d_Solicitud.AprobarSolicitud(ID_Solicitud , usuario);
+
+
+            return FilasAfectada;
+        }
+
+
+        #endregion
+
+        #region Desaprobar Solicitud 
+        public int DesaprobarSolicitud(int ID_Solicitud, String usuario)
+        {
+            int FilasAfectada = 0;
+
+            FilasAfectada = d_Solicitud.DesaprobarSolicitud(ID_Solicitud, usuario);
+
+
+            return FilasAfectada;
+        }
+
+        #endregion
+
 
     }
 }

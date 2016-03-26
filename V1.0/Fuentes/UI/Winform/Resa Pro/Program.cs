@@ -29,7 +29,11 @@ namespace Resa_Pro
 
             //Application.Run(new Formularios.MainScreen(12));
 
-            Application.Run(new Formularios.Solicitudes());
+            //Application.Run(new Formularios.Solicitudes());
+
+            Application.Run(new Formularios.Eventos());
+                
+
         }
     }
 }

@@ -75,15 +75,21 @@ execute CrearSolicitud  @FechaInicio, false, 1, @FechaInicio, 1,@ID_Solicitud = 
 
 Create procedure ObtenerSolicitudes
 AS
+BEGIN 
+ Update Solicitudes 
+ Set Aprobacion = 'Efectuado' from Solicitudes
+ inner join Eventos on eventos.ID_Solicitud = Solicitudes.ID_Solicitud where Eventos.Tiempo_Final < GETDATE() 
+END
+
 BEGIN
-Select SO.ID_SolicitudID,SO.Fecha Fecha, SO.Aprobacion Estado, SA.Nombre Salon, EV.Titulo_Evento Evento from Salones SA
+Select SO.ID_Solicitud ID,SO.Fecha Fecha, SO.Aprobacion Estado, SA.Nombre Salon, EV.Titulo_Evento Evento from Salones SA
 Inner join Solicitudes SO on SO.ID_Salon = SA.ID_Salon
 Inner Join Eventos EV on EV.ID_Solicitud = SO.ID_Solicitud
 END
 GO
 /* Eliminando El stored procedure */
 drop procedure ObtenerSolicitudes;
-
+use resaDB
 
 /*  Prueba del stored Procedure */
 create table #data(ID_Solicitud Int,Fecha SmallDateTime,Aprobacion Nvarchar(30) ,Nombre Nvarchar(100),Titulo_Evento Nvarchar(100))
@@ -300,18 +306,20 @@ CREATE PROCEDURE ActualizarEvento
   
   /* Obtener Eventos */
   
-  CREATE Procedure ObtenerEventos
+CREATE Procedure ObtenerEventos
 AS
 BEGIN
-Select EV.ID_Evento as 'ID',  EV.Titulo_Evento as 'Titulo' , EV.Tipo as 'Tipo' , EV.Topico as 'Topico',EV.ID_Solicitud as 'Solicitud', organizadores.Nombre as 'Organizador' from Eventos as EV
-Inner join organizadores on organizadores.ID_Evento = EV.ID_Evento;
+Select EV.ID_Evento as 'ID',  EV.Titulo_Evento as 'Titulo' , EV.Tipo as 'Tipo' , EV.Topico as 'Topico',EV.ID_Solicitud as 'Solicitud', organizadores.Nombre as 'Organizador', Salones.Nombre  as 'Salon'from Eventos as EV
+Inner join organizadores on organizadores.ID_Evento = EV.ID_Evento
+Inner join Solicitudes  on Solicitudes.ID_Solicitud = EV.ID_Solicitud
+Inner join Salones on Salones.ID_Salon = Solicitudes.ID_Salon Where Solicitudes.Aprobacion = 'Aprobada'
 END
 GO
 
 /* Eliminando Stored procedure */
-
+use ResaDB
 Drop procedure ObtenerEventos
-
+s
 /* Stored procedures de los organizadores*/
 
 /* Insertar un organizador */
