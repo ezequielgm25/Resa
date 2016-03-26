@@ -80,7 +80,22 @@ namespace Capas.Negocio
 
             return FilasAfectadas;
         }
-             
+
         #endregion
+
+
+        #region Obtener ID Y Nombre de todos los Salones 
+
+        public DataTable ObtenerID_NombreDeSalones()
+        {
+            //Retornara los Id y nombres de los salones
+            DataT = d_Salon.ObtenerID_NombreDeSalones();
+
+            return DataT;
+
+        }
+
+        #endregion
+
     }
 }

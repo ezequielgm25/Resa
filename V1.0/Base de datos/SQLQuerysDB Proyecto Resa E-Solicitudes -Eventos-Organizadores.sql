@@ -95,7 +95,7 @@ go
 Drop Table #data
 
 /* Actualizar Solicitud */
-CREATE PROCEDURE ActualizarSolicitudes
+CREATE PROCEDURE ActualizarSolicitud
    @ID_Solicitud as int,
    @Fecha as NVarchar(30),
    @Aprobacion as Nvarchar(30),
@@ -140,7 +140,7 @@ drop procedure EliminarSolicitud
 
 /* probando El stored procedure */
 
-Execute EliminarSolicitud 7
+Execute EliminarSolicitud 25
 
 /* */
 Select * from solicitudes
@@ -181,13 +181,19 @@ BEGIN
 END
 GO
 
+/* Truenqueando  las tablas*/
+
+Select  * from Solicitudes 
+Select * From Eventos
+Select * from organizadores
+
 /* Eliminar procedure de eventos */
 Drop procedure CrearEvento
 
 /*Probando El store procedure */
 
 
- Declare  @ID_Evento  Int;
+Declare  @ID_Evento  Int;
 
 execute CrearEvento  'La Loquera del pais','To los maldito loco','Loco','La basura','03/24/16 1:00 PM','03/24/16 1:00 PM',4, @ID_Evento = @ID_Evento output
 
@@ -197,6 +203,8 @@ Select @ID_Evento  as 'ID'
 Select * from Eventos
 
 Select * from solicitudes
+
+Select * from organizadores
  
 /* Soluccionando verificacion de las fechas  para la no repeticion */
 
@@ -214,6 +222,48 @@ Select * from solicitudes
      
      
      /* Actualizar  un evento */ 
+     
+ /*Verificacion de las fechas de */
+ 
+ CREATE PROCEDURE VerificarFechas 
+   @Tiempo_Inicio  as  Nvarchar(30),
+   @Tiempo_Final   as  Nvarchar(30),
+   @ID_Salon       as  int,
+   @MSG as int  Output
+
+  AS
+  BEGIN
+    DECLARE  @FechaInicioEvento as smallDateTime;
+    set @FechaInicioEvento = CONVERT(smalldatetime, @Tiempo_Inicio, 1);
+    DECLARE  @FechaFinalEvento as smallDateTime;
+    set @FechaFinalEvento = CONVERT(smalldatetime, @Tiempo_Final, 1);
+   
+    DECLARE @C AS int;
+    SET @C = 0;
+   
+  END
+  
+  BEGIN
+    Select @C = count(Tiempo_Inicio) from Eventos 
+    Inner join Solicitudes on Solicitudes.ID_Solicitud = Eventos.ID_Solicitud   
+    Inner Join Salones  on Salones.ID_Salon = Solicitudes.ID_Salon where Salones.ID_Salon = @ID_Salon and @FechaInicioEvento <= Tiempo_Final and @FechaFinalEvento >= Tiempo_Inicio
+  End 
+
+  BEGIN
+   if(@C > 0)
+   set @MSG = 1;
+   END
+  BEGIN
+   if(@C = 0 )
+   set @MSG = 0;
+  END
+  /* - - - - */
+  drop procedure VerificarFechas
+  
+  select * from Eventos
+  
+  
+ /* Actualizar un evento hora*/ 
      
 CREATE PROCEDURE ActualizarEvento
   @ID_Evento      as  int,
@@ -247,3 +297,142 @@ CREATE PROCEDURE ActualizarEvento
   execute ActualizarEvento 5,'La Loquera del pais','To los maldito loco','Loco','La basura','03/24/16 1:00 PM','03/24/16 1:00 PM'
   
   select * from eventos
+  
+  /* Obtener Eventos */
+  
+  CREATE Procedure ObtenerEventos
+AS
+BEGIN
+Select EV.ID_Evento as 'ID',  EV.Titulo_Evento as 'Titulo' , EV.Tipo as 'Tipo' , EV.Topico as 'Topico',EV.ID_Solicitud as 'Solicitud', organizadores.Nombre as 'Organizador' from Eventos as EV
+Inner join organizadores on organizadores.ID_Evento = EV.ID_Evento;
+END
+GO
+
+/* Eliminando Stored procedure */
+
+Drop procedure ObtenerEventos
+
+/* Stored procedures de los organizadores*/
+
+/* Insertar un organizador */
+
+CREATE PROCEDURE InsertarOrganizador
+  @Nombre        as      Nvarchar(100),
+  @Descripcion   as      Nvarchar(150),
+  @CorreoElectronico as  Nvarchar(100),
+  @ID_Evento        as   int,
+  @ID_Organizador   as   Int output
+  AS
+  BEGIN
+   INSERT  INTO Organizadores 
+   (
+     Nombre,Descripcion,CorreoElectronico,ID_Evento
+   )
+   VALUES
+   (
+     @Nombre , @Descripcion , @CorreoElectronico,@ID_Evento
+   )
+  END
+  BEGIN
+  Set @ID_Organizador = @@IDENTITY;
+  END
+  GO
+ 
+  
+  
+  
+  /* Eliminar Stored Procedure */
+  
+  drop Procedure InsertarOrganizador;
+  
+  /* Prueba */
+  DECLARE @ID_Organizador as int;
+  
+  Execute InsertarOrganizador  'Leonel Fernandez','Presidente de la','tuLeo.com',1,@ID_Organizador = @ID_Organizador output
+   
+  Select @ID_Organizador as 'ID'
+   /* - - - - - - - - */
+   select * from Eventos;
+   Select * from organizadores
+  
+  /* Uctualizar un organizador */
+  
+  CREATE PROCEDURE ActualizarOrganizador
+  @ID_Organizador  as int, 
+  @Nombre          as Nvarchar(100),
+  @Descripcion     as Nvarchar(150),
+  @CorreoElectronico as  Nvarchar(100)
+AS 
+  BEGIN
+    Update organizadores
+    Set Nombre = @Nombre, Descripcion = @Descripcion , CorreoElectronico = @CorreoElectronico
+    where ID_Organizador = @ID_Organizador  
+  END
+  GO
+  /* Delete procedure*/
+  drop procedure ActualizarOrganizador;
+  /* prueba */
+  
+    Execute ActualizarOrganizador  2,'Leonel Fernandez','Presidente de la','tuLeo.com'
+    
+    Select * from organizadores
+    
+    
+    /*Logistica  para la Actualizacion  de las Entidades Eventos, Solicitudes y organizadores */
+    
+    use ResaDB
+   /*Obtener Solicitudes*/
+   
+  CREATE PROCEDURE ObtenerSolicitud
+   @ID_Solicitud as int,
+   @Fecha as SmallDateTime output,
+   @Aprobacion as Nvarchar(30) output,
+   @Usuario as nVarchar(60) output,
+   @FechaAprobacion as SmallDateTime output,
+   @ID_Salon as int output
+   AS 
+   BEGIN
+    Select @Fecha = Fecha  , @Aprobacion = Aprobacion  ,  @Usuario = Usuario,   @FechaAprobacion = FechaAprobacion ,  @ID_Salon = ID_Salon  From Solicitudes Where ID_Solicitud = @ID_Solicitud
+   END
+   GO
+   /* */ 
+   Drop procedure ObtenerSolicitud
+   select * from Solicitudes
+   select * from Salones
+   
+   /* Obtener Evento */
+   CREATE PROCEDURE ObtenerEvento
+  @ID_Solicitud   as int,
+  @ID_Evento      as  int output,
+  @Titulo_Evento  as  Nvarchar(100) output,
+  @Descripcion    as  Nvarchar(300) output,
+  @Tipo           as  Nvarchar(100) output,
+  @Topico         as  Nvarchar(150) output,
+  @Tiempo_Inicio  as  smallDateTime output,
+  @Tiempo_Final   as  smallDateTime output
+  AS
+  BEGIN
+  Select @ID_Evento = ID_Evento ,  @Titulo_Evento = Titulo_Evento  , @Descripcion = Descripcion  , @Tipo = Tipo , @Topico = Topico , @Tiempo_Inicio = Tiempo_Inicio   , @Tiempo_Final = Tiempo_Final     from Eventos where ID_Solicitud = @ID_Solicitud
+  END
+  Go
+  /*  - - - - - - */
+  
+  drop procedure ObtenerEvento;
+  
+  
+  
+  /* Obtener Organizador */
+  CREATE Procedure ObtenerOrganizador
+  @ID_Evento   as int,
+  @ID_Organizador  as int output, 
+  @Nombre          as Nvarchar(100) output,
+  @Descripcion     as Nvarchar(150) output,
+  @CorreoElectronico as  Nvarchar(100) output
+  As
+  BEGIN
+  select  @ID_Organizador = ID_Organizador ,  @Nombre = Nombre ,  @Descripcion = Descripcion ,  @CorreoElectronico = CorreoElectronico From Organizadores where ID_Evento = @ID_Evento 
+  END
+  GO
+  
+  /* - - - */ 
+  drop procedure ObtenerOrganizador;

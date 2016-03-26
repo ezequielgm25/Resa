@@ -98,6 +98,7 @@
             this.SBActualizar.Size = new System.Drawing.Size(75, 61);
             this.SBActualizar.TabIndex = 4;
             this.SBActualizar.Text = "Actualizar";
+            this.SBActualizar.Click += new System.EventHandler(this.SBActualizar_Click);
             // 
             // SBEliminar
             // 
@@ -108,6 +109,7 @@
             this.SBEliminar.Size = new System.Drawing.Size(75, 61);
             this.SBEliminar.TabIndex = 5;
             this.SBEliminar.Text = "Eliminar";
+            this.SBEliminar.Click += new System.EventHandler(this.SBEliminar_Click);
             // 
             // Solicitudes
             // 

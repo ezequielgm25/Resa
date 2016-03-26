@@ -60,7 +60,7 @@ Create Table Salones
    ID_Solicitud    Int not null Identity(1,1),
    Fecha           SmallDateTime not null,
    Aprobacion      Nvarchar(30) not null,
-   Usuario         Nvarchar(60) not null,
+   Usuario         Nvarchar(60),
    FechaAprobacion SmallDateTime,
    ID_Salon        int not null,
    primary Key(ID_Solicitud),
@@ -71,6 +71,7 @@ Create Table Salones
   )
   
   Go
+ 
  
  
   /* Tabla de Eventos*/
@@ -288,9 +289,15 @@ go
 /* Eliminando la tabla #Data*/
 Drop Table #data
 
-
+/* Obtener Id y nombre de Salones */
+CREATE PROCEDURE ObtenerSalonesID_N
+AS
+begin
+Select ID_Salon As 'ID', Nombre FROM Salones
+end
+Go
 /* ***************************************************************/
-
+Drop procedure ObtenerSalonesID_N
 
 /************ Agregar Servicio **************/     /* - - - - - - - - - - - - - - - - - */
               

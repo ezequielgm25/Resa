@@ -56,6 +56,7 @@ namespace Capas.Data
 
                 DataTable DataT = new DataTable();
 
+                DataT.Clear();
                 DataAD.Fill(DataT);
 
                 return DataT;
@@ -173,5 +174,31 @@ namespace Capas.Data
         }
 
         #endregion
+
+        #region Obtener Salones ID y nombres
+
+        public DataTable ObtenerID_NombreDeSalones()
+        {
+            StoredProcedure = "ObtenerSalonesID_N";
+
+            SqlCommand comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            comando.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter DataAD_SalonesID_Nombre = new SqlDataAdapter(comando);
+          
+            DataTable DataT = new DataTable();
+
+            DataT.Clear();
+
+            DataAD_SalonesID_Nombre.Fill(DataT);
+
+            return DataT;
+
+
+        }
+
+        #endregion
+
     }
 }
