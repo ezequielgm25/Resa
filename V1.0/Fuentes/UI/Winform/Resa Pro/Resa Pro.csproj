@@ -186,11 +186,11 @@
     <Compile Include="Formularios\AgregarSolicitud.Designer.cs">
       <DependentUpon>AgregarSolicitud.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Eventos.cs">
+    <Compile Include="Formularios\EventosF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Eventos.Designer.cs">
-      <DependentUpon>Eventos.cs</DependentUpon>
+    <Compile Include="Formularios\EventosF.Designer.cs">
+      <DependentUpon>EventosF.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Loging.cs">
       <SubType>Form</SubType>
@@ -210,11 +210,11 @@
     <Compile Include="Formularios\Salones.Designer.cs">
       <DependentUpon>Salones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Solicitudes.cs">
+    <Compile Include="Formularios\SolicitudesF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Solicitudes.Designer.cs">
-      <DependentUpon>Solicitudes.cs</DependentUpon>
+    <Compile Include="Formularios\SolicitudesF.Designer.cs">
+      <DependentUpon>SolicitudesF.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Splash.cs">
       <SubType>Form</SubType>
@@ -242,6 +242,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResaDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResaDBDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Formularios\ActualizarEvento.resx">
       <DependentUpon>ActualizarEvento.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,8 +265,8 @@
     <EmbeddedResource Include="Formularios\AgregarSolicitud.resx">
       <DependentUpon>AgregarSolicitud.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Eventos.resx">
-      <DependentUpon>Eventos.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\EventosF.resx">
+      <DependentUpon>EventosF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Loging.resx">
       <DependentUpon>Loging.cs</DependentUpon>
@@ -272,8 +277,8 @@
     <EmbeddedResource Include="Formularios\Salones.resx">
       <DependentUpon>Salones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Solicitudes.resx">
-      <DependentUpon>Solicitudes.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\SolicitudesF.resx">
+      <DependentUpon>SolicitudesF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
@@ -307,6 +312,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ResaDBDataSet.xsc">
+      <DependentUpon>ResaDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ResaDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ResaDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ResaDBDataSet.xss">
+      <DependentUpon>ResaDBDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -348,6 +364,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagenes\Salon icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Solicitudes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Eventos.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

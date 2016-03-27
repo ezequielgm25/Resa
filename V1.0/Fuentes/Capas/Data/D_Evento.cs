@@ -197,7 +197,7 @@ namespace Capas.Data
             conexion.Conectar();
 
             Comando.CommandType = CommandType.StoredProcedure;
-            Comando.Parameters.Add("@ID_Solicitud", SqlDbType.Int).Value = ID_Solicitud;
+           
 
 
             //Variables Devueltas
@@ -291,6 +291,58 @@ namespace Capas.Data
         }
         #endregion
 
+
+
+        #region Obtener Eventos Detallados 
+
+        public DataTable ObtenerEventosDetallados()
+        {
+
+            StoredProcedure = "ObtenerEventosDetallados";
+
+            SqlCommand comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            comando.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter DataAD = new SqlDataAdapter(comando);
+
+            DataTable DataT = new DataTable();
+
+            DataT.Clear();
+
+            DataAD.Fill(DataT);
+
+            return DataT;
+
+
+        }
+
+
+        #endregion
+
+        #region Obtener Eventos por ID
+        public DataTable ObtenerEventosPorID(int ID_Salon)
+        {
+            StoredProcedure = "ObtenerEventosDetalladosXID";
+
+            SqlCommand comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.Add("@ID_Salon", SqlDbType.Int).Value = ID_Salon;
+
+            SqlDataAdapter DataAD = new SqlDataAdapter(comando);
+
+            DataTable DataT = new DataTable();
+
+            DataT.Clear();
+
+            DataAD.Fill(DataT);
+
+            return DataT;
+
+        }
+
+        #endregion
 
 
     }

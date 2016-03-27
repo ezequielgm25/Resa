@@ -488,7 +488,6 @@ D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\DevExpress.XtraCharts.v15.2.U
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.Salones.resources
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.ActualizarSalon.resources
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.VerSalon.resources
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.Solicitudes.resources
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.AgregarSolicitud.resources
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\DevExpress.CodeRush.UserControls.dll
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\DevExpress.DXCore.Controls.XtraVerticalGrid.v6.3.dll
@@ -496,6 +495,7 @@ D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\DevExpress.CodeRush.UserContr
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.ActualizarSolicitudesF.resources
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.VerSolicitud.resources
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.CrearEvento.resources
-D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.Eventos.resources
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.ActualizarEvento.resources
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.VerEvento.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.EventosF.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.SolicitudesF.resources

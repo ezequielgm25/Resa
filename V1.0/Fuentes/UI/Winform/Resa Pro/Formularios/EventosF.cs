@@ -14,7 +14,7 @@ using Capas.Infraestructura.Entidades;
 
 namespace Resa_Pro.Formularios
 {
-    public partial class Eventos : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class EventosF : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         //<Summary>
         // Interfaz que manejara las opciones y funciones de las solicitudes 
@@ -35,7 +35,7 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Contructor
-        public Eventos()
+        public EventosF()
         {
             InitializeComponent();
 

@@ -308,6 +308,11 @@ CREATE PROCEDURE ActualizarEvento
   
 CREATE Procedure ObtenerEventos
 AS
+BEGIN 
+ Update Solicitudes 
+ Set Aprobacion = 'Efectuado' from Solicitudes
+ inner join Eventos on eventos.ID_Solicitud = Solicitudes.ID_Solicitud where Eventos.Tiempo_Final < GETDATE() 
+END
 BEGIN
 Select EV.ID_Evento as 'ID',  EV.Titulo_Evento as 'Titulo' , EV.Tipo as 'Tipo' , EV.Topico as 'Topico',EV.ID_Solicitud as 'Solicitud', organizadores.Nombre as 'Organizador', Salones.Nombre  as 'Salon'from Eventos as EV
 Inner join organizadores on organizadores.ID_Evento = EV.ID_Evento
@@ -319,7 +324,51 @@ GO
 /* Eliminando Stored procedure */
 use ResaDB
 Drop procedure ObtenerEventos
-s
+/*  - ---  - - - -- - - - -- - - */
+
+/********************************************/
+
+CREATE PROCEDURE ObtenerEventosDetallados 
+AS
+BEGIN 
+ Update Solicitudes 
+ Set Aprobacion = 'Efectuado' from Solicitudes
+ inner join Eventos on eventos.ID_Solicitud = Solicitudes.ID_Solicitud where Eventos.Tiempo_Final < GETDATE() 
+END
+BEGIN
+Select EV.Titulo_Evento as 'Titulo'  , EV.Tipo  , EV.Topico , organizadores.Nombre as 'Organizador', Salones.Nombre  as 'Salon', EV.Tiempo_Inicio , EV.Tiempo_Final from Eventos as EV
+Inner join organizadores on organizadores.ID_Evento = EV.ID_Evento
+Inner join Solicitudes  on Solicitudes.ID_Solicitud = EV.ID_Solicitud
+Inner join Salones on Salones.ID_Salon = Solicitudes.ID_Salon Where Solicitudes.Aprobacion = 'Aprobada' order by Tiempo_Inicio ASC
+END
+GO
+/**/
+
+Select * from Eventos
+/*Eliminando Stored procedure */ 
+Drop procedure ObtenerEventosDetallados
+
+CREATE PROCEDURE ObtenerEventosDetalladosXID
+@ID_Salon as int 
+AS
+BEGIN 
+ Update Solicitudes 
+ Set Aprobacion = 'Efectuado' from Solicitudes
+ inner join Eventos on eventos.ID_Solicitud = Solicitudes.ID_Solicitud where Eventos.Tiempo_Final < GETDATE() 
+END
+BEGIN
+Select EV.Titulo_Evento as 'Titulo'  , EV.Tipo  , EV.Topico , organizadores.Nombre as 'Organizador', Salones.Nombre  as 'Salon', EV.Tiempo_Inicio , EV.Tiempo_Final from Eventos as EV
+Inner join organizadores on organizadores.ID_Evento = EV.ID_Evento
+Inner join Solicitudes  on Solicitudes.ID_Solicitud = EV.ID_Solicitud
+Inner join Salones on Salones.ID_Salon = Solicitudes.ID_Salon Where Solicitudes.Aprobacion = 'Aprobada' and Solicitudes.ID_Salon = @ID_Salon order by Tiempo_Inicio ASC
+END
+GO
+/* Eliminar Stored procedure */
+
+Drop Procedure  ObtenerEventosDetalladosXID
+
+
+
 /* Stored procedures de los organizadores*/
 
 /* Insertar un organizador */

@@ -63,6 +63,16 @@ namespace Resa_Pro.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Eventos {
+            get {
+                object obj = ResourceManager.GetObject("Eventos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FondoLoging {
             get {
                 object obj = ResourceManager.GetObject("FondoLoging", resourceCulture);
@@ -86,6 +96,16 @@ namespace Resa_Pro.Properties {
         internal static System.Drawing.Bitmap Salon_icono {
             get {
                 object obj = ResourceManager.GetObject("Salon icono", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Solicitudes {
+            get {
+                object obj = ResourceManager.GetObject("Solicitudes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

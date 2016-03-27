@@ -12,7 +12,7 @@ using Capas.Negocio;
 using Capas.Infraestructura.Entidades;
 namespace Resa_Pro.Formularios
 {
-    public partial class Solicitudes : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class SolicitudesF : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         //<Summary>
         // interfaz que manejara las opciones y funciones de las solicitudes 
@@ -29,7 +29,7 @@ namespace Resa_Pro.Formularios
 
 
 
-        public Solicitudes()
+        public SolicitudesF()
         {
             InitializeComponent();
 

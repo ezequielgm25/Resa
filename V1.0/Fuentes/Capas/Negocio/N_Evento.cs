@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace Capas.Negocio
 {
-   public class N_Evento
+    public class N_Evento
     {
         //<Summary>
         // Clase que avergara la logistica de la entidad evento
@@ -57,9 +57,9 @@ namespace Capas.Negocio
             int Resultado;
 
 
-             Resultado = d_Evento.VerificarFechas(FechaInicio, FechaFinal, ID_Salon);
+            Resultado = d_Evento.VerificarFechas(FechaInicio, FechaFinal, ID_Salon);
 
-             return Resultado;
+            return Resultado;
 
         }
 
@@ -71,9 +71,9 @@ namespace Capas.Negocio
         {
             E_Evento e_Evento = new E_Evento();
 
-            e_Evento= d_Evento.ObtenerEvento(ID_Solicitud);
+            e_Evento = d_Evento.ObtenerEvento(ID_Solicitud);
 
-           
+
 
             return e_Evento;
         }
@@ -106,5 +106,37 @@ namespace Capas.Negocio
         }
 
         #endregion
+
+
+        #region Obtener Eventos Detallados 
+        public DataTable ObtenerEventosDetallados()
+        {
+            DataT = d_Evento.ObtenerEventosDetallados();
+
+            return DataT;
+        }
+
+
+        #endregion
+
+
+
+        #region Obtener Eventospor ID 
+
+        public DataTable ObtenerEventosPorID(int ID_Salon)
+        {
+            DataT = d_Evento.ObtenerEventosPorID(ID_Salon);
+
+            return DataT;
+        }
+
+        #endregion
+
+
+
+
+
+
+
     }
 }
