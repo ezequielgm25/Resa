@@ -168,6 +168,12 @@
     <Compile Include="Formularios\ActualizarSolicitudesF.Designer.cs">
       <DependentUpon>ActualizarSolicitudesF.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\ActualizarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ActualizarUsuario.Designer.cs">
+      <DependentUpon>ActualizarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\CrearEvento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +191,12 @@
     </Compile>
     <Compile Include="Formularios\AgregarSolicitud.Designer.cs">
       <DependentUpon>AgregarSolicitud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\CrearUsuarioF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\CrearUsuarioF.Designer.cs">
+      <DependentUpon>CrearUsuarioF.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\EventosF.cs">
       <SubType>Form</SubType>
@@ -222,6 +234,12 @@
     <Compile Include="Formularios\Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\UsuariosF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\UsuariosF.Designer.cs">
+      <DependentUpon>UsuariosF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\VerEvento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +274,9 @@
     <EmbeddedResource Include="Formularios\ActualizarSolicitudesF.resx">
       <DependentUpon>ActualizarSolicitudesF.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ActualizarUsuario.resx">
+      <DependentUpon>ActualizarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\CrearEvento.resx">
       <DependentUpon>CrearEvento.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\AgregarSolicitud.resx">
       <DependentUpon>AgregarSolicitud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\CrearUsuarioF.resx">
+      <DependentUpon>CrearUsuarioF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\EventosF.resx">
       <DependentUpon>EventosF.cs</DependentUpon>
@@ -282,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\UsuariosF.resx">
+      <DependentUpon>UsuariosF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\VerEvento.resx">
       <DependentUpon>VerEvento.cs</DependentUpon>

@@ -499,3 +499,6 @@ D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.Actualiz
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.VerEvento.resources
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.EventosF.resources
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.SolicitudesF.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.UsuariosF.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.CrearUsuarioF.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.ActualizarUsuario.resources

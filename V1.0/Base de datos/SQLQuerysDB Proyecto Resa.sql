@@ -65,7 +65,6 @@ Create Table Opciones
 (
  ID_Opcion int not null Identity(1,1),
  Opcion    Varchar(50) not null, 
- Estado    Bit not null,
  ID_Perfil int not null,
  Primary Key(ID_Opcion),
  Foreign Key(ID_Perfil) REFERENCES Perfiles(ID_Perfil) 
@@ -75,6 +74,7 @@ Create Table Opciones
  )
   GO
   
+
   /* Creando Tabla Funciones */
 
 Create Table Funciones 
@@ -115,7 +115,8 @@ CREATE PROCEDURE IngresarUsuario
   @Usuario  as nvarchar(50),
   @Pass     as nvarchar(300),
   @Estado   as nvarchar(50),
-  @ID_Rol   as int
+  @ID_Rol   as int,
+  @ID_Usuario as int output
 AS 
 BEGIN
     DECLARE @hash varchar(4000);
@@ -134,6 +135,10 @@ BEGIN
       
     )
 END
+BEGIN
+Set @ID_Usuario= @@IDENTITY; 
+
+END
 GO
 /*********  Eliminando Stored Procedure *************/
 Drop procedure IngresarUsuario
@@ -143,7 +148,7 @@ Drop procedure IngresarUsuario
    /* Prueba */
 Execute IngresarUsuario 'Juan','Ramirez','JuanRM','1234','Activo',3
 select *  from usuarios
-
+use ResaDB
 select * from usuarios
 /* Loging Usuario  */ 
 

@@ -23,6 +23,10 @@ namespace Capas.Infraestructura.Entidades
 
         private string Contraseña;
 
+        private string Estado;
+
+        private int ID_Rol;
+
         private String Rol;
 
 
@@ -59,8 +63,21 @@ namespace Capas.Infraestructura.Entidades
             get { return Contraseña; }
             set { Contraseña = value; }
         }
-        
-        public string rol
+
+        public string estado
+        {
+            get { return Estado; }
+            set { Estado = value; }
+        }
+
+        public int id_Rol
+        {
+            get { return ID_Rol; }
+            set { ID_Rol = value; }
+        }
+
+
+        public String rol
         {
             get { return Rol;  }
             set { Rol = value; }

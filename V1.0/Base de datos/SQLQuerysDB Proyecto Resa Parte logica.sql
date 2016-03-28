@@ -277,6 +277,8 @@ begin
 Select ID_Salon As 'ID', Nombre, Ubicacion, Capacidad, Estado FROM Salones
 end
 Go
+
+use resaDB
 /* Eliminar el stored procedure*/
 drop procedure ObtenerSalones
 

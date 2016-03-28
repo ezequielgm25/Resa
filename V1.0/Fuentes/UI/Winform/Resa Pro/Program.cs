@@ -27,11 +27,13 @@ namespace Resa_Pro
             //Cuando El usuario se autentifique se cerrara el loging y se abrira la pantalla principal
             //</summary>
 
-            Application.Run(new Formularios.MainScreen(12));
+            //Application.Run(new Formularios.MainScreen(12));
 
             //Application.Run(new Formularios.Solicitudes());
 
             //Application.Run(new Formularios.Eventos());
+
+            Application.Run(new Formularios.UsuariosF());
                 
 
         }
