@@ -7,4 +7,10 @@
     <TipoOpcion />
     <Excepcion />
   </Error>
+  <Error Fecha="03/29/16 11:09:30 PM">
+    <ID_Usuario>22</ID_Usuario>
+    <Opcion>Salones</Opcion>
+    <TipoOpcion>Crear</TipoOpcion>
+    <Excepcion>nose</Excepcion>
+  </Error>
 </Errores>

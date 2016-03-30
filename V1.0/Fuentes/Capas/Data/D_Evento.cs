@@ -197,8 +197,8 @@ namespace Capas.Data
             conexion.Conectar();
 
             Comando.CommandType = CommandType.StoredProcedure;
-           
 
+            Comando.Parameters.Add("@ID_Solicitud", SqlDbType.Int).Value = ID_Solicitud;
 
             //Variables Devueltas
 

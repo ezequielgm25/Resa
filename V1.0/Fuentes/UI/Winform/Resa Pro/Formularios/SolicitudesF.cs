@@ -19,23 +19,57 @@ namespace Resa_Pro.Formularios
         //</Summary>
 
         #region Declaraciones
-
+        //Solicitud 
         N_Solicitud n_Solicitud = new N_Solicitud();
 
         E_Solicitud e_Solicitud = new E_Solicitud();
+        //Usuarios 
+
+        N_Usuario n_Usuario = new N_Usuario();
+
+        E_Usuario e_Usuario = new E_Usuario();
+        //Auditorias 
+
+        N_Auditoria n_Auditoria = new N_Auditoria();
+
+        E_Auditoria e_Auditoria = new E_Auditoria();
 
 
         #endregion
 
 
 
-        public SolicitudesF()
+        public SolicitudesF(E_Usuario e_UsuarioAU)
         {
             InitializeComponent();
 
             #region Obteniendo las Solicitudes 
 
             GCSolicitudes.DataSource = n_Solicitud.ObtenerSolicitudes();
+
+            #endregion
+
+            //Asignando e_Usuario   a la goblal
+
+            e_Usuario = e_UsuarioAU;
+
+
+            #region Control de usuario
+
+            //Opciones de usuario 
+
+            int Perfil_Usuario = n_Usuario.ObtenerPerfil(e_UsuarioAU.id_Usuario);
+
+            //Trabajando la opcion de Usuarios
+            String Opcion = "Solicitudes";  // -- - -Opcion
+
+            int ID_OSolicitudes = n_Usuario.ObtenerIDOpcion(Opcion, Perfil_Usuario);
+            //Agregar
+            SBAgregarS.Visible = n_Usuario.ObtenerFuncion(ID_OSolicitudes, "Crear");
+            //Actualizar
+            SBActualizar.Visible = n_Usuario.ObtenerFuncion(ID_OSolicitudes, "Actualizar");
+            //Eliminar
+            SBEliminar.Visible = n_Usuario.ObtenerFuncion(ID_OSolicitudes, "Eliminar");
 
             #endregion
 
@@ -46,16 +80,39 @@ namespace Resa_Pro.Formularios
         #region Agregar Solicitud 
         private void SBAgregarS_Click(object sender, EventArgs e)
         {
-            //Instancia de la interfaz de crear solicitud 
 
-            AgregarSolicitud A_Solicitud = new AgregarSolicitud();
+            //Obteniendo la fecha de entrada 
+            String Fecha_Entrada = Convert.ToString(DateTime.Now);
 
-            A_Solicitud.ShowDialog();
+            try
+            {
+                //Instancia de la interfaz de crear solicitud 
 
-            //Actualizando la data en el grid control 
-            GCSolicitudes.DataSource = n_Solicitud.ObtenerSolicitudes();
+                AgregarSolicitud A_Solicitud = new AgregarSolicitud(e_Usuario);
 
+                A_Solicitud.ShowDialog();
 
+                //Actualizando la data en el grid control 
+                GCSolicitudes.DataSource = n_Solicitud.ObtenerSolicitudes();
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(Convert.ToString(E));
+            }
+
+            finally
+            {
+                e_Auditoria.id_Usuario = e_Usuario.id_Usuario;
+                e_Auditoria.tipoUsuario = e_Usuario.rol;
+                e_Auditoria.fecha_Entrada = Fecha_Entrada;
+                e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
+                e_Auditoria.opcion = "Solicitudes";
+                e_Auditoria.tipoOpcion = "Agregar";
+
+                //insertando la auditoria
+
+                n_Auditoria.InsertarAuditoria(e_Auditoria);
+            }
 
         }
 
@@ -73,25 +130,51 @@ namespace Resa_Pro.Formularios
             // Se actualizara una solicitud 
             //</Summary>
 
-            int ID_Solicitud = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
-            string Nombre_Salon = Convert.ToString(gridView1.GetFocusedRowCellValue("Salon"));
+            //Obteniendo la fecha de entrada 
+            String Fecha_Entrada = Convert.ToString(DateTime.Now);
 
-            if (ID_Solicitud != 0)
+            try
             {
+                int ID_Solicitud = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
+                string Nombre_Salon = Convert.ToString(gridView1.GetFocusedRowCellValue("Salon"));
 
-                ActualizarSolicitudesF AS_Form = new ActualizarSolicitudesF(ID_Solicitud, Nombre_Salon);
+                if (ID_Solicitud != 0)
+                {
 
-                AS_Form.ShowDialog();
+                    ActualizarSolicitudesF AS_Form = new ActualizarSolicitudesF(ID_Solicitud, Nombre_Salon);
 
-                //Actualizar el grid 
+                    AS_Form.ShowDialog();
 
-                GCSolicitudes.DataSource = n_Solicitud.ObtenerSolicitudes();
+                    //Actualizar el grid 
+
+                    GCSolicitudes.DataSource = n_Solicitud.ObtenerSolicitudes();
+                }
+
+                else
+                {
+                    MessageBox.Show(" No hay una solicitud seleccionada");
+                }
+
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(Convert.ToString(E));
             }
 
-            else
+            finally
             {
-                MessageBox.Show(" No hay una solicitud seleccionada");
+                e_Auditoria.id_Usuario = e_Usuario.id_Usuario;
+                e_Auditoria.tipoUsuario = e_Usuario.rol;
+                e_Auditoria.fecha_Entrada = Fecha_Entrada;
+                e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
+                e_Auditoria.opcion = "Solicitudes";
+                e_Auditoria.tipoOpcion = "Actualizar";
+
+                //insertando la auditoria
+
+                n_Auditoria.InsertarAuditoria(e_Auditoria);
             }
+
 
         }
 
@@ -107,38 +190,64 @@ namespace Resa_Pro.Formularios
             //Recupera el ID de la solicitud la  cual va a ser eliminada
             e_Solicitud.id_Solicitud = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
 
-            if (e_Solicitud.id_Solicitud != 0)
+            //Obteniendo la fecha de entrada 
+            String Fecha_Entrada = Convert.ToString(DateTime.Now);
+
+            try
             {
-                DialogResult dialogResult = MessageBox.Show("Desea eliminar la Solicitud?", "Confirmation", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
+
+                if (e_Solicitud.id_Solicitud != 0)
                 {
-
-
-
-                    FilasAfectadas = n_Solicitud.EliminarSolicitud(e_Solicitud.id_Solicitud);
-
-                    if (FilasAfectadas != 1)
+                    DialogResult dialogResult = MessageBox.Show("Desea eliminar la Solicitud?", "Confirmation", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
                     {
-                        MessageBox.Show("Ocurrio un error al eliminar la solicitud");
+
+
+
+                        FilasAfectadas = n_Solicitud.EliminarSolicitud(e_Solicitud.id_Solicitud);
+
+                        if (FilasAfectadas != 1)
+                        {
+                            MessageBox.Show("Ocurrio un error al eliminar la solicitud");
+                        }
+                        else
+                        {
+                            MessageBox.Show("La solicitud se elimino correctamente");
+
+                            GCSolicitudes.DataSource = n_Solicitud.ObtenerSolicitudes();
+
+                        }
+
                     }
-                    else
+                    else if (dialogResult == DialogResult.No)
                     {
-                        MessageBox.Show("La solicitud se elimino correctamente");
-
-                        GCSolicitudes.DataSource = n_Solicitud.ObtenerSolicitudes();
-
+                        //No hacer nada
                     }
 
                 }
-                else if (dialogResult == DialogResult.No)
+                else
                 {
-                    //No hacer nada
+                    MessageBox.Show(" No hay solicitud Seleccionada ");
                 }
 
             }
-            else
+            catch (Exception E)
             {
-                MessageBox.Show(" No hay solicitud Seleccionada ");
+                MessageBox.Show(Convert.ToString(E));
+            }
+
+            finally
+            {
+                e_Auditoria.id_Usuario = e_Usuario.id_Usuario;
+                e_Auditoria.tipoUsuario = e_Usuario.rol;
+                e_Auditoria.fecha_Entrada = Fecha_Entrada;
+                e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
+                e_Auditoria.opcion = "Solicitudes";
+                e_Auditoria.tipoOpcion = "Eliminar";
+
+                //insertando la auditoria
+
+                n_Auditoria.InsertarAuditoria(e_Auditoria);
             }
 
 
@@ -161,7 +270,7 @@ namespace Resa_Pro.Formularios
             if (ID_Solicitud != 0)
             {
 
-                VerSolicitud AS_Form = new VerSolicitud(ID_Solicitud, Nombre_Salon);
+                VerSolicitud AS_Form = new VerSolicitud(ID_Solicitud, Nombre_Salon, e_Usuario);
 
                 AS_Form.ShowDialog();
 

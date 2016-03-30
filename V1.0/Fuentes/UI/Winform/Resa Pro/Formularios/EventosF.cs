@@ -31,11 +31,23 @@ namespace Resa_Pro.Formularios
         E_Solicitud e_Solicitud = new E_Solicitud();
 
         N_Solicitud n_Solicitud = new N_Solicitud();
+        //Usuarios 
+
+        N_Usuario n_Usuario = new N_Usuario();
+
+        E_Usuario e_Usuario = new E_Usuario();
+        //Auditorias 
+
+        N_Auditoria n_Auditoria = new N_Auditoria();
+
+        E_Auditoria e_Auditoria = new E_Auditoria();
+
+
 
         #endregion
 
         #region Contructor
-        public EventosF()
+        public EventosF(E_Usuario e_UsuarioAU)
         {
             InitializeComponent();
 
@@ -45,6 +57,29 @@ namespace Resa_Pro.Formularios
 
             #endregion
 
+            //Asignando e_Usuario   a la goblal
+
+            e_Usuario = e_UsuarioAU;
+
+
+            #region Control de usuario
+
+            //Opciones de usuario 
+
+            int Perfil_Usuario = n_Usuario.ObtenerPerfil(e_UsuarioAU.id_Usuario);
+
+            //Trabajando la opcion de Usuarios
+            String Opcion = "Eventos";  // -- - -Opcion
+
+            int ID_OEventos = n_Usuario.ObtenerIDOpcion(Opcion, Perfil_Usuario);
+            //Crear
+            SBAgregarE.Visible = n_Usuario.ObtenerFuncion(ID_OEventos, "Crear");
+            //Actualizar
+            SBActualizarE.Visible = n_Usuario.ObtenerFuncion(ID_OEventos, "Actualizar");
+            //Eliminar
+            SBEliminarE.Visible = n_Usuario.ObtenerFuncion(ID_OEventos, "Eliminar");
+
+            #endregion
         }
 
         #endregion
@@ -52,15 +87,38 @@ namespace Resa_Pro.Formularios
         #region marcar Un evento
         private void SBAgregarE_Click(object sender, EventArgs e)
         {
-            //Instancia de la interfaz 
 
-            CrearEvento C_Evento = new CrearEvento();
+            //Obteniendo la fecha de entrada 
+            String Fecha_Entrada = Convert.ToString(DateTime.Now);
 
-            C_Evento.ShowDialog();
+            try
+            {
+                //Instancia de la interfaz 
 
-            //Actualizando la data de el grid control 
-            GCEventos.DataSource = n_Evento.ObtenerEventos();
+                CrearEvento C_Evento = new CrearEvento(e_Usuario);
 
+                C_Evento.ShowDialog();
+
+                //Actualizando la data de el grid control 
+                GCEventos.DataSource = n_Evento.ObtenerEventos();
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(Convert.ToString(E));
+            }
+            finally
+            {
+                e_Auditoria.id_Usuario = e_Usuario.id_Usuario;
+                e_Auditoria.tipoUsuario = e_Usuario.rol;
+                e_Auditoria.fecha_Entrada = Fecha_Entrada;
+                e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
+                e_Auditoria.opcion = "Eventos";
+                e_Auditoria.tipoOpcion = "Agregar";
+
+                //insertando la auditoria
+
+                n_Auditoria.InsertarAuditoria(e_Auditoria);
+            }
 
 
 
@@ -71,45 +129,71 @@ namespace Resa_Pro.Formularios
         #region Eliminar Evento
         private void SBEliminarE_Click(object sender, EventArgs e)
         {
-            int FilasAfectadas = 0;
 
-            //Preguntar al usuario  si desea eliminarlo
-            //Recupera el ID de la solicitud la  cual va a ser eliminada
-            e_Solicitud.id_Solicitud = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Solicitud"));
+            //Obteniendo la fecha de entrada 
+            String Fecha_Entrada = Convert.ToString(DateTime.Now);
 
-            if (e_Solicitud.id_Solicitud != 0)
-            {
-                DialogResult dialogResult = MessageBox.Show("Desea eliminar el evento?", "Confirmation", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
+            try {
+
+                int FilasAfectadas = 0;
+
+                //Preguntar al usuario  si desea eliminarlo
+                //Recupera el ID de la solicitud la  cual va a ser eliminada
+                e_Solicitud.id_Solicitud = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Solicitud"));
+
+                if (e_Solicitud.id_Solicitud != 0)
                 {
-
-
-
-                    FilasAfectadas = n_Solicitud.EliminarSolicitud(e_Solicitud.id_Solicitud);
-
-                    if (FilasAfectadas != 1)
+                    DialogResult dialogResult = MessageBox.Show("Desea eliminar el evento?", "Confirmation", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
                     {
-                        MessageBox.Show("Ocurrio un error al eliminar el evento");
+
+
+
+                        FilasAfectadas = n_Solicitud.EliminarSolicitud(e_Solicitud.id_Solicitud);
+
+                        if (FilasAfectadas != 1)
+                        {
+                            MessageBox.Show("Ocurrio un error al eliminar el evento");
+                        }
+                        else
+                        {
+                            MessageBox.Show("El evento se elimino correctamente");
+
+                            GCEventos.DataSource = n_Evento.ObtenerEventos();
+
+                        }
+
                     }
-                    else
+                    else if (dialogResult == DialogResult.No)
                     {
-                        MessageBox.Show("El evento se elimino correctamente");
-
-                        GCEventos.DataSource = n_Evento.ObtenerEventos();
-
+                        //No hacer nada
                     }
 
                 }
-                else if (dialogResult == DialogResult.No)
+                else
                 {
-                    //No hacer nada
+                    MessageBox.Show(" No hay Evento seleccionado ");
                 }
 
             }
-            else
+            catch(Exception E)
             {
-                MessageBox.Show(" No hay Evento seleccionado ");
+                MessageBox.Show(Convert.ToString(E));
             }
+            finally
+            {
+                e_Auditoria.id_Usuario = e_Usuario.id_Usuario;
+                e_Auditoria.tipoUsuario = e_Usuario.rol;
+                e_Auditoria.fecha_Entrada = Fecha_Entrada;
+                e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
+                e_Auditoria.opcion = "Eventos";
+                e_Auditoria.tipoOpcion = "Eliminar";
+
+                //insertando la auditoria
+
+                n_Auditoria.InsertarAuditoria(e_Auditoria);
+            }
+
 
         }
 
@@ -123,25 +207,52 @@ namespace Resa_Pro.Formularios
             // Se actualizara un evento
             //</Summary>
 
-            int ID_Solicitud = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Solicitud"));
-            string Nombre_Salon = Convert.ToString(gridView1.GetFocusedRowCellValue("Salon"));
+            //Obteniendo la fecha de entrada 
+            String Fecha_Entrada = Convert.ToString(DateTime.Now);
 
-            if (ID_Solicitud != 0)
+            try {
+
+                int ID_Solicitud = Convert.ToInt32(gridView1.GetFocusedRowCellValue("Solicitud"));
+                string Nombre_Salon = Convert.ToString(gridView1.GetFocusedRowCellValue("Salon"));
+
+                if (ID_Solicitud != 0)
+                {
+
+                    ActualizarEvento AS_Form = new ActualizarEvento(ID_Solicitud, Nombre_Salon);
+
+                    AS_Form.ShowDialog();
+
+                    //Actualizar el grid 
+
+                    GCEventos.DataSource = n_Evento.ObtenerEventos();
+                }
+
+                else
+                {
+                    MessageBox.Show(" No hay un evento seleccionado");
+                }
+
+
+            }
+            catch(Exception E)
             {
-
-                ActualizarEvento AS_Form = new ActualizarEvento(ID_Solicitud, Nombre_Salon);
-
-                AS_Form.ShowDialog();
-
-                //Actualizar el grid 
-
-                GCEventos.DataSource = n_Evento.ObtenerEventos();
+                MessageBox.Show(Convert.ToString(E));
             }
 
-            else
+            finally
             {
-                MessageBox.Show(" No hay un evento seleccionado");
+                e_Auditoria.id_Usuario = e_Usuario.id_Usuario;
+                e_Auditoria.tipoUsuario = e_Usuario.rol;
+                e_Auditoria.fecha_Entrada = Fecha_Entrada;
+                e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
+                e_Auditoria.opcion = "Eventos";
+                e_Auditoria.tipoOpcion = "Actualizar";
+
+                //insertando la auditoria
+
+                n_Auditoria.InsertarAuditoria(e_Auditoria);
             }
+
 
         }
 

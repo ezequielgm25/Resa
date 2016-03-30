@@ -65,6 +65,8 @@
             this.BBSalones = new DevExpress.XtraBars.BarButtonItem();
             this.BBSolicitudes = new DevExpress.XtraBars.BarButtonItem();
             this.BBEventos = new DevExpress.XtraBars.BarButtonItem();
+            this.BBUsuarios = new DevExpress.XtraBars.BarButtonItem();
+            this.BBReportes = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPagesOSistema = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.Salones = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -72,6 +74,10 @@
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.Eventos = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.RBPUsuarios = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.RBPReportes = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemSpinEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemSpinEdit();
             this.repositoryItemDuration1 = new DevExpress.XtraScheduler.UI.RepositoryItemDuration();
             this.RPGSkins = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -208,9 +214,11 @@
             this.barButtonItem3,
             this.BBSalones,
             this.BBSolicitudes,
-            this.BBEventos});
+            this.BBEventos,
+            this.BBUsuarios,
+            this.BBReportes});
             this.RMainScreen.Location = new System.Drawing.Point(0, 0);
-            this.RMainScreen.MaxItemId = 58;
+            this.RMainScreen.MaxItemId = 60;
             this.RMainScreen.Name = "RMainScreen";
             this.RMainScreen.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribbonPagesOSistema});
@@ -289,13 +297,33 @@
             this.BBEventos.Name = "BBEventos";
             this.BBEventos.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BBEventos_ItemClick);
             // 
+            // BBUsuarios
+            // 
+            this.BBUsuarios.Caption = "Usuarios";
+            this.BBUsuarios.Glyph = ((System.Drawing.Image)(resources.GetObject("BBUsuarios.Glyph")));
+            this.BBUsuarios.Id = 58;
+            this.BBUsuarios.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("BBUsuarios.LargeGlyph")));
+            this.BBUsuarios.Name = "BBUsuarios";
+            this.BBUsuarios.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BBUsuarios_ItemClick);
+            // 
+            // BBReportes
+            // 
+            this.BBReportes.Caption = "Reportes";
+            this.BBReportes.Glyph = ((System.Drawing.Image)(resources.GetObject("BBReportes.Glyph")));
+            this.BBReportes.Id = 59;
+            this.BBReportes.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("BBReportes.LargeGlyph")));
+            this.BBReportes.Name = "BBReportes";
+            this.BBReportes.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BBReportes_ItemClick);
+            // 
             // ribbonPagesOSistema
             // 
             this.ribbonPagesOSistema.Name = "ribbonPagesOSistema";
             this.ribbonPagesOSistema.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.Salones,
             this.Solicitudes,
-            this.Eventos});
+            this.Eventos,
+            this.RBPUsuarios,
+            this.RBPReportes});
             this.ribbonPagesOSistema.Text = "Opciones del sistema";
             // 
             // Salones
@@ -338,6 +366,33 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.BBEventos);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Gestionar Eventos";
+            // 
+            // RBPUsuarios
+            // 
+            this.RBPUsuarios.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup4});
+            this.RBPUsuarios.Name = "RBPUsuarios";
+            this.RBPUsuarios.Text = "Usuarios";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.Glyph = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup4.Glyph")));
+            this.ribbonPageGroup4.ItemLinks.Add(this.BBUsuarios);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "Gestionar los usuarios";
+            // 
+            // RBPReportes
+            // 
+            this.RBPReportes.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup5});
+            this.RBPReportes.Name = "RBPReportes";
+            this.RBPReportes.Text = "Reportes";
+            // 
+            // ribbonPageGroup5
+            // 
+            this.ribbonPageGroup5.ItemLinks.Add(this.BBReportes);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "Gestionar los reportes";
             // 
             // repositoryItemSpinEdit1
             // 
@@ -625,5 +680,11 @@
         private DevExpress.XtraGrid.Columns.TileViewColumn colSalon;
         private DevExpress.XtraGrid.Columns.TileViewColumn colTiempo_Inicio;
         private DevExpress.XtraGrid.Columns.TileViewColumn colTiempo_Final;
+        private DevExpress.XtraBars.BarButtonItem BBUsuarios;
+        private DevExpress.XtraBars.BarButtonItem BBReportes;
+        private DevExpress.XtraBars.Ribbon.RibbonPage RBPUsuarios;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.Ribbon.RibbonPage RBPReportes;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
     }
 }

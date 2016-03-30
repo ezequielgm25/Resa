@@ -16,24 +16,23 @@ namespace Resa_Pro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             //Application.Run(new Splash());
 
             //<summary>
             //Cuando se cierre  el splash se abrira la ventana de loging
             //</summary>
 
-            //Application.Run(new Formularios.Loging());
+            Application.Run(new Formularios.Loging());
+
             //<summary>
             //Cuando El usuario se autentifique se cerrara el loging y se abrira la pantalla principal
             //</summary>
 
+
             //Application.Run(new Formularios.MainScreen(12));
 
-            //Application.Run(new Formularios.Solicitudes());
-
-            //Application.Run(new Formularios.Eventos());
-
-            Application.Run(new Formularios.UsuariosF());
+          
                 
 
         }

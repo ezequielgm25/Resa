@@ -31,7 +31,7 @@ namespace Resa_Pro.Formularios
         //usuarios 
         private N_Usuario n_Usuario;
 
-        private E_Usuario e_Usuario;
+        private E_Usuario e_UsuarioAU;
 
         //Salones 
 
@@ -48,10 +48,18 @@ namespace Resa_Pro.Formularios
         N_Evento n_Evento = new N_Evento();
 
 
+        //Usuarios
+
+        E_Auditoria e_Auditoria = new E_Auditoria();
+
+        N_Auditoria n_Auditoria = new N_Auditoria();
+
+        E_Usuario e_Usuario = new  E_Usuario();
         #endregion
 
 
 
+        #region Contructor
 
         public MainScreen(int ID_Usuario)
         {
@@ -71,15 +79,22 @@ namespace Resa_Pro.Formularios
 
 
             //obteniendo datos del usuario 
-            e_Usuario = n_Usuario.ObtenerUsuario(ID_Usuario);
+            e_UsuarioAU = n_Usuario.ObtenerUsuario(ID_Usuario);
+
+            //Asignando el ID_Usuario 
+
+            e_UsuarioAU.id_Usuario = ID_Usuario;
+
 
             //Asignando a elementos de la barra de estado los datos
-            BarStaticINombreU.Caption = e_Usuario.nombre + " " + e_Usuario.apellido;
+            BarStaticINombreU.Caption = e_UsuarioAU.nombre + " " + e_UsuarioAU.apellido;
 
-            barStaticItemRol.Caption = e_Usuario.rol;
+            barStaticItemRol.Caption = e_UsuarioAU.rol;
 
             barItemFecha.Caption = Convert.ToString(System.DateTime.Today.ToString("d"));
             /*----------------------------------------------------------------------------*/
+
+
 
             #region Completando el data source de los grid control 
 
@@ -90,8 +105,53 @@ namespace Resa_Pro.Formularios
 
 
 
+            #region Seguridad  autentificando el usuario 
+
+
+
+            //Opciones de usuario 
+
+            int Perfil_Usuario = n_Usuario.ObtenerPerfil(ID_Usuario);
+
+            //Trabajando la opcion de Usuarios
+            String Opcion = "Usuarios";  // -- - -Opcion
+
+            int ID_OUsuarios = n_Usuario.ObtenerIDOpcion(Opcion, Perfil_Usuario);
+
+            //Usuarios 
+            if (n_Usuario.ObtenerFuncion(ID_OUsuarios, "Ver") == true || n_Usuario.ObtenerFuncion(ID_OUsuarios, "Crear") == true || n_Usuario.ObtenerFuncion(ID_OUsuarios, "Actualizar") == true || n_Usuario.ObtenerFuncion(ID_OUsuarios, "Eliminar") == true)
+            {
+
+                RBPUsuarios.Visible = true;
+
+            }
+            else
+            {
+                RBPUsuarios.Visible = false;
+            }
+
+            //Reportes 
+            Opcion = "Reportes";  // -- - -Opcion
+
+            int ID_OReportes= n_Usuario.ObtenerIDOpcion(Opcion, Perfil_Usuario);
+
+            if(n_Usuario.ObtenerFuncion(ID_OReportes, "Imprimir") == true || n_Usuario.ObtenerFuncion(ID_OReportes, "Generar") == true)
+            {
+                RBPReportes.Visible = true;
+            }
+            else
+            {
+                RBPReportes.Visible = false;
+            }
+
+
+            #endregion
+
+
 
         }
+
+        #endregion
 
         //<summary>
         //Meto que inicializa la galeria de temas de la aplicacion
@@ -127,21 +187,22 @@ namespace Resa_Pro.Formularios
         #endregion
 
 
-
-
         #region Salones
 
         private void BBSalones_ItemClick(object sender, ItemClickEventArgs e)
         {
             //Opcion de  gestion de los salones 
 
-            Salones salones = new Salones();
+            Salones salones = new Salones(e_UsuarioAU);
 
             salones.ShowDialog();
 
             //Actualizando el grid control de Salones 
 
             GCSalones.DataSource = n_Salon.ObtenerID_NombreDeSalones();
+
+            //Cuando se corte el dialogo se hara la siguiente accion 
+            GCEventos.DataSource = n_Evento.ObtenerEventosDetallados();
 
 
         }
@@ -154,7 +215,7 @@ namespace Resa_Pro.Formularios
         {
             //Interrfaz solicitudes 
 
-            SolicitudesF solicitudesF = new SolicitudesF();
+            SolicitudesF solicitudesF = new SolicitudesF(e_UsuarioAU);
 
             solicitudesF.ShowDialog();
 
@@ -177,7 +238,7 @@ namespace Resa_Pro.Formularios
 
             //Interfaz de los eventos 
 
-            EventosF eventosF = new EventosF();
+            EventosF eventosF = new EventosF(e_UsuarioAU);
 
             eventosF.ShowDialog();
 
@@ -219,6 +280,66 @@ namespace Resa_Pro.Formularios
 
         }
 
+
+        #endregion
+
+        #region Usuarios 
+        private void BBUsuarios_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //<Summary>
+            // Interfaz donde se gestionara los usuarios 
+            //</Summary>
+
+            UsuariosF F_Usuarios = new UsuariosF(e_UsuarioAU);
+
+
+            F_Usuarios.ShowDialog();
+
+
+        }
+
+        #endregion
+
+        #region  Reportes 
+        private void BBReportes_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //<Summary>
+            // Interfaz donde se gestionara los Reportes 
+            //</Summary>
+
+
+            //Obteniendo la fecha de entrada 
+            String Fecha_Entrada = Convert.ToString(DateTime.Now);
+
+            try
+            {
+
+                Repo R = new Repo(e_UsuarioAU);
+
+                R.ShowDialog();
+            }
+            catch(Exception E)
+            {
+                MessageBox.Show(Convert.ToString(E));
+            }
+
+            finally
+            {
+                e_Auditoria.id_Usuario = e_UsuarioAU.id_Usuario;
+                e_Auditoria.tipoUsuario = e_UsuarioAU.rol;
+                e_Auditoria.fecha_Entrada = Fecha_Entrada;
+                e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
+                e_Auditoria.opcion = "Reportes";
+                e_Auditoria.tipoOpcion = "Generar";
+
+                //insertando la auditoria
+
+                n_Auditoria.InsertarAuditoria(e_Auditoria);
+            }
+
+
+
+        }
 
         #endregion
     }

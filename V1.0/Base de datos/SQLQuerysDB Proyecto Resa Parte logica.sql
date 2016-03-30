@@ -170,7 +170,7 @@ GO
 
 /* Eliminar Stored Procedure */
 
-Drop procedure CrearSalon
+--Drop procedure CrearSalon
 
 /* Prueba Stored procedure */
 Declare @ID_Salon as int;
@@ -213,7 +213,7 @@ END
  GO
 
 /* Eliminando procedure */ 
-Drop procedure ActualizarSalon
+--Drop procedure ActualizarSalon
 /* Probando el stored procedure*/
 
 Execute ActualizarSalon 5 ,'salonsote el escondidote','donde tu abuela',200,'loco'
@@ -246,7 +246,7 @@ Create Procedure obtenerSalon
  GO
  
  /* Eliminando EL StoredProcedure */          
- Drop Procedure obtenerSalon
+ --Drop Procedure obtenerSalon
  
  /* Probando Obtener Salon */ 
  
@@ -280,7 +280,7 @@ Go
 
 use resaDB
 /* Eliminar el stored procedure*/
-drop procedure ObtenerSalones
+--drop procedure ObtenerSalones
 
 /*  Prueba del stored Procedure */
 create table #data(ID_Salon Int, Nombre NVarchar(100),Ubicacion Nvarchar(100),Capacidad Int, Estado Nvarchar(100))
@@ -299,7 +299,7 @@ Select ID_Salon As 'ID', Nombre FROM Salones
 end
 Go
 /* ***************************************************************/
-Drop procedure ObtenerSalonesID_N
+--Drop procedure ObtenerSalonesID_N
 
 /************ Agregar Servicio **************/     /* - - - - - - - - - - - - - - - - - */
               
@@ -323,7 +323,7 @@ BEGIN
  GO 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 /*Probando */
-Drop procedure AgregarServicio
+--Drop procedure AgregarServicio
 /*****/
 execute AgregarServicio 'hjhjh','Bailarines profecionales',5
 
@@ -342,7 +342,7 @@ END
 GO
 
 /* Elminar procedure*/
-Drop Procedure EliminarServicio
+--Drop Procedure EliminarServicio
 /* * * * * * * Prueba * * * * * * * * * * * */
 EXECUTE EliminarServicio 17
 
@@ -360,7 +360,7 @@ end
 Go
 
 /* Eliminar procedure */
-Drop Procedure ObtenerServicios
+--Drop Procedure ObtenerServicios
 /* Prueba*/
 create table #data( servicio NVarchar(100),Descripcion Nvarchar(250) )
 
@@ -397,7 +397,7 @@ BEGIN
  
  /* Eliminando Procedure */
  
- Drop procedure AgregarInventario
+ --Drop procedure AgregarInventario
  
  /* Prueba */
  Execute AgregarInventario 'Aire Acondicionado',5
@@ -418,7 +418,7 @@ WHERE ID_Inventario = @ID_Inventario
 END
 GO
 /* Elminar procedure*/
-Drop Procedure EliminarInventario
+--Drop Procedure EliminarInventario
 /* * * * * * * Prueba * * * * * * * * * * * */
 EXECUTE EliminarInventario 9
 
@@ -434,7 +434,7 @@ Select ID_Inventario as 'ID',Inventario from Inventarios where ID_Salon = @ID_Sa
 end
 Go
 /* Eliminando Procedure */
-drop procedure ObtenerInventarios
+--drop procedure ObtenerInventarios
 /*   */
 Select * from Inventarios
 

@@ -345,3 +345,41 @@ Select * from Perfiles
 Select * from Opciones
 Select * from Roles
 Select * from GruposUsuarios
+
+
+/* Insertar Auditoria */ 
+use ResaDB
+CREATE PROCEDURE InsertarAuditoria  
+  @ID_Usuario    as  Int,
+  @TipoUsuario   as  Nvarchar(100),
+  @Fecha_Entrada as  Nvarchar(30),
+  @Fecha_Salida  as  NVarchar(30),
+  @Opcion        as  Nvarchar(100),
+  @Tipo_Opcion   as  Nvarchar(100)
+ AS
+ BEGIN
+   DECLARE  @Fecha_EntradaC as smallDateTime;
+   set @Fecha_EntradaC = CONVERT(smalldatetime, @Fecha_Entrada, 1);
+   DECLARE  @Fecha_SalidaC as smallDateTime;
+   set @Fecha_SalidaC = CONVERT(smalldatetime, @Fecha_Salida, 1);
+ END
+BEGIN
+   Insert Into Auditorias
+    (
+       ID_Usuario,TipoUsuario,Fecha_Entrada,Fecha_Salida,Opcion,Tipo_Opcion
+    )
+    Values
+    (
+        @ID_Usuario,@TipoUsuario,@Fecha_EntradaC,@Fecha_SalidaC,@Opcion,@Tipo_Opcion
+    ) 
+END 
+GO
+
+/*-----*/
+--drop procedure InsertarAuditoria
+
+use ResaDB
+
+select * from usuarios 
+
+Select * from Auditorias

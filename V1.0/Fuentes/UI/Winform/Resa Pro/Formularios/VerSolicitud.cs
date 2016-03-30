@@ -39,9 +39,16 @@ namespace Resa_Pro.Formularios
 
         N_Organizador n_Organizador = new N_Organizador();
 
+        //Usuarios 
+
+        N_Usuario n_Usuario = new N_Usuario();
+
+        E_Usuario e_Usuario = new E_Usuario();
+
+
         #endregion
 
-        public VerSolicitud(int ID_Solicitud, string Nombre_Salon)
+        public VerSolicitud(int ID_Solicitud, string Nombre_Salon,E_Usuario e_UsuarioAU)
         {
             InitializeComponent();
 
@@ -54,7 +61,28 @@ namespace Resa_Pro.Formularios
 
             AsignarDatos(e_Solicitud.id_Solicitud, e_Salon.nombre);
 
+            //Asignando e_Usuario   a la goblal
 
+            e_Usuario = e_UsuarioAU;
+
+
+            #region Control de usuario
+
+            //Opciones de usuario 
+
+            int Perfil_Usuario = n_Usuario.ObtenerPerfil(e_UsuarioAU.id_Usuario);
+
+            //Trabajando la opcion de Usuarios
+            String Opcion = "Solicitudes";  // -- - -Opcion
+
+            int ID_OSalones = n_Usuario.ObtenerIDOpcion(Opcion, Perfil_Usuario);
+            //Aprobar
+            SBAprobar.Visible = n_Usuario.ObtenerFuncion(ID_OSalones, "Aprobar");
+            //Desaprobar
+            SBDesaprobar.Visible = n_Usuario.ObtenerFuncion(ID_OSalones, "Aprobar");
+         
+
+            #endregion
 
         }
 
@@ -116,7 +144,7 @@ namespace Resa_Pro.Formularios
 
 
 
-            int FilaAfectada = n_Solicitud.AprobarSolicitud(e_Solicitud.id_Solicitud, "Fulanito");
+            int FilaAfectada = n_Solicitud.AprobarSolicitud(e_Solicitud.id_Solicitud, e_Usuario.nombre);
 
             if(FilaAfectada == 0)
             {
@@ -140,7 +168,7 @@ namespace Resa_Pro.Formularios
         private void SBDesaprobar_Click(object sender, EventArgs e)
         {
 
-            int FilaAfectada = n_Solicitud.DesaprobarSolicitud(e_Solicitud.id_Solicitud, "Fulanito");
+            int FilaAfectada = n_Solicitud.DesaprobarSolicitud(e_Solicitud.id_Solicitud, e_Usuario.nombre);
 
             if (FilaAfectada == 0)
             {

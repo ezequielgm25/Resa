@@ -25,15 +25,21 @@ namespace Resa_Pro.Formularios
         //Usuarios 
         N_Usuario n_Usuario = new N_Usuario();
 
-        E_Usuario e_Usuario = new E_Usuario(); 
-         
+        E_Usuario e_Usuario = new E_Usuario();
 
+        //Entidad para el usuairo Autentificado
+        E_Usuario e_UsuarioAutentificado = new E_Usuario();
+        //Auditorias 
+
+        N_Auditoria n_Auditoria = new N_Auditoria();
+
+        E_Auditoria e_Auditoria = new E_Auditoria();
 
         #endregion
 
 
         #region Contructor 
-        public UsuariosF()
+        public UsuariosF(E_Usuario e_UsuarioAU)
         {
             InitializeComponent();
 
@@ -46,6 +52,32 @@ namespace Resa_Pro.Formularios
             #endregion
 
 
+            e_Usuario = e_UsuarioAU;
+
+
+            #region Control de usuario
+
+            //Opciones de usuario 
+
+            int Perfil_Usuario = n_Usuario.ObtenerPerfil(e_UsuarioAU.id_Usuario);
+
+            //Trabajando la opcion de Usuarios
+            String Opcion = "Usuarios";  // -- - -Opcion
+
+            int ID_OUsuarios = n_Usuario.ObtenerIDOpcion(Opcion, Perfil_Usuario);
+            //Crear
+            SBAgregarU.Visible = n_Usuario.ObtenerFuncion(ID_OUsuarios, "Crear");
+            //Actualizar
+            SBActualizarU.Visible = n_Usuario.ObtenerFuncion(ID_OUsuarios, "Actualizar");
+            //Eliminar
+            SBEliminarU.Visible = n_Usuario.ObtenerFuncion(ID_OUsuarios, "Eliminar");
+
+
+            #endregion
+
+
+
+
         }
 
         #endregion
@@ -54,17 +86,51 @@ namespace Resa_Pro.Formularios
         #region Agregar Usuario 
         private void SBAgregarU_Click(object sender, EventArgs e)
         {
-            //Intanciando la interfaz de crear Usuario 
 
-            CrearUsuarioF c_UsuarioF = new CrearUsuarioF();
 
-            c_UsuarioF.ShowDialog();
+            //Obteniendo la fecha de entrada 
+            String Fecha_Entrada = Convert.ToString(DateTime.Now);
 
-            //actualizando el data sorce del grid control de usuarios 
+            try
+            {
+                //Intanciando la interfaz de crear Usuario 
 
-            GCUsuarios.DataSource = n_Usuario.ObtenerUsuarios();
+                CrearUsuarioF c_UsuarioF = new CrearUsuarioF();
 
-            
+                c_UsuarioF.ShowDialog();
+
+                //actualizando el data sorce del grid control de usuarios 
+
+                GCUsuarios.DataSource = n_Usuario.ObtenerUsuarios();
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(Convert.ToString(E));
+
+
+            }
+
+            finally
+            {
+
+                e_Auditoria.id_Usuario = e_Usuario.id_Usuario;
+                e_Auditoria.tipoUsuario = e_Usuario.rol;
+                e_Auditoria.fecha_Entrada = Fecha_Entrada;
+                e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
+                e_Auditoria.opcion = "Usuarios";
+                e_Auditoria.tipoOpcion = "Agregar";
+
+                //insertando la auditoria
+
+                n_Auditoria.InsertarAuditoria(e_Auditoria);
+
+
+            }
+
+
+
+
+
         }
 
 
@@ -81,33 +147,54 @@ namespace Resa_Pro.Formularios
             // Se actualizara un evento
             //</Summary>
 
-            int ID_Usuario = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
+            //Obteniendo la fecha de entrada 
+            String Fecha_Entrada = Convert.ToString(DateTime.Now);
 
-            if (ID_Usuario != 0)
+            try
             {
+                int ID_Usuario = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
 
-                //Intanciando la interfaz de Actualizar un usuario 
+                if (ID_Usuario != 0)
+                {
 
-                ActualizarUsuario A_Usuario = new ActualizarUsuario(ID_Usuario);
+                    //Intanciando la interfaz de Actualizar un usuario 
 
-                A_Usuario.ShowDialog();
+                    ActualizarUsuario A_Usuario = new ActualizarUsuario(ID_Usuario);
+
+                    A_Usuario.ShowDialog();
 
 
-                //actualizando el data sorce del grid control de usuarios 
+                    //actualizando el data sorce del grid control de usuarios 
 
-                GCUsuarios.DataSource = n_Usuario.ObtenerUsuarios();
+                    GCUsuarios.DataSource = n_Usuario.ObtenerUsuarios();
+                }
+
+                else
+                {
+                    MessageBox.Show(" No hay un usuario seleccionado");
+                }
+
+
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show(Convert.ToString(E));
+
             }
 
-            else
+            finally
             {
-                MessageBox.Show(" No hay un usuario seleccionado");
+                e_Auditoria.id_Usuario = e_Usuario.id_Usuario;
+                e_Auditoria.tipoUsuario = e_Usuario.rol;
+                e_Auditoria.fecha_Entrada = Fecha_Entrada;
+                e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
+                e_Auditoria.opcion = "Usuarios";
+                e_Auditoria.tipoOpcion = "Actualizar";
+
+                //insertando la auditoria
+
+                n_Auditoria.InsertarAuditoria(e_Auditoria);
             }
-
-
-
-         
-
-
 
 
         }
@@ -126,36 +213,43 @@ namespace Resa_Pro.Formularios
             //Preguntar al usuario  si desea eliminarlo
             //Recupera el ID de la del Usuario el cual sera eliminado 
 
-            e_Usuario.id_Usuario = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
+            //Obteniendo la fecha de entrada 
+            String Fecha_Entrada = Convert.ToString(DateTime.Now);
+            e_UsuarioAutentificado.id_Usuario = e_Usuario.id_Usuario;
 
-            if (e_Usuario.id_Usuario != 0)
+            try
             {
-                DialogResult dialogResult = MessageBox.Show("Desea eliminar el Usuario?", "Confirmation", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
+
+                e_Usuario.id_Usuario = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
+
+                if (e_Usuario.id_Usuario != 0)
                 {
-
-
-                    
-                    FilasAfectadas = n_Usuario.EliminarUsuario(e_Usuario.id_Usuario);
-
-                    if (FilasAfectadas != 1)
+                    DialogResult dialogResult = MessageBox.Show("Desea eliminar el Usuario?", "Confirmation", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
                     {
-                        MessageBox.Show("Ocurrio un error al eliminar el usuario");
+
+
+
+                        FilasAfectadas = n_Usuario.EliminarUsuario(e_Usuario.id_Usuario);
+
+                        if (FilasAfectadas != 1)
+                        {
+                            MessageBox.Show("Ocurrio un error al eliminar el usuario");
+                        }
+                        else
+                        {
+                            MessageBox.Show("El Usuario se elimino correctamente");
+
+                            GCUsuarios.DataSource = n_Usuario.ObtenerUsuarios();
+
+                        }
+
                     }
-                    else
+                    else if (dialogResult == DialogResult.No)
                     {
-                        MessageBox.Show("El Usuario se elimino correctamente");
-
-                        GCUsuarios.DataSource = n_Usuario.ObtenerUsuarios();
-
+                        //No hacer nada
                     }
 
-                }
-                else if (dialogResult == DialogResult.No)
-                {
-                    //No hacer nada
-                }
-                
                 }
                 else
                 {
@@ -163,9 +257,31 @@ namespace Resa_Pro.Formularios
                 }
 
             }
+            catch (Exception E)
+            {
+                MessageBox.Show(Convert.ToString(E));
+            }
 
-        
+            finally
+            {
+                e_Auditoria.id_Usuario = e_UsuarioAutentificado.id_Usuario;
+                e_Auditoria.tipoUsuario = e_Usuario.rol;
+                e_Auditoria.fecha_Entrada = Fecha_Entrada;
+                e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
+                e_Auditoria.opcion = "Usuarios";
+                e_Auditoria.tipoOpcion = "Eliminar";
 
-        #endregion
-    }
+                //insertando la auditoria
+
+                n_Auditoria.InsertarAuditoria(e_Auditoria);
+
+            }
+
+
+        }
+          
+
+
+    #endregion
+}
 }

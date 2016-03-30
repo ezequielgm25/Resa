@@ -141,7 +141,7 @@ Set @ID_Usuario= @@IDENTITY;
 END
 GO
 /*********  Eliminando Stored Procedure *************/
-Drop procedure IngresarUsuario
+--Drop procedure IngresarUsuario
 /* *--- Fin ---* */
 
 /* Ejecutando el Store Proceedure */
@@ -158,33 +158,43 @@ Create Procedure LoginUsuario
     @Usuario AS nvarchar(50),
     @Pass AS nvarchar(50),
     @Result As int Output
-    
+ 
 As
+BEGIN 
      DECLARE @PassWord as Varchar(4000);
      DECLARE @hash varchar(4000);
      SET @hash = HASHBYTES('SHA1', @Pass);  --Pass editada
      
      DECLARE @UserID as Int;--Declaracion de variable utilizada
-     
-Begin
-    Select  @passWord = Contraseña, @UserID = ID_Usuario From usuarios Where Usuario = @Usuario
-End
- 
-Begin
-    If @hash = @PassWord
-         
-          Set @Result = @UserID
-    
-    Else
-        Set @Result = 0
-End
- 
-Go
--------------------------------------------------------------------------------------------
+     DECLARE @Estado as NVarchar(50);
+ BEGIN 
+   Select @Estado = Estado from Usuarios Where Usuario = @Usuario
+ END
+   IF(@Estado = 'Activo')
+   
+    BEGIN
+      Select  @passWord = Contraseña, @UserID = ID_Usuario From usuarios Where Usuario = @Usuario
+    END
 
+    If (@hash = @PassWord)
+          Set @Result = @UserID;
+    if (@hash != @PassWord)
+          Set @Result = 0;
+ 
+if(@Estado = 'Inactivo')
+ 
+ Set @Result = -1;
+   
+if(@Estado != 'Activo' and @Estado != 'Inactivo')
+ Set @Result = -2;
+   
+ END
+GO
+-------------------------------------------------------------------------------------------
+select * from usuarios
 /*********  Eliminando Stored Procedure *************/
 ----------------------------------------------------
-Drop procedure LoginUsuario
+--Drop procedure LoginUsuario
 -----------------------------------------------------
 /************ Ejecuntando Stored procedure de prueba ********************/
 
@@ -226,7 +236,7 @@ Create procedure ObtenerUsuario
  
  /*******************************************************************************************/
 ----------------------------------------------------
-Drop procedure ObtenerUsuario   /*Para eliminar el storedprocedure*/
+--Drop procedure ObtenerUsuario   /*Para eliminar el storedprocedure*/
 -----------------------------------------------------
 /************ Ejecuntando Stored procedure de prueba ********************/
 

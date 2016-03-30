@@ -36,7 +36,7 @@ END
 GO
 /* Eliminar Stored Procedure */
 
-Drop procedure CrearSolicitud 
+--Drop procedure CrearSolicitud 
 
 /* Prueb Stored procedure  1 */
 Declare @ID_Solicitud as int;
@@ -88,7 +88,7 @@ Inner Join Eventos EV on EV.ID_Solicitud = SO.ID_Solicitud
 END
 GO
 /* Eliminando El stored procedure */
-drop procedure ObtenerSolicitudes;
+--drop procedure ObtenerSolicitudes;
 use resaDB
 
 /*  Prueba del stored Procedure */
@@ -123,7 +123,7 @@ END
  GO
 
 /* Stored procedure a eliminar */
-drop procedure ActualizarSolicitudes;
+--drop procedure ActualizarSolicitudes;
 
 /* probando el stored procedure */
 
@@ -142,7 +142,7 @@ BEGIN
 END
 GO
 /* Eliminando Stored procedure */
-drop procedure EliminarSolicitud 
+--drop procedure EliminarSolicitud 
 
 /* probando El stored procedure */
 
@@ -194,7 +194,7 @@ Select * From Eventos
 Select * from organizadores
 
 /* Eliminar procedure de eventos */
-Drop procedure CrearEvento
+--Drop procedure CrearEvento
 
 /*Probando El store procedure */
 
@@ -264,7 +264,7 @@ Select * from organizadores
    set @MSG = 0;
   END
   /* - - - - */
-  drop procedure VerificarFechas
+  --drop procedure VerificarFechas
   
   select * from Eventos
   
@@ -295,7 +295,7 @@ CREATE PROCEDURE ActualizarEvento
   
   /* Eliminar el  stored procedure */
   
-  Drop procedure ActualizarEvento
+  --Drop procedure ActualizarEvento
   
   /* Probando el procedure*/
   
@@ -323,7 +323,7 @@ GO
 
 /* Eliminando Stored procedure */
 use ResaDB
-Drop procedure ObtenerEventos
+--Drop procedure ObtenerEventos
 /*  - ---  - - - -- - - - -- - - */
 
 /********************************************/
@@ -346,7 +346,7 @@ GO
 
 Select * from Eventos
 /*Eliminando Stored procedure */ 
-Drop procedure ObtenerEventosDetallados
+--Drop procedure ObtenerEventosDetallados
 
 CREATE PROCEDURE ObtenerEventosDetalladosXID
 @ID_Salon as int 
@@ -365,7 +365,7 @@ END
 GO
 /* Eliminar Stored procedure */
 
-Drop Procedure  ObtenerEventosDetalladosXID
+--Drop Procedure  ObtenerEventosDetalladosXID
 
 
 
@@ -400,7 +400,7 @@ CREATE PROCEDURE InsertarOrganizador
   
   /* Eliminar Stored Procedure */
   
-  drop Procedure InsertarOrganizador;
+  --drop Procedure InsertarOrganizador;
   
   /* Prueba */
   DECLARE @ID_Organizador as int;
@@ -427,7 +427,7 @@ AS
   END
   GO
   /* Delete procedure*/
-  drop procedure ActualizarOrganizador;
+  --drop procedure ActualizarOrganizador;
   /* prueba */
   
     Execute ActualizarOrganizador  2,'Leonel Fernandez','Presidente de la','tuLeo.com'
@@ -453,7 +453,7 @@ AS
    END
    GO
    /* */ 
-   Drop procedure ObtenerSolicitud
+   --Drop procedure ObtenerSolicitud
    select * from Solicitudes
    select * from Salones
    
@@ -474,7 +474,7 @@ AS
   Go
   /*  - - - - - - */
   
-  drop procedure ObtenerEvento;
+  --drop procedure ObtenerEvento;
   
   
   
@@ -492,4 +492,4 @@ AS
   GO
   
   /* - - - */ 
-  drop procedure ObtenerOrganizador;
+  --drop procedure ObtenerOrganizador;

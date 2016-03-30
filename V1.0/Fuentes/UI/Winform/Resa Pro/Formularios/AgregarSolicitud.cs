@@ -39,12 +39,21 @@ namespace Resa_Pro.Formularios
         E_Organizador e_Organizador = new E_Organizador();
 
         N_Organizador n_Organizador = new N_Organizador();
+        //Usuario
+        E_Usuario e_UsuarioAU = new E_Usuario();
+
+    
 
         #endregion
 
         #region Constructor
-        public AgregarSolicitud()
+        public AgregarSolicitud(E_Usuario e_Usuario)
         {
+
+            //Asignando la entidad usuario
+            e_UsuarioAU = e_Usuario;
+
+
             InitializeComponent();
 
             #region LLenando el datasource del grid control que precentara el Salon a eligir
@@ -62,7 +71,6 @@ namespace Resa_Pro.Formularios
         }
 
         #endregion
-
 
         #region  Asignar al lbl de salon seleccionado
 
@@ -82,7 +90,6 @@ namespace Resa_Pro.Formularios
         }
 
         #endregion
-
 
         #region Guardar Solicitud 
         private void SBGuardar_Click(object sender, EventArgs e)
@@ -212,7 +219,7 @@ namespace Resa_Pro.Formularios
                     {
                         MessageBox.Show("Hay discordancia en las fechas");
 
-                        DateEditTFinal.Text = null;
+                        DateEditTFinal.Text = "";
                     }
                     else
                     {
@@ -226,8 +233,8 @@ namespace Resa_Pro.Formularios
                             MessageBox.Show("El Tiempo Seleccionado ya esta en uso");
 
                             //Limpiando los dateTipes
-                            DateEditTInicio.ResetText();
-                            DateEditTFinal.ResetText();
+                            DateEditTInicio.Text = "";
+                            DateEditTFinal.Text = "";
 
                         }
                         else
@@ -265,7 +272,7 @@ namespace Resa_Pro.Formularios
                     {
                         MessageBox.Show("Hay discordancia en las fechas");
 
-                        DateEditTFinal.Text = null;
+                        DateEditTFinal.Text = "";
 
                     }
                     else
@@ -279,8 +286,8 @@ namespace Resa_Pro.Formularios
                         {
                             MessageBox.Show("El Tiempo Seleccionado ya esta en uso ");
 
-                            DateEditTInicio.ResetText();
-                            DateEditTFinal.ResetText();
+                            DateEditTInicio.Text = "";
+                            DateEditTFinal.Text = "";
 
                         }
                         else
@@ -322,7 +329,7 @@ namespace Resa_Pro.Formularios
                     {
                         MessageBox.Show("Hay discordancia en las fechas");
 
-                        DateEditTFinal.Text = null;
+                        DateEditTFinal.Text = "";
 
                     }
                     else
@@ -336,13 +343,13 @@ namespace Resa_Pro.Formularios
                         {
                             MessageBox.Show("El Tiempo Seleccionado ya esta en uso ");
 
-                            DateEditTInicio.ResetText();
-                            DateEditTFinal.ResetText();
+                            DateEditTInicio.Text = "";
+                            DateEditTFinal.Text = "";
 
                         }
                         else
                         {
-
+                            //No hacer Nada
                         }
 
                     }

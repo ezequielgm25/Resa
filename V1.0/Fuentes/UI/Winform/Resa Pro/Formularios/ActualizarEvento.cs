@@ -207,7 +207,7 @@ namespace Resa_Pro.Formularios
                     {
                         MessageBox.Show("Hay discordancia en las fechas");
 
-                        DateEditTFinal.Text = null;
+                        DateEditTFinal.Text = "";
                     }
                     else
                     {
@@ -226,8 +226,8 @@ namespace Resa_Pro.Formularios
                                 MessageBox.Show("El Tiempo Seleccionado ya esta en uso");
 
                                 //Limpiando los dateTipes
-                                DateEditTInicio.ResetText();
-                                DateEditTFinal.ResetText();
+                                DateEditTInicio.Text = "";
+                                DateEditTFinal.Text = "";
 
                             }
                             else
@@ -272,7 +272,7 @@ namespace Resa_Pro.Formularios
                     {
                         MessageBox.Show("Hay discordancia en las fechas");
 
-                        DateEditTFinal.Text = null;
+                        DateEditTFinal.Text = "";
 
                     }
                     else
@@ -288,8 +288,8 @@ namespace Resa_Pro.Formularios
                             {
                                 MessageBox.Show("El Tiempo Seleccionado ya esta en uso ");
 
-                                DateEditTInicio.ResetText();
-                                DateEditTFinal.ResetText();
+                                DateEditTInicio.Text = "";
+                                DateEditTFinal.Text = "";
 
                             }
                             else

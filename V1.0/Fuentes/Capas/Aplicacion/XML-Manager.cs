@@ -162,8 +162,6 @@ namespace Capas.Aplicacion
 
         #endregion
 
-
-
         #region buscarEnXml
 
         //<summary>
@@ -214,7 +212,7 @@ namespace Capas.Aplicacion
         //Metodo para obtener la direccion del XMl 
 
         #region  obtener Direccion base
-        public static string directorioBaseAplicacion()
+        public string directorioBaseAplicacion()
         {
             string stringDirectorioBase;
             if (System.AppDomain.CurrentDomain.BaseDirectory.IndexOf("bin") > 0)
@@ -231,5 +229,28 @@ namespace Capas.Aplicacion
         }
 
         #endregion
+
+        #region Guardar En el XMl ERROR un error 
+
+        public void GuardarEnXMl( string Fecha , string ID_Usuario , string opcion , string  TipoOpcion, string excepcion)
+        {
+
+            XDocument miXML = XDocument.Load(directorioBaseAplicacion() + @"XML\App-Error.xml");
+            miXML.Root.Add(
+                new XElement("Error",
+                    new XAttribute("Fecha", Fecha),
+                    new XElement("ID_Usuario", ID_Usuario),
+                    new XElement("Opcion", opcion),
+                    new XElement("TipoOpcion", TipoOpcion),
+                      new XElement("Excepcion", excepcion))
+                    );
+            miXML.Save(directorioBaseAplicacion() + @"XML\App-Error.xml");
+
+
+        }
+
+
+        #endregion
+
     }
 }

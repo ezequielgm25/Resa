@@ -76,6 +76,8 @@
             // 
             this.gridView1.GridControl = this.GCUsuarios;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsFind.ShowClearButton = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // SBEliminarU
@@ -124,6 +126,7 @@
             this.Controls.Add(this.ribbon);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "UsuariosF";

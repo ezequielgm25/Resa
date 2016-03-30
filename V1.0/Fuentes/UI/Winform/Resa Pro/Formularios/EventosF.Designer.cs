@@ -77,6 +77,8 @@
             // 
             this.gridView1.GridControl = this.GCEventos;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsFind.ShowClearButton = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // SBEliminarE
@@ -112,7 +114,7 @@
             this.SBAgregarE.Text = "Agregar";
             this.SBAgregarE.Click += new System.EventHandler(this.SBAgregarE_Click);
             // 
-            // Eventos
+            // EventosF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,9 +127,10 @@
             this.Controls.Add(this.ribbon);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Eventos";
+            this.Name = "EventosF";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;

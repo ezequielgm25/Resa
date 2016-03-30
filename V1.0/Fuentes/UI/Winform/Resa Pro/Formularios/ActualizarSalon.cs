@@ -33,7 +33,8 @@ namespace Resa_Pro.Formularios
         E_Inventario e_Inventario = new E_Inventario();
         N_Inventario n_Inventario = new N_Inventario();
 
-        #endregion
+     
+        
 
 
         #region Constructor 
@@ -47,7 +48,8 @@ namespace Resa_Pro.Formularios
             //</Summary>
 
             //Asignando la los datos  de la entidad parametrica a la entidad global de la interfaz
-
+            
+            //----------------//
             et_Salon = e_Salon;
             //---------------//
             #region Asignando valores 
@@ -341,7 +343,9 @@ namespace Resa_Pro.Formularios
         }
         #endregion
 
-        #endregion]
+        #endregion
+
+        #endregion
 
     }
 }

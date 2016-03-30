@@ -43,6 +43,7 @@
     <Compile Include="Aplicacion\ConexionAplicacion.cs" />
     <Compile Include="Aplicacion\Email.cs" />
     <Compile Include="Aplicacion\XML-Manager.cs" />
+    <Compile Include="Data\D_Auditoria.cs" />
     <Compile Include="Data\D_Autentificacion.cs" />
     <Compile Include="Data\D_Evento.cs" />
     <Compile Include="Data\D_Inventario.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Data\D_Servicio.cs" />
     <Compile Include="Data\D_Solicitud.cs" />
     <Compile Include="Data\D_Usuario.cs" />
+    <Compile Include="Infraestructura\Entidades\E_Auditoria.cs" />
     <Compile Include="Infraestructura\Entidades\E_Evento.cs" />
     <Compile Include="Infraestructura\Entidades\E_Inventario.cs" />
     <Compile Include="Infraestructura\Entidades\E_Organizador.cs" />
@@ -59,6 +61,7 @@
     <Compile Include="Infraestructura\Entidades\E_Solicitud.cs" />
     <Compile Include="Infraestructura\Entidades\E_Usuario.cs" />
     <Compile Include="Infraestructura\Entidades\E_Autentificacion.cs" />
+    <Compile Include="Negocio\N_Auditoria.cs" />
     <Compile Include="Negocio\N_Autentificacion.cs" />
     <Compile Include="Negocio\N_Evento.cs" />
     <Compile Include="Negocio\N_Inventario.cs" />

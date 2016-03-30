@@ -77,6 +77,8 @@
             // 
             this.gridView1.GridControl = this.GCSolicitudes;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsFind.AlwaysVisible = true;
+            this.gridView1.OptionsFind.ShowClearButton = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // SBAgregarS
@@ -112,7 +114,7 @@
             this.SBEliminar.Text = "Eliminar";
             this.SBEliminar.Click += new System.EventHandler(this.SBEliminar_Click);
             // 
-            // Solicitudes
+            // SolicitudesF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,14 +127,14 @@
             this.Controls.Add(this.ribbon);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Solicitudes";
+            this.Name = "SolicitudesF";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Solicitudes";
-           
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GCSolicitudes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

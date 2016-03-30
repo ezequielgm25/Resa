@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capas.Infraestructura.Entidades;
 using Capas.Negocio;
-using DevExpress.XtraEditors;
+
 
 
 
@@ -22,7 +22,7 @@ namespace Resa_Pro.Formularios
         //</summary>
 
         #region Variables 
-    
+
         private int ID_Usuario;
 
         #endregion
@@ -50,7 +50,7 @@ namespace Resa_Pro.Formularios
 
             //Inicializando variables 
 
-           
+
         }
 
         public Loging(Form form)
@@ -86,36 +86,72 @@ namespace Resa_Pro.Formularios
         private void BtnIniciarSesion_Click(object sender, EventArgs e)
         {
 
-            //Insertando los datos a la entidad
-             
-            E_Autentificacion.usuario = TbUsuario.Text;
-            E_Autentificacion.contraseña = TbPass.Text;
+                //Insertando los datos a la entidad
+
+                E_Autentificacion.usuario = TbUsuario.Text;
+                E_Autentificacion.contraseña = TbPass.Text;
 
 
-            //llamando el metodo en la capa de negocio
+                //llamando el metodo en la capa de negocio
 
-            ID_Usuario = N_Autentificaicon.VerificarUsuario(E_Autentificacion);
-            
-            if(ID_Usuario != 0)
-            {
+                ID_Usuario = N_Autentificaicon.VerificarUsuario(E_Autentificacion); // Se obtiene el ID del usuario que se autentifico en el sistema
 
-               
-                MainScreen Pantallaprincipal = new MainScreen(ID_Usuario);
-                this.Hide();
-                Pantallaprincipal.ShowDialog();
-                this.Close();
-                
+                if (ID_Usuario == -1 || ID_Usuario == -2)
+                {
 
-            
-               
-            }
-            else
-            {
-                XtraMessageBox.Show("Usuario o Contraseña incorrectos");
-               
-            }
-            #endregion
+                    if (ID_Usuario == -1)
+                    {
+                        MessageBox.Show("Lo sentimos pero el usuario esta inactivo", "Mensaje de autentificacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
+                    if (ID_Usuario == -2)
+                    {
+                        MessageBox.Show("El usuario no existe ", "Mensaje de autentificacion", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
+
+                }
+
+
+                else
+                {
+                    if (ID_Usuario != 0)
+                    {
+
+                        //<summary>
+                        // Enviando el ID_Al Formulario mainSCreen para que obtenga la informacion del usuario
+                        //</summary>
+
+                        MainScreen Pantallaprincipal = new MainScreen(ID_Usuario); // Instanciando la interfaz de pantalla principal
+
+                        this.Hide();  //Ocultando la interfaz de login 
+
+                        Pantallaprincipal.ShowDialog();
+
+                        this.Close();
+
+
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario o contraseña incorrectos", "Mensaje de autentificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                        //Dandole el focus a los controles 
+
+                        TbPass.Focus(); //Dandole el Focus a el TB de pass
+
+
+                    }
+                }
+                #endregion
+
+          
 
         }
+
     }
+
 }
