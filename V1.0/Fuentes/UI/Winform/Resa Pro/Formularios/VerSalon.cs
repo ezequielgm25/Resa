@@ -18,7 +18,7 @@ namespace Resa_Pro.Formularios
         //<Summary>
         // Clase de la interfaz donde se mostrara toda la informacion concerniente a un salon
         //</Summary>
-        #region Instancias
+        #region Instancias - 
 
         //Servicio
     
@@ -29,9 +29,15 @@ namespace Resa_Pro.Formularios
         N_Inventario n_Inventario = new N_Inventario();
 
         #endregion
+
+        #region Contructor -
+        /// <summary>
+        /// Contructor de la interfaz  de ver salones la cual acepta como parametro una entidad salon
+        /// </summary>
+        /// <param name="e_Salon"></param>
         public VerSalon(E_Salon e_Salon)
         {
-
+            //Inicializando los componentes 
             InitializeComponent();
 
             #region Asignando los valores a los controles
@@ -53,17 +59,19 @@ namespace Resa_Pro.Formularios
             #region Obteniendo los servicios y inventarios del salon
 
             #region Servicios 
-
+            //Obteniendo los servicios 
             GCServicios.DataSource = n_Servicio.ObtenerServicios(e_Salon.id_Salon);
 
             #endregion
 
             #region Inventarios
+            //obteniendo los  los inventarios 
             GCInventarios.DataSource = n_Inventario.ObtenerInventarios(e_Salon.id_Salon);
             #endregion
 
             #endregion
         }
 
+        #endregion
     }
 }

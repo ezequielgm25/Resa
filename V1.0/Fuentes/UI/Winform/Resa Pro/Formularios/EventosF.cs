@@ -11,6 +11,7 @@ using DevExpress.XtraBars;
 
 using Capas.Negocio;
 using Capas.Infraestructura.Entidades;
+using Capas.Aplicacion;
 
 namespace Resa_Pro.Formularios
 {
@@ -20,7 +21,7 @@ namespace Resa_Pro.Formularios
         // Interfaz que manejara las opciones y funciones de las solicitudes 
         //</Summary>
 
-        #region Declaraciones
+        #region Declaraciones - 
 
         N_Evento n_Evento = new N_Evento();
 
@@ -41,14 +42,21 @@ namespace Resa_Pro.Formularios
         N_Auditoria n_Auditoria = new N_Auditoria();
 
         E_Auditoria e_Auditoria = new E_Auditoria();
-
+        //Xml manager 
+        XML_Manager X_m = new XML_Manager();
 
 
         #endregion
 
-        #region Contructor
+        #region Contructor -
+        /// <summary>
+        /// Contructor de la interfaz  Eventos la cual espera como parametro una entidad de un usuario
+        /// </summary>
+        /// <param name="e_UsuarioAU"></param>
         public EventosF(E_Usuario e_UsuarioAU)
         {
+
+            //Inicializando los componentes 
             InitializeComponent();
 
             #region Asignando la data source al grid control 
@@ -59,10 +67,10 @@ namespace Resa_Pro.Formularios
 
             //Asignando e_Usuario   a la goblal
 
-            e_Usuario = e_UsuarioAU;
+             e_Usuario = e_UsuarioAU;
 
-
-            #region Control de usuario
+ 
+            #region Control de usuario -- Control de acceso -- 
 
             //Opciones de usuario 
 
@@ -70,7 +78,8 @@ namespace Resa_Pro.Formularios
 
             //Trabajando la opcion de Usuarios
             String Opcion = "Eventos";  // -- - -Opcion
-
+            
+            //obteniendo  el ID de la obcion de Eventos  de este usuario 
             int ID_OEventos = n_Usuario.ObtenerIDOpcion(Opcion, Perfil_Usuario);
             //Crear
             SBAgregarE.Visible = n_Usuario.ObtenerFuncion(ID_OEventos, "Crear");
@@ -85,6 +94,11 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region marcar Un evento
+        /// <summary>
+        /// Evento click del boton agregar  que maneja la funcion de agregar un evento
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBAgregarE_Click(object sender, EventArgs e)
         {
 
@@ -102,12 +116,21 @@ namespace Resa_Pro.Formularios
                 //Actualizando la data de el grid control 
                 GCEventos.DataSource = n_Evento.ObtenerEventos();
             }
+            //Se captura una excepcion 
             catch (Exception E)
             {
-                MessageBox.Show(Convert.ToString(E));
+                
+                MessageBox.Show(Convert.ToString(E), "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+
+                //Guardando el error en  El XMl de destinado  con los parametros correcpondientes 
+                X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_Usuario.id_Usuario), "Salones", "Crear", Convert.ToString(E));
             }
+
+            //Agregando una auditoria  al usuario 
             finally
             {
+                //Asignando los parametros a la entidad de auditoria
+
                 e_Auditoria.id_Usuario = e_Usuario.id_Usuario;
                 e_Auditoria.tipoUsuario = e_Usuario.rol;
                 e_Auditoria.fecha_Entrada = Fecha_Entrada;
@@ -115,7 +138,7 @@ namespace Resa_Pro.Formularios
                 e_Auditoria.opcion = "Eventos";
                 e_Auditoria.tipoOpcion = "Agregar";
 
-                //insertando la auditoria
+                //Insertando la auditoria
 
                 n_Auditoria.InsertarAuditoria(e_Auditoria);
             }

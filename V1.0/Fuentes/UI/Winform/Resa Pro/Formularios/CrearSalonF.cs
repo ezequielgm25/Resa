@@ -21,7 +21,7 @@ namespace Resa_Pro.Formularios
         //Interfaz que gestionara la creacion de un nuevo salon 
         //</Summary>
 
-        #region Declaraciones
+        #region Declaraciones -
 
             //Entidad Salon
         N_Salon n_salon = new N_Salon();
@@ -40,14 +40,19 @@ namespace Resa_Pro.Formularios
          
         #endregion
 
-
-        #region Constructor
+        #region Constructor -
+        /// <summary>
+        /// Metodo contructor de la  interfaz 
+        /// </summary>
         public CrearSalonF()
         {
+            //Se inicializan los componentes 
             InitializeComponent();
            
-
+            
             #region Desabilitando los botones de servicio y inventarios mientros no se agrege un salon 
+
+            //Mientras no se haiga agregado un salon los siguientes controles permaneceran desactivados 
 
             //Servicios
             SBAgregarS.Enabled = false;
@@ -63,7 +68,7 @@ namespace Resa_Pro.Formularios
 
 
             #region Agregando opciones al combobox de estado 
-
+            //Agregando  las opciones de los combobox 
             CBEstado.Items.Add("Activo");
             CBEstado.Items.Add("Inactivo");
             
@@ -74,21 +79,28 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Crear Salon 
+        /// <summary>
+        /// Evento click sobre el boton crear que gestionara la funcion de creacion 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBCrearSalon_Click(object sender, EventArgs e)
         {
 
+            //Verifica los controles si tienen data 
 
             if (TENombre.EditValue == "" || TEDireccion.EditValue == "" || TECapacidad.EditValue == "" || CBEstado.SelectedItem == null)
             {
-
-                XtraMessageBox.Show("Todos los datos deben ser completados");
+                //Mensaje de informacion para el usuario de que  todos los datos deben ser completados 
+                XtraMessageBox.Show("Todos los datos deben ser completados","informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             }
-
+             //Si los controles estan completos se inicia el proceso de creacion del salon 
             else
             {
 
                 #region Asignando Datos a la entidad de salon 
+                //se asignan los datos a una entidad salon 
 
                 e_Salon.nombre = Convert.ToString(TENombre.EditValue);
                 e_Salon.ubicacion = Convert.ToString(TEDireccion.EditValue);
@@ -97,17 +109,22 @@ namespace Resa_Pro.Formularios
 
                 #endregion
 
-
+                
+                //Se crea un salon y se recupera un ID del mismo 
                 e_Salon.id_Salon = n_salon.CrearSalon(e_Salon);
 
+                //Se verifica el resultado  
                 if (e_Salon.id_Salon == null)
                 {
-                    XtraMessageBox.Show("Nose pudo guardar el salon");
+                    //Mensaje de error 
+                    XtraMessageBox.Show("Nose pudo guardar el salon","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
+                //Se inicia el proceso de agregar "Inventarios" y "Servicios"
                 else
                 {
 
                     #region  Desactivar controles del grupo  de controles de la creacion de salon
+                    //Se desactivan  los controles destinados para la creacion de los salones  
 
                     TENombre.Enabled = false;
                     TEDireccion.Enabled = false;
@@ -118,6 +135,8 @@ namespace Resa_Pro.Formularios
                     #endregion
 
                     #region Se habilitan los controles de los grupos de servicios y inventarios 
+
+                    //Se activan los controles desactivados con anterioridad 
 
                     //Servicios
                     SBAgregarS.Enabled = true;
@@ -142,24 +161,39 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-        #region Servicios
+        #region Servicios -
 
+        //<summary>
+        // Seccion donde se agregaran los servicios  y quitaran los servicios al salon
+        //</summary>
+     
         #region Agregar Servicio 
-
+        
+        
+           /// <summary>
+           /// Evento click del boton agregar en el cual se agregara un servicio al salon 
+           /// </summary>
+           /// <param name="sender"></param>
+           /// <param name="e"></param>
         private void SBAgregarS_Click(object sender, EventArgs e)
         {
-
+            //variable que recogera las filas afectadas
             int FilasAfectadas = 0;
 
+            //Verificacion de los controles "Que contengan data"
             if( TBNombreS.Text =="" || TBDescripcionS.Text == "" )
             {
-                XtraMessageBox.Show("Los campos de servicio y descripcion deben tener informacion");
+                //mensaje de informacion de que los controles deben estar completos 
+                MessageBox.Show("Los campos de servicio y descripcion deben tener informacion","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
 
             }
+            //Si los controles estan completos se ejecuta la siguiente fraccion de codigo
             else
             {
                 #region Asignando los valores a la entidad de servicios
+
+                //Se completa la entidad de servicios 
 
                 e_Servicio.servicio = Convert.ToString(TBNombreS.Text);
                 e_Servicio.descripcion = Convert.ToString(TBDescripcionS.Text);
@@ -168,29 +202,36 @@ namespace Resa_Pro.Formularios
                 #endregion
 
                 #region Agregando el servicio al salon
+                //Se agrega el servicio al salon 
+
 
                 FilasAfectadas = n_Servicio.AgregarServicio(e_Servicio);
 
+                //Se verifica las filas afectadas 
                 if(FilasAfectadas == 0)
                 {
-                    XtraMessageBox.Show("Ocurrio un error al guardar los datos ");
+                    //En este caso se muestra un mensaje de error a guardar el servicio 
+                    MessageBox.Show("Ocurrio un error al guardar los datos" , "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
 
 
                 }
+
+                //Si no ocurrio un error se muestra el siguiente mensaje 
                 else
                 {
 
-
-                    XtraMessageBox.Show(" El servicio se agrego correctamente ");
+                    //Mensaje positivo en la insercion 
+                     MessageBox.Show(" El servicio se agrego correctamente","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
                     #region Obteniendo Servicios
-
+                    //Se completa el datasource del grid control destinado a presentar los  datos de un servicio 
                     GCServicios.DataSource = n_Servicio.ObtenerServicios(e_Salon.id_Salon);
 
                     #endregion
 
                     #region Limpiando los controles 
 
+                    //Se limpian los controles consernientes   a los servicios 
                     TBNombreS.Clear();
                     TBDescripcionS.Clear();
                     #endregion 
@@ -213,34 +254,54 @@ namespace Resa_Pro.Formularios
 
         #region QuitarServicio
 
+     
+        /// <summary>
+        /// Evento Click del boton quitar el cual quitara un servicio al salon 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void SBQuitarS_Click(object sender, EventArgs e)
         {
-
+            //variable que recogera las filas afectadas 
             int FilasAfectadas = 0;
 
+            //Se recoge el ID del servicio 
             int ID_Servicio = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
 
-            //Ejecutar el metodo en la capa de negocio de eliminar el servicio
-
-            FilasAfectadas = n_Servicio.EliminarServicio(ID_Servicio);
-
-            if(FilasAfectadas != 1)
+            if (ID_Servicio != 0)
             {
-                XtraMessageBox.Show("El servicio no fue eliminado ocurrio un error al eliminarlo");
+
+                //Ejecutar el metodo en la capa de negocio de eliminar el servicio
+
+                FilasAfectadas = n_Servicio.EliminarServicio(ID_Servicio);
+
+                //Verificacion de las filas afectadas
+                if (FilasAfectadas != 1)
+                {
+                    //Mensaje negativo 
+                    MessageBox.Show("El servicio no fue eliminado ocurrio un error al eliminarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                //De lo contrario se ejecuta 
+                else
+                {
+                    //Mensaje positivo
+                    MessageBox.Show("El servicio fue eliminado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    //Actualizando el data source de la GRID Control  de servicios
+
+                    GCServicios.DataSource = n_Servicio.ObtenerServicios(e_Salon.id_Salon);
+
+                }
+
+
             }
             else
             {
-                XtraMessageBox.Show("El servicio Fue eliminado correctamente");
+                //Mensaje de que el grid no contiene data
 
-                //Actualizando el data source de la GRID Control 
-
-                GCServicios.DataSource = n_Servicio.ObtenerServicios(e_Salon.id_Salon);
-
+                MessageBox.Show("No hay un servicio seleccionado","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
-
-            
-
 
 
         }
@@ -249,23 +310,38 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-        #region Inventarios
+        #region Inventarios -
 
-        #region Agregar inventario
+        //<summary>
+        // Seccion donde se gestionaran los servicios del salon 
+        //</summary>
 
+        #region Agregar inventario - 
+
+        /// <summary>
+        /// Evento click  del boton agregar el cual gestionara la funcion de agregar un inventario al salon
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBAgregarI_Click(object sender, EventArgs e)
         {
+            //Variables que recogera las filas afectadas 
             int FilasAfectadas = 0;
 
+            //Verificacion si control esta completo 
             if (TBNombreIV.Text == "")
             {
-
-                XtraMessageBox.Show("El Campo de inventario esta vacio");
+                //Mensaje  de sugerencia 
+                MessageBox.Show("El Campo de inventario esta vacio","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
 
             }
+            //En caso de que el los controles tengan data se ejecuta lo siguiente 
             else
             {
+
                 #region Asignando los valores a la entidad de inventarios
+
+                //Se asignan los valores a la entidad 
 
                 e_Inventario.inventario = Convert.ToString(TBNombreIV.Text);
 
@@ -275,27 +351,35 @@ namespace Resa_Pro.Formularios
 
                 #region Agregando el inventario al salon
 
+                //Agregando inventario al sistema
                 FilasAfectadas = n_Inventario.AgregarInventario(e_Inventario);
 
+                // Verificacion de las filas afectadas 
                 if (FilasAfectadas == 0)
                 {
-                    XtraMessageBox.Show("Ocurrio un error al guardar los datos ");
+                    //mensaje negativo
+                    MessageBox.Show("Ocurrio un error al guardar los datos ","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
 
 
                 }
+
+                //En caso de lo contrario 
+
                 else
                 {
 
-
-                    XtraMessageBox.Show(" El inventario se agrego correctamente ");
+                    //mensje positivo 
+                    MessageBox.Show(" El inventario se agrego correctamente ","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
                     #region Obteniendo inventarios
 
+                    //precentando los inventarios del salon
                     GCInventarios.DataSource = n_Inventario.ObtenerInventarios(e_Inventario.id_Salon);
 
                     #endregion
 
                     #region Limpiando los controles 
+                    //Limpiando  el control  
 
                     TBNombreIV.Clear();
 
@@ -311,30 +395,53 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-            #region Quitar inventario
+        #endregion
 
+        #region Quitar inventario -
+        /// <summary>
+        ///  Evento click sobre el boton quitar el que gestionara la funcion de eliminar un inventario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBQuitarI_Click(object sender, EventArgs e)
         {
+            //variable que recogera las filas afectadas 
             int FilasAfectadas = 0;
 
+            //Se recoge el  id del inventario del grid view 
             int ID_Inventario = Convert.ToInt32(gridView2.GetFocusedRowCellValue("ID"));
 
-            //Ejecutar el metodo en la capa de negocio de eliminar el servicio
-
-            FilasAfectadas = n_Inventario.EliminarInventario(ID_Inventario);
-
-            if (FilasAfectadas != 1)
+            if (ID_Inventario != 0)
             {
-                XtraMessageBox.Show("El inventario no fue eliminado ocurrio un error al eliminarlo");
+                //Ejecutar el metodo en la capa de negocio de eliminar el servicio
+
+                FilasAfectadas = n_Inventario.EliminarInventario(ID_Inventario);
+
+                //se verifica las filas afectadas
+                if (FilasAfectadas != 1)
+                {
+                    //mensaje negativo
+                    MessageBox.Show("El inventario no fue eliminado ocurrio un error al eliminarlo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                //De lo contrario 
+                else
+                {
+                    //Mensaje positivo 
+                    MessageBox.Show("El inventario Fue eliminado correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    //Actualizando el data source de la GRID Control 
+
+                    GCInventarios.DataSource = n_Inventario.ObtenerInventarios(e_Salon.id_Salon);
+
+                }
+
             }
             else
             {
-                XtraMessageBox.Show("El inventario Fue eliminado correctamente");
+                //Mensaje de error  de que no hay ningun inventario seleccionado para quitar
 
-                //Actualizando el data source de la GRID Control 
+                MessageBox.Show("No hay ningun inventario seleccionado ", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                GCInventarios.DataSource = n_Inventario.ObtenerInventarios(e_Salon.id_Salon);
-               
             }
         }
 
@@ -345,7 +452,7 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-        #endregion
+        
 
     }
 }

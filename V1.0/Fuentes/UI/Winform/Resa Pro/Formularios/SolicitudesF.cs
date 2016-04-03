@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using Capas.Aplicacion;
 using Capas.Negocio;
 using Capas.Infraestructura.Entidades;
 namespace Resa_Pro.Formularios
@@ -18,7 +19,7 @@ namespace Resa_Pro.Formularios
         // interfaz que manejara las opciones y funciones de las solicitudes 
         //</Summary>
 
-        #region Declaraciones
+        #region Declaraciones -
         //Solicitud 
         N_Solicitud n_Solicitud = new N_Solicitud();
 
@@ -33,14 +34,20 @@ namespace Resa_Pro.Formularios
         N_Auditoria n_Auditoria = new N_Auditoria();
 
         E_Auditoria e_Auditoria = new E_Auditoria();
-
+        //Xml manager 
+        XML_Manager X_m = new XML_Manager();
 
         #endregion
 
-
-
+        #region Contructor -
+        /// <summary>
+        /// Contructor de la interfaz de  solicitudes que acepta como parametros una entida de usuario 
+        /// </summary>
+        /// <param name="e_UsuarioAU"></param>
         public SolicitudesF(E_Usuario e_UsuarioAU)
         {
+
+            //Inicializando los componentes
             InitializeComponent();
 
             #region Obteniendo las Solicitudes 
@@ -54,7 +61,7 @@ namespace Resa_Pro.Formularios
             e_Usuario = e_UsuarioAU;
 
 
-            #region Control de usuario
+            #region Control de usuario  -- Control de usuarios --
 
             //Opciones de usuario 
 
@@ -75,9 +82,14 @@ namespace Resa_Pro.Formularios
 
 
         }
+        #endregion
 
-
-        #region Agregar Solicitud 
+        #region Agregar Solicitud - 
+        /// <summary>
+        /// Evento click sobre el boton agregar en el cual se gestionara agregar una solicitud
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBAgregarS_Click(object sender, EventArgs e)
         {
 
@@ -97,9 +109,13 @@ namespace Resa_Pro.Formularios
             }
             catch (Exception E)
             {
-                MessageBox.Show(Convert.ToString(E));
+                //Mostrando la excepcion al usuario
+                MessageBox.Show(Convert.ToString(E), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Guardando el error en  El XMl de destinado  con los parametros correcpondientes 
+                X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_Usuario.id_Usuario), "Solicitudes", "Crear", Convert.ToString(E));
             }
 
+            //Agregando una auditoria  al usuario 
             finally
             {
                 e_Auditoria.id_Usuario = e_Usuario.id_Usuario;
@@ -116,31 +132,33 @@ namespace Resa_Pro.Formularios
 
         }
 
-
-
-
-
-
         #endregion
 
-        #region Actualizar Solicitudes 
+        #region Actualizar Solicitudes -
+        /// <summary>
+        /// Evento click sobre el boton actualizar donde se gestionara la Actualizacion de una solicitud
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBActualizar_Click(object sender, EventArgs e)
         {
-            //<Summary>
-            // Se actualizara una solicitud 
-            //</Summary>
+            //<summary>
+            //se actualizara una solicitud 
+            //</summary>
 
             //Obteniendo la fecha de entrada 
             String Fecha_Entrada = Convert.ToString(DateTime.Now);
 
             try
             {
+                //Recogiendo los datos seleccionados de la grid view 
                 int ID_Solicitud = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
                 string Nombre_Salon = Convert.ToString(gridView1.GetFocusedRowCellValue("Salon"));
 
+                //Restificando los datos 
                 if (ID_Solicitud != 0)
                 {
-
+                    //Instanciando el forms de solicitudes y enviando los parametros concernientes 
                     ActualizarSolicitudesF AS_Form = new ActualizarSolicitudesF(ID_Solicitud, Nombre_Salon);
 
                     AS_Form.ShowDialog();
@@ -152,17 +170,24 @@ namespace Resa_Pro.Formularios
 
                 else
                 {
-                    MessageBox.Show(" No hay una solicitud seleccionada");
+                    //Mensaje de que no hay nada seleccionado en la grid view 
+                    MessageBox.Show(" No hay una solicitud seleccionada", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
             }
+            //Capturando la excepcion  y mostrandola al usuario y guardando el error 
             catch (Exception E)
             {
-                MessageBox.Show(Convert.ToString(E));
+                //Mostrando la excepcion al usuario
+                MessageBox.Show(Convert.ToString(E), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Guardando el error en  El XMl de destinado  con los parametros correcpondientes 
+                X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_Usuario.id_Usuario), "Solicitudes", "Actualizar", Convert.ToString(E));
             }
 
+            //Asignandole finalmente la auditoria al usuario 
             finally
             {
+                //Asignandole los datos a la entidad Auditoria 
                 e_Auditoria.id_Usuario = e_Usuario.id_Usuario;
                 e_Auditoria.tipoUsuario = e_Usuario.rol;
                 e_Auditoria.fecha_Entrada = Fecha_Entrada;
@@ -180,40 +205,49 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-
-        #region Eliminar 
+        #region Eliminar- 
+        /// <summary>
+        /// Evento click sobre el  boton eliminar el cual gestionara la eliminacion de una solicitud 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBEliminar_Click(object sender, EventArgs e)
         {
+            //Variable que recogera las filas afectadas 
             int FilasAfectadas = 0;
-
-            //Preguntar al usuario  si desea eliminarlo
-            //Recupera el ID de la solicitud la  cual va a ser eliminada
-            e_Solicitud.id_Solicitud = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
 
             //Obteniendo la fecha de entrada 
             String Fecha_Entrada = Convert.ToString(DateTime.Now);
 
             try
             {
+                //Recupera el ID de la solicitud la  cual va a ser eliminada
+                e_Solicitud.id_Solicitud = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
 
                 if (e_Solicitud.id_Solicitud != 0)
                 {
+
+                    //Preguntar al usuario  si desea eliminarlo
                     DialogResult dialogResult = MessageBox.Show("Desea eliminar la Solicitud?", "Confirmation", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
 
 
-
+                        // Se ejecuta el metodo de eliminar solicitud en la capa de negocio 
                         FilasAfectadas = n_Solicitud.EliminarSolicitud(e_Solicitud.id_Solicitud);
 
+                        //Se verifica las filas afectadas 
                         if (FilasAfectadas != 1)
                         {
-                            MessageBox.Show("Ocurrio un error al eliminar la solicitud");
+                            //Mensaje de error
+                            MessageBox.Show("Ocurrio un error al eliminar la solicitud", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
+                        //De lo contrario 
                         else
                         {
-                            MessageBox.Show("La solicitud se elimino correctamente");
-
+                            //Mensaje  Positivo
+                            MessageBox.Show("La solicitud se elimino correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //Actualizando el datasource principal de solicitudes 
                             GCSolicitudes.DataSource = n_Solicitud.ObtenerSolicitudes();
 
                         }
@@ -227,17 +261,26 @@ namespace Resa_Pro.Formularios
                 }
                 else
                 {
-                    MessageBox.Show(" No hay solicitud Seleccionada ");
+                    MessageBox.Show(" No hay solicitud Seleccionada", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
+
+
             }
+            //Se captura una excepcion  se muestra al usuario y se guarda un error en el XMl 
             catch (Exception E)
             {
-                MessageBox.Show(Convert.ToString(E));
+                //Mostrando la excepcion al usuario
+                MessageBox.Show(Convert.ToString(E), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Guardando el error en  El XMl de destinado  con los parametros correcpondientes 
+                X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_Usuario.id_Usuario), "Solicitudes", "Eliminar", Convert.ToString(E));
             }
 
+            //Se agregara una auditoria a un usuario 
             finally
             {
+                //Asignando los parametros a una entidad Auditoria 
+
                 e_Auditoria.id_Usuario = e_Usuario.id_Usuario;
                 e_Auditoria.tipoUsuario = e_Usuario.rol;
                 e_Auditoria.fecha_Entrada = Fecha_Entrada;
@@ -255,21 +298,27 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-
-        #region Ver Solicitudes
+        #region Ver Solicitudes -
+        /// <summary>
+        /// Evento Double click sobre el grid view Que permitira visualizar una solicitud 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GCSolicitudes_DoubleClick(object sender, EventArgs e)
         {
             //<Summary>
             // Se Visualizara una solicitud 
             //</Summary>
 
-
+            //Recogiendo los datos seleccionados en la grid view
             int ID_Solicitud = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
             string Nombre_Salon = Convert.ToString(gridView1.GetFocusedRowCellValue("Salon"));
 
+
+            //Verificando los datos 
             if (ID_Solicitud != 0)
             {
-
+                //Instanciando una interfaz de visualizacion de una solicitud 
                 VerSolicitud AS_Form = new VerSolicitud(ID_Solicitud, Nombre_Salon, e_Usuario);
 
                 AS_Form.ShowDialog();
@@ -278,10 +327,11 @@ namespace Resa_Pro.Formularios
 
                 GCSolicitudes.DataSource = n_Solicitud.ObtenerSolicitudes();
             }
-
+            //De lo contrario 
             else
             {
-                MessageBox.Show(" No hay una solicitud seleccionada");
+                //Mensaje de error 
+                MessageBox.Show("No hay una solicitud seleccionada", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }

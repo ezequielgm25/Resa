@@ -36,15 +36,21 @@ namespace Resa_Pro.Formularios
 
         private int ID_OUsuarios = 0;
 
-        private int ID_OReportes = 0; 
+        private int ID_OReportes = 0;
 
 
-        #endregion 
+        #endregion
 
 
 
         #endregion
 
+
+        #region Contructor
+        /// <summary>
+        /// Metodo Contructor de la interfaz  de actualizar un usuario 
+        /// </summary>
+        /// <param name="ID_Usuario"></param>
         public ActualizarUsuario(int ID_Usuario)
         {
             InitializeComponent();
@@ -82,7 +88,7 @@ namespace Resa_Pro.Formularios
             try
             {
 
-                MessageBox.Show(Convert.ToString(e_Usuario.id_Usuario) + " " + Convert.ToString(ID_Usuario));
+            
                 //Obteniendo el perfil del usuario
                 int Perfil_Usuario = n_Usuario.ObtenerPerfil(ID_Usuario);
 
@@ -161,6 +167,7 @@ namespace Resa_Pro.Formularios
 
         }
 
+        #endregion
 
         #region Actualizar  el usuario 
 
@@ -362,8 +369,12 @@ namespace Resa_Pro.Formularios
         }
 
 
+
         #endregion
 
+        private void CBXSalonesC_CheckedChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

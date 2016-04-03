@@ -20,7 +20,7 @@ namespace Resa_Pro.Formularios
         //</Summary>
 
 
-        #region Declaraciones
+        #region Declaraciones - 
         //Salones
         N_Salon n_Salon = new N_Salon();
 
@@ -48,8 +48,17 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
+        #region Contructor -
+        /// <summary>
+        /// Contructor de la interfaz de  visualizacion de una solicitud la cual acepta como parametros " Un ID de una solicitud , Nombre de un salon , Una entidad de un usuario"
+        /// </summary>
+        /// <param name="ID_Solicitud"></param>
+        /// <param name="Nombre_Salon"></param>
+        /// <param name="e_UsuarioAU"></param>
         public VerSolicitud(int ID_Solicitud, string Nombre_Salon,E_Usuario e_UsuarioAU)
         {
+            //Inicializando los componentes 
+
             InitializeComponent();
 
             //Asignando el nombre del salon
@@ -86,24 +95,34 @@ namespace Resa_Pro.Formularios
 
         }
 
+        #endregion
 
-        #region  Asignando los datos a los controles 
-
+        #region  Asignando los datos a los controles -
+        /// <summary>
+        /// Metodo asignar Datos el cual asigna todos los datos 
+        /// </summary>
+        /// <param name="ID_Solicitud"></param>
+        /// <param name="nombre"></param>
         public void AsignarDatos(int ID_Solicitud, String nombre)
         {
 
             //Asignando la informacion a las Entidades 
+            //Solicitudes
             e_Solicitud = n_Solicitud.ObtenerSolicitud(ID_Solicitud);
+            //Eventos
             e_Evento = n_Evento.ObtenerEvento(ID_Solicitud);
+            //Organizador
             e_Organizador = n_Organizador.Obtenerorganizador(e_Evento.id_Evento);
 
             //Asignando la informacion de la solicitud
 
             LBLFecha.Text = e_Solicitud.fecha;
+            //Estado de aprobacion
             LBLEstado.Text = e_Solicitud.aprobacion;
 
-
+            //Fecha de aprobacion
             LBLFechaAprobacion.Text = e_Solicitud.fechaAprobacion;
+            //Usuario 
             LBLUsuario.Text = e_Solicitud.usuario;
 
             //Asignando el nombre del salon 
@@ -113,8 +132,11 @@ namespace Resa_Pro.Formularios
             //Asignando la informacion a los controles 
 
             LBLTituloE.Text = e_Evento.titulo_Evento;
+            //Tipo
             LBLTipoE.Text = e_Evento.tipo;
+            //Tipico
             LBLTopico.Text = e_Evento.topico;
+            //Descripcion
             LBLDescripcioinE.Text = e_Evento.descripcion;
 
             //Tiempo 
@@ -125,7 +147,9 @@ namespace Resa_Pro.Formularios
             //Organizador 
 
             LBLNombreO.Text = e_Organizador.nombre;
+            //Descripcion
             LBLDescripcionO.Text = e_Organizador.descripcion;
+            //Correo Organizaddor
             LBLCorreoO.Text = e_Organizador.correoElectronico;
 
 
@@ -135,25 +159,32 @@ namespace Resa_Pro.Formularios
         }
         #endregion
 
-
-
-        #region Aprobar Solicitud 
+        #region Aprobar Solicitud -
+        /// <summary>
+        /// Evento click sobre el boton Aprobar el cual gectionara la aprobacion de una solicitud 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
 
-
+            //Aprobar solicitud  evento que retornara 
 
             int FilaAfectada = n_Solicitud.AprobarSolicitud(e_Solicitud.id_Solicitud, e_Usuario.nombre);
 
+            //Verificacion 
             if(FilaAfectada == 0)
             {
-                MessageBox.Show("Ocurrio un error al aprobar la solicitud ");
+                //Mensaje de error
+                MessageBox.Show("Ocurrio un error al aprobar la solicitud ","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+            
             else
             {
-                MessageBox.Show("Solcitud aprobada Satifactoriamente");
-
+                //Mensaje Positivo 
+                MessageBox.Show("Solcitud aprobada satifactoriamente");
+                //Actualizar los datos en el formulario 
                 AsignarDatos(e_Solicitud.id_Solicitud, e_Salon.nombre);
             }
             
@@ -164,19 +195,30 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-        #region Desaprobar Solicitud
+        #region Desaprobar Solicitud -
+
+        /// <summary>
+        /// Evento click sobre el boton desaprobar donde se desaprobara una solicitud 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBDesaprobar_Click(object sender, EventArgs e)
         {
 
+            //Filas afectadas 
             int FilaAfectada = n_Solicitud.DesaprobarSolicitud(e_Solicitud.id_Solicitud, e_Usuario.nombre);
 
+            //Verificacion 
             if (FilaAfectada == 0)
             {
-                MessageBox.Show("Ocurrio un error al desaprobar la solicitud ");
+                //mensaje de error 
+                MessageBox.Show("Ocurrio un error al desaprobar la solicitud ", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Solcitud fue desaprobada Satifactoriamente");
+                //Mensaje positivo 
+                MessageBox.Show("Solcitud fue desaprobada Satifactoriamente","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                //Actualizar los datos en el formulario 
                 AsignarDatos(e_Solicitud.id_Solicitud, e_Salon.nombre);
 
             }

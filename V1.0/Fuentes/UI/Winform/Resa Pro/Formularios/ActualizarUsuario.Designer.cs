@@ -475,6 +475,7 @@
             this.CBXSalonesC.TabIndex = 0;
             this.CBXSalonesC.Text = "Crear";
             this.CBXSalonesC.UseVisualStyleBackColor = true;
+            this.CBXSalonesC.CheckedChanged += new System.EventHandler(this.CBXSalonesC_CheckedChanged);
             // 
             // ActualizarUsuario
             // 

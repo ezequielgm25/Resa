@@ -295,9 +295,11 @@ Drop Table #data
 CREATE PROCEDURE ObtenerSalonesID_N
 AS
 begin
-Select ID_Salon As 'ID', Nombre FROM Salones
+Select ID_Salon As 'ID', Nombre FROM Salones where Estado = 'Activo'
 end
 Go
+
+use ResaDB
 /* ***************************************************************/
 --Drop procedure ObtenerSalonesID_N
 
