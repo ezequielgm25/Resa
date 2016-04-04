@@ -56,6 +56,10 @@ namespace Capas.Data
             //Asignando Stored procedure
             StoredProcedure = "ObtenerSolicitudes";
 
+
+            //Conexion string de modo prueba del sistema
+            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
+
             //SQL Command
             SqlCommand comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
@@ -89,7 +93,11 @@ namespace Capas.Data
 
             //Asignando el stored procedure
             StoredProcedure = "CrearSolicitud";
-            
+
+
+            //Conexion string de modo prueba del sistema
+            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
+
             //SqlCommand
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
@@ -240,6 +248,9 @@ namespace Capas.Data
             //Asignando El stored procedure 
             StoredProcedure = "ActualizarSolicitud";
 
+            //Conexion string de modo prueba del sistema
+            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
+
             //Command
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
@@ -292,6 +303,10 @@ namespace Capas.Data
 
             //Asignando el stored procedure 
             StoredProcedure = "EliminarSolicitud";
+
+            //Conexion string de modo prueba del sistema
+            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
+
 
             //SQL Command
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);

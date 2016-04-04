@@ -10,7 +10,7 @@ using Capas.Infraestructura.Entidades;
 
 namespace Capas.Data
 {
-    public class D_Salon: Conexion
+    public class D_Salon : Conexion
     {
         //<Summary>
         //Clase que se encargara  de gestionar el usuario enn la capa de datos 
@@ -18,9 +18,9 @@ namespace Capas.Data
 
         #region Instancias -
 
-              //Salon 
+        //Salon 
         E_Salon e_Salon = new E_Salon();
-          //Conexion
+        //Conexion
         private Conexion conexion;
 
 
@@ -28,7 +28,7 @@ namespace Capas.Data
 
         #region  Variables - 
 
-        
+
         private String StoredProcedure;
 
         private int FilasAfectadas = 0;
@@ -55,27 +55,31 @@ namespace Capas.Data
         /// <returns></returns>
         public DataTable ObtenerSalones()
         {
-                //Asignando el Stored Procedura 
-                StoredProcedure = "ObtenerSalones";
-                //Un se SQL command al que se le pasan el stored procedute la conexion
-                SqlCommand comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
-                //El tipo de comando
-                comando.CommandType = CommandType.StoredProcedure;
+            //Asignando el Stored Procedura 
+            StoredProcedure = "ObtenerSalones";
 
-                //Un DataAdapter 
-                SqlDataAdapter DataAD = new SqlDataAdapter(comando);
-                //Un dataTable
-                DataTable DataT = new DataTable();
-                
-                //se limpia 
-                DataT.Clear();
+            //Conexion string de modo prueba del sistema
+            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
 
-                 //Se llena  la DataTable 
-                DataAD.Fill(DataT);
+            //Un se SQL command al que se le pasan el stored procedute la conexion
+            SqlCommand comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+            //El tipo de comando
+            comando.CommandType = CommandType.StoredProcedure;
 
-                return DataT;
+            //Un DataAdapter 
+            SqlDataAdapter DataAD = new SqlDataAdapter(comando);
+            //Un dataTable
+            DataTable DataT = new DataTable();
 
-          
+            //se limpia 
+            DataT.Clear();
+
+            //Se llena  la DataTable 
+            DataAD.Fill(DataT);
+
+            return DataT;
+
+
         }
         #endregion
 
@@ -88,27 +92,35 @@ namespace Capas.Data
         public int CrearSalon(E_Salon e_S)
         {
             //Variable  que recogera el ID
-            int ID= 0;
+            int ID = 0;
             //Asignando el StoredProcedure
             StoredProcedure = "CrearSalon";
 
+
+
             //SQl Command --Asignadosele sus correspondientes parametros
+
+            //resaConexion Prueba 
+            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
+
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
             // Conectar a la base de datos
+
+
 
             conexion.Conectar();
             //Asignando el command Type 
             Comando.CommandType = CommandType.StoredProcedure;
             //Agregando los parametros 
-            Comando.Parameters.Add("@Nombre", SqlDbType.NVarChar,100).Value = e_S.nombre;
-            Comando.Parameters.Add("@Ubicacion", SqlDbType.NVarChar,100).Value = e_S.ubicacion;
+            Comando.Parameters.Add("@Nombre", SqlDbType.NVarChar, 100).Value = e_S.nombre;
+            Comando.Parameters.Add("@Ubicacion", SqlDbType.NVarChar, 100).Value = e_S.ubicacion;
             Comando.Parameters.Add("@Capacidad", SqlDbType.Int).Value = e_S.capacidad;
-            Comando.Parameters.Add("@Estado", SqlDbType.NVarChar,100).Value = e_S.estado;
+            Comando.Parameters.Add("@Estado", SqlDbType.NVarChar, 100).Value = e_S.estado;
 
             //Variable devuelta ID_Salon
 
-            SqlParameter ID_Salon  = new SqlParameter("@ID_Salon", SqlDbType.Int);
+            SqlParameter ID_Salon = new SqlParameter("@ID_Salon", SqlDbType.Int);
             ID_Salon.Direction = ParameterDirection.Output;
             Comando.Parameters.Add(ID_Salon);
 
@@ -118,9 +130,9 @@ namespace Capas.Data
             //Asigna el resultado devuelto por el stored procedure
 
             ID = Convert.ToInt32(Comando.Parameters["@ID_Salon"].Value);
-           
+
             //Cerrando la conexion 
-            conexion.Desconectar();
+            //  conexion.Desconectar();
 
             //Devolviendo el resultado 
 
@@ -141,6 +153,11 @@ namespace Capas.Data
 
             //Asignando el stored procedure 
             StoredProcedure = "ActualizarSalon";
+
+            //Conexion string de modo prueba del sistema
+
+
+            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
 
             //SQl Command con sus correspondientes parametros
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
@@ -181,6 +198,9 @@ namespace Capas.Data
             //Asignando el stored procedure 
             StoredProcedure = "EliminarSalon";
 
+            //Conexion string de modo prueba del sistema
+            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
+
             //Sql commando con sus correspondientes parametros 
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
@@ -193,7 +213,7 @@ namespace Capas.Data
 
             //Agregando los parametros 
             Comando.Parameters.Add("@ID_Salon", SqlDbType.Int).Value = ID_Salon;
-            
+
             //Variable devuelta ID_Salon
 
             //Se ejecuta el  Query y se asignan las filas afectas

@@ -48,6 +48,10 @@ namespace Capas.Data
 
             StoredProcedure = "InsertarOrganizador";
 
+            //Conexion string de modo prueba del sistema
+            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
+
+            //SQL Command 
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
             // Conectar a la base de datos
@@ -93,6 +97,10 @@ namespace Capas.Data
 
             StoredProcedure = "ActualizarOrganizador";
 
+            //Conexion string de modo prueba del sistema
+            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
+
+            //Sql Command 
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
             // Conectar a la base de datos

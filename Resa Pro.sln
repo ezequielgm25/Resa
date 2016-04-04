@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{F4B5EF0D-F63
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capas", "V1.0\Fuentes\Capas\Capas.csproj", "{4F8D2628-F15B-4EC2-8E2B-09FFDF6DA5A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UntPResa", "UntPResa\UntPResa.csproj", "{BBF06852-3EEC-41E5-B234-0329B007484C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{4F8D2628-F15B-4EC2-8E2B-09FFDF6DA5A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F8D2628-F15B-4EC2-8E2B-09FFDF6DA5A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F8D2628-F15B-4EC2-8E2B-09FFDF6DA5A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBF06852-3EEC-41E5-B234-0329B007484C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF06852-3EEC-41E5-B234-0329B007484C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF06852-3EEC-41E5-B234-0329B007484C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF06852-3EEC-41E5-B234-0329B007484C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -133,7 +133,7 @@ namespace Resa_Pro.Formularios
             VerificacionFechas();
 
             //Verificacion de  los Controles que esten debidamente llenos
-            if(string.IsNullOrEmpty(TBTituloE.Text) || string.IsNullOrEmpty(TBTipoE.Text) || string.IsNullOrEmpty(TBTopicoE.Text) || string.IsNullOrEmpty(TBDescripcionE.Text) || string.IsNullOrEmpty(DateEditTInicio.Text) || string.IsNullOrEmpty(DateEditTFinal.Text) || string.IsNullOrEmpty(TBNombreO.Text) || string.IsNullOrEmpty(TBDescripcionO.Text) || string.IsNullOrEmpty(TBCorreoO.Text) || Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID")) == 0 || VEmail(TBCorreoO.Text) != true )
+            if(string.IsNullOrEmpty(TBTituloE.Text) || string.IsNullOrEmpty(TBTipoE.Text) || string.IsNullOrEmpty(TBTopicoE.Text) || string.IsNullOrEmpty(TBDescripcionE.Text) || string.IsNullOrEmpty(DateEditTInicio.Text) || string.IsNullOrEmpty(DateEditTFinal.Text) || string.IsNullOrEmpty(TBNombreO.Text) || string.IsNullOrEmpty(TBDescripcionO.Text) || string.IsNullOrEmpty(TBCorreoO.Text) || Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID")) == 0 || VEmail(TBCorreoO.Text) != true  || LBLNombreSalon.Text == "No seleccionado.")
             {
 
                 if (TBCorreoO.Text != "" && VEmail(TBCorreoO.Text) != true)

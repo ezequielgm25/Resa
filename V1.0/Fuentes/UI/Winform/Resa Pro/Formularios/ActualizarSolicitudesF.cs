@@ -230,7 +230,6 @@ namespace Resa_Pro.Formularios
                                 }
                                 else
                                 {
-
                                 }
 
                             }

@@ -383,3 +383,14 @@ use ResaDB
 select * from usuarios 
 
 Select * from Auditorias
+
+
+//Pruebas 
+
+use ResaDB
+
+select * from  salones
+select * from solicitudes
+
+Select * from eventos
+Select * from organizadores

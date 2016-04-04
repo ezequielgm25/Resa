@@ -170,24 +170,31 @@ namespace Resa_Pro.Formularios
         {
 
             //Aprobar solicitud  evento que retornara 
-
-            int FilaAfectada = n_Solicitud.AprobarSolicitud(e_Solicitud.id_Solicitud, e_Usuario.nombre);
-
-            //Verificacion 
-            if(FilaAfectada == 0)
+            if (LBLEstado.Text != "Aprobada")
             {
-                //Mensaje de error
-                MessageBox.Show("Ocurrio un error al aprobar la solicitud ","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                int FilaAfectada = n_Solicitud.AprobarSolicitud(e_Solicitud.id_Solicitud, e_Usuario.nombre);
+
+
+                //Verificacion 
+                if (FilaAfectada == 0)
+                {
+                    //Mensaje de error
+                    MessageBox.Show("Ocurrio un error al aprobar la solicitud ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                else
+                {
+                    //Mensaje Positivo 
+                    MessageBox.Show("Solcitud fue aprobada satifactoriamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //Actualizar los datos en el formulario 
+                    AsignarDatos(e_Solicitud.id_Solicitud, e_Salon.nombre);
+                }
+
             }
-            
             else
             {
-                //Mensaje Positivo 
-                MessageBox.Show("Solcitud aprobada satifactoriamente");
-                //Actualizar los datos en el formulario 
-                AsignarDatos(e_Solicitud.id_Solicitud, e_Salon.nombre);
+                MessageBox.Show("Solcitud ya esta aprobada", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
 
         }
 
@@ -205,25 +212,32 @@ namespace Resa_Pro.Formularios
         private void SBDesaprobar_Click(object sender, EventArgs e)
         {
 
-            //Filas afectadas 
-            int FilaAfectada = n_Solicitud.DesaprobarSolicitud(e_Solicitud.id_Solicitud, e_Usuario.nombre);
 
-            //Verificacion 
-            if (FilaAfectada == 0)
+            if (LBLEstado.Text != "No aprobada")
             {
-                //mensaje de error 
-                MessageBox.Show("Ocurrio un error al desaprobar la solicitud ", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                //Filas afectadas 
+                int FilaAfectada = n_Solicitud.DesaprobarSolicitud(e_Solicitud.id_Solicitud, e_Usuario.nombre);
+
+                //Verificacion 
+                if (FilaAfectada == 0)
+                {
+                    //mensaje de error 
+                    MessageBox.Show("Ocurrio un error al desaprobar la solicitud ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    //Mensaje positivo 
+                    MessageBox.Show("Solcitud fue desaprobada Satifactoriamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //Actualizar los datos en el formulario 
+                    AsignarDatos(e_Solicitud.id_Solicitud, e_Salon.nombre);
+
+                }
+
             }
             else
             {
-                //Mensaje positivo 
-                MessageBox.Show("Solcitud fue desaprobada Satifactoriamente","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                //Actualizar los datos en el formulario 
-                AsignarDatos(e_Solicitud.id_Solicitud, e_Salon.nombre);
-
+                MessageBox.Show("Solcitud ya no ha sido aprobada", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-
 
 
         }
