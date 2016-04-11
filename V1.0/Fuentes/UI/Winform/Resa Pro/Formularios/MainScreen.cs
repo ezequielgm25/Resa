@@ -13,6 +13,7 @@ using DevExpress.XtraBars.Helpers;
 using DevExpress.XtraScheduler;
 using Capas.Negocio;
 using Capas.Infraestructura.Entidades;
+using DevExpress.Utils;
 using DevExpress.Xpf;
 using DevExpress.XtraGrid;
 
@@ -147,6 +148,12 @@ namespace Resa_Pro.Formularios
 
             #endregion
 
+
+            #region CAmbiando el tema de los formularios
+
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Black");
+
+            #endregion
 
 
         }

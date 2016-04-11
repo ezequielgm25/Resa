@@ -26,7 +26,6 @@ Create Table Salones
 (
   ID_Servicio     Int not null Identity(1,1),
   Servicio        Nvarchar(100) not null,
-  Descripcion     Nvarchar(250) not null,
   ID_Salon        int not null,
   Primary key(ID_Servicio),
   Foreign key(ID_Salon) REFERENCES Salones(ID_Salon)
@@ -35,6 +34,9 @@ Create Table Salones
   )
   
   Go
+
+
+  
   
   /* Tabla de inventarios */
   
@@ -48,6 +50,27 @@ Create Table Salones
   On delete cascade
   On update cascade,
   
+  )
+  
+  Go
+  /*Tablas que guardaran todos los inventarios y servicios del sistema*/
+  
+  /*Servicios Globales*/
+  
+    Create Table ServiciosGlobales
+(
+  ID_Servicio     Int not null Identity(1,1),
+  Servicio        Nvarchar(100) not null,
+  Primary key(ID_Servicio)
+  )
+  
+  Go
+  /* Inventarios  Globales */ 
+      Create Table InventariosGlobales
+(
+  ID_Inventario     Int not null Identity(1,1),
+  Inventario        Nvarchar(100) not null,
+  Primary key(ID_Inventario)
   )
   
   Go
@@ -450,4 +473,50 @@ go
 /* Eliminando Tabla */
 Drop Table #data
 
+/* -- Trabajando los servicios Globales --*/
 
+/* obteniendo los servicios globales */
+
+Create Procedure ObtenerServiciosGlobales
+AS
+begin
+Select ID_Servicio as 'ID',  Servicio from ServiciosGlobales
+end
+Go
+/* Eliminando Stored procedure  */
+
+--Drop procedure ObtenerServiciosGlobales
+/* - - - - - - - - - - - - - -  - - - - */
+
+/* Eliminar un servicio Global */
+
+Create Procedure EliminarServicioGlobal
+@ID_Servicio AS INT
+AS
+BEGIN
+DELETE FROM ServiciosGlobales
+WHERE ID_Servicio = @ID_Servicio
+END
+GO
+/*--------------------------------------*/
+
+/* Insertando un servicio global */
+
+Create Procedure InsertarServicioGlobal
+ @Servicio as Nvarchar(100)
+ As 
+BEGIN
+   Insert Into ServiciosGlobales
+    (
+        Servicio
+    )
+    Values
+    (
+        @Servicio
+    )
+    
+ END
+ GO 
+ /* - ------ - - - - - - - - -- - - - - - */
+
+select * from ServiciosGlobales

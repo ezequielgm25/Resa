@@ -130,5 +130,33 @@ namespace Capas.Data
 
         #endregion
 
+        #region Obtener Servicios Globales
+
+        public DataTable ObtenerServiciosGlobales()
+        {
+            //Stored procedure
+            StoredProcedure = "ObtenerServiciosGlobales";
+            //Command
+            SqlCommand comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            //Tipo de comando 
+            comando.CommandType = CommandType.StoredProcedure;
+
+            //Data adapter
+            SqlDataAdapter DataAD = new SqlDataAdapter(comando);
+            //DataTable
+            DataTable DataT = new DataTable();
+            //LLenando  el dataT
+            DataAD.Fill(DataT);
+            //Retornando la data
+            return DataT;
+
+
+        }
+
+        #endregion
+
+
+
     }
 }

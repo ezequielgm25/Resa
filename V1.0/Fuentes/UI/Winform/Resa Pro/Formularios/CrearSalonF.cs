@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
+using System.Data.SqlClient;
 
 using Capas.Infraestructura.Entidades;
 using Capas.Negocio;
@@ -38,6 +39,9 @@ namespace Resa_Pro.Formularios
         E_Inventario e_Inventario = new E_Inventario();
 
         N_Inventario n_Inventario = new N_Inventario();
+        //Usuario
+        E_Usuario e_UsuarioAU = new E_Usuario();
+
         //Xml manager 
         XML_Manager X_m = new XML_Manager();
 
@@ -47,25 +51,25 @@ namespace Resa_Pro.Formularios
         /// <summary>
         /// Metodo contructor de la  interfaz 
         /// </summary>
-        public CrearSalonF()
+        public CrearSalonF(E_Usuario e_Usuario)
         {
             //Se inicializan los componentes 
             InitializeComponent();
 
+            //Asignando los valores de la entidad de usuario recivida como parametro a la entidad global
+            e_UsuarioAU = e_Usuario;
 
-            #region Desabilitando los botones de servicio y inventarios mientros no se agrege un salon 
-
-            //Mientras no se haiga agregado un salon los siguientes controles permaneceran desactivados 
+            #region Insertando los servicios y inventarios a los CheckedListBox
 
             //Servicios
-            SBAgregarS.Enabled = false;
-            SBQuitarS.Enabled = false;
-            TBDescripcionS.Enabled = false;
-            TBNombreS.Enabled = false;
-            //Inventarios
-            SBAgregarI.Enabled = false;
-            SBQuitarI.Enabled = false;
-            TBNombreIV.Enabled = false;
+            DataTable SqlDT = new DataTable();
+            SqlDT = n_Servicio.ObtenerServiciosGlobales();
+
+            CKDListServicios.DataSource = SqlDT;
+            CKDListServicios.ValueMember = "ID";
+            CKDListServicios.DisplayMember = "Servicio";
+
+       
 
             #endregion
 
@@ -81,6 +85,7 @@ namespace Resa_Pro.Formularios
         }
         #endregion
 
+       
         #region Crear Salon 
         /// <summary>
         /// Evento click sobre el boton crear que gestionara la funcion de creacion 
@@ -89,6 +94,9 @@ namespace Resa_Pro.Formularios
         /// <param name="e"></param>
         private void SBCrearSalon_Click(object sender, EventArgs e)
         {
+            /*
+            //Obtener fecha de entrada 
+            String Fecha_Entrada = Convert.ToString(DateTime.Now);
 
             try
             {
@@ -122,7 +130,7 @@ namespace Resa_Pro.Formularios
                     if (e_Salon.id_Salon == null)
                     {
                         //Mensaje de error 
-                        XtraMessageBox.Show("Nose pudo guardar el salon", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Nose pudo guardar el salon", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     //Se inicia el proceso de agregar "Inventarios" y "Servicios"
                     else
@@ -144,14 +152,9 @@ namespace Resa_Pro.Formularios
                         //Se activan los controles desactivados con anterioridad 
 
                         //Servicios
-                        SBAgregarS.Enabled = true;
-                        SBQuitarS.Enabled = true;
-                        TBDescripcionS.Enabled = true;
-                        TBNombreS.Enabled = true;
+                     
                         //Inventarios
-                        SBAgregarI.Enabled = true;
-                        SBQuitarI.Enabled = true;
-                        TBNombreIV.Enabled = true;
+                      
 
 
                         #endregion
@@ -164,7 +167,106 @@ namespace Resa_Pro.Formularios
             {
                 //Mostrando la excepcion al usuario
                 MessageBox.Show(Convert.ToString(E), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Guardando el error en  El XMl de destinado  con los parametros correcpondientes 
+                X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_UsuarioAU.id_Usuario), "Salones", "Crear", Convert.ToString(E));
 
+            }
+
+            */
+
+
+        }
+
+
+
+
+
+        #endregion
+
+        #region Servicios 
+
+        #region Eliminar Servicio Global 
+        private void SBEliminarS_Click(object sender, EventArgs e)
+        {
+            int FilasAfectadas;
+
+            if (CKDListServicios.SelectedItems.Count == 1)
+            {
+
+
+                int ID = Convert.ToInt32(CKDListServicios.SelectedValue);
+
+                MessageBox.Show(Convert.ToString(ID));
+
+                FilasAfectadas = n_Servicio.EliminarServicioGlobal(ID);
+
+                if (FilasAfectadas != 0)
+                {
+
+                    MessageBox.Show("El servicio se elimino correctamente!", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    //Servicios
+                    DataTable SqlDT = new DataTable();
+                    SqlDT = n_Servicio.ObtenerServiciosGlobales();
+
+                    CKDListServicios.DataSource = SqlDT;
+                    CKDListServicios.ValueMember = "ID";
+                    CKDListServicios.DisplayMember = "Servicio";
+                }
+                else
+                {
+                    MessageBox.Show("Ocurrio un error al eliminar el servicio"," Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Se debe selccionar un servicio para ser eliminado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
+
+        }
+
+
+        #endregion
+
+        #region Agregar Servicio Global
+        private void SBAgregarS_Click(object sender, EventArgs e)
+        {
+            int FilasAfectadas = 0;
+
+            if(TBServicio.Text != "")
+            {
+
+                FilasAfectadas = n_Servicio.InsertarServicioGlobal(TBServicio.Text);
+
+                if(FilasAfectadas != 0)
+                {
+                    MessageBox.Show("El servicio se agrego correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                    //Servicios
+                    DataTable SqlDT = new DataTable();
+                    SqlDT = n_Servicio.ObtenerServiciosGlobales();
+
+                    CKDListServicios.DataSource = SqlDT;
+                    CKDListServicios.ValueMember = "ID";
+                    CKDListServicios.DisplayMember = "Servicio";
+
+                    //Limpiando el campo de servicio 
+
+                    TBServicio.Clear();
+
+                }
+                else
+                {
+                    MessageBox.Show("Ocurrio un error al agregar el servicio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Se debe completar el campo de servicio", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
@@ -173,6 +275,25 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
+
+        #endregion
+
+        #region Inventarios
+
+        #region Eliminar Inventario Global
+
+
+        #endregion
+
+
+        #region Eliminar Inventario Global 
+
+
+        #endregion
+
+        #endregion
+
+        /*
         #region Servicios -
 
         //<summary>
@@ -480,7 +601,7 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #endregion
-
+    */
 
 
     }

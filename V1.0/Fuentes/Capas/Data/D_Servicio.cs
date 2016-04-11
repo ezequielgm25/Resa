@@ -18,7 +18,7 @@ namespace Capas.Data
         #region Instancias
 
        
-
+            //Intancia de la clase conexion
         private Conexion conexion;
 
 
@@ -26,6 +26,7 @@ namespace Capas.Data
 
         #region  Variables
 
+        //Variables
         private String StoredProcedure;
 
         private int FilasAfectadas = 0;
@@ -33,7 +34,9 @@ namespace Capas.Data
         #endregion
 
         #region Contructor
-
+        /// <summary>
+        /// Contructor de la  clase de data servicio parte logica de la iteracion con la base de datos de los servicios
+        /// </summary>
         public D_Servicio()
         {
             conexion = new Conexion();
@@ -42,7 +45,11 @@ namespace Capas.Data
         #endregion
 
         #region Agregar Servicio 
-
+        /// <summary>
+        /// metodo agregar un servicio el cual inserta un servicio en la base de datos 
+        /// </summary>
+        /// <param name="e_Servicio"></param>
+        /// <returns></returns>
         public int AgregarServicio(E_Servicio e_Servicio)
         {
 
@@ -131,6 +138,102 @@ namespace Capas.Data
         }
 
         #endregion
+
+
+        #region Obtener Servicios Globales
+
+        public DataTable ObtenerServiciosGlobales()
+        {
+            //Stored procedure
+            StoredProcedure = "ObtenerServiciosGlobales";
+            //Command
+            SqlCommand comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            //Tipo de comando 
+            comando.CommandType = CommandType.StoredProcedure;
+
+            //Data adapter
+            SqlDataAdapter DataAD = new SqlDataAdapter(comando);
+            //DataTable
+            DataTable DataT = new DataTable();
+            //LLenando  el dataT
+            DataAD.Fill(DataT);
+            //Retornando la data
+            return DataT;
+
+
+        }
+
+        #endregion
+
+        #region Eliminar Servicios Globales
+
+        public int EliminarServicioGlobales(int ID_Servicio)
+        {
+
+            StoredProcedure = "EliminarServicioGlobal";
+
+            SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            // Conectar a la base de datos
+
+            conexion.Conectar();
+
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.Parameters.Add("@ID_Servicio", SqlDbType.Int).Value = ID_Servicio;
+
+            //Se ejecuta el  Query y se asignan las filas afectas
+            FilasAfectadas = Comando.ExecuteNonQuery();
+
+            //Cerrando la conexion 
+            conexion.Desconectar();
+
+            //Devolviendo el resultado 
+
+
+            return FilasAfectadas;
+
+
+
+        }
+
+        #endregion
+
+        #region Insertar un Servicio Global
+        public int InsertarServicioGlobal(String Servicio)
+        {
+
+            StoredProcedure = "InsertarServicioGlobal";
+
+
+            //Conexion string de modo prueba del sistema
+            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
+
+
+            SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            // Conectar a la base de datos
+
+            conexion.Conectar();
+
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.Parameters.Add("@Servicio", SqlDbType.NVarChar, 100).Value = Servicio;
+          
+
+            //Se ejecuta el  Query y se asignan las filas afectas
+            FilasAfectadas = Comando.ExecuteNonQuery();
+
+            //Cerrando la conexion 
+            conexion.Desconectar();
+
+            //Devolviendo el resultado 
+
+
+            return FilasAfectadas;
+        }
+
+        #endregion
+
 
     }
 }

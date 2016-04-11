@@ -13,4 +13,126 @@
     <TipoOpcion>Crear</TipoOpcion>
     <Excepcion>nose</Excepcion>
   </Error>
+  <Error Fecha="04/10/16 11:50:03 PM">
+    <ID_Usuario>22</ID_Usuario>
+    <Opcion>Salones</Opcion>
+    <TipoOpcion>Crear</TipoOpcion>
+    <Excepcion>System.InvalidOperationException: ExecuteReader requiere una Connection abierta y disponible. El estado actual de la conexión es cerrada.
+   en System.Data.SqlClient.SqlCommand.ValidateCommand(String method, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task&amp; task, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader()
+   en Capas.Data.D_Servicio.ObtenerServiciosGlobales() en D:\Resa\V1.0\Fuentes\Capas\Data\D_Servicio.cs:línea 159
+   en Capas.Negocio.N_Servicio.ObtenerServiciosGlobales() en D:\Resa\V1.0\Fuentes\Capas\Negocio\N_Servicio.cs:línea 81
+   en Resa_Pro.Formularios.CrearSalonF..ctor(E_Usuario e_Usuario) en D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\Formularios\CrearSalonF.cs:línea 66
+   en Resa_Pro.Formularios.Salones.SBCrear_Click(Object sender, EventArgs e) en D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\Formularios\Salones.cs:línea 114</Excepcion>
+  </Error>
+  <Error Fecha="04/10/16 11:52:34 PM">
+    <ID_Usuario>22</ID_Usuario>
+    <Opcion>Salones</Opcion>
+    <TipoOpcion>Crear</TipoOpcion>
+    <Excepcion>System.InvalidOperationException: Intento no válido de llamar a Read cuando el lector está cerrado.
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean&amp; more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Resa_Pro.Formularios.CrearSalonF..ctor(E_Usuario e_Usuario) en D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\Formularios\CrearSalonF.cs:línea 68
+   en Resa_Pro.Formularios.Salones.SBCrear_Click(Object sender, EventArgs e) en D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\Formularios\Salones.cs:línea 114</Excepcion>
+  </Error>
+  <Error Fecha="04/10/16 11:53:06 PM">
+    <ID_Usuario>22</ID_Usuario>
+    <Opcion>Salones</Opcion>
+    <TipoOpcion>Crear</TipoOpcion>
+    <Excepcion>System.InvalidOperationException: Intento no válido de llamar a Read cuando el lector está cerrado.
+   en System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean&amp; more)
+   en System.Data.SqlClient.SqlDataReader.Read()
+   en Resa_Pro.Formularios.CrearSalonF..ctor(E_Usuario e_Usuario) en D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\Formularios\CrearSalonF.cs:línea 68
+   en Resa_Pro.Formularios.Salones.SBCrear_Click(Object sender, EventArgs e) en D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\Formularios\Salones.cs:línea 114</Excepcion>
+  </Error>
+  <Error Fecha="04/11/16 12:05:02 AM">
+    <ID_Usuario>22</ID_Usuario>
+    <Opcion>Salones</Opcion>
+    <TipoOpcion>Crear</TipoOpcion>
+    <Excepcion>System.InvalidOperationException: No se ha inicializado la propiedad SelectCommand antes de llamar a 'Fill'.
+   en System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   en Capas.Data.D_Servicio.ObtenerServiciosGlobales() en D:\Resa\V1.0\Fuentes\Capas\Data\D_Servicio.cs:línea 160
+   en Capas.Negocio.N_Servicio.ObtenerServiciosGlobales() en D:\Resa\V1.0\Fuentes\Capas\Negocio\N_Servicio.cs:línea 81
+   en Resa_Pro.Formularios.CrearSalonF..ctor(E_Usuario e_Usuario) en D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\Formularios\CrearSalonF.cs:línea 66
+   en Resa_Pro.Formularios.Salones.SBCrear_Click(Object sender, EventArgs e) en D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\Formularios\Salones.cs:línea 114</Excepcion>
+  </Error>
+  <Error Fecha="04/11/16 12:55:38 AM">
+    <ID_Usuario>22</ID_Usuario>
+    <Opcion>Salones</Opcion>
+    <TipoOpcion>Crear</TipoOpcion>
+    <Excepcion>System.InvalidCastException: La conversión especificada no es válida.
+   en Resa_Pro.Formularios.CrearSalonF.SBEliminarS_Click(Object sender, EventArgs e) en D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\Formularios\CrearSalonF.cs:línea 191
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en DevExpress.XtraEditors.BaseButton.OnClick(EventArgs e)
+   en DevExpress.XtraEditors.BaseButton.OnMouseUp(MouseEventArgs e)
+   en System.Windows.Forms.Control.WmMouseUp(Message&amp; m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message&amp; m)
+   en DevExpress.Utils.Controls.ControlBase.WndProc(Message&amp; m)
+   en DevExpress.XtraEditors.BaseControl.WndProc(Message&amp; msg)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message&amp; m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message&amp; m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG&amp; msg)
+   en System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.RunDialog(Form form)
+   en System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   en System.Windows.Forms.Form.ShowDialog()
+   en Resa_Pro.Formularios.Salones.SBCrear_Click(Object sender, EventArgs e) en D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\Formularios\Salones.cs:línea 116</Excepcion>
+  </Error>
+  <Error Fecha="04/11/16 1:01:49 AM">
+    <ID_Usuario>22</ID_Usuario>
+    <Opcion>Salones</Opcion>
+    <TipoOpcion>Crear</TipoOpcion>
+    <Excepcion>System.InvalidCastException: La conversión especificada no es válida.
+   en Resa_Pro.Formularios.CrearSalonF.SBEliminarS_Click(Object sender, EventArgs e) en D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\Formularios\CrearSalonF.cs:línea 191
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en DevExpress.XtraEditors.BaseButton.OnClick(EventArgs e)
+   en DevExpress.XtraEditors.BaseButton.OnMouseUp(MouseEventArgs e)
+   en System.Windows.Forms.Control.WmMouseUp(Message&amp; m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message&amp; m)
+   en DevExpress.Utils.Controls.ControlBase.WndProc(Message&amp; m)
+   en DevExpress.XtraEditors.BaseControl.WndProc(Message&amp; msg)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message&amp; m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message&amp; m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG&amp; msg)
+   en System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.RunDialog(Form form)
+   en System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   en System.Windows.Forms.Form.ShowDialog()
+   en Resa_Pro.Formularios.Salones.SBCrear_Click(Object sender, EventArgs e) en D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\Formularios\Salones.cs:línea 116</Excepcion>
+  </Error>
+  <Error Fecha="04/11/16 1:05:25 AM">
+    <ID_Usuario>22</ID_Usuario>
+    <Opcion>Salones</Opcion>
+    <TipoOpcion>Crear</TipoOpcion>
+    <Excepcion>System.InvalidCastException: La conversión especificada no es válida.
+   en Resa_Pro.Formularios.CrearSalonF.SBEliminarS_Click(Object sender, EventArgs e) en D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\Formularios\CrearSalonF.cs:línea 194
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en DevExpress.XtraEditors.BaseButton.OnClick(EventArgs e)
+   en DevExpress.XtraEditors.BaseButton.OnMouseUp(MouseEventArgs e)
+   en System.Windows.Forms.Control.WmMouseUp(Message&amp; m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message&amp; m)
+   en DevExpress.Utils.Controls.ControlBase.WndProc(Message&amp; m)
+   en DevExpress.XtraEditors.BaseControl.WndProc(Message&amp; msg)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message&amp; m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message&amp; m)
+   en System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   en System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG&amp; msg)
+   en System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   en System.Windows.Forms.Application.RunDialog(Form form)
+   en System.Windows.Forms.Form.ShowDialog(IWin32Window owner)
+   en System.Windows.Forms.Form.ShowDialog()
+   en Resa_Pro.Formularios.Salones.SBCrear_Click(Object sender, EventArgs e) en D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\Formularios\Salones.cs:línea 116</Excepcion>
+  </Error>
 </Errores>

@@ -111,7 +111,7 @@ namespace Resa_Pro.Formularios
             try
             {
                 //Instanciando una entidad 
-                CrearSalonF C_Salon = new CrearSalonF();
+                CrearSalonF C_Salon = new CrearSalonF(e_Usuario);
 
                 C_Salon.ShowDialog();
 

@@ -72,6 +72,50 @@ namespace Capas.Negocio
 
         #endregion
 
+        #region Obtener Servicios Globales
+        public DataTable ObtenerServiciosGlobales()
+        {
+            //Declarando data Adapter
+            DataTable DataT = new DataTable();
+            //instanciando el metodo y recogiendo el resultado
+            DataT = d_Servicio.ObtenerServiciosGlobales();
+            //Returnando el dataT
+            return DataT;
+        }
+
+        #endregion
+
+        #region Eliminar Servicio Global
+
+        public int  EliminarServicioGlobal(int ID_S)
+        {
+
+            int FilasAfectadas;
+
+            FilasAfectadas = d_Servicio.EliminarServicioGlobales(ID_S);
+
+            return FilasAfectadas;
+
+        }
+
+
+
+        #endregion
+
+        #region Insertar Un servicio Global 
+
+        public int InsertarServicioGlobal(String Servicio)
+        {
+            int FilasAfectadas = 0;
+
+            FilasAfectadas = d_Servicio.InsertarServicioGlobal(Servicio);
+
+            return FilasAfectadas;
+
+        }
+
+
+        #endregion
 
     }
 }
