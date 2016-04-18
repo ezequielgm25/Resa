@@ -117,5 +117,34 @@ namespace Capas.Negocio
 
         #endregion
 
+
+        #region Verificar Existencia del Servicio 
+        public int VerificarExistenciaDeServicio(E_Servicio e_Servicio)
+        {
+            int Resultado = 0;
+
+            Resultado = d_Servicio.VerificarExistenciaDeServicio(e_Servicio);
+
+
+            return Resultado;
+
+        }
+
+
+
+        #endregion
+
+        #region Eliminar Servicio por servicio y ID
+        public int EliminarSercvicioXS_ID(E_Servicio e_Servicio)
+        {
+            int FilasAfectadas;
+
+            FilasAfectadas = d_Servicio.EliminarSercvicioXS_ID(e_Servicio);
+
+            return FilasAfectadas;
+
+        }
+        #endregion 
+
     }
 }

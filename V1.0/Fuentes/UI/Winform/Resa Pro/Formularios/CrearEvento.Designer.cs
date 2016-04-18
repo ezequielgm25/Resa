@@ -51,13 +51,14 @@
             this.GCOrganizador = new DevExpress.XtraEditors.GroupControl();
             this.LBLNombreSalon = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.SBGuardar = new DevExpress.XtraEditors.SimpleButton();
+            this.SBOrganizador = new DevExpress.XtraEditors.SimpleButton();
+            this.CBOrganizador = new System.Windows.Forms.ComboBox();
             this.TBCorreoO = new System.Windows.Forms.TextBox();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.TBDescripcionO = new System.Windows.Forms.TextBox();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.TBNombreO = new System.Windows.Forms.TextBox();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.SBGuardar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GCSalon)).BeginInit();
             this.GCSalon.SuspendLayout();
@@ -270,14 +271,15 @@
             // 
             // GCOrganizador
             // 
-            this.GCOrganizador.Controls.Add(this.LBLNombreSalon);
-            this.GCOrganizador.Controls.Add(this.labelControl9);
+            this.GCOrganizador.Controls.Add(this.SBOrganizador);
+            this.GCOrganizador.Controls.Add(this.CBOrganizador);
             this.GCOrganizador.Controls.Add(this.TBCorreoO);
             this.GCOrganizador.Controls.Add(this.labelControl8);
             this.GCOrganizador.Controls.Add(this.TBDescripcionO);
             this.GCOrganizador.Controls.Add(this.labelControl7);
-            this.GCOrganizador.Controls.Add(this.TBNombreO);
             this.GCOrganizador.Controls.Add(this.labelControl6);
+            this.GCOrganizador.Controls.Add(this.LBLNombreSalon);
+            this.GCOrganizador.Controls.Add(this.labelControl9);
             this.GCOrganizador.Dock = System.Windows.Forms.DockStyle.Top;
             this.GCOrganizador.Location = new System.Drawing.Point(654, 49);
             this.GCOrganizador.Name = "GCOrganizador";
@@ -301,52 +303,6 @@
             this.labelControl9.TabIndex = 14;
             this.labelControl9.Text = "Solicitud al salon:";
             // 
-            // TBCorreoO
-            // 
-            this.TBCorreoO.Location = new System.Drawing.Point(91, 167);
-            this.TBCorreoO.Name = "TBCorreoO";
-            this.TBCorreoO.Size = new System.Drawing.Size(232, 21);
-            this.TBCorreoO.TabIndex = 13;
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Location = new System.Drawing.Point(14, 175);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(37, 13);
-            this.labelControl8.TabIndex = 12;
-            this.labelControl8.Text = "Correo:";
-            // 
-            // TBDescripcionO
-            // 
-            this.TBDescripcionO.Location = new System.Drawing.Point(91, 85);
-            this.TBDescripcionO.Multiline = true;
-            this.TBDescripcionO.Name = "TBDescripcionO";
-            this.TBDescripcionO.Size = new System.Drawing.Size(219, 59);
-            this.TBDescripcionO.TabIndex = 11;
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Location = new System.Drawing.Point(14, 93);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(58, 13);
-            this.labelControl7.TabIndex = 10;
-            this.labelControl7.Text = "Descripcion:";
-            // 
-            // TBNombreO
-            // 
-            this.TBNombreO.Location = new System.Drawing.Point(91, 37);
-            this.TBNombreO.Name = "TBNombreO";
-            this.TBNombreO.Size = new System.Drawing.Size(219, 21);
-            this.TBNombreO.TabIndex = 9;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(14, 37);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(41, 13);
-            this.labelControl6.TabIndex = 9;
-            this.labelControl6.Text = "Nombre:";
-            // 
             // SBGuardar
             // 
             this.SBGuardar.Image = ((System.Drawing.Image)(resources.GetObject("SBGuardar.Image")));
@@ -357,6 +313,66 @@
             this.SBGuardar.TabIndex = 9;
             this.SBGuardar.Text = "Marcar evento";
             this.SBGuardar.Click += new System.EventHandler(this.SBGuardar_Click);
+            // 
+            // SBOrganizador
+            // 
+            this.SBOrganizador.Image = ((System.Drawing.Image)(resources.GetObject("SBOrganizador.Image")));
+            this.SBOrganizador.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.SBOrganizador.Location = new System.Drawing.Point(331, 41);
+            this.SBOrganizador.Name = "SBOrganizador";
+            this.SBOrganizador.Size = new System.Drawing.Size(39, 23);
+            this.SBOrganizador.TabIndex = 24;
+            this.SBOrganizador.Click += new System.EventHandler(this.SBOrganizador_Click);
+            // 
+            // CBOrganizador
+            // 
+            this.CBOrganizador.FormattingEnabled = true;
+            this.CBOrganizador.Location = new System.Drawing.Point(92, 43);
+            this.CBOrganizador.Name = "CBOrganizador";
+            this.CBOrganizador.Size = new System.Drawing.Size(232, 21);
+            this.CBOrganizador.TabIndex = 23;
+            this.CBOrganizador.SelectedValueChanged += new System.EventHandler(this.CBOrganizador_SelectedValueChanged);
+            // 
+            // TBCorreoO
+            // 
+            this.TBCorreoO.Location = new System.Drawing.Point(92, 176);
+            this.TBCorreoO.Name = "TBCorreoO";
+            this.TBCorreoO.ReadOnly = true;
+            this.TBCorreoO.Size = new System.Drawing.Size(232, 21);
+            this.TBCorreoO.TabIndex = 22;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(15, 184);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(37, 13);
+            this.labelControl8.TabIndex = 21;
+            this.labelControl8.Text = "Correo:";
+            // 
+            // TBDescripcionO
+            // 
+            this.TBDescripcionO.Location = new System.Drawing.Point(92, 94);
+            this.TBDescripcionO.Multiline = true;
+            this.TBDescripcionO.Name = "TBDescripcionO";
+            this.TBDescripcionO.ReadOnly = true;
+            this.TBDescripcionO.Size = new System.Drawing.Size(232, 59);
+            this.TBDescripcionO.TabIndex = 20;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(15, 102);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(58, 13);
+            this.labelControl7.TabIndex = 19;
+            this.labelControl7.Text = "Descripcion:";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(15, 46);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(41, 13);
+            this.labelControl6.TabIndex = 18;
+            this.labelControl6.Text = "Nombre:";
             // 
             // CrearEvento
             // 
@@ -426,12 +442,13 @@
         private DevExpress.XtraEditors.GroupControl GCOrganizador;
         private DevExpress.XtraEditors.LabelControl LBLNombreSalon;
         private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.SimpleButton SBGuardar;
+        private DevExpress.XtraEditors.SimpleButton SBOrganizador;
+        private System.Windows.Forms.ComboBox CBOrganizador;
         private System.Windows.Forms.TextBox TBCorreoO;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private System.Windows.Forms.TextBox TBDescripcionO;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private System.Windows.Forms.TextBox TBNombreO;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.SimpleButton SBGuardar;
     }
 }

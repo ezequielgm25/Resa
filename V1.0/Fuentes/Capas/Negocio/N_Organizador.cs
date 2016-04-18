@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+
 using Capas.Data;
 using Capas.Infraestructura.Entidades;
 
@@ -73,6 +76,58 @@ namespace Capas.Negocio
 
         #endregion
 
+        //Trabajando los organizadores Globales 
 
+        #region obtener Organizadores Globales
+        public DataTable ObtenerOrganizadoresGlobales()
+        {
+            DataTable DT = new DataTable();
+
+            DT = d_Organizador.ObteniendoOrganizadoresGlobales();
+
+            return DT;
+        }
+
+        #endregion
+
+        #region Insertar Organizador Global 
+        public int InsertarOrganizadorGlobal(E_Organizador e_Or)
+        {
+            int FilasAfectadas = 0;
+
+            FilasAfectadas = d_Organizador.AgregandoOrganizadorGlobal(e_Or);
+
+            return FilasAfectadas;
+        }
+
+
+        #endregion
+
+
+        #region  Actualizar Organizador Global
+        public int ActualizarOrganizadorGlobal(E_Organizador e_Or)
+        {
+            int FilasAfectadas = 0;
+
+            FilasAfectadas = d_Organizador.ActualizarOrganizadorGlobal(e_Or);
+
+            return FilasAfectadas;
+        }
+
+        #endregion
+
+        #region Eliminar Organizador 
+        public int EliminarOrganizadorGlobal(int ID_Or)
+        {
+            int FilasAfectadas;
+
+            FilasAfectadas = d_Organizador.EliminarOrganizadorGlobal(ID_Or);
+
+            return FilasAfectadas;
+
+        }
+
+
+        #endregion
     }
 }

@@ -493,3 +493,66 @@ AS
   
   /* - - - */ 
   --drop procedure ObtenerOrganizador;
+  
+  /* --- Insertar Organizador Global  ---- */
+  
+  CREATE PROCEDURE InsertarOrganizadorGlobal
+  @Nombre        as      Nvarchar(100),
+  @Descripcion   as      Nvarchar(150),
+  @CorreoElectronico as  Nvarchar(100)
+  
+  AS
+  BEGIN
+   INSERT  INTO  organizadoresGlobales
+   (
+     Nombre,Descripcion,CorreoElectronico
+   )
+   VALUES
+   (
+     @Nombre , @Descripcion , @CorreoElectronico
+   )
+  END
+  GO
+  
+  /*  --- EliminarOrganizador Global --- */
+  
+  Create procedure EliminarOrganizadorGlobal
+  @ID_Organizador as int
+  AS
+  BEGIN
+  DELETE FROM organizadoresGlobales
+  Where ID_Organizador = @ID_Organizador
+  END
+  GO
+  
+  /* --- Actualizar Organizador  --- */
+  
+  Create procedure ActualizarORganizadorGlobal
+  @ID_Organizador  as int, 
+  @Nombre          as Nvarchar(100),
+  @Descripcion     as Nvarchar(150),
+  @CorreoElectronico as  Nvarchar(100)
+AS 
+  BEGIN
+    Update organizadoresGlobales
+    Set Nombre = @Nombre, Descripcion = @Descripcion , CorreoElectronico = @CorreoElectronico
+    where ID_Organizador = @ID_Organizador  
+  END
+  GO
+  
+  drop procedure ActualizarORganizadorGlobal
+  /* --- Obtener Organizadores Globales --- */
+ 
+ Create procedure ObtenerOrganizadoresGlobales
+ AS 
+ BEGIN
+ Select ID_Organizador AS 'ID' ,Nombre , Descripcion ,CorreoElectronico as 'Correo' From organizadoresGlobales order by ID_Organizador Desc 
+ END
+ GO
+ 
+ --drop procedure ObtenerOrganizadoresGlobales
+ /* --- Obtener Organizador  Global  ---- */
+ Create Procedure ObtenerOrganizadorGlobal
+ 
+ AS
+   

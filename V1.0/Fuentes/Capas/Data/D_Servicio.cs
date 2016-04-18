@@ -17,8 +17,8 @@ namespace Capas.Data
 
         #region Instancias
 
-       
-            //Intancia de la clase conexion
+
+        //Intancia de la clase conexion
         private Conexion conexion;
 
 
@@ -63,12 +63,11 @@ namespace Capas.Data
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
             // Conectar a la base de datos
-            
+
             conexion.Conectar();
-            
+
             Comando.CommandType = CommandType.StoredProcedure;
             Comando.Parameters.Add("@Servicio", SqlDbType.NVarChar, 100).Value = e_Servicio.servicio;
-            Comando.Parameters.Add("@Descripcion", SqlDbType.NVarChar, 250).Value = e_Servicio.descripcion;
             Comando.Parameters.Add("@ID_Salon", SqlDbType.Int).Value = e_Servicio.id_Salon;
 
             //Se ejecuta el  Query y se asignan las filas afectas
@@ -84,7 +83,6 @@ namespace Capas.Data
         }
 
         #endregion
-
 
         #region Obtener Servicios 
 
@@ -108,7 +106,6 @@ namespace Capas.Data
 
         #endregion
 
-
         #region Eliminar Servicio
 
         public int EliminarServicio(int ID_Servicio)
@@ -124,7 +121,7 @@ namespace Capas.Data
 
             Comando.CommandType = CommandType.StoredProcedure;
             Comando.Parameters.Add("@ID_Servicio", SqlDbType.Int).Value = ID_Servicio;
-          
+
             //Se ejecuta el  Query y se asignan las filas afectas
             FilasAfectadas = Comando.ExecuteNonQuery();
 
@@ -138,7 +135,6 @@ namespace Capas.Data
         }
 
         #endregion
-
 
         #region Obtener Servicios Globales
 
@@ -218,7 +214,7 @@ namespace Capas.Data
 
             Comando.CommandType = CommandType.StoredProcedure;
             Comando.Parameters.Add("@Servicio", SqlDbType.NVarChar, 100).Value = Servicio;
-          
+
 
             //Se ejecuta el  Query y se asignan las filas afectas
             FilasAfectadas = Comando.ExecuteNonQuery();
@@ -234,6 +230,86 @@ namespace Capas.Data
 
         #endregion
 
+        #region verificar existencia del servicio 
+        public int VerificarExistenciaDeServicio(E_Servicio e_Servicio)
+        {
+            
+            //Varaible que devolvera la  variable 
+            int Resultado  = 0;
+            //Entidad 
+
+          
+            StoredProcedure = "VerificarExistenciaServicio";
+
+            SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            // Conectar a la base de datos
+
+            conexion.Conectar();
+
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.Parameters.Add("Servicio", SqlDbType.NVarChar,100).Value = e_Servicio.servicio;
+            Comando.Parameters.Add("@ID_Salon", SqlDbType.Int).Value =e_Servicio.id_Salon;
+            
+
+
+            //Variables Devueltas
+
+            SqlParameter Result  = new SqlParameter("@Result", SqlDbType.Int);
+            Result.Direction = ParameterDirection.Output;
+            Comando.Parameters.Add(Result);
+
+
+
+            //Se ejecuta el  Query y se asignan las filas afectas
+            FilasAfectadas = Comando.ExecuteNonQuery();
+
+            //Asigna el resultado devuelto por el stored procedure
+
+             Resultado = Convert.ToInt32(Comando.Parameters["@Result"].Value);
+         
+
+
+            //Cerrando la conexion 
+            conexion.Desconectar();
+
+            //Devolviendo el resultado
+            return Resultado;
+        }
+
+        #endregion
+
+        #region Eliminar Servicio por Nombre y ID 
+
+        public int EliminarSercvicioXS_ID(E_Servicio e_Servicio)
+        {
+            StoredProcedure = "EliminarServicioXS_ID";
+
+            SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            // Conectar a la base de datos
+
+            conexion.Conectar();
+
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.Parameters.Add("@Servicio", SqlDbType.NVarChar,100).Value = e_Servicio.servicio;
+            Comando.Parameters.Add("@ID_Salon", SqlDbType.Int).Value = e_Servicio.id_Salon;
+
+            //Se ejecuta el  Query y se asignan las filas afectas
+            FilasAfectadas = Comando.ExecuteNonQuery();
+
+            //Cerrando la conexion 
+            conexion.Desconectar();
+
+            //Devolviendo el resultado 
+
+
+            return FilasAfectadas;
+
+        }
+
+
+        #endregion
 
     }
 }

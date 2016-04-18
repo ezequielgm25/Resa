@@ -20,6 +20,55 @@ Create Table Salones
   
   Go
   
+  /* - - - - - Ubicaciones Globales - - - - - */ 
+  
+  Create Table UbicacionesGlobales
+(
+  ID_Ubicacion    Int not null Identity(1,1),
+  Ubicacion       Nvarchar(100) not null
+  Primary key(ID_Ubicacion)
+ )
+  Go
+  
+/*---- Stored procedures de las ubicaciones ------*/
+
+/* Obtener ubicaciones Globales */
+
+
+create procedure ObtenerUbicacionesGlobales 
+AS
+begin
+Select ID_Ubicacion As 'ID', Ubicacion FROM UbicacionesGlobales Order By Ubicacion DESC
+end
+Go
+
+Drop procedure ObtenerUbicacionesGlobales
+
+/*Eliminar Ubicacion */
+CREATE PROCEDURE EliminarUbicacionGlobal
+@ID_Ubicacion as Int 
+ AS 
+BEGIN
+   delete from UbicacionesGlobales Where ID_Ubicacion = @ID_Ubicacion
+END
+ GO
+/*Agregarr Ubicacion*/
+create procedure AgregarUbicacionGlobal
+ @Ubicacion as Nvarchar(100)
+ As 
+BEGIN
+   Insert Into UbicacionesGlobales
+    (
+        Ubicacion
+    )
+    Values
+    (
+        @Ubicacion
+    )
+    
+ END
+ GO 
+  
     /* Tabla de Servicios */
   
   Create Table Servicios
@@ -135,6 +184,17 @@ Create Table Salones
   )
   
   Go
+  /*  ---  ORganizadores Globales */
+    Create Table organizadoresGlobales
+(
+  ID_Organizador      Int not null Identity(1,1),
+  Nombre              Nvarchar(100) not null,
+  Descripcion         Nvarchar(150) not null,
+  CorreoElectronico   Nvarchar(100) not null
+  Primary key(ID_Organizador),
+  )  
+  
+  
   
   /* Tabla de auditorias */
   
@@ -331,17 +391,16 @@ use ResaDB
 CREATE PROCEDURE AgregarServicio 
  
  @Servicio as Nvarchar(100),
- @Descripcion as Nvarchar(250),
  @ID_Salon as int
  As 
 BEGIN
    Insert Into Servicios
     (
-        Servicio,Descripcion,ID_Salon
+        Servicio,ID_Salon
     )
     Values
     (
-        @Servicio, @Descripcion, @ID_Salon
+        @Servicio, @ID_Salon
     )
     
  END
@@ -365,6 +424,18 @@ DELETE FROM Servicios
 WHERE ID_Servicio = @ID_Servicio
 END
 GO
+/*----- Eliminar Servicio con servicio y id de salon  ----------*/ 
+
+Create Procedure EliminarServicioXS_ID
+@Servicio as Nvarchar(100),
+@ID_Salon as int
+AS 
+BEGIN
+DELETE FROM Servicios
+WHERE ID_Salon = @ID_Salon and Servicio = @Servicio
+END
+GO
+
 
 /* Elminar procedure*/
 --Drop Procedure EliminarServicio
@@ -380,7 +451,7 @@ Create Procedure ObtenerServicios
 @ID_Salon as int
 AS
 begin
-Select ID_Servicio AS 'ID', Servicio, Descripcion from Servicios where ID_Salon = @ID_Salon
+Select ID_Servicio AS 'ID', Servicio from Servicios where ID_Salon = @ID_Salon
 end
 Go
 
@@ -442,6 +513,19 @@ DELETE FROM Inventarios
 WHERE ID_Inventario = @ID_Inventario
 END
 GO
+
+/*----- Eliminar inventario con inventario y id de salon  ----------*/ 
+
+Create Procedure EliminarInventarioXS_ID
+@Inventario as Nvarchar(100),
+@ID_Salon as int
+AS 
+BEGIN
+DELETE FROM Inventarios
+WHERE ID_Salon = @ID_Salon and Inventario = @Inventario
+END
+GO
+
 /* Elminar procedure*/
 --Drop Procedure EliminarInventario
 /* * * * * * * Prueba * * * * * * * * * * * */
@@ -520,3 +604,100 @@ BEGIN
  /* - ------ - - - - - - - - -- - - - - - */
 
 select * from ServiciosGlobales
+
+/* Verificando Existencia de un Servicio en el salon  */
+
+
+CREATE PROCEDURE VerificarExistenciaServicio
+@Servicio Nvarchar(100),
+@ID_Salon   int,
+@Result As int Output
+  As 
+BEGIN
+  Declare @ServicioCount as int;
+
+END
+BEGIN
+ select @ServicioCount = count(Servicio) from Servicios where servicio = @servicio   and ID_Salon = @ID_Salon;
+END
+BEGIN
+if(@ServicioCount = 1)
+ 
+ Set @Result = 1;
+ else 
+ Set @Result = 0;
+
+END
+GO 
+
+
+/*----------------*/
+--Drop procedure VerificarExisstenciaServicio
+ /*------ TRabajando los  inventarios Globales ----- */
+/* obteniendo los inventarios globales */
+
+Create Procedure ObtenerInventariosGlobales
+AS
+begin
+Select ID_Inventario as 'ID',  Inventario from InventariosGlobales
+end
+Go
+
+/* Eliminar un Inventario Global */
+
+Create Procedure EliminarInventarioGlobal
+@ID_Inventario AS INT
+AS
+BEGIN
+DELETE FROM InventariosGlobales
+WHERE ID_Inventario = @ID_Inventario
+END
+GO
+
+/*-------- Inisertar un servicio Global -----------*/
+Create Procedure InsertarInventarioGlobal
+ @Inventario as Nvarchar(100)
+ As 
+BEGIN
+   Insert Into InventariosGlobales
+    (
+        Inventario
+    )
+    Values
+    (
+        @Inventario
+    )
+    
+ END
+ GO
+ 
+/* - - - -  - Verificar existencia de un servicio - - - -  */ 
+ 
+/* Verificando Existencia de un Inventario en el salon  */
+
+
+CREATE PROCEDURE VerificarExistenciaInventario
+@Inventario Nvarchar(100),
+@ID_Salon   int,
+@Result As int Output
+  As 
+BEGIN
+  Declare @InventarioCount as int;
+
+END
+BEGIN
+ select @InventarioCount = count(Inventario) from Inventarios where Inventario = @Inventario  and ID_Salon = @ID_Salon;
+END
+BEGIN
+if(@InventarioCount = 1)
+ 
+ Set @Result = 1;
+ else 
+ Set @Result = 0;
+
+END
+GO 
+/*------- */
+
+
+

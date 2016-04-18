@@ -525,3 +525,5 @@ D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\CrystalDecisions.ReportAppSer
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\ShockwaveFlashObjects.dll
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.Repo.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.UbicacionF.resources
+D:\Resa\V1.0\Fuentes\UI\Winform\Resa Pro\obj\Debug\Resa_Pro.Formularios.OrganizadoresF.resources

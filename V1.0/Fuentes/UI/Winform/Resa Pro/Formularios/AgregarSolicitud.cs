@@ -73,6 +73,22 @@ namespace Resa_Pro.Formularios
 
             #endregion
 
+            #region llenando el ComboBox de organizadores 
+
+            CBOrganizador.DataSource = n_Organizador.ObtenerOrganizadoresGlobales();
+            CBOrganizador.ValueMember = "ID";
+            CBOrganizador.DisplayMember = "Nombre";
+
+            //Deseleccionando el items predeterminado 
+            CBOrganizador.SelectedValue = -2;
+            TBCorreoO.Text = "";
+            TBDescripcionO.Text = "";
+             
+           
+
+
+            #endregion
+
         }
 
         #endregion
@@ -133,7 +149,7 @@ namespace Resa_Pro.Formularios
             VerificacionFechas();
 
             //Verificacion de  los Controles que esten debidamente llenos
-            if(string.IsNullOrEmpty(TBTituloE.Text) || string.IsNullOrEmpty(TBTipoE.Text) || string.IsNullOrEmpty(TBTopicoE.Text) || string.IsNullOrEmpty(TBDescripcionE.Text) || string.IsNullOrEmpty(DateEditTInicio.Text) || string.IsNullOrEmpty(DateEditTFinal.Text) || string.IsNullOrEmpty(TBNombreO.Text) || string.IsNullOrEmpty(TBDescripcionO.Text) || string.IsNullOrEmpty(TBCorreoO.Text) || Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID")) == 0 || VEmail(TBCorreoO.Text) != true  || LBLNombreSalon.Text == "No seleccionado.")
+            if(string.IsNullOrEmpty(TBTituloE.Text) || string.IsNullOrEmpty(TBTipoE.Text) || string.IsNullOrEmpty(TBTopicoE.Text) || string.IsNullOrEmpty(TBDescripcionE.Text) || string.IsNullOrEmpty(DateEditTInicio.Text) || string.IsNullOrEmpty(DateEditTFinal.Text) || CBOrganizador.SelectedItem == null || string.IsNullOrEmpty(TBDescripcionO.Text) || string.IsNullOrEmpty(TBCorreoO.Text) || Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID")) == 0 || VEmail(TBCorreoO.Text) != true  || LBLNombreSalon.Text == "No seleccionado.")
             {
 
                 if (TBCorreoO.Text != "" && VEmail(TBCorreoO.Text) != true)
@@ -210,15 +226,9 @@ namespace Resa_Pro.Formularios
                     //De lo contrario 
                     else
                     {
-                        //Asignando los datos a la entidad de organizador
+                        //Asignando los datos a la entidad de organizador Solo el Id por que ya anteriormente son asignados 
 
-                        //Nombre
-                        e_Organizador.nombre = TBNombreO.Text;
-                        //Descripcion
-                        e_Organizador.descripcion = TBDescripcionO.Text;
-                        //correoElectronico
-                        e_Organizador.correoElectronico = TBCorreoO.Text;
-                        //ID_Evento
+                     
                         e_Organizador.id_Evento = e_Evento.id_Evento;
 
                         //Guardando la solicitud y esperando el Id 
@@ -533,8 +543,72 @@ namespace Resa_Pro.Formularios
             }
         }
 
+
         #endregion
 
+        #region Organizadores 
+        private void SBOrganizador_Click(object sender, EventArgs e)
+        {
+            //Instanciando la interfaz de organizadores
+
+            OrganizadoresF OrganizadorFrm = new OrganizadoresF();
+
+            OrganizadorFrm.ShowDialog();
+
+            // Asignando el datasource nuevamente al combobox
+
+
+            CBOrganizador.DataSource = n_Organizador.ObtenerOrganizadoresGlobales();
+            CBOrganizador.ValueMember = "ID";
+            CBOrganizador.DisplayMember = "Nombre";
+
+
+
+        }
+
+        #endregion
+
+        #region Cambio en el valor del ComboBox 
+        private void CBOrganizador_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+
+
+
+            //MessageBox.Show(NombreOrganizador);
+
+            int C = 0;
+            //Asignando al combo box de ubicaciones la ubicacion seleccionada anteriormente
+            foreach (DataRowView rowView in CBOrganizador.Items)
+            {
+                //Completando la entidad de servicios 
+
+                if (C == CBOrganizador.SelectedIndex)
+                {
+
+
+                    TBDescripcionO.Text = Convert.ToString(rowView["Descripcion"]);
+
+                    TBCorreoO.Text = Convert.ToString(rowView["Correo"]);
+                    //Completando la Entidad 
+
+                    e_Organizador.nombre = Convert.ToString(rowView["Nombre"]);
+                    e_Organizador.descripcion = Convert.ToString(rowView["Descripcion"]);
+                    e_Organizador.correoElectronico = Convert.ToString(rowView["Correo"]);
+
+
+                }
+
+                C++;
+            }
+        }
+
+
+
+
+
+
+        #endregion
 
     }
 }

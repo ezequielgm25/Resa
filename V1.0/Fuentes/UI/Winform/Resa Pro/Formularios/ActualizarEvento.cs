@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
+using System.Text.RegularExpressions;
 using Capas.Negocio;
 using Capas.Infraestructura.Entidades;
 
@@ -80,11 +81,33 @@ namespace Resa_Pro.Formularios
             DateEditTInicio.DateTime = Convert.ToDateTime(e_Evento.tiempo_Inicio);
             DateEditTFinal.DateTime = Convert.ToDateTime(e_Evento.tiempo_Final);
 
+             
             //Organizador 
+            string NombreOR = e_Organizador.nombre;
 
-            TBNombreO.Text = e_Organizador.nombre;
-            TBDescripcionO.Text = e_Organizador.descripcion;
-            TBCorreoO.Text = e_Organizador.correoElectronico;
+            // Asignando el datasource al combobox 
+            CBOrganizador.DataSource = n_Organizador.ObtenerOrganizadoresGlobales();
+            CBOrganizador.ValueMember = "ID";
+            CBOrganizador.DisplayMember = "Nombre";
+
+
+
+            int N = 0;
+            //Asignando al combo box de ubicaciones la ubicacion seleccionada anteriormente
+            foreach (DataRowView rowView in CBOrganizador.Items)
+            {
+                //Completando la entidad de servicios 
+
+                if (NombreOR == Convert.ToString(rowView["Nombre"]))
+                {
+
+                    CBOrganizador.SelectedItem = CBOrganizador.Items[N];
+
+                }
+
+                N++;
+            }
+
 
 
 
@@ -333,12 +356,22 @@ namespace Resa_Pro.Formularios
 
 
 
-            if (string.IsNullOrEmpty(TBTituloE.Text) || string.IsNullOrEmpty(TBTipoE.Text) || string.IsNullOrEmpty(TBTopicoE.Text) || string.IsNullOrEmpty(TBDescripcionE.Text) || string.IsNullOrEmpty(DateEditTInicio.Text) || string.IsNullOrEmpty(DateEditTFinal.Text) || string.IsNullOrEmpty(TBNombreO.Text) || string.IsNullOrEmpty(TBDescripcionO.Text) || string.IsNullOrEmpty(TBCorreoO.Text))
+            if (string.IsNullOrEmpty(TBTituloE.Text) || string.IsNullOrEmpty(TBTipoE.Text) || string.IsNullOrEmpty(TBTopicoE.Text) || string.IsNullOrEmpty(TBDescripcionE.Text) || string.IsNullOrEmpty(DateEditTInicio.Text) || string.IsNullOrEmpty(DateEditTFinal.Text) || CBOrganizador.SelectedItem == null || string.IsNullOrEmpty(TBDescripcionO.Text) || string.IsNullOrEmpty(TBCorreoO.Text))
             {
 
-                MessageBox.Show("Todos los campos Deben Contener Informacion");
+                if (TBCorreoO.Text != "" && VEmail(TBCorreoO.Text) != true)
+                {
+
+                    //Mensaje de informacion de los campos no estan completos o debidamente llenos
+                    MessageBox.Show("El correo esta mal escrito", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
 
+                }
+                else
+                {
+                    //Mensaje de informacion de los campos no estan completos o debidamente llenos
+                    MessageBox.Show("Todos los campos deben contener Informacion", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
             else
             {
@@ -382,10 +415,8 @@ namespace Resa_Pro.Formularios
                     else
                     {
                         //Asignando los datos a la entidad de Evento
-                        e_Organizador.nombre = TBNombreO.Text;
-                        e_Organizador.descripcion = TBDescripcionO.Text;
-                        e_Organizador.correoElectronico = TBCorreoO.Text;
-
+                      
+                        
                         //Guardando la solicitud y esperando el Id 
 
                         FilasAfectadas = n_Organizador.ActualizarOrganizador(e_Organizador);
@@ -413,5 +444,97 @@ namespace Resa_Pro.Formularios
 
 
         #endregion
+
+        #region Verificacion de Email -
+        /// <summary>
+        /// Metodo que verifica el email acepta un string como parametro 
+        /// </summary>
+        /// <param name="Email"></param>
+        /// <returns></returns>
+        public bool VEmail(String Email)
+        {
+            //Variable que contendra la expresion de validacion del email  
+            String expresion;
+            //Asignando la expresion de validacion 
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+
+            //Varificando 
+            if (Regex.IsMatch(Email, expresion))
+            {
+                //Desicion 
+                if (Regex.Replace(Email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+
+        #endregion
+
+        #region Evento de cambio de valor en el combobox de organizador
+        private void CBOrganizador_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+            //MessageBox.Show(NombreOrganizador);
+
+            int C = 0;
+            //Asignando al combo box de ubicaciones la ubicacion seleccionada anteriormente
+            foreach (DataRowView rowView in CBOrganizador.Items)
+            {
+                //Completando la entidad de servicios 
+
+                if (C == CBOrganizador.SelectedIndex)
+                {
+
+
+                    TBDescripcionO.Text = Convert.ToString(rowView["Descripcion"]);
+
+                    TBCorreoO.Text = Convert.ToString(rowView["Correo"]);
+                    //Completando la Entidad 
+
+                    e_Organizador.nombre = Convert.ToString(rowView["Nombre"]);
+                    e_Organizador.descripcion = Convert.ToString(rowView["Descripcion"]);
+                    e_Organizador.correoElectronico = Convert.ToString(rowView["Correo"]);
+
+
+                }
+
+                C++;
+            }
+
+        }
+        #endregion
+
+        #region Organizadores 
+        private void SBOrganizador_Click(object sender, EventArgs e)
+        {
+
+            //Instanciando la interfaz de organizadores
+
+            OrganizadoresF OrganizadorFrm = new OrganizadoresF();
+
+            OrganizadorFrm.ShowDialog();
+
+            // Asignando el datasource nuevamente al combobox
+
+
+            CBOrganizador.DataSource = n_Organizador.ObtenerOrganizadoresGlobales();
+            CBOrganizador.ValueMember = "ID";
+            CBOrganizador.DisplayMember = "Nombre";
+
+        }
+        #endregion
+
+      
     }
 }

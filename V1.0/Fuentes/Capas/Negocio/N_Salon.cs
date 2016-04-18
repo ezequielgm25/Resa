@@ -130,5 +130,51 @@ namespace Capas.Negocio
 
         #endregion
 
+        //Trabajando las Ubicaciones dinamicas 
+
+        #region Obtener Ubicaciones Globales
+        public DataTable ObtenerUbicacionesGlobales()
+        {
+
+            //Se ejecuta el evento en la capa de data
+            DataT = d_Salon.ObtenerUbicacionesGlobales();
+
+
+            //Se retorna el resultado 
+            return DataT;
+
+
+        }
+
+        #endregion
+
+        #region Agregar Ubicacion Global 
+        public int AgregarUbicacionGlobal(string Ubicacion)
+        {
+            int FilasAfectadas;
+
+            FilasAfectadas = d_Salon.AgregarUbicacionGlobal(Ubicacion);
+
+
+            return FilasAfectadas;
+        }
+
+
+        #endregion
+
+
+        #region Eliminar Ubicacion Global 
+        public int EliminarUbicacionGlobal(int ID_Ubicacion)
+        {
+            int FilasAfectadas;
+
+            FilasAfectadas = d_Salon.EliminarUbicacionGlobal(ID_Ubicacion);
+
+            return FilasAfectadas;
+
+
+        }
+        #endregion
+
     }
 }

@@ -59,7 +59,7 @@ namespace Capas.Data
             StoredProcedure = "ObtenerSalones";
 
             //Conexion string de modo prueba del sistema
-            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
+            //conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
 
             //Un se SQL command al que se le pasan el stored procedute la conexion
             SqlCommand comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
@@ -258,6 +258,126 @@ namespace Capas.Data
         }
 
         #endregion
+
+        //Area donde se trabaja las ubicaciones globales 
+
+        #region  Obtener Ubicaciones Globales 
+        public DataTable ObtenerUbicacionesGlobales()
+        {
+            //Asignando el Stored Procedura 
+            StoredProcedure = "ObtenerUbicacionesGlobales";
+
+            //Conexion string de modo prueba del sistema
+            //conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
+
+            //Un se SQL command al que se le pasan el stored procedute la conexion
+            SqlCommand comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+            //El tipo de comando
+            comando.CommandType = CommandType.StoredProcedure;
+
+            //Un DataAdapter 
+            SqlDataAdapter DataAD = new SqlDataAdapter(comando);
+            //Un dataTable
+            DataTable DataT = new DataTable();
+
+            //se limpia 
+            DataT.Clear();
+
+            //Se llena  la DataTable 
+            DataAD.Fill(DataT);
+
+            return DataT;
+
+
+        }
+
+        #endregion
+
+        #region Agregar Ubicacion Global 
+        public int AgregarUbicacionGlobal(string Ubicacion)
+        {
+            //Variable  que recogera el ID
+            int ID = 0;
+            //Asignando el StoredProcedure
+            StoredProcedure = "AgregarUbicacionGlobal";
+
+
+
+            //SQl Command --Asignadosele sus correspondientes parametros
+
+            //resaConexion Prueba 
+            //conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
+
+            SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            // Conectar a la base de datos
+
+
+
+            conexion.Conectar();
+            //Asignando el command Type 
+            Comando.CommandType = CommandType.StoredProcedure;
+            //Agregando los parametros 
+            Comando.Parameters.Add("@Ubicacion", SqlDbType.NVarChar, 100).Value = Ubicacion;
+
+
+            //Se ejecuta el  Query y se asignan las filas afectas
+            FilasAfectadas = Comando.ExecuteNonQuery();
+
+
+
+
+
+            //Cerrando la conexion 
+            conexion.Desconectar();
+
+            //Devolviendo el resultado 
+
+            return FilasAfectadas;
+        }
+
+        #endregion
+
+        #region Eliminar Ubicacion Global 
+        public int EliminarUbicacionGlobal(int ID_Ubicacion)
+        {
+            //Variables que recogera las filas afectadas 
+
+            int filasAfectadas = 0;
+
+            //Asignando el stored procedure 
+            StoredProcedure = "EliminarUbicacionGlobal";
+
+            //Conexion string de modo prueba del sistema
+            //conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
+
+            //Sql commando con sus correspondientes parametros 
+            SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            // Conectar a la base de datos
+
+            conexion.Conectar();
+
+            //Asignando el tipo de comando 
+            Comando.CommandType = CommandType.StoredProcedure;
+
+            //Agregando los parametros 
+            Comando.Parameters.Add("@ID_Ubicacion", SqlDbType.Int).Value = ID_Ubicacion;
+
+            //Variable devuelta ID_Salon
+
+            //Se ejecuta el  Query y se asignan las filas afectas
+            FilasAfectadas = Comando.ExecuteNonQuery();
+
+            //Cerrando la conexion 
+            conexion.Desconectar();
+
+            //Devolviendo el resultado 
+            return FilasAfectadas;
+        }
+
+        #endregion
+
 
     }
 }

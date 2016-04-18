@@ -76,7 +76,6 @@ namespace Capas.Data
 
         #endregion
 
-
         #region Obtener Inventarios
 
         public DataTable ObtenerInventarios(int id_Salon)
@@ -98,7 +97,6 @@ namespace Capas.Data
         }
 
         #endregion
-
 
         #region Eliminar Inventario
 
@@ -130,12 +128,12 @@ namespace Capas.Data
 
         #endregion
 
-        #region Obtener Servicios Globales
+        #region Obtener Inventarios Globales
 
-        public DataTable ObtenerServiciosGlobales()
+        public DataTable ObtenerInventariosGlobales()
         {
             //Stored procedure
-            StoredProcedure = "ObtenerServiciosGlobales";
+            StoredProcedure = "ObtenerInventariosGlobales";
             //Command
             SqlCommand comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
@@ -156,6 +154,155 @@ namespace Capas.Data
 
         #endregion
 
+        #region Eliminar Inventarios Globales
+
+        public int EliminarInventariosGlobales(int ID_Inventario)
+        {
+
+            StoredProcedure = "EliminarInventarioGlobal";
+
+            SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            // Conectar a la base de datos
+
+            conexion.Conectar();
+
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.Parameters.Add("@ID_Inventario", SqlDbType.Int).Value = ID_Inventario;
+
+            //Se ejecuta el  Query y se asignan las filas afectas
+            FilasAfectadas = Comando.ExecuteNonQuery();
+
+            //Cerrando la conexion 
+            conexion.Desconectar();
+
+            //Devolviendo el resultado 
+
+
+            return FilasAfectadas;
+
+
+
+        }
+
+        #endregion
+
+        #region Insertar un Inventario Global
+        public int InsertarInventarioGlobal(String Inventario)
+        {
+
+            StoredProcedure = "InsertarInventarioGlobal";
+
+
+            //Conexion string de modo prueba del sistema
+            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
+
+
+            SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            // Conectar a la base de datos
+
+            conexion.Conectar();
+
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.Parameters.Add("@Inventario", SqlDbType.NVarChar, 100).Value = Inventario;
+
+
+            //Se ejecuta el  Query y se asignan las filas afectas
+            FilasAfectadas = Comando.ExecuteNonQuery();
+
+            //Cerrando la conexion 
+            conexion.Desconectar();
+
+            //Devolviendo el resultado 
+
+
+            return FilasAfectadas;
+        }
+
+        #endregion
+
+        #region verificar existencia del inventario 
+        public int VerificarExistenciaDeInventario(E_Inventario e_Inventario)
+        {
+
+            //Varaible que devolvera la  variable 
+            int Resultado = 0;
+            //Entidad 
+
+
+            StoredProcedure = "VerificarExistenciaInventario";
+
+            SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            // Conectar a la base de datos
+
+            conexion.Conectar();
+
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.Parameters.Add("Inventario", SqlDbType.NVarChar, 100).Value = e_Inventario.inventario;
+            Comando.Parameters.Add("@ID_Salon", SqlDbType.Int).Value = e_Inventario.id_Salon;
+
+
+
+            //Variables Devueltas
+
+            SqlParameter Result = new SqlParameter("@Result", SqlDbType.Int);
+            Result.Direction = ParameterDirection.Output;
+            Comando.Parameters.Add(Result);
+
+
+
+            //Se ejecuta el  Query y se asignan las filas afectas
+            FilasAfectadas = Comando.ExecuteNonQuery();
+
+            //Asigna el resultado devuelto por el stored procedure
+
+            Resultado = Convert.ToInt32(Comando.Parameters["@Result"].Value);
+
+
+
+            //Cerrando la conexion 
+            conexion.Desconectar();
+
+            //Devolviendo el resultado
+            return Resultado;
+        }
+
+        #endregion
+
+
+        #region Eliminar Inventario por Nombre y ID 
+
+        public int EliminarInventarioXS_ID(E_Inventario e_Inventario)
+        {
+            StoredProcedure = "EliminarInventarioXS_ID";
+
+            SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
+
+            // Conectar a la base de datos
+
+            conexion.Conectar();
+
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.Parameters.Add("@Inventario", SqlDbType.NVarChar, 100).Value = e_Inventario.inventario;
+            Comando.Parameters.Add("@ID_Salon", SqlDbType.Int).Value = e_Inventario.id_Salon;
+
+            //Se ejecuta el  Query y se asignan las filas afectas
+            FilasAfectadas = Comando.ExecuteNonQuery();
+
+            //Cerrando la conexion 
+            conexion.Desconectar();
+
+            //Devolviendo el resultado 
+
+
+            return FilasAfectadas;
+
+        }
+
+
+        #endregion
 
 
     }

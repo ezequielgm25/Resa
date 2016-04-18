@@ -227,6 +227,12 @@
     <Compile Include="Formularios\MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\OrganizadoresF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\OrganizadoresF.Designer.cs">
+      <DependentUpon>OrganizadoresF.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Repo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +256,12 @@
     </Compile>
     <Compile Include="Formularios\Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\UbicacionF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\UbicacionF.Designer.cs">
+      <DependentUpon>UbicacionF.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\UsuariosF.cs">
       <SubType>Form</SubType>
@@ -322,6 +334,9 @@
     <EmbeddedResource Include="Formularios\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\OrganizadoresF.resx">
+      <DependentUpon>OrganizadoresF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Repo.resx">
       <DependentUpon>Repo.cs</DependentUpon>
     </EmbeddedResource>
@@ -333,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\UbicacionF.resx">
+      <DependentUpon>UbicacionF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\UsuariosF.resx">
       <DependentUpon>UsuariosF.cs</DependentUpon>
