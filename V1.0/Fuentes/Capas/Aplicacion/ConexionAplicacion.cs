@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Capas.Aplicacion
 {
     public class ConexionAplicacion
@@ -26,16 +21,18 @@ namespace Capas.Aplicacion
         private Capas.Data.Conexion Enlace = new Capas.Data.Conexion();
 
         #endregion
-    
-
+   
         #region Prueba de conexion 
 
-
+        /// <summary>
+        /// Metodo que probara la conexion a la base de datos 
+        /// </summary>
         public void PruebaConexion()
         {
 
+            //Prueba la conexionAplicacion
             enlaceDB = Enlace.Conectar();
-            
+            //Si es verdadera cierra la misma 
             if(enlaceDB == true)
             {
                 Enlace.Desconectar();
@@ -47,11 +44,6 @@ namespace Capas.Aplicacion
 
 
         #endregion
-
-
-
-
-
 
     }
 }

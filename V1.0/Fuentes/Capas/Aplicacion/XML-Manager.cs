@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using System.Xml.Linq;
 using System.Xml;
-using System.Threading;
+
 
 namespace Capas.Aplicacion
 {
@@ -24,7 +20,7 @@ namespace Capas.Aplicacion
         public void verificarArchivosXMLAplicacion(){
 
             try {
-
+                //Verificando la existencia de los archivos 
                 if (Directory.Exists(directorioBaseAplicacion() + @"XML") == false)
                 {
 
@@ -46,8 +42,12 @@ namespace Capas.Aplicacion
 
                } catch ( DirectoryNotFoundException e)
                {
-                
-               }
+
+                //Enviando un email  a la cuenta de soporte la excepcion
+                Email email = new Email();
+                //Enviando
+                email.enviarEmail(e.Message);
+            }
              
             
 
@@ -57,8 +57,11 @@ namespace Capas.Aplicacion
 
         #endregion 
 
-
         #region Creando el XMl  
+        /// <summary>
+        /// Metodo para Crear un Xml
+        /// </summary>
+        /// <param name="file"></param>
         public void CrearXMl(string file)
         {
             String FullXmlPath  = null;
@@ -140,13 +143,22 @@ namespace Capas.Aplicacion
                 catch(IOException IOE)
                {
 
-               }
+                //Enviando un email  a la cuenta de soporte la excepcion
+                Email email = new Email();
+                //Enviando
+                email.enviarEmail(IOE.Message);
+
+            }
 
         }
 
         #endregion
 
         #region Creando Directorio de los XMl
+        /// <summary>
+        /// Metodo para la Creacion de un directorio 
+        /// </summary>
+        /// <param name="Folder"></param>
         private void CrearDirectorio(string Folder)
         {
             try {
@@ -154,7 +166,10 @@ namespace Capas.Aplicacion
                 }
             catch (IOException EIO)
             {
-
+                //Enviando un email  a la cuenta de soporte la excepcion
+                Email email = new Email();
+                //Enviando
+                email.enviarEmail(EIO.Message);
             }
 
         }
@@ -167,7 +182,13 @@ namespace Capas.Aplicacion
         //<summary>
         //Metodo que buscara el contenido de un nodo hijo dentro de un XML 
         //</summary>
-
+        /// <summary>
+        /// Metodo que buscara un contenido de un nodo dentro de un archivo .XML
+        /// </summary>
+        /// <param name="ParameterNodo"></param>
+        /// <param name="stringParameterAtributo"></param>
+        /// <param name="stringParameterArchivoXML"></param>
+        /// <returns></returns>
         public string BuscarElementoArchivoXMl(string ParameterNodo, string stringParameterAtributo, string stringParameterArchivoXML)
         {
             //Variables
@@ -195,10 +216,13 @@ namespace Capas.Aplicacion
             catch ( IOException IOE)
             {
                 #region Manejo de errores en la busqueda del contenido del nodo
-
+                //Enviando un email  a la cuenta de soporte la excepcion
+                Email email = new Email();
+                //Enviando
+                email.enviarEmail(IOE.Message);
                 #endregion
 
-              
+
             }
 
             return Content;
@@ -212,16 +236,21 @@ namespace Capas.Aplicacion
         //Metodo para obtener la direccion del XMl 
 
         #region  obtener Direccion base
+            /// <summary>
+            /// Metodo para obtener la direccion basede un Directorio
+            /// </summary>
+            /// <returns></returns>
         public string directorioBaseAplicacion()
         {
-            string stringDirectorioBase;
+            string stringDirectorioBase;//String directorio
+
             if (System.AppDomain.CurrentDomain.BaseDirectory.IndexOf("bin") > 0)
             {
-
+                //Directorio Base 
                 stringDirectorioBase = System.AppDomain.CurrentDomain.BaseDirectory.Substring(0, System.AppDomain.CurrentDomain.BaseDirectory.IndexOf("bin"));
             }
             else {
-
+                //Directorio release
                 stringDirectorioBase = System.AppDomain.CurrentDomain.BaseDirectory.ToString();
             }
 
@@ -232,9 +261,18 @@ namespace Capas.Aplicacion
 
         #region Guardar En el XMl ERROR un error 
 
+        /// <summary>
+        /// Guardar en XMl  un error
+        /// </summary>
+        /// <param name="Fecha"></param>
+        /// <param name="ID_Usuario"></param>
+        /// <param name="opcion"></param>
+        /// <param name="TipoOpcion"></param>
+        /// <param name="excepcion"></param>
         public void GuardarEnXMl( string Fecha , string ID_Usuario , string opcion , string  TipoOpcion, string excepcion)
         {
 
+            //Se resibe y se asignan los parametros esperados 
             XDocument miXML = XDocument.Load(directorioBaseAplicacion() + @"XML\App-Error.xml");
             miXML.Root.Add(
                 new XElement("Error",

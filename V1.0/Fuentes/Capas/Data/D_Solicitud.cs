@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+
+//Referencias a  las capas del sistema 
 using Capas.Infraestructura.Entidades;
 
 namespace Capas.Data
@@ -44,7 +42,6 @@ namespace Capas.Data
 
         #endregion
 
-
         #region Obtener Solicitudes -
          
         /// <summary>
@@ -58,7 +55,7 @@ namespace Capas.Data
 
 
             //Conexion string de modo prueba del sistema
-            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
+            //conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
 
             //SQL Command
             SqlCommand comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
@@ -78,7 +75,6 @@ namespace Capas.Data
             return DataT;
         }
         #endregion
-
 
         #region Crear Solicitud - 
         /// <summary>

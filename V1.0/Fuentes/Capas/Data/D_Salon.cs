@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
-using Capas.Data;
+//Using del sistema 
 using Capas.Infraestructura.Entidades;
 
 namespace Capas.Data
@@ -141,8 +137,13 @@ namespace Capas.Data
 
         #endregion
 
-        #region Actualizar Salon -
+        #region Actualizar Salon -  
 
+        /// <summary>
+        /// Metodo donde se actualiza un salon 
+        /// </summary>
+        /// <param name="e_S"></param>
+        /// <returns></returns>
         public int ActualizarSalon(E_Salon e_S)
         {
             //Variables que recogera las filas afectadas 
@@ -189,6 +190,11 @@ namespace Capas.Data
         #endregion
 
         #region Eliminar Salon -
+        /// <summary>
+        /// Metodo Donde se elimina un salon esperando como parametro un ID
+        /// </summary>
+        /// <param name="ID_Salon"></param>
+        /// <returns></returns>
         public int EliminarSalon(int ID_Salon)
         {
             //Variables que recogera las filas afectadas 
@@ -229,7 +235,10 @@ namespace Capas.Data
         #endregion
 
         #region Obtener Salones ID y nombres -
-
+        /// <summary>
+        ///  Metodo donde se optiene los ID y nombres de todos los salones 
+        /// </summary>
+        /// <returns></returns>
         public DataTable ObtenerID_NombreDeSalones()
         {
             //Asignaando el stored procedure 
@@ -261,7 +270,12 @@ namespace Capas.Data
 
         //Area donde se trabaja las ubicaciones globales 
 
-        #region  Obtener Ubicaciones Globales 
+        #region  Obtener Ubicaciones Globales -
+
+            /// <summary>
+            /// Metodo donde se obtienen las ubicaciones globales  -- Lista de ubicaciones  asignadas a los salones
+            /// </summary>
+            /// <returns></returns>
         public DataTable ObtenerUbicacionesGlobales()
         {
             //Asignando el Stored Procedura 
@@ -293,16 +307,18 @@ namespace Capas.Data
 
         #endregion
 
-        #region Agregar Ubicacion Global 
+        #region Agregar Ubicacion Global -
+        /// <summary>
+        /// Metodo donde se agrega una ubicacion global a la lista 
+        /// </summary>
+        /// <param name="Ubicacion"></param>
+        /// <returns></returns>
         public int AgregarUbicacionGlobal(string Ubicacion)
         {
             //Variable  que recogera el ID
             int ID = 0;
             //Asignando el StoredProcedure
             StoredProcedure = "AgregarUbicacionGlobal";
-
-
-
             //SQl Command --Asignadosele sus correspondientes parametros
 
             //resaConexion Prueba 
@@ -311,9 +327,6 @@ namespace Capas.Data
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
             // Conectar a la base de datos
-
-
-
             conexion.Conectar();
             //Asignando el command Type 
             Comando.CommandType = CommandType.StoredProcedure;
@@ -323,11 +336,6 @@ namespace Capas.Data
 
             //Se ejecuta el  Query y se asignan las filas afectas
             FilasAfectadas = Comando.ExecuteNonQuery();
-
-
-
-
-
             //Cerrando la conexion 
             conexion.Desconectar();
 
@@ -338,7 +346,12 @@ namespace Capas.Data
 
         #endregion
 
-        #region Eliminar Ubicacion Global 
+        #region Eliminar Ubicacion Global -
+        /// <summary>
+        /// Metodo donde se elimina una ubicacion global
+        /// </summary>
+        /// <param name="ID_Ubicacion"></param>
+        /// <returns></returns>
         public int EliminarUbicacionGlobal(int ID_Ubicacion)
         {
             //Variables que recogera las filas afectadas 

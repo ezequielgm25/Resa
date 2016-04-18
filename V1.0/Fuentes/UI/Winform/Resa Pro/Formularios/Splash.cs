@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 
+//Instancias de las capas 
 using Capas.Aplicacion;
 
 
@@ -35,11 +36,12 @@ namespace Resa_Pro
         //Se inicializaran todos los componentos en  el contructor principal donde se llamaran los metodos de cargar  el sistema que verifican la existencia de los recursos del sistema 
         //</summary>
 
+        #region Constructor
+         
         public Splash()
         {
+             //Inicializando los componentes 
             InitializeComponent();
-            
-          
 
             #region  Inicializando variables, objetos y llamadas 
 
@@ -89,19 +91,22 @@ namespace Resa_Pro
 
         }
 
-       
+        #endregion
 
         #region  progressive  bar contralada con la clase Drawing
 
         //Timer que controla el dibujo de la progress bar del splash 
+        /// <summary>
+        /// Evento Que controla los ticks del timer del splash que controlara el efecto de crecimiento de la  barra 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timerSplash_Tick(object sender, EventArgs e)
         {
-
-            
+            //Verificando la posicion 
             if (posicionX > 0)
             {
                 // -- Dibujando rectangulo --
-
                 Marco.FillRectangle(Pincel, posicionX, posicionY, Ancho, Altura);
 
                 posicionX = posicionX - 2;
@@ -111,6 +116,7 @@ namespace Resa_Pro
             }
             else
             {
+                //Deteniendo el timer 
                 timerSplash.Stop();
                 this.Close();
             }
@@ -121,10 +127,12 @@ namespace Resa_Pro
         #endregion
 
         #region Cargar Sistema (Se verifican todos los recursos y  emails pendientes)
+        /// <summary>
+        /// Evento Donde se verifican los recursos del sistema
+        /// </summary>
         private void CargarSistema()
         {
-
-            
+             
             try {
                 #region Instanciaciones a clases
 
@@ -168,7 +176,13 @@ namespace Resa_Pro
             {
                  //Mostrando mensaje de error
 
-                MessageBox.Show("No se  pudo  cargar el sistema ERROR " + e.ToString());
+                MessageBox.Show("No se  pudo  cargar el sistema ERROR " + e.Message, "Error",MessageBoxButtons.OK,MessageBoxIcon.Error );
+
+                //Enviando un email  a la cuenta de soporte la excepcion
+                Email email = new Email();
+                //Enviando
+                email.enviarEmail(e.Message);
+
             }
             
             
@@ -183,9 +197,6 @@ namespace Resa_Pro
         }
 
         #endregion
-
-
-      
 
     }
 }

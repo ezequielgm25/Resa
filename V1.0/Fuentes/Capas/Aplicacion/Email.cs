@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Net;
 using System.Net.Mail;
 
@@ -16,7 +12,10 @@ namespace Capas.Aplicacion
 
 
         #region Envio de un email
-        public  void  enviarEmail(){
+            /// <summary>
+            /// Metodo de envio de un correo electronico 
+            /// </summary>
+        public  void  enviarEmail( String Excepcion){
              
             //objeto email
         MailMessage email = new MailMessage();
@@ -26,7 +25,7 @@ namespace Capas.Aplicacion
         email.To.Add(new MailAddress("Ezequielgarcia0925@gmail.com"));
         email.From = new MailAddress("soporteezequielgarcia@gmail.com");
         email.Subject = "Asunto ( " + DateTime.Now.ToString("dd / MMM / yyy hh:mm:ss") + " ) ";
-        email.Body = "Cualquier contenido en <b>HTML</b> para enviarlo por correo electrónico.";
+        email.Body = "Error " + Excepcion;
         email.IsBodyHtml = true;
         email.Priority = MailPriority.Normal;
 

@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+
+//Using de las capas del sistema 
 using Capas.Infraestructura.Entidades;
 
 namespace Capas.Data
@@ -40,12 +38,18 @@ namespace Capas.Data
 
         #endregion
 
-        #region Insertar organizador
-
+        #region Insertar organizador +
+        /// <summary>
+        /// Metodo donde se inserta un organizador al sistema
+        /// </summary>
+        /// <param name="e_Or"></param>
+        /// <returns></returns>
         public int InsertarOrganizador(E_Organizador e_Or)
         {
+            //Variable que recogera el ID
             int ID = 0;
 
+            //Stored procedure 
             StoredProcedure = "InsertarOrganizador";
 
             //Conexion string de modo prueba del sistema
@@ -57,13 +61,14 @@ namespace Capas.Data
             // Conectar a la base de datos
 
             conexion.Conectar();
-
+            //Tipo de comando 
             Comando.CommandType = CommandType.StoredProcedure;
+            //Parametros 
             Comando.Parameters.Add("@Nombre", SqlDbType.NVarChar, 100).Value = e_Or.nombre;
             Comando.Parameters.Add("@Descripcion", SqlDbType.NVarChar, 150).Value = e_Or.descripcion;
             Comando.Parameters.Add("@CorreoElectronico", SqlDbType.NVarChar, 100).Value = e_Or.correoElectronico;
             Comando.Parameters.Add("@ID_Evento", SqlDbType.Int).Value = e_Or.id_Evento;
-          
+
             //Variable devuelta ID_Organizador
 
             SqlParameter ID_Organizador = new SqlParameter("@ID_Organizador", SqlDbType.Int);
@@ -87,14 +92,19 @@ namespace Capas.Data
         }
         #endregion
 
-        #region Actualizar organizador 
-
+        #region Actualizar organizador + 
+        /// <summary>
+        /// Metodo donde se actualizara un organizador en la base de datos 
+        /// </summary>
+        /// <param name="e_Or"></param>
+        /// <returns></returns>
         public int ActualizarOrganizador(E_Organizador e_Or)
         {
+            //Variable que recoje las filas afectadas
             int filasAfectadas = 0;
 
-            int ID = 0;
 
+            //Stored procedure 
             StoredProcedure = "ActualizarOrganizador";
 
             //Conexion string de modo prueba del sistema
@@ -107,7 +117,9 @@ namespace Capas.Data
 
             conexion.Conectar();
 
+            //Tipo de comando 
             Comando.CommandType = CommandType.StoredProcedure;
+            //Parametros 
             Comando.Parameters.Add("@ID_Organizador", SqlDbType.Int).Value = e_Or.id_Organizador;
             Comando.Parameters.Add("@Nombre", SqlDbType.NVarChar, 100).Value = e_Or.nombre;
             Comando.Parameters.Add("@Descripcion", SqlDbType.NVarChar, 150).Value = e_Or.descripcion;
@@ -128,23 +140,30 @@ namespace Capas.Data
 
         #endregion
 
-        #region obtener Organizador
-
+        #region obtener Organizador +
+        /// <summary>
+        /// Metodo en el cual se optienen los organizadores 
+        /// </summary>
+        /// <param name="ID_Evento"></param>
+        /// <returns></returns>
         public E_Organizador ObtenerOrganizador(int ID_Evento)
         {
             //Entidad 
-
             E_Organizador e_Organizador = new E_Organizador();
 
+            //Stored procedure
             StoredProcedure = "ObtenerOrganizador";
 
+            //Sql Command
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
             // Conectar a la base de datos
 
             conexion.Conectar();
 
+            //Tipo de comando
             Comando.CommandType = CommandType.StoredProcedure;
+            //Parametros
             Comando.Parameters.Add("@ID_Evento", SqlDbType.Int).Value = ID_Evento;
 
 
@@ -169,7 +188,7 @@ namespace Capas.Data
             CorreoElectronico.Direction = ParameterDirection.Output;
             Comando.Parameters.Add(CorreoElectronico);
 
-           
+
 
             //Se ejecuta el  Query y se asignan las filas afectas
             FilasAfectadas = Comando.ExecuteNonQuery();
@@ -180,7 +199,7 @@ namespace Capas.Data
             e_Organizador.nombre = Convert.ToString(Comando.Parameters["@Nombre"].Value);
             e_Organizador.descripcion = Convert.ToString(Comando.Parameters["@Descripcion"].Value);
             e_Organizador.correoElectronico = Convert.ToString(Comando.Parameters["@CorreoElectronico"].Value);
-        
+
 
             //Cerrando la conexion 
             conexion.Desconectar();
@@ -191,14 +210,18 @@ namespace Capas.Data
 
             //Devolviendo la entidad
 
-            return e_Organizador; 
+            return e_Organizador;
         }
 
         #endregion
 
         //Trabajando los organizadores Globales 
 
-        #region Obteniendo los organizadores Globales 
+        #region Obteniendo los organizadores Globales +
+        /// <summary>
+        /// Metodo Donde se obtienen los organizadores Globales  -- Organizadores que estaran en una tabla como referencia que podran ser manipulados
+        /// </summary>
+        /// <returns></returns>
         public DataTable ObteniendoOrganizadoresGlobales()
         {
 
@@ -225,9 +248,15 @@ namespace Capas.Data
 
         #endregion
 
-        #region Agregando Organizador Global 
+        #region Agregando Organizador Global +
+        /// <summary>
+        /// Metodo donde se agrega un organizador Global a la lista 
+        /// </summary>
+        /// <param name="e_Or"></param>
+        /// <returns></returns>
         public int AgregandoOrganizadorGlobal(E_Organizador e_Or)
         {
+            //Variable que recoge las filas Afectadas
             int FilasAfectadas = 0;
 
             StoredProcedure = "InsertarOrganizadorGlobal";
@@ -242,13 +271,15 @@ namespace Capas.Data
 
             conexion.Conectar();
 
+            //Tipo de comando 
             Comando.CommandType = CommandType.StoredProcedure;
+            //Parametros 
             Comando.Parameters.Add("@Nombre", SqlDbType.NVarChar, 100).Value = e_Or.nombre;
             Comando.Parameters.Add("@Descripcion", SqlDbType.NVarChar, 150).Value = e_Or.descripcion;
             Comando.Parameters.Add("@CorreoElectronico", SqlDbType.NVarChar, 100).Value = e_Or.correoElectronico;
-        
 
-           
+
+
 
             //Se ejecuta el  Query y se asignan las filas afectas
             FilasAfectadas = Comando.ExecuteNonQuery();
@@ -266,12 +297,16 @@ namespace Capas.Data
 
         #endregion
 
-        #region Actualizando organizador Global 
+        #region Actualizando organizador Global +
+        /// <summary>
+        /// Metodo en el cual se actualiza las caracteristicas de un organizador 
+        /// </summary>
+        /// <param name="e_Or"></param>
+        /// <returns></returns>
         public int ActualizarOrganizadorGlobal(E_Organizador e_Or)
         {
             int filasAfectadas = 0;
 
-            int ID = 0;
 
             StoredProcedure = "ActualizarORganizadorGlobal";
 
@@ -284,8 +319,9 @@ namespace Capas.Data
             // Conectar a la base de datos
 
             conexion.Conectar();
-
+            //Command Type
             Comando.CommandType = CommandType.StoredProcedure;
+            //Parametros
             Comando.Parameters.Add("@ID_Organizador", SqlDbType.Int).Value = e_Or.id_Organizador;
             Comando.Parameters.Add("@Nombre", SqlDbType.NVarChar, 100).Value = e_Or.nombre;
             Comando.Parameters.Add("@Descripcion", SqlDbType.NVarChar, 150).Value = e_Or.descripcion;
@@ -306,19 +342,28 @@ namespace Capas.Data
 
         #endregion
 
-        #region Eliminando organizador  Global
+        #region Eliminando organizador Global +
+        /// <summary>
+        /// Evento donde se elimina un organizador de la lista de organizadores Globales 
+        /// </summary>
+        /// <param name="ID_Organizador"></param>
+        /// <returns></returns>
         public int EliminarOrganizadorGlobal(int ID_Organizador)
         {
+            //Stored procedure
             StoredProcedure = "EliminarOrganizadorGlobal";
 
+            //Sql command
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
             // Conectar a la base de datos
 
             conexion.Conectar();
 
+            //Command type
             Comando.CommandType = CommandType.StoredProcedure;
 
+            //Parametros
             Comando.Parameters.Add("@ID_Organizador", SqlDbType.Int).Value = ID_Organizador;
 
 
@@ -332,8 +377,6 @@ namespace Capas.Data
             conexion.Desconectar();
 
             //Devolviendo el resultado 
-
-
             return FilasAfectadas;
 
         }
