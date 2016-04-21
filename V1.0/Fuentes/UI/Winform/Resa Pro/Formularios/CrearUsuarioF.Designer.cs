@@ -143,6 +143,7 @@
             this.TBContra.Name = "TBContra";
             this.TBContra.Size = new System.Drawing.Size(169, 21);
             this.TBContra.TabIndex = 9;
+            this.TBContra.UseSystemPasswordChar = true;
             // 
             // label5
             // 

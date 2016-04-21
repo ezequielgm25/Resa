@@ -32,6 +32,8 @@
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.GCcrearSalon = new DevExpress.XtraEditors.GroupControl();
+            this.SBUbicaciones = new DevExpress.XtraEditors.SimpleButton();
+            this.CBUbicacion = new System.Windows.Forms.ComboBox();
             this.CBEstado = new System.Windows.Forms.ComboBox();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -52,8 +54,6 @@
             this.SBAgregarIV = new DevExpress.XtraEditors.SimpleButton();
             this.SBQuitarIV = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.CBUbicacion = new System.Windows.Forms.ComboBox();
-            this.SBUbicaciones = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GCcrearSalon)).BeginInit();
             this.GCcrearSalon.SuspendLayout();
@@ -74,7 +74,7 @@
             this.ribbon.MaxItemId = 1;
             this.ribbon.Name = "ribbon";
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbon.Size = new System.Drawing.Size(784, 49);
+            this.ribbon.Size = new System.Drawing.Size(779, 49);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // ribbonStatusBar
@@ -82,7 +82,7 @@
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 576);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(784, 27);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(779, 27);
             // 
             // GCcrearSalon
             // 
@@ -98,9 +98,27 @@
             this.GCcrearSalon.Dock = System.Windows.Forms.DockStyle.Top;
             this.GCcrearSalon.Location = new System.Drawing.Point(0, 49);
             this.GCcrearSalon.Name = "GCcrearSalon";
-            this.GCcrearSalon.Size = new System.Drawing.Size(784, 144);
+            this.GCcrearSalon.Size = new System.Drawing.Size(779, 144);
             this.GCcrearSalon.TabIndex = 11;
             this.GCcrearSalon.Text = "Crear Salon";
+            // 
+            // SBUbicaciones
+            // 
+            this.SBUbicaciones.Image = ((System.Drawing.Image)(resources.GetObject("SBUbicaciones.Image")));
+            this.SBUbicaciones.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.SBUbicaciones.Location = new System.Drawing.Point(745, 30);
+            this.SBUbicaciones.Name = "SBUbicaciones";
+            this.SBUbicaciones.Size = new System.Drawing.Size(27, 26);
+            this.SBUbicaciones.TabIndex = 15;
+            this.SBUbicaciones.Click += new System.EventHandler(this.SBUbicaciones_Click);
+            // 
+            // CBUbicacion
+            // 
+            this.CBUbicacion.FormattingEnabled = true;
+            this.CBUbicacion.Location = new System.Drawing.Point(362, 35);
+            this.CBUbicacion.Name = "CBUbicacion";
+            this.CBUbicacion.Size = new System.Drawing.Size(375, 21);
+            this.CBUbicacion.TabIndex = 14;
             // 
             // CBEstado
             // 
@@ -239,9 +257,9 @@
             this.groupControl1.Controls.Add(this.SBQuitarIV);
             this.groupControl1.Controls.Add(this.labelControl5);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupControl1.Location = new System.Drawing.Point(391, 193);
+            this.groupControl1.Location = new System.Drawing.Point(387, 193);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(393, 383);
+            this.groupControl1.Size = new System.Drawing.Size(392, 383);
             this.groupControl1.TabIndex = 15;
             this.groupControl1.Text = "Agregar Inventario";
             // 
@@ -252,7 +270,7 @@
             this.CKDListInventario.FormattingEnabled = true;
             this.CKDListInventario.Location = new System.Drawing.Point(2, 20);
             this.CKDListInventario.Name = "CKDListInventario";
-            this.CKDListInventario.Size = new System.Drawing.Size(389, 212);
+            this.CKDListInventario.Size = new System.Drawing.Size(388, 212);
             this.CKDListInventario.TabIndex = 19;
             // 
             // TBInventario
@@ -290,29 +308,11 @@
             this.labelControl5.TabIndex = 6;
             this.labelControl5.Text = "Inventario:";
             // 
-            // CBUbicacion
-            // 
-            this.CBUbicacion.FormattingEnabled = true;
-            this.CBUbicacion.Location = new System.Drawing.Point(362, 35);
-            this.CBUbicacion.Name = "CBUbicacion";
-            this.CBUbicacion.Size = new System.Drawing.Size(375, 21);
-            this.CBUbicacion.TabIndex = 14;
-            // 
-            // SBUbicaciones
-            // 
-            this.SBUbicaciones.Image = ((System.Drawing.Image)(resources.GetObject("SBUbicaciones.Image")));
-            this.SBUbicaciones.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.SBUbicaciones.Location = new System.Drawing.Point(745, 30);
-            this.SBUbicaciones.Name = "SBUbicaciones";
-            this.SBUbicaciones.Size = new System.Drawing.Size(27, 26);
-            this.SBUbicaciones.TabIndex = 15;
-            this.SBUbicaciones.Click += new System.EventHandler(this.SBUbicaciones_Click);
-            // 
             // ActualizarSalon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 603);
+            this.ClientSize = new System.Drawing.Size(779, 603);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.GCagregarServicio);
             this.Controls.Add(this.GCcrearSalon);

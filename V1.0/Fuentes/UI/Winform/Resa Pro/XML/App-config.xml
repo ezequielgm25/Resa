@@ -2,14 +2,14 @@
 <Configuraciones>
   <Support>
     <EmailFrom>EzequielGarcia0925@gmail.com</EmailFrom>
-    <EmailSubject>Contactandote desde la aplicacion de reservacion</EmailSubject>
+    <EmailSubject>soporteezequielgarcia@gmail.com</EmailSubject>
     <Pop3 />
-    <SMTP />
+    <SMTP>smtp.gmail.com</SMTP>
     <SSL />
-    <Port />
+    <Port>587</Port>
     <EmailFormat />
-    <HostServer/>
-    <PasswordServer />
+    <HostServer>soporteezequielgarcia@gmail.com</HostServer>
+    <PasswordServer>soporte1234</PasswordServer>
     <ContactInfo>Ezequiel Garcia Vive en la victoria</ContactInfo>
     <PhoneContact>829-304-8492</PhoneContact>
   </Support>

@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraBars;
+
+//Usings del sistema
 using Capas.Negocio;
 using Capas.Infraestructura.Entidades;
+using Capas.Aplicacion;
 
 namespace Resa_Pro.Formularios
 {
@@ -45,6 +40,17 @@ namespace Resa_Pro.Formularios
 
         E_Usuario e_Usuario = new E_Usuario();
 
+        //Auditoria 
+
+        N_Auditoria n_Auditoria = new N_Auditoria();
+
+        E_Auditoria e_Auditoria = new E_Auditoria();
+        //Xml manager 
+        XML_Manager X_m = new XML_Manager();
+        //Variable que recogera el error
+
+        string MessageError = "";
+
 
         #endregion
 
@@ -55,7 +61,7 @@ namespace Resa_Pro.Formularios
         /// <param name="ID_Solicitud"></param>
         /// <param name="Nombre_Salon"></param>
         /// <param name="e_UsuarioAU"></param>
-        public VerSolicitud(int ID_Solicitud, string Nombre_Salon,E_Usuario e_UsuarioAU)
+        public VerSolicitud(int ID_Solicitud, string Nombre_Salon, E_Usuario e_UsuarioAU)
         {
             //Inicializando los componentes 
 
@@ -75,6 +81,7 @@ namespace Resa_Pro.Formularios
             e_Usuario = e_UsuarioAU;
 
 
+
             #region Control de usuario
 
             //Opciones de usuario 
@@ -89,7 +96,7 @@ namespace Resa_Pro.Formularios
             SBAprobar.Visible = n_Usuario.ObtenerFuncion(ID_OSalones, "Aprobar");
             //Desaprobar
             SBDesaprobar.Visible = n_Usuario.ObtenerFuncion(ID_OSalones, "Aprobar");
-         
+
 
             #endregion
 
@@ -154,7 +161,7 @@ namespace Resa_Pro.Formularios
 
 
 
-       
+
 
         }
         #endregion
@@ -169,31 +176,71 @@ namespace Resa_Pro.Formularios
         private void simpleButton1_Click(object sender, EventArgs e)
         {
 
-            //Aprobar solicitud  evento que retornara 
-            if (LBLEstado.Text != "Aprobada")
+            //Obteniendo la fecha de entrada 
+            String Fecha_Entrada = Convert.ToString(DateTime.Now);
+
+            try
             {
-                int FilaAfectada = n_Solicitud.AprobarSolicitud(e_Solicitud.id_Solicitud, e_Usuario.nombre);
 
 
-                //Verificacion 
-                if (FilaAfectada == 0)
+                //Aprobar solicitud  evento que retornara 
+                if (LBLEstado.Text != "Aprobada")
                 {
-                    //Mensaje de error
-                    MessageBox.Show("Ocurrio un error al aprobar la solicitud ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                    int FilaAfectada = n_Solicitud.AprobarSolicitud(e_Solicitud.id_Solicitud, e_Usuario.nombre);
 
+
+                    //Verificacion 
+                    if (FilaAfectada == 0)
+                    {
+                        //Mensaje de error
+                        MessageBox.Show("Ocurrio un error al aprobar la solicitud ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    else
+                    {
+                        //Mensaje Positivo 
+                        MessageBox.Show("Solcitud fue aprobada satifactoriamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //Actualizar los datos en el formulario 
+                        AsignarDatos(e_Solicitud.id_Solicitud, e_Salon.nombre);
+                    }
+
+                }
                 else
                 {
-                    //Mensaje Positivo 
-                    MessageBox.Show("Solcitud fue aprobada satifactoriamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //Actualizar los datos en el formulario 
-                    AsignarDatos(e_Solicitud.id_Solicitud, e_Salon.nombre);
+                    MessageBox.Show("Solcitud ya esta aprobada", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
+
             }
-            else
+            //Se captura una excepcion  se muestra al usuario y se guarda un error en el XMl 
+            catch (Exception E)
             {
-                MessageBox.Show("Solcitud ya esta aprobada", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Mostrando la excepcion al usuario
+                MessageBox.Show(Convert.ToString(E.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Guardando el error en  El XMl de destinado  con los parametros correcpondientes 
+                X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_Usuario.id_Usuario), "Solicitudes", "Aprobar", Convert.ToString(E));
+
+                //Mensaje de error 
+
+                MessageError = E.Message;
+
+            }
+
+            //Se agregara una auditoria a un usuario 
+            finally
+            {
+                //Asignando los parametros a una entidad Auditoria 
+
+                e_Auditoria.id_Usuario = e_Usuario.id_Usuario;
+                e_Auditoria.tipoUsuario = e_Usuario.rol;
+                e_Auditoria.fecha_Entrada = Fecha_Entrada;
+                e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
+                e_Auditoria.opcion = "Solicitudes";
+                e_Auditoria.tipoOpcion = "Aprobar" + MessageError;
+
+                //insertando la auditoria
+
+                n_Auditoria.InsertarAuditoria(e_Auditoria);
             }
 
         }
@@ -211,34 +258,69 @@ namespace Resa_Pro.Formularios
         /// <param name="e"></param>
         private void SBDesaprobar_Click(object sender, EventArgs e)
         {
+            //Obteniendo la fecha de entrada 
+            String Fecha_Entrada = Convert.ToString(DateTime.Now);
 
-
-            if (LBLEstado.Text != "No aprobada")
+            try
             {
-                //Filas afectadas 
-                int FilaAfectada = n_Solicitud.DesaprobarSolicitud(e_Solicitud.id_Solicitud, e_Usuario.nombre);
 
-                //Verificacion 
-                if (FilaAfectada == 0)
+                if (LBLEstado.Text != "No aprobada")
                 {
-                    //mensaje de error 
-                    MessageBox.Show("Ocurrio un error al desaprobar la solicitud ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //Filas afectadas 
+                    int FilaAfectada = n_Solicitud.DesaprobarSolicitud(e_Solicitud.id_Solicitud, e_Usuario.nombre);
+
+                    //Verificacion 
+                    if (FilaAfectada == 0)
+                    {
+                        //mensaje de error 
+                        MessageBox.Show("Ocurrio un error al desaprobar la solicitud ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        //Mensaje positivo 
+                        MessageBox.Show("Solcitud fue desaprobada Satifactoriamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //Actualizar los datos en el formulario 
+                        AsignarDatos(e_Solicitud.id_Solicitud, e_Salon.nombre);
+
+                    }
+
                 }
                 else
                 {
-                    //Mensaje positivo 
-                    MessageBox.Show("Solcitud fue desaprobada Satifactoriamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //Actualizar los datos en el formulario 
-                    AsignarDatos(e_Solicitud.id_Solicitud, e_Salon.nombre);
-
+                    MessageBox.Show("Solcitud ya no ha sido aprobada", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }
-            else
+            //Se captura una excepcion  se muestra al usuario y se guarda un error en el XMl 
+            catch (Exception E)
             {
-                MessageBox.Show("Solcitud ya no ha sido aprobada", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //Mostrando la excepcion al usuario
+                MessageBox.Show(Convert.ToString(E.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Guardando el error en  El XMl de destinado  con los parametros correcpondientes 
+                X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_Usuario.id_Usuario), "Solicitudes", "Desaprobar", Convert.ToString(E));
+
+                //Mensaje de error 
+
+                MessageError = E.Message;
+
             }
 
+            //Se agregara una auditoria a un usuario 
+            finally
+            {
+                //Asignando los parametros a una entidad Auditoria 
+
+                e_Auditoria.id_Usuario = e_Usuario.id_Usuario;
+                e_Auditoria.tipoUsuario = e_Usuario.rol;
+                e_Auditoria.fecha_Entrada = Fecha_Entrada;
+                e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
+                e_Auditoria.opcion = "Solicitudes";
+                e_Auditoria.tipoOpcion = "Desaprobar" + MessageError;
+
+                //insertando la auditoria
+
+                n_Auditoria.InsertarAuditoria(e_Auditoria);
+            }
 
         }
 

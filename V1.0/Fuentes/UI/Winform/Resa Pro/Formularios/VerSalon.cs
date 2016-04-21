@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraBars;
+
+//Usings de capas del sistema 
 using Capas.Infraestructura.Entidades;
 using Capas.Negocio;
 
@@ -54,7 +47,6 @@ namespace Resa_Pro.Formularios
 
 
             #endregion 
-
 
             #region Obteniendo los servicios y inventarios del salon
 

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraBars;
+
 using System.Text.RegularExpressions;
 //---//
 using Capas.Negocio;
@@ -30,8 +23,10 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-
         #region Constructor
+        /// <summary>
+        /// Contructor de la interfaz de organizadores donde se gestiona el CRUD de los organizadores globales 
+        /// </summary>
         public OrganizadoresF()
         {
             InitializeComponent();
@@ -44,16 +39,16 @@ namespace Resa_Pro.Formularios
         }
 
         #endregion
-        private void OrganizadoresF_Load(object sender, EventArgs e)
-        {
-
-        }
-
 
         #region Agregar Organizador 
+        /// <summary>
+        /// Metodo donde se agrega un organizador a la lista de organizadores globales 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBAgregar_Click(object sender, EventArgs e)
         {
-
+            //Verificacion de los campos 
             if (TBNombreO.Text == "" || TBDescripcionO.Text == "" || TBCorreoO.Text == "" || VEmail(TBCorreoO.Text) != true)
             {
                 if (TBCorreoO.Text != "" && VEmail(TBCorreoO.Text) != true)
@@ -80,11 +75,11 @@ namespace Resa_Pro.Formularios
                 e_Organizador.descripcion = TBDescripcionO.Text;
                 //correoElectronico
                 e_Organizador.correoElectronico = TBCorreoO.Text;
-             
+
 
                 //Guardando el organizador 
 
-                 int FilasAfectadas = n_Organizador.InsertarOrganizadorGlobal(e_Organizador);
+                int FilasAfectadas = n_Organizador.InsertarOrganizadorGlobal(e_Organizador);
 
                 //Verificando los datos
                 if (FilasAfectadas == 0)
@@ -102,10 +97,10 @@ namespace Resa_Pro.Formularios
 
                     //Actualizando el datasource 
 
-                    GCOrganizadores.DataSource = n_Organizador.ObtenerOrganizadoresGlobales();  
-                   
+                    GCOrganizadores.DataSource = n_Organizador.ObtenerOrganizadoresGlobales();
 
-                    
+
+
                 }
 
 
@@ -115,6 +110,11 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Verificar Email 
+        /// <summary>
+        /// Metodo donde se verifica la correcta forma del correo electronico 
+        /// </summary>
+        /// <param name="Email"></param>
+        /// <returns></returns>
         public bool VEmail(String Email)
         {
             //Variable que contendra la expresion de validacion del email  
@@ -144,72 +144,90 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Actualizar Organizador
+        /// <summary>
+        /// Metodo donde se actualiza las caracteristicas de un organizador
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBActualizar_Click(object sender, EventArgs e)
         {
+            int ID_Organizador = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
 
-            if (TBNombreO.Text == "" || TBDescripcionO.Text == "" || TBCorreoO.Text == "" || VEmail(TBCorreoO.Text) != true)
+
+            if (ID_Organizador != 0)
             {
-                if (TBCorreoO.Text != "" && VEmail(TBCorreoO.Text) != true)
+
+                //Revizando que todos los campos esten completamente llenos 
+                if (TBNombreO.Text == "" || TBDescripcionO.Text == "" || TBCorreoO.Text == "" || VEmail(TBCorreoO.Text) != true)
                 {
+                    if (TBCorreoO.Text != "" && VEmail(TBCorreoO.Text) != true)
+                    {
 
-                    //Mensaje de informacion de los campos no estan completos o debidamente llenos
-                    MessageBox.Show("El correo esta mal escrito", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        //Mensaje de informacion de los campos no estan completos o debidamente llenos
+                        MessageBox.Show("El correo esta mal escrito", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
 
+                    }
+                    else
+                    {
+                        //Mensaje de informacion de los campos no estan completos o debidamente llenos
+                        MessageBox.Show("Todos los campos deben contener Informacion", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
                 }
                 else
                 {
-                    //Mensaje de informacion de los campos no estan completos o debidamente llenos
-                    MessageBox.Show("Todos los campos deben contener Informacion", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //Asignando los datos a la entidad de organizador
+
+                    //Nombre
+                    e_Organizador.nombre = TBNombreO.Text;
+                    //Descripcion
+                    e_Organizador.descripcion = TBDescripcionO.Text;
+                    //correoElectronico
+                    e_Organizador.correoElectronico = TBCorreoO.Text;
+
+
+                    //Guardando el organizador 
+
+                    int FilasAfectadas = n_Organizador.ActualizarOrganizadorGlobal(e_Organizador);
+
+                    //Verificando los datos
+                    if (FilasAfectadas == 0)
+                    {
+                        //Mensaje de error
+                        MessageBox.Show("Ocurrio un error al actualizar el organizador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    //De lo contrario 
+                    else
+                    {
+                        //Mensaje positivo se guardo correctamente
+
+                        MessageBox.Show("El organizador se actualizo correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                        //Actualizando el datasource 
+
+                        GCOrganizadores.DataSource = n_Organizador.ObtenerOrganizadoresGlobales();
+
+                        //Limpiando los controles 
+
+                        TBNombreO.Text = "";
+                        TBDescripcionO.Text = "";
+                        TBCorreoO.Text = "";
+
+
+                    }
+
+
                 }
+
+
             }
             else
             {
-                //Asignando los datos a la entidad de organizador
+                //mensaje  de que el Grid view esta vacio 
 
-                //Nombre
-                e_Organizador.nombre = TBNombreO.Text;
-                //Descripcion
-                e_Organizador.descripcion = TBDescripcionO.Text;
-                //correoElectronico
-                e_Organizador.correoElectronico = TBCorreoO.Text;
-
-
-                //Guardando el organizador 
-
-                int FilasAfectadas = n_Organizador.ActualizarOrganizadorGlobal(e_Organizador);
-
-                //Verificando los datos
-                if (FilasAfectadas == 0)
-                {
-                    //Mensaje de error
-                    MessageBox.Show("Ocurrio un error al actualizar el organizador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                //De lo contrario 
-                else
-                {
-                    //Mensaje positivo se guardo correctamente
-
-                    MessageBox.Show("El organizador se actualizo correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                    //Actualizando el datasource 
-
-                    GCOrganizadores.DataSource = n_Organizador.ObtenerOrganizadoresGlobales();
-
-                    //Limpiando los controles 
-
-                    TBNombreO.Text = "";
-                    TBDescripcionO.Text = "";
-                    TBCorreoO.Text = "";
-                 
-
-                }
-
-
+                MessageBox.Show(" No hay ninguna ubicacion a eliminar seleccionado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-
-
 
 
         }
@@ -217,6 +235,11 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Click en la grid control
+        /// <summary>
+        /// Evento click en el grid control de organizadores 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GCOrganizadores_Click(object sender, EventArgs e)
         {
             //Asignando la data a la entidad
@@ -242,10 +265,16 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Eliminar 
+        /// <summary>
+        /// Metodo donde se elimina un  organizador global del sistema 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBEliminar_Click(object sender, EventArgs e)
         {
-
+            //Filas afectadas 
             int FilasAfectadas;
+            //ID organizador 
             int ID_Organizador = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
 
 

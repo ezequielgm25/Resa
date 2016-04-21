@@ -1,21 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
-using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraBars.Helpers;
-using DevExpress.XtraScheduler;
+//Usings del sistema
 using Capas.Negocio;
 using Capas.Infraestructura.Entidades;
-using DevExpress.Utils;
-using DevExpress.Xpf;
-using DevExpress.XtraGrid;
+using Capas.Aplicacion;
 
 
 namespace Resa_Pro.Formularios
@@ -61,15 +51,20 @@ namespace Resa_Pro.Formularios
 
 
         #region Contructor
-
+        /// <summary>
+        /// Constructor de la interfaz "Pantalla principal"
+        /// </summary>
+        /// <param name="ID_Usuario"></param>
         public MainScreen(int ID_Usuario)
         {
             /* liberando memoria */
             System.GC.Collect();
             /*----- */
 
-
+            //Iniciando los componentes
             InitializeComponent();
+
+            //Iniciando la Galaria de skins de devspress
             InitSkinGallery();
 
             //Mostrando Datos del usuario en la barra de estado
@@ -103,7 +98,6 @@ namespace Resa_Pro.Formularios
             GCEventos.DataSource = n_Evento.ObtenerEventosDetallados();
 
             #endregion
-
 
 
             #region Seguridad  autentificando el usuario 
@@ -149,9 +143,9 @@ namespace Resa_Pro.Formularios
             #endregion
 
 
-            #region CAmbiando el tema de los formularios
+            #region Cambiando el tema de los formularios
 
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Black");
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Office 2010 Black");
 
             #endregion
 
@@ -165,26 +159,31 @@ namespace Resa_Pro.Formularios
         //</Summary>
 
         #region inicializar galeria de Skins
+        /// <summary>
+        /// Metodo que inicializa la galeria de skins de devexpress
+        /// </summary>
         void InitSkinGallery()
         {
+            // -- Metodo de 
             SkinHelper.InitSkinGallery(rgbiSkins, true);
         }
 
-
-
-
-
         #endregion
 
-
         #region Cerrar Sesion 
+        /// <summary>
+        /// Metodo donde se cierra la session en el sistema 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BarButtonCerrarSesion_ItemClick(object sender, ItemClickEventArgs e)
         {
 
-
-
-            this.Hide();
+            //Se oculata este 
+            this.Hide(); 
+            //Se llama la interfaz del loging 
             Loging loging = new Loging(this);
+            //Se muestra 
             loging.ShowDialog();
 
 
@@ -193,8 +192,12 @@ namespace Resa_Pro.Formularios
         }
         #endregion
 
-
         #region Salones
+        /// <summary>
+        /// Evento click en el grid control de salones el cual hace que se precenten los eventos correspondientes de salones 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void BBSalones_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -215,9 +218,13 @@ namespace Resa_Pro.Formularios
         }
 
         #endregion
-
-
+  
         #region Solicitudes
+        /// <summary>
+        /// Evento click donde se maneja la session de las solicitudes del sistema 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BBSolicitudes_ItemClick(object sender, ItemClickEventArgs e)
         {
             //Interrfaz solicitudes 
@@ -238,8 +245,12 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-
         #region Eventos 
+        /// <summary>
+        /// Evento click donde se maneja la session de eventos 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BBEventos_ItemClick(object sender, ItemClickEventArgs e)
         {
 
@@ -257,8 +268,12 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-
         #region Click Sobre el grid control eventos 
+        /// <summary>
+        /// Evento click sobre el grid control eventos 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GCEventos_Click(object sender, EventArgs e)
         {
 
@@ -266,8 +281,12 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-
         #region Click Sobre el grid control Salones que actualizara el grid control eventos
+        /// <summary>
+        /// Evento click sobre el grid control salones 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GCSalones_Click(object sender, EventArgs e)
         {
             //Actualizando el Datasource de el grid control GCEventos  para mostrar los eventos del salon seleccionado
@@ -282,7 +301,7 @@ namespace Resa_Pro.Formularios
             }
             else
             {
-                MessageBox.Show("No hay un Salon seleccionado para mostrar sus eventos");
+                MessageBox.Show("No hay un Salon seleccionado para mostrar sus eventos","Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
@@ -291,6 +310,11 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Usuarios 
+        /// <summary>
+        /// Evento click donde se controla la session de usuarios en el sistema
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BBUsuarios_ItemClick(object sender, ItemClickEventArgs e)
         {
             //<Summary>
@@ -299,7 +323,7 @@ namespace Resa_Pro.Formularios
 
             UsuariosF F_Usuarios = new UsuariosF(e_UsuarioAU);
 
-
+            //Mostrando la interfaz 
             F_Usuarios.ShowDialog();
 
 
@@ -308,6 +332,11 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region  Reportes 
+        /// <summary>
+        /// Evento click donde se controla session de reportes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BBReportes_ItemClick(object sender, ItemClickEventArgs e)
         {
             //<Summary>
@@ -327,7 +356,12 @@ namespace Resa_Pro.Formularios
             }
             catch(Exception E)
             {
-                MessageBox.Show(Convert.ToString(E));
+                MessageBox.Show(Convert.ToString(E.Message));
+
+                //Enviando un email  a la cuenta de soporte la excepcion
+                Email email = new Email();
+                //Enviando
+                email.enviarEmail(E.Message);
             }
 
             finally

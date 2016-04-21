@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraBars;
 using System.Text.RegularExpressions;
 
+//Usings capas del sistema 
 using Capas.Negocio;
 using Capas.Infraestructura.Entidades;
 
@@ -127,10 +121,6 @@ namespace Resa_Pro.Formularios
 
                 N++;
             }
-
-           
-
-
 
             #endregion
 
@@ -325,7 +315,7 @@ namespace Resa_Pro.Formularios
 
                                 if (Resultado == 1)
                                 {
-                                    MessageBox.Show("El Tiempo Seleccionado ya esta en uso", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    MessageBox.Show("El Tiempo seleccionado ya esta en uso", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                                     //Limpiando los dateTipes
                                     DateEditTInicio.Text = "";
@@ -558,7 +548,7 @@ namespace Resa_Pro.Formularios
                         else
                         {
 
-                            MessageBox.Show("La solicitud se Actualizo correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("La solicitud se actualizo correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             this.Close();
                         }
@@ -614,6 +604,11 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Organizadores 
+        /// <summary>
+        /// Evento click donde se gestiona el CRUD de los organizadores globales
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBOrganizador_Click(object sender, EventArgs e)
         {
 
@@ -637,6 +632,11 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Cambio del valor 
+        /// <summary>
+        /// Evento de cambio de valor en el ComboBox  que cambia todos los otros relaccionados 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CBOrganizador_SelectedValueChanged(object sender, EventArgs e)
         {
 

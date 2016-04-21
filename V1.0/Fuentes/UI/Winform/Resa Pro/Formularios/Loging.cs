@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+//Usings del sistema 
 using Capas.Infraestructura.Entidades;
 using Capas.Negocio;
-
+using Capas.Aplicacion;
 
 
 
@@ -38,8 +32,12 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Constructor
+        /// <summary>
+        /// Constructor de el formulario de Loging 
+        /// </summary>
         public Loging()
         {
+            //Inicializando los compenentes 
             InitializeComponent();
 
             //Inicializando las instancias 
@@ -53,11 +51,14 @@ namespace Resa_Pro.Formularios
 
         }
 
+        //Segundo constructor
         public Loging(Form form)
         {
 
+            //Se cierra el formulario pasado como parametro
             form.Close();
 
+            //Inicializacion de los componentes 
             InitializeComponent();
 
             //Inicializando las instancias 
@@ -72,9 +73,14 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Cancelar
+        /// <summary>
+        /// Metodo donde se cancela el ingreso al sistema y se cierra la aplicacion 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-
+            //Cerrando la aplicacion 
             Application.Exit();
 
 
@@ -83,9 +89,16 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Iniciar Sesion
+        /// <summary>
+        /// Evento click sobre el boton "Iniciar sesion" en el cual se maneja la autentificacion del usuario en el sistema
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnIniciarSesion_Click(object sender, EventArgs e)
         {
-
+            //Verificando que los  campos esten completos 
+            if (TbUsuario.Text != "" && TbPass.Text != "")
+            {
                 //Insertando los datos a la entidad
 
                 E_Autentificacion.usuario = TbUsuario.Text;
@@ -93,9 +106,23 @@ namespace Resa_Pro.Formularios
 
 
                 //llamando el metodo en la capa de negocio
+                try
+                {
+                    ID_Usuario = N_Autentificaicon.VerificarUsuario(E_Autentificacion); // Se obtiene el ID del usuario que se autentifico en el sistema
+                }
+                catch (Exception EX)
+                {
+                    //Mostrando mensaje de error
 
-                ID_Usuario = N_Autentificaicon.VerificarUsuario(E_Autentificacion); // Se obtiene el ID del usuario que se autentifico en el sistema
+                    MessageBox.Show("No se pudo un autentificar el usuario " + EX.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                    //Enviando un email  a la cuenta de soporte la excepcion
+                    Email email = new Email();
+                    //Enviando
+                    email.enviarEmail(EX.Message);
+
+
+                }
                 if (ID_Usuario == -1 || ID_Usuario == -2)
                 {
 
@@ -146,11 +173,16 @@ namespace Resa_Pro.Formularios
 
                     }
                 }
-                #endregion
 
-          
+            }
+            else
+            {
+                MessageBox.Show("Los campos de contraseña y usuario  deben estar llenos", "Mensaje de autentificacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
 
         }
+        #endregion
 
     }
 

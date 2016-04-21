@@ -106,7 +106,7 @@
             // 
             this.SBActualizar.Image = ((System.Drawing.Image)(resources.GetObject("SBActualizar.Image")));
             this.SBActualizar.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.SBActualizar.Location = new System.Drawing.Point(282, 421);
+            this.SBActualizar.Location = new System.Drawing.Point(286, 421);
             this.SBActualizar.Name = "SBActualizar";
             this.SBActualizar.Size = new System.Drawing.Size(75, 52);
             this.SBActualizar.TabIndex = 6;

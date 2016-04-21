@@ -21,9 +21,14 @@ namespace Capas.Aplicacion
         MailMessage email = new MailMessage();
 
             #region Propiedades del email
+            //Instanciando la clase donde se manejan las opciones de XML
+            XML_Manager XmlFile = new XML_Manager();
 
-        email.To.Add(new MailAddress("Ezequielgarcia0925@gmail.com"));
-        email.From = new MailAddress("soporteezequielgarcia@gmail.com");
+
+           
+
+        email.To.Add(new MailAddress(XmlFile.BuscarElementoArchivoXMl("EmailFrom", "", "App-Config.xml")));
+        email.From = new MailAddress(XmlFile.BuscarElementoArchivoXMl("EmailSubject", "","App-Config.xml"));
         email.Subject = "Asunto ( " + DateTime.Now.ToString("dd / MMM / yyy hh:mm:ss") + " ) ";
         email.Body = "Error " + Excepcion;
         email.IsBodyHtml = true;
@@ -37,11 +42,11 @@ namespace Capas.Aplicacion
 
             #region Propiedades  del objeto Smtp 
 
-            smtp.Host = "smtp.gmail.com";
-            smtp.Port = 587;
+            smtp.Host = XmlFile.BuscarElementoArchivoXMl("SMTP", "", "App-Config.xml");
+            smtp.Port = Convert.ToInt32(XmlFile.BuscarElementoArchivoXMl("Port", "", "App-Config.xml"));
             smtp.EnableSsl = true;
             smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new NetworkCredential("soporteezequielgarcia@gmail.com", "soporte1234");
+            smtp.Credentials = new NetworkCredential(XmlFile.BuscarElementoArchivoXMl("HostServer", "", "App-Config.xml"), XmlFile.BuscarElementoArchivoXMl("PasswordServer", "", "App-Config.xml"));
 
             #endregion 
 

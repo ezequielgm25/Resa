@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+//Usings del sistema
 using Capas.Data;
 using Capas.Infraestructura.Entidades;
+
 namespace Capas.Negocio
 {
     public class N_Auditoria
@@ -23,9 +21,12 @@ namespace Capas.Negocio
         #endregion
 
         #region Contructor 
-
+        /// <summary>
+        /// Constructor de la clase auditoria en la capa de negocio
+        /// </summary>
         public N_Auditoria()
         {
+            //Instancias 
             d_Auditoria = new D_Auditoria();
 
             e_Auditoria = new E_Auditoria();
@@ -35,14 +36,19 @@ namespace Capas.Negocio
 
         #endregion
 
-
-        #region Insertar Auditoria '
+        #region Insertar Auditoria +
+        /// <summary>
+        /// Metodo donde se inserta una auditoria a un usuario 
+        /// </summary>
+        /// <param name="e_Au"></param>
+        /// <returns></returns>
         public int InsertarAuditoria(E_Auditoria e_Au )
         {
 
-
+            //Recogiendo las filas afectadas
             int FilasAfectadas = d_Auditoria.InsertarAuditoria(e_Au);
 
+            //Retornando 
             return FilasAfectadas;
         }
         

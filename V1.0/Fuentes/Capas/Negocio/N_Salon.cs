@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
+﻿
 using System.Data;
+
+//Usings del sistema 
 using Capas.Data;
 using Capas.Infraestructura.Entidades;
 
@@ -45,9 +42,9 @@ namespace Capas.Negocio
         public DataTable ObtenerSalones()
         {
             //Se ejecuta el evento en la capa de data
-            DataT = d_Salon.ObtenerSalones(); 
+            DataT = d_Salon.ObtenerSalones();
 
-           //Se retorna el resultado 
+            //Se retorna el resultado 
             return DataT;
 
         }
@@ -66,7 +63,7 @@ namespace Capas.Negocio
             int ID = 0;
 
             //SE ejecuta el metodo de la capa Data 
-            ID = d_Salon.CrearSalon(e_s);   
+            ID = d_Salon.CrearSalon(e_s);
 
             //Se retorna el ID 
             return ID;
@@ -132,7 +129,11 @@ namespace Capas.Negocio
 
         //Trabajando las Ubicaciones dinamicas 
 
-        #region Obtener Ubicaciones Globales
+        #region Obtener Ubicaciones Globales -
+        /// <summary>
+        /// Metodo donde se obtiene la lista de ubicaciones globales de los salones 
+        /// </summary>
+        /// <returns></returns>
         public DataTable ObtenerUbicacionesGlobales()
         {
 
@@ -148,28 +149,43 @@ namespace Capas.Negocio
 
         #endregion
 
-        #region Agregar Ubicacion Global 
+        #region Agregar Ubicacion Global -
+        /// <summary>
+        /// Metodo donde se agrega una ubicacion a la lista de ubicaciones globales de los salones
+        /// </summary>
+        /// <param name="Ubicacion"></param>
+        /// <returns></returns>
         public int AgregarUbicacionGlobal(string Ubicacion)
         {
+            //Variable que recoje las filas afectadas
             int FilasAfectadas;
 
+            //Ejecutando el metodo y recogiendo los resultados
             FilasAfectadas = d_Salon.AgregarUbicacionGlobal(Ubicacion);
 
-
+            //Returnando las filas afectadas 
             return FilasAfectadas;
         }
 
 
         #endregion
 
-
-        #region Eliminar Ubicacion Global 
+        #region Eliminar Ubicacion Global  -
+        /// <summary>
+        ///  Metodo donde se elimina una ubicacion global de la lista 
+        /// </summary>
+        /// <param name="ID_Ubicacion"></param>
+        /// <returns></returns>
         public int EliminarUbicacionGlobal(int ID_Ubicacion)
         {
+
+            //Variable que recoje las filas afectadas
             int FilasAfectadas;
 
+            //Recogiendo y ejecutando el metodo 
             FilasAfectadas = d_Salon.EliminarUbicacionGlobal(ID_Ubicacion);
 
+            //Returnando las filas afectadas 
             return FilasAfectadas;
 
 

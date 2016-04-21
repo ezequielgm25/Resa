@@ -143,6 +143,7 @@
             this.TBContra.Name = "TBContra";
             this.TBContra.Size = new System.Drawing.Size(169, 21);
             this.TBContra.TabIndex = 9;
+            this.TBContra.UseSystemPasswordChar = true;
             // 
             // label5
             // 
@@ -475,7 +476,6 @@
             this.CBXSalonesC.TabIndex = 0;
             this.CBXSalonesC.Text = "Crear";
             this.CBXSalonesC.UseVisualStyleBackColor = true;
-            this.CBXSalonesC.CheckedChanged += new System.EventHandler(this.CBXSalonesC_CheckedChanged);
             // 
             // ActualizarUsuario
             // 

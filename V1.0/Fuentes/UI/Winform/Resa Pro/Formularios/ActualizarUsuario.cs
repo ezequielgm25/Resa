@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraBars;
+
+
+//Usings capas del sistema
 using Capas.Negocio;
 using Capas.Infraestructura.Entidades;
 
@@ -44,7 +39,6 @@ namespace Resa_Pro.Formularios
 
 
         #endregion
-
 
         #region Contructor
         /// <summary>
@@ -170,7 +164,11 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Actualizar  el usuario 
-
+        /// <summary>
+        /// Metodo donde se gestiona la actualizacion de un usuario en el sistema 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBActualizarU_Click(object sender, EventArgs e)
         {
             //Verificar Controles
@@ -180,7 +178,7 @@ namespace Resa_Pro.Formularios
             if (string.IsNullOrEmpty(CBRol.Text) || string.IsNullOrEmpty(TBNombre.Text) || string.IsNullOrEmpty(TBApellido.Text) || string.IsNullOrEmpty(CBEstado.Text))
             {
 
-                MessageBox.Show(" El unico campo opcional a completar es la contraseña despues todos los otros deben estar completos");
+                MessageBox.Show(" El unico campo opcional a completar es la contraseña despues todos los otros deben estar completos","Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             else
@@ -322,11 +320,11 @@ namespace Resa_Pro.Formularios
 
                                 if (Actualizado == false)
                                 {
-                                    MessageBox.Show("Ocurrio un errror al actualizar el usuario");
+                                    MessageBox.Show("Ocurrio un errror al actualizar el usuario","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                                 else
                                 {
-                                    MessageBox.Show("El usuario se actualizo correctamente");
+                                    MessageBox.Show("El usuario se actualizo correctamente","Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                     this.Close();
                                 }
@@ -336,7 +334,7 @@ namespace Resa_Pro.Formularios
                             }
                             else
                             {
-                                MessageBox.Show("Ocurrio un error al actualizar el usuario");
+                                MessageBox.Show("Ocurrio un error al actualizar el usuario","Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
 
 
@@ -348,7 +346,7 @@ namespace Resa_Pro.Formularios
                         }
                         else
                         {
-                            MessageBox.Show("Ocurrio un error al actualizar el usuario");
+                            MessageBox.Show("Ocurrio un error al actualizar el usuario","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
 
@@ -357,7 +355,7 @@ namespace Resa_Pro.Formularios
                     else
                     {
 
-                        MessageBox.Show("Ocurrio un error al actualizar el usuario");
+                        MessageBox.Show("Ocurrio un error al actualizar el usuario","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
 
@@ -372,9 +370,5 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-        private void CBXSalonesC_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

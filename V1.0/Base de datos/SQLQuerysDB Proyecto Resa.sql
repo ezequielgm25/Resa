@@ -161,40 +161,60 @@ Create Procedure LoginUsuario
  
 As
 BEGIN 
+     
      DECLARE @PassWord as Varchar(4000);
      DECLARE @hash varchar(4000);
      SET @hash = HASHBYTES('SHA1', @Pass);  --Pass editada
      
      DECLARE @UserID as Int;--Declaracion de variable utilizada
-     DECLARE @Estado as NVarchar(50);
- BEGIN 
-   Select @Estado = Estado from Usuarios Where Usuario = @Usuario
- END
-   IF(@Estado = 'Activo')
+     DECLARE @Estado as Nvarchar(15);
    
-    BEGIN
-      Select  @passWord = Contraseña, @UserID = ID_Usuario From usuarios Where Usuario = @Usuario
-    END
+   
 
-    If (@hash = @PassWord)
-          Set @Result = @UserID;
-    if (@hash != @PassWord)
-          Set @Result = 0;
- 
-if(@Estado = 'Inactivo')
- 
- Set @Result = -1;
-   
-if(@Estado != 'Activo' and @Estado != 'Inactivo')
- Set @Result = -2;
-   
- END
+    BEGIN
+     Select  @Estado = Estado from Usuarios Where Usuario = @Usuario
+    END
+ BEGIN
+    
+    
+     IF(@Estado != '')
+       BEGIN
+    
+       IF(@Estado = 'Activo')
+         BEGIN
+           Select  @passWord = Contraseña, @UserID = ID_Usuario From usuarios Where Usuario = @Usuario
+       
+       If (@hash = @PassWord)
+         BEGIN
+           Set @Result = @UserID;
+         END
+       If (@hash != @PassWord)
+         BEGIN
+           Set @Result = 0;
+         END
+         
+         END  
+            
+       If(@Estado = 'Inactivo')
+        BEGIN
+          Set @Result = -1;
+        END
+        
+     END
+     Else
+      BEGIN
+       set @Result = -2;
+       return;
+      END
+      
+     END
+   END
 GO
 -------------------------------------------------------------------------------------------
 select * from usuarios
 /*********  Eliminando Stored Procedure *************/
 ----------------------------------------------------
---Drop procedure LoginUsuario
+Drop procedure LoginUsuario
 -----------------------------------------------------
 /************ Ejecuntando Stored procedure de prueba ********************/
 
@@ -255,3 +275,5 @@ Create procedure ObtenerUsuario
  Select @Rol        As 'Rol'
  go
 /************************************************************************/ 
+
+

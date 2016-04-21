@@ -203,7 +203,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Organizadores";
-            this.Load += new System.EventHandler(this.OrganizadoresF_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GCOrganizador)).EndInit();
             this.GCOrganizador.ResumeLayout(false);

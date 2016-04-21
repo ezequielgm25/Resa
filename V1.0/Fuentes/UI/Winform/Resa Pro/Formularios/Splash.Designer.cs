@@ -49,7 +49,7 @@
             this.pbFondo.BackColor = System.Drawing.Color.Transparent;
             this.pbFondo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbFondo.BackgroundImage")));
             this.pbFondo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbFondo.Location = new System.Drawing.Point(23, 28);
+            this.pbFondo.Location = new System.Drawing.Point(249, 62);
             this.pbFondo.Name = "pbFondo";
             this.pbFondo.Size = new System.Drawing.Size(154, 134);
             this.pbFondo.TabIndex = 0;

@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraBars;
 using System.Text.RegularExpressions;
 
+//Usings capas del sistema
 using Capas.Infraestructura.Entidades;
 using Capas.Negocio;
 
@@ -43,7 +37,7 @@ namespace Resa_Pro.Formularios
         //Usuario
         E_Usuario e_UsuarioAU = new E_Usuario();
 
-    
+
 
         #endregion
 
@@ -83,8 +77,8 @@ namespace Resa_Pro.Formularios
             CBOrganizador.SelectedValue = -2;
             TBCorreoO.Text = "";
             TBDescripcionO.Text = "";
-             
-           
+
+
 
 
             #endregion
@@ -107,13 +101,13 @@ namespace Resa_Pro.Formularios
             string NombreSalon = Convert.ToString(gridView1.GetFocusedRowCellValue("Nombre"));
 
             //Verificacion de la variable 
-            if(NombreSalon == "")
+            if (NombreSalon == "")
             {
                 //Asignando  salon al Label de salon 
-                MessageBox.Show("No hay Salones habilitados","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("No hay Salones habilitados", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             //De lo contrario 
-            else 
+            else
             {
                 //Asignando el dato seleccionado en la grid view 
                 LBLNombreSalon.Text = Convert.ToString(gridView1.GetFocusedRowCellValue("Nombre"));
@@ -149,7 +143,7 @@ namespace Resa_Pro.Formularios
             VerificacionFechas();
 
             //Verificacion de  los Controles que esten debidamente llenos
-            if(string.IsNullOrEmpty(TBTituloE.Text) || string.IsNullOrEmpty(TBTipoE.Text) || string.IsNullOrEmpty(TBTopicoE.Text) || string.IsNullOrEmpty(TBDescripcionE.Text) || string.IsNullOrEmpty(DateEditTInicio.Text) || string.IsNullOrEmpty(DateEditTFinal.Text) || CBOrganizador.SelectedItem == null || string.IsNullOrEmpty(TBDescripcionO.Text) || string.IsNullOrEmpty(TBCorreoO.Text) || Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID")) == 0 || VEmail(TBCorreoO.Text) != true  || LBLNombreSalon.Text == "No seleccionado.")
+            if (string.IsNullOrEmpty(TBTituloE.Text) || string.IsNullOrEmpty(TBTipoE.Text) || string.IsNullOrEmpty(TBTopicoE.Text) || string.IsNullOrEmpty(TBDescripcionE.Text) || string.IsNullOrEmpty(DateEditTInicio.Text) || string.IsNullOrEmpty(DateEditTFinal.Text) || CBOrganizador.SelectedItem == null || string.IsNullOrEmpty(TBDescripcionO.Text) || string.IsNullOrEmpty(TBCorreoO.Text) || Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID")) == 0 || VEmail(TBCorreoO.Text) != true || LBLNombreSalon.Text == "No seleccionado.")
             {
 
                 if (TBCorreoO.Text != "" && VEmail(TBCorreoO.Text) != true)
@@ -165,13 +159,13 @@ namespace Resa_Pro.Formularios
                     //Mensaje de informacion de los campos no estan completos o debidamente llenos
                     MessageBox.Show("Todos los campos deben contener Informacion", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-                
+
 
             }
             //De lo contrario 
             else
             {
-                
+
                 //Asignando los datos  a la entidad de solicitud 
 
                 e_Solicitud.fecha = Convert.ToString(DateTime.Now);
@@ -180,14 +174,14 @@ namespace Resa_Pro.Formularios
                 e_Solicitud.fechaAprobacion = Convert.ToString(DateTime.Now);
                 e_Solicitud.id_Salon = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
 
-                     //Guardando la solicitud y esperando el Id 
-                    e_Solicitud.id_Solicitud = n_Solicitud.CrearSolicitud(e_Solicitud);
-                  
+                //Guardando la solicitud y esperando el Id 
+                e_Solicitud.id_Solicitud = n_Solicitud.CrearSolicitud(e_Solicitud);
+
                 //Comprobando los datos 
-                 if( e_Solicitud.id_Solicitud == 0)
-                {   
+                if (e_Solicitud.id_Solicitud == 0)
+                {
                     //Mensaje de error
-                    MessageBox.Show("Ocurrio un error al guardar la solicitud","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Ocurrio un error al guardar la solicitud", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -197,11 +191,11 @@ namespace Resa_Pro.Formularios
                     DateTime Fechainicial = DateEditTInicio.DateTime;
                     DateTime FechaFinal = DateEditTFinal.DateTime;
                     //Tiempos//
-                    
+
                     // --- Otros --- //
                     e_Evento.titulo_Evento = TBTituloE.Text;
                     //Tipo
-                    e_Evento.tipo    = TBTipoE.Text;
+                    e_Evento.tipo = TBTipoE.Text;
                     //Topico
                     e_Evento.topico = TBTopicoE.Text;
                     //Descripcion
@@ -213,7 +207,7 @@ namespace Resa_Pro.Formularios
                     //Id  de la  Solicitud
                     e_Evento.id_Solicitud = e_Solicitud.id_Solicitud;
 
-                    
+
 
                     //Guardando la solicitud y esperando el Id 
                     e_Evento.id_Evento = n_Evento.CrearEvento(e_Evento);
@@ -228,7 +222,7 @@ namespace Resa_Pro.Formularios
                     {
                         //Asignando los datos a la entidad de organizador Solo el Id por que ya anteriormente son asignados 
 
-                     
+
                         e_Organizador.id_Evento = e_Evento.id_Evento;
 
                         //Guardando la solicitud y esperando el Id 
@@ -239,14 +233,14 @@ namespace Resa_Pro.Formularios
                         if (e_Solicitud.id_Solicitud == 0)
                         {
                             //Mensaje de error
-                            MessageBox.Show("Ocurrio un error al guardar la solicitud","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                            MessageBox.Show("Ocurrio un error al guardar la solicitud", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
-                         //De lo contrario 
+                        //De lo contrario 
                         else
                         {
                             //Mensaje positivo se guardo correctamente
 
-                            MessageBox.Show("La solicitud se guardo correctamente","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                            MessageBox.Show("La solicitud se guardo correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             this.Close();
                         }
@@ -291,13 +285,13 @@ namespace Resa_Pro.Formularios
                 {
 
                     //Asignando los datos 
-                    FechaInicial = DateEditTInicio.DateTime ;
+                    FechaInicial = DateEditTInicio.DateTime;
                     FechaFinal = DateEditTFinal.DateTime;
 
                     //Condicion de verificacion de discordancia en las fechas o algo por el estilo
                     if (FechaInicial >= FechaFinal)
                     {
-                        MessageBox.Show("Hay discordancia en las fechas","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Hay discordancia en las fechas", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                         //Eliminando el text 
                         DateEditTFinal.Text = "";
@@ -319,7 +313,7 @@ namespace Resa_Pro.Formularios
 
                             if (Resultado == 1)
                             {
-                                MessageBox.Show("El Tiempo Seleccionado ya esta en uso","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El Tiempo Seleccionado ya esta en uso", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                                 //Limpiando los dateTipes
                                 DateEditTInicio.Text = "";
@@ -335,7 +329,7 @@ namespace Resa_Pro.Formularios
                         else
                         {
                             //Mensaje de error 
-                            MessageBox.Show("No se ha seleccionado un salon para verificar las fechas","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                            MessageBox.Show("No se ha seleccionado un salon para verificar las fechas", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
                     }
 
@@ -374,7 +368,7 @@ namespace Resa_Pro.Formularios
                     if (FechaInicial >= FechaFinal)
                     {
 
-                        MessageBox.Show("Hay discordancia en las fechas","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Hay discordancia en las fechas", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         //Eliminando el text en el DateEdit 
 
                         DateEditTFinal.Text = "";
@@ -398,7 +392,7 @@ namespace Resa_Pro.Formularios
                             if (Resultado == 1)
                             {
                                 //Mensaje de informacion de que la fecha no esta disponible 
-                                MessageBox.Show("El Tiempo Seleccionado ya esta en uso","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El Tiempo seleccionado ya esta en uso", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                                 //Limpiando los DateEdit 
                                 DateEditTInicio.Text = "";
@@ -457,7 +451,7 @@ namespace Resa_Pro.Formularios
                     if (FechaInicial >= FechaFinal)
                     {
                         //Mensaje de informacion de discordancia en las fechas
-                        MessageBox.Show("Hay discordancia en las fechas","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show("Hay discordancia en las fechas", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         //Eliminando la informacion
                         DateEditTFinal.Text = "";
@@ -465,7 +459,7 @@ namespace Resa_Pro.Formularios
                         DateEditTFinal.Focus();
 
                     }
-                     //De lo contrario 
+                    //De lo contrario 
                     else
                     {
                         //Variable que recogera el resultado
@@ -482,7 +476,7 @@ namespace Resa_Pro.Formularios
 
                             if (Resultado == 1)
                             {
-                                MessageBox.Show("El Tiempo Seleccionado ya esta en uso","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                                MessageBox.Show("El Tiempo seleccionado ya esta en uso", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                                 DateEditTInicio.Text = "";
                                 DateEditTFinal.Text = "";
@@ -498,7 +492,7 @@ namespace Resa_Pro.Formularios
                         {
                             //Mensaje de informacion de que no hay salon selecciondo 
 
-                            MessageBox.Show("No hay salon seleccionado","Informacion",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                            MessageBox.Show("No hay salon seleccionado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
                     }
 
@@ -547,6 +541,11 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Organizadores 
+        /// <summary>
+        /// Evento click en el boton organizadores donde se trabaja EL CRUD de los mismos 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBOrganizador_Click(object sender, EventArgs e)
         {
             //Instanciando la interfaz de organizadores
@@ -569,11 +568,13 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Cambio en el valor del ComboBox 
+        /// <summary>
+        /// Evento del combobox de organizadores donde se cambian los valores de los campos 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CBOrganizador_SelectedValueChanged(object sender, EventArgs e)
         {
-
-
-
 
             //MessageBox.Show(NombreOrganizador);
 

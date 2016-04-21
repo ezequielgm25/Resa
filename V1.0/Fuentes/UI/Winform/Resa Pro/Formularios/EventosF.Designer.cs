@@ -85,7 +85,7 @@
             // 
             this.SBEliminarE.Image = ((System.Drawing.Image)(resources.GetObject("SBEliminarE.Image")));
             this.SBEliminarE.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.SBEliminarE.Location = new System.Drawing.Point(557, 420);
+            this.SBEliminarE.Location = new System.Drawing.Point(538, 420);
             this.SBEliminarE.Name = "SBEliminarE";
             this.SBEliminarE.Size = new System.Drawing.Size(75, 61);
             this.SBEliminarE.TabIndex = 8;

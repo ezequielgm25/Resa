@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraBars;
 using System.Text.RegularExpressions;
+
+//Usings del sistema 
 using Capas.Negocio;
 using Capas.Infraestructura.Entidades;
 
@@ -46,7 +41,10 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Contructor 
-
+        /// <summary>
+        /// /Contructor de la interfaz de crear un evento
+        /// </summary>
+        /// <param name="e_Usuario"></param>
         public CrearEvento(E_Usuario e_Usuario)
         {
             InitializeComponent();
@@ -64,7 +62,7 @@ namespace Resa_Pro.Formularios
 
             #region Completando el lable que indicara el registro seleccionado
 
-            LBLNombreSalon.Text = Convert.ToString(gridView1.GetFocusedRowCellValue("Nombre"));
+            LBLNombreSalon.Text = "No seleccionado.";
 
             #endregion
 
@@ -91,50 +89,72 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Validacion de fechas 
-
+        /// <summary>
+        /// Evento donde se verifican las fechas de los eventos al hacerse un cambio en la mismas 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void DateEditTInicio_EditValueChanged_1(object sender, EventArgs e)
         {
+            //Declaraccion de las variables 
             DateTime FechaInicial;
             DateTime FechaFinal;
+            //------//
 
-
+            //Verificacion de que los DateEdit contengandatos 
             if (!string.IsNullOrEmpty(DateEditTInicio.Text))
             {
                 if (!string.IsNullOrEmpty(DateEditTFinal.Text))
                 {
 
-
+                    //Asignando los datos 
                     FechaInicial = DateEditTInicio.DateTime;
                     FechaFinal = DateEditTFinal.DateTime;
 
+                    //Condicion de verificacion de discordancia en las fechas o algo por el estilo
                     if (FechaInicial >= FechaFinal)
                     {
-                        MessageBox.Show("Hay discordancia en las fechas");
+                        MessageBox.Show("Hay discordancia en las fechas", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                        DateEditTFinal.Text ="";
+                        //Eliminando el text 
+                        DateEditTFinal.Text = "";
+                        //Dandole el focus al DateEditTFinal
+                        DateEditTFinal.Focus();
                     }
                     else
                     {
+                        //Variable que recogera el resultado 
                         int Resultado;
+                        //Variable salon que verificara los resultados 
                         int ID_Salon = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
 
-                        Resultado = n_Evento.VerificarFechas(DateEditTInicio.DateTime, DateEditTFinal.DateTime, ID_Salon);
-
-                        if (Resultado == 1)
+                        //Verificacion 
+                        if (ID_Salon != 0)
                         {
-                            MessageBox.Show("El Tiempo Seleccionado ya esta en uso");
 
-                            //Limpiando los dateTipes
-                            DateEditTInicio.Text = "";
-                            DateEditTFinal.Text ="";
+                            Resultado = n_Evento.VerificarFechas(DateEditTInicio.DateTime, DateEditTFinal.DateTime, ID_Salon);
+
+                            if (Resultado == 1)
+                            {
+                                MessageBox.Show("El Tiempo Seleccionado ya esta en uso", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                                //Limpiando los dateTipes
+                                DateEditTInicio.Text = "";
+                                DateEditTFinal.Text = "";
+
+                            }
+                            else
+                            {
+
+                            }
 
                         }
                         else
                         {
-
+                            //Mensaje de error 
+                            MessageBox.Show("No se ha seleccionado un salon para verificar las fechas", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
-
                     }
 
                 }
@@ -145,48 +165,75 @@ namespace Resa_Pro.Formularios
         }
 
         //Validacion de la fecha Final 
+        /// <summary>
+        /// Evento de edicion de valor en el Date edit de fecha final
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void DateEditTFinal_EditValueChanged(object sender, EventArgs e)
         {
+            //Variables a las cuales se lees asignara las fechas 
             DateTime FechaInicial;
             DateTime FechaFinal;
+            // -- - //
 
-
+            //Verificacion de  que los DateEdit Contengan Data 
             if (!string.IsNullOrEmpty(DateEditTInicio.Text))
             {
                 if (!string.IsNullOrEmpty(DateEditTFinal.Text))
                 {
-
+                    //Asignando las fechas a los DateEdits
                     FechaInicial = DateEditTInicio.DateTime;
                     FechaFinal = DateEditTFinal.DateTime;
 
+                    //Verificacion si hay discordancia en las fechas 
                     if (FechaInicial >= FechaFinal)
                     {
-                        MessageBox.Show("Hay discordancia en las fechas");
+
+                        MessageBox.Show("Hay discordancia en las fechas", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        //Eliminando el text en el DateEdit 
 
                         DateEditTFinal.Text = "";
+                        // Dandole el enfoque al DateEdit 
+                        DateEditTFinal.Focus();
 
                     }
                     else
                     {
+
+                        //Variable que se le asignara el resultado
                         int Resultado;
+                        //Variable que resivira el ID  de la fila seleccionada en el grid view 
                         int ID_Salon = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
 
-                        Resultado = n_Evento.VerificarFechas(DateEditTInicio.DateTime, DateEditTFinal.DateTime, ID_Salon);
-
-                        if (Resultado == 1)
+                        if (ID_Salon != 0)
                         {
-                            MessageBox.Show("El Tiempo Seleccionado ya esta en uso ");
+                            //Verificacion de las fechas 
+                            Resultado = n_Evento.VerificarFechas(DateEditTInicio.DateTime, DateEditTFinal.DateTime, ID_Salon);
+                            //verificando el resultado
+                            if (Resultado == 1)
+                            {
+                                //Mensaje de informacion de que la fecha no esta disponible 
+                                MessageBox.Show("El Tiempo seleccionado ya esta en uso", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                            DateEditTInicio.Text = "";
-                            DateEditTFinal.Text =  "";
+                                //Limpiando los DateEdit 
+                                DateEditTInicio.Text = "";
+                                DateEditTFinal.Text = "";
+
+                            }
+                            else
+                            {
+
+                            }
 
                         }
                         else
                         {
+                            //Mensaje de error
+                            MessageBox.Show("No hay un salon seleccionado al cual se pueda verificar las fechas ", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                         }
-
                     }
 
                 }
@@ -199,68 +246,75 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-        #region  Asignar al lbl de salon seleccionado
-
-        private void GCSalones_Click(object sender, EventArgs e)
-        {
-
-            #region Completando el label que indicara el registro seleccionado
-
-            LBLNombreSalon.Text = Convert.ToString(gridView1.GetFocusedRowCellValue("Nombre"));
-
-
-            #endregion
-
-            /* Verificacion de la Fecha para este salon */
-            VerificacionFechas();
-
-        }
-
-        #endregion
-
         #region Verificacion de Fechas Alternativas 
-
+        /// <summary>
+        /// Metodo de verificacion de fechas alternativas
+        /// </summary>
         public void VerificacionFechas()
         {
+            //Declaracion de dos variables Datetimes
             DateTime FechaInicial;
             DateTime FechaFinal;
+            //*---------------------------------*//
 
-
+            //Verificacion si los dos DateTimes tienen informacion 
             if (!string.IsNullOrEmpty(DateEditTInicio.Text))
             {
                 if (!string.IsNullOrEmpty(DateEditTFinal.Text))
                 {
-
+                    //Asignacion de los valores 
                     FechaInicial = DateEditTInicio.DateTime;
+                    //----//
                     FechaFinal = DateEditTFinal.DateTime;
+
+                    //Comparando las fechas en busca de alguna discordancia
 
                     if (FechaInicial >= FechaFinal)
                     {
-                        MessageBox.Show("Hay discordancia en las fechas");
+                        //Mensaje de informacion de discordancia en las fechas
+                        MessageBox.Show("Hay discordancia en las fechas", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                        //Eliminando la informacion
                         DateEditTFinal.Text = "";
+                        //Asignando el focus al DateEdit
+                        DateEditTFinal.Focus();
 
                     }
+                    //De lo contrario 
                     else
                     {
+                        //Variable que recogera el resultado
                         int Resultado;
+
+                        //variable que se le asigna la data del grid view 
                         int ID_Salon = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
 
-                        Resultado = n_Evento.VerificarFechas(DateEditTInicio.DateTime, DateEditTFinal.DateTime, ID_Salon);
-
-                        if (Resultado == 1)
+                        //Desicion de verficacion 
+                        if (ID_Salon != 0)
                         {
-                            MessageBox.Show("El Tiempo Seleccionado ya esta en uso ");
 
-                            DateEditTInicio.Text = "";
-                            DateEditTFinal.Text = "";
+                            Resultado = n_Evento.VerificarFechas(DateEditTInicio.DateTime, DateEditTFinal.DateTime, ID_Salon);
+
+                            if (Resultado == 1)
+                            {
+                                MessageBox.Show("El Tiempo seleccionado ya esta en uso", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                                DateEditTInicio.Text = "";
+                                DateEditTFinal.Text = "";
+
+                            }
+                            else
+                            {
+                                //No hacer Nada
+                            }
 
                         }
                         else
                         {
+                            //Mensaje de informacion de que no hay salon selecciondo 
 
+                            MessageBox.Show("No hay salon seleccionado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
-
                     }
 
                 }
@@ -274,7 +328,11 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Crear Evento 
-
+        /// <summary>
+        /// Boton donde se gestionara el guardado del evento 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBGuardar_Click(object sender, EventArgs e)
         {
             //<Summary>
@@ -289,7 +347,7 @@ namespace Resa_Pro.Formularios
 
 
 
-            if (string.IsNullOrEmpty(TBTituloE.Text) || string.IsNullOrEmpty(TBTipoE.Text) || string.IsNullOrEmpty(TBTopicoE.Text) || string.IsNullOrEmpty(TBDescripcionE.Text) || string.IsNullOrEmpty(DateEditTInicio.Text) || string.IsNullOrEmpty(DateEditTFinal.Text) || CBOrganizador.SelectedItem == null  || string.IsNullOrEmpty(TBDescripcionO.Text) || string.IsNullOrEmpty(TBCorreoO.Text))
+            if (string.IsNullOrEmpty(TBTituloE.Text) || string.IsNullOrEmpty(TBTipoE.Text) || string.IsNullOrEmpty(TBTopicoE.Text) || string.IsNullOrEmpty(TBDescripcionE.Text) || string.IsNullOrEmpty(DateEditTInicio.Text) || string.IsNullOrEmpty(DateEditTFinal.Text) || CBOrganizador.SelectedItem == null || Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID")) == 0 || string.IsNullOrEmpty(TBDescripcionO.Text) || string.IsNullOrEmpty(TBCorreoO.Text) || LBLNombreSalon.Text == "No seleccionado.")
             {
 
                 if (TBCorreoO.Text != "" && VEmail(TBCorreoO.Text) != true)
@@ -326,7 +384,7 @@ namespace Resa_Pro.Formularios
 
                 if (e_Solicitud.id_Solicitud == 0)
                 {
-                    MessageBox.Show("Ocurrio un error al guardar la solicitud ");
+                    MessageBox.Show("Ocurrio un error al guardar la solicitud ","Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -349,7 +407,7 @@ namespace Resa_Pro.Formularios
                     e_Evento.id_Evento = n_Evento.CrearEvento(e_Evento);
                     if (e_Solicitud.id_Solicitud == 0)
                     {
-                        MessageBox.Show("Ocurrio un error al guardar la solicitud ");
+                        MessageBox.Show("Ocurrio un error al guardar la solicitud ","Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
                     {
@@ -362,11 +420,11 @@ namespace Resa_Pro.Formularios
                         e_Organizador.id_Organizador = n_Organizador.insertarOrganizador(e_Organizador);
                         if (e_Solicitud.id_Solicitud == 0)
                         {
-                            MessageBox.Show("Ocurrio un error al guardar el evento ");
+                            MessageBox.Show("Ocurrio un error al guardar el evento ","Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }
                         else
                         {
-                            MessageBox.Show("El evento se guardo correctamente");
+                            MessageBox.Show("El evento se guardo correctamente","Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                             this.Close();
                         }
@@ -385,20 +443,35 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region  Asignar al lbl de salon seleccionado
+        /// <summary>
+        /// Evento click sobre el grid control que controlara el salon seleccionado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GCSalones_Click_1(object sender, EventArgs e)
         {
 
-
             #region Completando el label que indicara el registro seleccionado
+            //Variable a la cuall se le asignara la data seleccionada en la grid view 
+            string NombreSalon = Convert.ToString(gridView1.GetFocusedRowCellValue("Nombre"));
 
-            LBLNombreSalon.Text = Convert.ToString(gridView1.GetFocusedRowCellValue("Nombre"));
+            //Verificacion de la variable 
+            if (NombreSalon == "")
+            {
+                //Asignando  salon al Label de salon 
+                MessageBox.Show("No hay Salones habilitados", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            //De lo contrario 
+            else
+            {
+                //Asignando el dato seleccionado en la grid view 
+                LBLNombreSalon.Text = Convert.ToString(gridView1.GetFocusedRowCellValue("Nombre"));
 
 
+                /* Verificacion de la Fecha para este salon */
+                VerificacionFechas();
+            }
             #endregion
-
-            /* Verificacion de la Fecha para este salon */
-            VerificacionFechas();
-
 
         }
         #endregion
@@ -439,6 +512,11 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Evento al cambiar los valores en el combobox 
+        /// <summary>
+        /// Evento donde se cambia los valores al seleccionarse otro elemento en el  combobox 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CBOrganizador_SelectedValueChanged(object sender, EventArgs e)
         {
        
@@ -473,6 +551,11 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Organizadores 
+        /// <summary>
+        /// Seccion donde se manejan los organizadores  //--Opcion --//
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBOrganizador_Click(object sender, EventArgs e)
         {
             //Instanciando la interfaz de organizadores

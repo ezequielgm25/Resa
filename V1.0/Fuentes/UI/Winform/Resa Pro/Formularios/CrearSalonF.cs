@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraBars;
 using DevExpress.XtraEditors;
-using System.Data.SqlClient;
 
+//Usings del sistema 
 using Capas.Infraestructura.Entidades;
 using Capas.Negocio;
 using Capas.Aplicacion;
@@ -280,15 +273,16 @@ namespace Resa_Pro.Formularios
         /// <param name="e"></param>
         private void SBEliminarS_Click(object sender, EventArgs e)
         {
+            //Variables    que recoge las filasafectadas
             int FilasAfectadas;
 
             if (CKDListServicios.SelectedItems.Count == 1)
             {
 
-
+                //Recogien el ID del servicio
                 int ID = Convert.ToInt32(CKDListServicios.SelectedValue);
 
-              
+
 
                 FilasAfectadas = n_Servicio.EliminarServicioGlobal(ID);
 
@@ -330,6 +324,7 @@ namespace Resa_Pro.Formularios
         /// <param name="e"></param>
         private void SBAgregarS_Click(object sender, EventArgs e)
         {
+            //Recogiendo las filas afectadas
             int FilasAfectadas = 0;
 
             if (TBServicio.Text != "")
@@ -387,6 +382,7 @@ namespace Resa_Pro.Formularios
         /// <param name="e"></param>
         private void SBEliminarI_Click(object sender, EventArgs e)
         {
+            //Recogiendo las filas afectadas
             int FilasAfectadas;
 
             if (CKDListInventario.SelectedItems.Count == 1)
@@ -395,7 +391,7 @@ namespace Resa_Pro.Formularios
 
                 int ID = Convert.ToInt32(CKDListInventario.SelectedValue);
 
-            
+
 
                 FilasAfectadas = n_Inventario.EliminarInventarioGlobal(ID);
 
@@ -478,6 +474,11 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Ubicaciones
+        /// <summary>
+        /// Metodo donde se maneja las uvicaciones Globales de los salones 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBUbicaciones_Click(object sender, EventArgs e)
         {
             //Instanciando el formulario 

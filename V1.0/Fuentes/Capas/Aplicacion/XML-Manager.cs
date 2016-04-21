@@ -42,11 +42,11 @@ namespace Capas.Aplicacion
 
                } catch ( DirectoryNotFoundException e)
                {
-
+                /*
                 //Enviando un email  a la cuenta de soporte la excepcion
                 Email email = new Email();
                 //Enviando
-                email.enviarEmail(e.Message);
+                email.enviarEmail(e.Message);*/
             }
              
             
@@ -88,14 +88,14 @@ namespace Capas.Aplicacion
                             new XElement("Support",
 
                                new XElement("EmailFrom", "EzequielGarcia0925@gmail.com"),
-                               new XElement("EmailSubject", "Contactandote desde la aplicacion de reservacion"),
+                               new XElement("EmailSubject","soporteezequielgarcia@gmail.com"),
                                new XElement("Pop3"),
-                               new XElement("SMTP"),
+                               new XElement("SMTP", "smtp.gmail.com"),
                                new XElement("SSL"),
-                               new XElement("Port"),
+                               new XElement("Port", 587),
                                new XElement("EmailFormat"),
-                               new XElement("HostServer"),
-                               new XElement("PasswordServer"),
+                               new XElement("HostServer", "soporteezequielgarcia@gmail.com"),
+                               new XElement("PasswordServer", "soporte1234"),
                                new XElement("ContactInfo", "Ezequiel Garcia Vive en la victoria"),
                                new XElement("PhoneContact", "829-304-8492")),
 
@@ -206,7 +206,7 @@ namespace Capas.Aplicacion
 
                 xmlDocument.Load(directorioBaseAplicacion() + @"XML\" + stringParameterArchivoXML); // Cargando el documento
 
-                xmlNodeList = xmlDocument.GetElementsByTagName("SqlServer");
+                xmlNodeList = xmlDocument.GetElementsByTagName(ParameterNodo);
 
 
 
@@ -215,13 +215,13 @@ namespace Capas.Aplicacion
             }
             catch ( IOException IOE)
             {
-                #region Manejo de errores en la busqueda del contenido del nodo
+               /* #region Manejo de errores en la busqueda del contenido del nodo
                 //Enviando un email  a la cuenta de soporte la excepcion
                 Email email = new Email();
                 //Enviando
                 email.enviarEmail(IOE.Message);
                 #endregion
-
+                */
 
             }
 

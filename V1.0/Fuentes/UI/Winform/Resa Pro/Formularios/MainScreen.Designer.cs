@@ -287,6 +287,7 @@
             this.BBSolicitudes.Id = 56;
             this.BBSolicitudes.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("BBSolicitudes.LargeGlyph")));
             this.BBSolicitudes.Name = "BBSolicitudes";
+            this.BBSolicitudes.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.BBSolicitudes.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BBSolicitudes_ItemClick);
             // 
             // BBEventos
@@ -350,8 +351,10 @@
             // 
             // ribbonPageGroup2
             // 
+            this.ribbonPageGroup2.AllowTextClipping = false;
             this.ribbonPageGroup2.ItemLinks.Add(this.BBSolicitudes);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.ShowCaptionButton = false;
             this.ribbonPageGroup2.Text = "Gestionar Solicitudes";
             // 
             // Eventos
@@ -363,6 +366,7 @@
             // 
             // ribbonPageGroup3
             // 
+            this.ribbonPageGroup3.AllowTextClipping = false;
             this.ribbonPageGroup3.ItemLinks.Add(this.BBEventos);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Gestionar Eventos";
@@ -376,6 +380,7 @@
             // 
             // ribbonPageGroup4
             // 
+            this.ribbonPageGroup4.AllowTextClipping = false;
             this.ribbonPageGroup4.Glyph = ((System.Drawing.Image)(resources.GetObject("ribbonPageGroup4.Glyph")));
             this.ribbonPageGroup4.ItemLinks.Add(this.BBUsuarios);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
@@ -390,6 +395,7 @@
             // 
             // ribbonPageGroup5
             // 
+            this.ribbonPageGroup5.AllowTextClipping = false;
             this.ribbonPageGroup5.ItemLinks.Add(this.BBReportes);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Gestionar los reportes";
@@ -464,7 +470,11 @@
             // GCEventos
             // 
             this.GCEventos.Dock = System.Windows.Forms.DockStyle.Right;
+            this.GCEventos.EmbeddedNavigator.Buttons.CancelEdit.Enabled = false;
+            this.GCEventos.EmbeddedNavigator.Buttons.Edit.Enabled = false;
+            this.GCEventos.EmbeddedNavigator.Buttons.PrevPage.Enabled = false;
             this.GCEventos.Location = new System.Drawing.Point(406, 143);
+            this.GCEventos.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Office2003;
             this.GCEventos.MainView = this.tileView2;
             this.GCEventos.MenuManager = this.RMainScreen;
             this.GCEventos.Name = "GCEventos";
@@ -473,6 +483,7 @@
             this.repositoryItemDateEdit2});
             this.GCEventos.Size = new System.Drawing.Size(883, 496);
             this.GCEventos.TabIndex = 6;
+            this.GCEventos.UseEmbeddedNavigator = true;
             this.GCEventos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.tileView2,
             this.tileView1});
@@ -481,7 +492,7 @@
             // tileView2
             // 
             this.tileView2.Appearance.ViewCaption.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
-            this.tileView2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
+            this.tileView2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.tileView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colTitulo,
             this.colTipo,
@@ -497,75 +508,125 @@
             this.tileView2.OptionsTiles.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.tileView2.OptionsView.AnimationType = DevExpress.XtraGrid.Views.Base.GridAnimationType.AnimateAllContent;
             this.tileView2.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.ShowAlways;
-            tileViewItemElement1.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement1.Appearance.Normal.BackColor = System.Drawing.Color.Transparent;
+            tileViewItemElement1.Appearance.Normal.BackColor2 = System.Drawing.Color.Transparent;
+            tileViewItemElement1.Appearance.Normal.BorderColor = System.Drawing.Color.DimGray;
+            tileViewItemElement1.Appearance.Normal.Font = new System.Drawing.Font("Tekton Pro Ext", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement1.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            tileViewItemElement1.Appearance.Normal.Options.UseBackColor = true;
+            tileViewItemElement1.Appearance.Normal.Options.UseBorderColor = true;
             tileViewItemElement1.Appearance.Normal.Options.UseFont = true;
+            tileViewItemElement1.Appearance.Normal.Options.UseForeColor = true;
+            tileViewItemElement1.Image = global::Resa_Pro.Properties.Resources.IconEsquina;
+            tileViewItemElement1.ImageLocation = new System.Drawing.Point(265, 58);
+            tileViewItemElement1.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Squeeze;
+            tileViewItemElement1.ImageSize = new System.Drawing.Size(150, 100);
             tileViewItemElement1.Text = "Titulo:";
+            tileViewItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileViewItemElement2.Appearance.Normal.Font = new System.Drawing.Font("Tekton Pro Cond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement2.Appearance.Normal.ForeColor = System.Drawing.Color.Purple;
+            tileViewItemElement2.Appearance.Normal.Options.UseFont = true;
+            tileViewItemElement2.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement2.Column = this.colTitulo;
-            tileViewItemElement2.Image = global::Resa_Pro.Properties.Resources.Eventos;
-            tileViewItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileViewItemElement2.ImageLocation = new System.Drawing.Point(70, 100);
+            tileViewItemElement2.Image = global::Resa_Pro.Properties.Resources.IconEvent;
+            tileViewItemElement2.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopCenter;
+            tileViewItemElement2.ImageLocation = new System.Drawing.Point(5, 110);
+            tileViewItemElement2.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.Squeeze;
+            tileViewItemElement2.ImageSize = new System.Drawing.Size(120, 150);
             tileViewItemElement2.Text = "colTitulo";
-            tileViewItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileViewItemElement2.TextLocation = new System.Drawing.Point(50, 4);
-            tileViewItemElement3.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileViewItemElement2.TextLocation = new System.Drawing.Point(58, 2);
+            tileViewItemElement3.Appearance.Normal.Font = new System.Drawing.Font("Tekton Pro Ext", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement3.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             tileViewItemElement3.Appearance.Normal.Options.UseFont = true;
+            tileViewItemElement3.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement3.Text = "Tipo:";
-            tileViewItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileViewItemElement3.TextLocation = new System.Drawing.Point(5, 25);
+            tileViewItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            tileViewItemElement3.TextLocation = new System.Drawing.Point(3, 25);
+            tileViewItemElement4.Appearance.Normal.Font = new System.Drawing.Font("Tekton Pro Cond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement4.Appearance.Normal.ForeColor = System.Drawing.Color.Purple;
+            tileViewItemElement4.Appearance.Normal.Options.UseFont = true;
+            tileViewItemElement4.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement4.Column = this.colTipo;
             tileViewItemElement4.Text = "colTipo";
             tileViewItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileViewItemElement4.TextLocation = new System.Drawing.Point(50, 30);
-            tileViewItemElement5.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement4.TextLocation = new System.Drawing.Point(50, 26);
+            tileViewItemElement5.Appearance.Normal.Font = new System.Drawing.Font("Tekton Pro Ext", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement5.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             tileViewItemElement5.Appearance.Normal.Options.UseFont = true;
+            tileViewItemElement5.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement5.Text = "Topico:";
             tileViewItemElement5.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
             tileViewItemElement5.TextLocation = new System.Drawing.Point(5, 50);
+            tileViewItemElement6.Appearance.Normal.Font = new System.Drawing.Font("Tekton Pro Cond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement6.Appearance.Normal.ForeColor = System.Drawing.Color.Purple;
+            tileViewItemElement6.Appearance.Normal.Options.UseFont = true;
+            tileViewItemElement6.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement6.Column = this.colTopico;
             tileViewItemElement6.Text = "colTopico";
             tileViewItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileViewItemElement6.TextLocation = new System.Drawing.Point(60, 55);
-            tileViewItemElement7.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement6.TextLocation = new System.Drawing.Point(70, 50);
+            tileViewItemElement7.Appearance.Normal.Font = new System.Drawing.Font("Tekton Pro Ext", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement7.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             tileViewItemElement7.Appearance.Normal.Options.UseFont = true;
+            tileViewItemElement7.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement7.Text = "Organizador:";
             tileViewItemElement7.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
             tileViewItemElement7.TextLocation = new System.Drawing.Point(5, 72);
+            tileViewItemElement8.Appearance.Normal.Font = new System.Drawing.Font("Tekton Pro Cond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement8.Appearance.Normal.ForeColor = System.Drawing.Color.Purple;
+            tileViewItemElement8.Appearance.Normal.Options.UseFont = true;
+            tileViewItemElement8.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement8.Column = this.colOrganizador;
             tileViewItemElement8.Text = "colOrganizador";
             tileViewItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileViewItemElement8.TextLocation = new System.Drawing.Point(92, 76);
-            tileViewItemElement9.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement8.TextLocation = new System.Drawing.Point(120, 72);
+            tileViewItemElement9.Appearance.Normal.Font = new System.Drawing.Font("Tekton Pro Ext", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement9.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             tileViewItemElement9.Appearance.Normal.Options.UseFont = true;
+            tileViewItemElement9.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement9.Text = "Salon:";
             tileViewItemElement9.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileViewItemElement9.TextLocation = new System.Drawing.Point(10, 95);
+            tileViewItemElement9.TextLocation = new System.Drawing.Point(5, 95);
+            tileViewItemElement10.Appearance.Normal.Font = new System.Drawing.Font("Tekton Pro Cond", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement10.Appearance.Normal.ForeColor = System.Drawing.Color.Purple;
+            tileViewItemElement10.Appearance.Normal.Options.UseFont = true;
+            tileViewItemElement10.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement10.Column = this.colSalon;
             tileViewItemElement10.Text = "colSalon";
             tileViewItemElement10.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileViewItemElement10.TextLocation = new System.Drawing.Point(54, 99);
+            tileViewItemElement10.TextLocation = new System.Drawing.Point(66, 96);
             tileViewItemElement11.Appearance.Normal.BackColor2 = System.Drawing.Color.Lime;
-            tileViewItemElement11.Appearance.Normal.Font = new System.Drawing.Font("Proxima Nova Rg", 11.25F, System.Drawing.FontStyle.Bold);
-            tileViewItemElement11.Appearance.Normal.ForeColor = System.Drawing.Color.DodgerBlue;
+            tileViewItemElement11.Appearance.Normal.Font = new System.Drawing.Font("Tekton Pro Ext", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement11.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             tileViewItemElement11.Appearance.Normal.Options.UseFont = true;
             tileViewItemElement11.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement11.Text = "Tiempo de inicio";
             tileViewItemElement11.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
             tileViewItemElement11.TextLocation = new System.Drawing.Point(4, 120);
+            tileViewItemElement12.Appearance.Normal.Font = new System.Drawing.Font("Tekton Pro Cond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement12.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            tileViewItemElement12.Appearance.Normal.Options.UseFont = true;
+            tileViewItemElement12.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement12.Column = this.colTiempo_Inicio;
             tileViewItemElement12.Text = "colTiempo_Inicio";
             tileViewItemElement12.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
             tileViewItemElement12.TextLocation = new System.Drawing.Point(10, 150);
-            tileViewItemElement13.Appearance.Normal.Font = new System.Drawing.Font("Proxima Nova Rg", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement13.Appearance.Normal.Font = new System.Drawing.Font("Tekton Pro Ext", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tileViewItemElement13.Appearance.Normal.ForeColor = System.Drawing.Color.Red;
             tileViewItemElement13.Appearance.Normal.Options.UseFont = true;
             tileViewItemElement13.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement13.Text = "Finaliza";
             tileViewItemElement13.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileViewItemElement13.TextLocation = new System.Drawing.Point(275, 120);
+            tileViewItemElement13.TextLocation = new System.Drawing.Point(245, 120);
+            tileViewItemElement14.Appearance.Normal.Font = new System.Drawing.Font("Tekton Pro Cond", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tileViewItemElement14.Appearance.Normal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            tileViewItemElement14.Appearance.Normal.Options.UseFont = true;
+            tileViewItemElement14.Appearance.Normal.Options.UseForeColor = true;
             tileViewItemElement14.Column = this.colTiempo_Final;
             tileViewItemElement14.Text = "colTiempo_Final";
             tileViewItemElement14.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.Manual;
-            tileViewItemElement14.TextLocation = new System.Drawing.Point(269, 145);
+            tileViewItemElement14.TextLocation = new System.Drawing.Point(245, 145);
             this.tileView2.TileTemplate.Add(tileViewItemElement1);
             this.tileView2.TileTemplate.Add(tileViewItemElement2);
             this.tileView2.TileTemplate.Add(tileViewItemElement3);

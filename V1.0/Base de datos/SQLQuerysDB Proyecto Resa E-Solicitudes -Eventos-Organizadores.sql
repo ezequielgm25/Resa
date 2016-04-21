@@ -556,3 +556,41 @@ AS
  
  AS
    
+   /* Stored procedure donde se obtendran el porcentaje de los eventos en un salon */
+Create procedure ObtenerPorcentajeSolicitudesSalones
+AS
+BEGIN
+Select Count(SO.ID_Solicitud) as 'Solicitudes', SA.Nombre  as 'Salon' from Salones as SA
+inner join Solicitudes  AS SO on SO.ID_Salon = SA.ID_Salon Group by SA.Nombre
+END
+GO
+
+--drop procedure ObtenerPorcentajeSolicitudesSalones
+
+ -- Stored procedure donde se obtienen las solicitudes aprobadas, no aprobadas y  efectuadas
+
+Create procedure PorcentajeSolicitudesAprobada
+AS
+BEGIN
+Select Count(SO.ID_Solicitud) as 'Solitudes aprobadas' from Salones as SA
+inner join Solicitudes  AS SO on SO.ID_Salon = SA.ID_Salon  where SO.Aprobacion = 'Aprobada'
+END
+GO
+
+-- Porcentaje solicitudes no aprobadas
+Create procedure PorcentajeSolicitudesNoAprobadas
+AS
+BEGIN
+Select Count(SO.ID_Solicitud) as 'Solitudes no aprobadas' from Salones as SA
+inner join Solicitudes  AS SO on SO.ID_Salon = SA.ID_Salon  where SO.Aprobacion = 'No Aprobada'
+END
+GO
+
+--Porcentaje Solicitudes efectuadas
+Create procedure PorcentajeSolicitudesEfectuadas
+AS
+BEGIN
+Select Count(SO.ID_Solicitud) as 'Solitudes efectuadas' from Salones as SA
+inner join Solicitudes  AS SO on SO.ID_Salon = SA.ID_Salon  where SO.Aprobacion = 'Efectuado'
+END
+GO

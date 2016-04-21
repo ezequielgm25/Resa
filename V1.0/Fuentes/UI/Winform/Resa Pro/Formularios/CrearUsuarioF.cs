@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraBars;
+
+//Usings del sistema 
 using Capas.Negocio;
 using Capas.Infraestructura.Entidades;
 
@@ -30,9 +24,12 @@ namespace Resa_Pro.Formularios
 
         #region Contructor 
 
-
+        /// <summary>
+        /// Constructor de la interfaz donde se creara un usuario
+        /// </summary>
         public CrearUsuarioF()
         {
+            //Inicializando los componentes 
             InitializeComponent();
 
 
@@ -50,25 +47,25 @@ namespace Resa_Pro.Formularios
 
         }
 
-
-
-
-
-
-
         #endregion
 
         #region Crear Usuario 
+        /// <summary>
+        /// Evento click en el boton crear donde se gestiona la creacion de un usuario 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBCrearU_Click(object sender, EventArgs e)
         {
             //Verificar Controles
 
+            //String que recogera el perfil 
             string perfil = "No Tiene Perfil";
 
             if (string.IsNullOrEmpty(CBRol.Text) || string.IsNullOrEmpty(TBNombre.Text) || string.IsNullOrEmpty(TBApellido.Text) || string.IsNullOrEmpty(TBContra.Text) || string.IsNullOrEmpty(CBEstado.Text))
             {
 
-                MessageBox.Show(" Toda la informacion del usuario debe estar completa");
+                MessageBox.Show(" Toda la informacion del usuario debe estar completa","Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             else
@@ -79,7 +76,7 @@ namespace Resa_Pro.Formularios
 
                 if (Resultado > 0)
                 {
-                    MessageBox.Show(" El usuario: " + TBusuario.Text + "\n" + " Ya esta en uso");
+                    MessageBox.Show(" El usuario: " + TBusuario.Text + "\n" + " Ya esta en uso","Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //Limpiar el Textbox de usuario 
 
@@ -263,11 +260,11 @@ namespace Resa_Pro.Formularios
 
                                 if(Guardado == false)
                                 {
-                                    MessageBox.Show("Ocurrio un error al guardar el usuario");
+                                    MessageBox.Show("Ocurrio un error al guardar el usuario","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                                 else
                                 {
-                                    MessageBox.Show("El usuario se guardo correctamente");
+                                    MessageBox.Show("El usuario se guardo correctamente","Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                     this.Close();
                                 }
@@ -277,7 +274,7 @@ namespace Resa_Pro.Formularios
                             }
                             else
                             {
-                                MessageBox.Show("Ocurrio un errror al crear el usuario");
+                                MessageBox.Show("Ocurrio un error al crear el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
 
 
@@ -289,7 +286,7 @@ namespace Resa_Pro.Formularios
                         }
                         else
                         {
-                            MessageBox.Show("Ocurrio un errror al crear el usuario");
+                            MessageBox.Show("Ocurrio un errror al crear el usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
 
@@ -298,7 +295,7 @@ namespace Resa_Pro.Formularios
                     else
                     {
 
-                        MessageBox.Show("Ocurrio un errror al crear el usuario");
+                        MessageBox.Show("Ocurrio un errror al crear el usuario","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
 
@@ -312,8 +309,6 @@ namespace Resa_Pro.Formularios
         }
 
         #endregion
-
-
         
     }
 }

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 
@@ -37,11 +31,13 @@ namespace Resa_Pro
         //</summary>
 
         #region Constructor
-         
+
         public Splash()
         {
-             //Inicializando los componentes 
+            //Inicializando los componentes 
             InitializeComponent();
+
+          ;
 
             #region  Inicializando variables, objetos y llamadas 
 
@@ -73,14 +69,14 @@ namespace Resa_Pro
             Thread hiloTimer = new Thread(delegadoTimerPB);
 
             //Prioridades
-            
+
             hilo.Priority = ThreadPriority.Lowest;
 
             hiloTimer.Priority = ThreadPriority.Lowest;
 
             //Hilos 
 
-            
+
             hilo.Start();
             hiloTimer.Start();
 
@@ -89,6 +85,7 @@ namespace Resa_Pro
             #endregion
 
 
+          
         }
 
         #endregion
@@ -126,22 +123,23 @@ namespace Resa_Pro
 
         #endregion
 
-        #region Cargar Sistema (Se verifican todos los recursos y  emails pendientes)
+        #region Cargar Sistema (Se verifican todos los recursos y  emails en caso de error de arranque )
         /// <summary>
         /// Evento Donde se verifican los recursos del sistema
         /// </summary>
         private void CargarSistema()
         {
-             
-            try {
+
+            try
+            {
                 #region Instanciaciones a clases
 
                 // Clase XMl
                 XML_Manager manejadorXMl = new XML_Manager();
                 // Clase conexion en  capa.Aplicacion
                 ConexionAplicacion Conexion = new ConexionAplicacion();
-                
-                
+
+
                 #endregion
 
                 #region creaccion de hilos 
@@ -159,24 +157,24 @@ namespace Resa_Pro
                 Thread hiloVerificarConexion = new Thread(delegadoVerificarConexion);
                 //Propiedad
 
-                hiloVerificadorXML.Priority = ThreadPriority.Normal;
+                hiloVerificadorXML.Priority = ThreadPriority.Highest;
 
-                hiloVerificarConexion.Priority = ThreadPriority.Normal;
+                hiloVerificarConexion.Priority = ThreadPriority.Lowest;
 
-               
+
                 //Hilos
-           
+
                 hiloVerificadorXML.Start();
 
                 hiloVerificarConexion.Start();
-                
+
                 #endregion
             }
             catch (Exception e)
             {
-                 //Mostrando mensaje de error
+                //Mostrando mensaje de error
 
-                MessageBox.Show("No se  pudo  cargar el sistema ERROR " + e.Message, "Error",MessageBoxButtons.OK,MessageBoxIcon.Error );
+                MessageBox.Show("No se  pudo  cargar el sistema ERROR " + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 //Enviando un email  a la cuenta de soporte la excepcion
                 Email email = new Email();
@@ -184,13 +182,6 @@ namespace Resa_Pro
                 email.enviarEmail(e.Message);
 
             }
-            
-            
-
-         
-           
-
-
 
 
 

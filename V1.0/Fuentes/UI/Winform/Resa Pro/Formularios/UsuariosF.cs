@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraBars;
 
+//usings del sistema
+using Capas.Aplicacion;
 using Capas.Infraestructura.Entidades;
 using Capas.Negocio;
 
@@ -35,12 +29,23 @@ namespace Resa_Pro.Formularios
 
         E_Auditoria e_Auditoria = new E_Auditoria();
 
+        //Xml manager 
+        XML_Manager X_m = new XML_Manager();
+
+        //Variable que recogera el error
+
+        string MessageError = "";
+
         #endregion
 
-
         #region Contructor 
+        /// <summary>
+        /// Contructor de la interfaz de manejo de los usuarios 
+        /// </summary>
+        /// <param name="e_UsuarioAU"></param>
         public UsuariosF(E_Usuario e_UsuarioAU)
         {
+            //Inicializando los componentes 
             InitializeComponent();
 
 
@@ -51,7 +56,7 @@ namespace Resa_Pro.Formularios
 
             #endregion
 
-
+            //Asignando la Entidad araigada a la global 
             e_Usuario = e_UsuarioAU;
 
 
@@ -82,8 +87,12 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-
         #region Agregar Usuario 
+        /// <summary>
+        /// Evento click sobre el agregar donde se gestionara la creacion de un usuaro 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBAgregarU_Click(object sender, EventArgs e)
         {
 
@@ -105,8 +114,14 @@ namespace Resa_Pro.Formularios
             }
             catch (Exception E)
             {
-                MessageBox.Show(Convert.ToString(E));
 
+                MessageBox.Show(Convert.ToString(E.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Guardando el error en  El XMl de destinado  con los parametros correcpondientes 
+                X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_Usuario.id_Usuario), "Usuarios", "Agregar", Convert.ToString(E));
+
+                //Mensaje de error 
+
+                MessageError = E.Message;
 
             }
 
@@ -118,7 +133,7 @@ namespace Resa_Pro.Formularios
                 e_Auditoria.fecha_Entrada = Fecha_Entrada;
                 e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
                 e_Auditoria.opcion = "Usuarios";
-                e_Auditoria.tipoOpcion = "Agregar";
+                e_Auditoria.tipoOpcion = "Agregar" + MessageError;
 
                 //insertando la auditoria
 
@@ -139,8 +154,12 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-
-        #region actualizar Usuario 
+        #region Actualizar Usuario 
+        /// <summary>
+        /// Evento click sobre el boton actualizar donde se gestiona la actuaizacion de un usuario 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBActualizarU_Click(object sender, EventArgs e)
         {
             //<Summary>
@@ -171,15 +190,20 @@ namespace Resa_Pro.Formularios
 
                 else
                 {
-                    MessageBox.Show(" No hay un usuario seleccionado");
+                    MessageBox.Show(" No hay un usuario seleccionado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
 
             }
             catch (Exception E)
             {
-                MessageBox.Show(Convert.ToString(E));
+                MessageBox.Show(Convert.ToString(E.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Guardando el error en  El XMl de destinado  con los parametros correcpondientes 
+                X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_Usuario.id_Usuario), "Usuarios", "Actualizar", Convert.ToString(E));
 
+                //Mensaje de error 
+
+                MessageError = E.Message;
             }
 
             finally
@@ -189,7 +213,7 @@ namespace Resa_Pro.Formularios
                 e_Auditoria.fecha_Entrada = Fecha_Entrada;
                 e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
                 e_Auditoria.opcion = "Usuarios";
-                e_Auditoria.tipoOpcion = "Actualizar";
+                e_Auditoria.tipoOpcion = "Actualizar" + MessageError;
 
                 //insertando la auditoria
 
@@ -204,8 +228,12 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-
-        #region Eliminar 
+        #region Eliminar   
+        /// <summary>
+        /// Evento click sobre el boton eliminar que gestiona la eliminacio de un usuario 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBEliminarU_Click(object sender, EventArgs e)
         {
             int FilasAfectadas = 0;
@@ -224,7 +252,7 @@ namespace Resa_Pro.Formularios
 
                 if (e_Usuario.id_Usuario != 0)
                 {
-                    DialogResult dialogResult = MessageBox.Show("Desea eliminar el Usuario?", "Confirmation", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Desea eliminar el usuario?", "Confirmation", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
 
@@ -234,11 +262,11 @@ namespace Resa_Pro.Formularios
 
                         if (FilasAfectadas != 1)
                         {
-                            MessageBox.Show("Ocurrio un error al eliminar el usuario");
+                            MessageBox.Show("Ocurrio un error al eliminar el usuario", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
                         }
                         else
                         {
-                            MessageBox.Show("El Usuario se elimino correctamente");
+                            MessageBox.Show("El usuario se elimino correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             GCUsuarios.DataSource = n_Usuario.ObtenerUsuarios();
 
@@ -253,13 +281,19 @@ namespace Resa_Pro.Formularios
                 }
                 else
                 {
-                    MessageBox.Show(" No hay un usuario seleccionado ");
+                    MessageBox.Show(" No hay un usuario seleccionado ", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }
             catch (Exception E)
             {
-                MessageBox.Show(Convert.ToString(E));
+                MessageBox.Show(Convert.ToString(E.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Guardando el error en  El XMl de destinado  con los parametros correcpondientes 
+                X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_Usuario.id_Usuario), "Usuarios", "Eliminar", Convert.ToString(E));
+
+                //Mensaje de error 
+
+                MessageError = E.Message;
             }
 
             finally

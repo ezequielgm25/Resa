@@ -1,15 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraBars;
 using Capas.Negocio;
-using DevExpress.XtraEditors;
+
+//Usings del sistema
 using Capas.Infraestructura.Entidades;
 
 namespace Resa_Pro.Formularios
@@ -73,16 +68,16 @@ namespace Resa_Pro.Formularios
             foreach (DataRowView rowView in CBUbicacion.Items)
             {
                 //Completando la entidad de servicios 
-               
-                 if(e_Salon.ubicacion == Convert.ToString(rowView["Ubicacion"]))
+
+                if (e_Salon.ubicacion == Convert.ToString(rowView["Ubicacion"]))
                 {
 
-                    CBUbicacion.SelectedItem = CBUbicacion.Items[C];  
+                    CBUbicacion.SelectedItem = CBUbicacion.Items[C];
                 }
 
                 C++;
             }
-            
+
 
             TECapacidad.EditValue = e_Salon.capacidad;
 
@@ -109,7 +104,6 @@ namespace Resa_Pro.Formularios
             #endregion
 
             #endregion
-
 
             #region Insertando los servicios y inventarios a los CheckedListBox
 
@@ -138,7 +132,6 @@ namespace Resa_Pro.Formularios
 
 
             #endregion
-
 
             #region Seleccionando los inventarios y  servicios que tenga el  salon
 
@@ -239,8 +232,6 @@ namespace Resa_Pro.Formularios
 
         }
         #endregion
-
-
 
         #region Actualizar  Salon -
         /// <summary>
@@ -405,7 +396,7 @@ namespace Resa_Pro.Formularios
 
                                     if (Resultado != 0)
                                     {
-                                        n_Inventario.EliminarSercvicioXS_ID(e_Inventario);
+                                        n_Inventario.EliminarInventarioXS_ID(e_Inventario);
                                     }
 
                                 }
@@ -556,7 +547,7 @@ namespace Resa_Pro.Formularios
             }
             else
             {
-                MessageBox.Show("Se debe selecionar un servicio para ser eliminado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Se debe seleccionar un servicio para ser eliminado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
         }
@@ -625,6 +616,7 @@ namespace Resa_Pro.Formularios
         /// <param name="e"></param>
         private void SBQuitarIV_Click(object sender, EventArgs e)
         {
+            //Variable que recogera las filas afectadas 
             int FilasAfectadas;
 
             if (CKDListInventario.SelectedItems.Count == 1)
@@ -668,9 +660,12 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-
         #region Ubicacion
-
+        /// <summary>
+        /// Metodo donde se manejan la session de ubicaciones globales de los salones 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBUbicaciones_Click(object sender, EventArgs e)
         {
             //Instanciando el formulario 
@@ -686,12 +681,6 @@ namespace Resa_Pro.Formularios
         }
 
         #endregion
-
-
-        
-
-
-
 
     }
 }

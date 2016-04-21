@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.Data;
+
+// using del sistema 
 using Capas.Data;
 using Capas.Infraestructura.Entidades;
 
@@ -17,9 +14,9 @@ namespace Capas.Negocio
         //</Summary>
 
         #region Declaraciones -
-            //DataTable
+        //DataTable
         DataTable DataT;
-         //Solicitudes capa data 
+        //Solicitudes capa data 
         D_Solicitud d_Solicitud;
 
         #endregion
@@ -33,7 +30,7 @@ namespace Capas.Negocio
             //DataTable
             DataT = new DataTable();
 
-            d_Solicitud= new D_Solicitud();
+            d_Solicitud = new D_Solicitud();
 
         }
 
@@ -129,7 +126,7 @@ namespace Capas.Negocio
             //Variables 
             int FilasAfectadas = 0;
             //-----//
-            
+
             //Ejecutando el metodo en la capa de datos 
             FilasAfectadas = d_Solicitud.EliminarSolicitud(ID_Solicitud);
 
@@ -153,7 +150,7 @@ namespace Capas.Negocio
             int FilasAfectada = 0;
 
             //Ejecutando el metodo en la capa de data de la solicitud
-            FilasAfectada = d_Solicitud.AprobarSolicitud(ID_Solicitud , usuario);
+            FilasAfectada = d_Solicitud.AprobarSolicitud(ID_Solicitud, usuario);
 
             //Retornando el Valor
             return FilasAfectada;

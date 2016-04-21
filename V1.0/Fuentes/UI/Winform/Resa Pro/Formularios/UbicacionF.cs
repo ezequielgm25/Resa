@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraBars;
+
+//Usings del sistema 
 using Capas.Negocio;
 using Capas.Infraestructura.Entidades;
 
@@ -29,6 +23,9 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Contructor
+        /// <summary>
+        /// Contructor de la interfaz de ubicaciones globales
+        /// </summary>
         public UbicacionF()
         {
             //Inicializando  los componenentes 
@@ -37,7 +34,7 @@ namespace Resa_Pro.Formularios
             //Llenando el DataGrid de ubicaciones 
 
             GCUbicaciones.DataSource = n_salon.ObtenerUbicacionesGlobales();
-           
+
 
 
         }
@@ -46,9 +43,14 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Agregar Ubicacion 
+        /// <summary>
+        /// Metodo donde se agrega una ubicacion global
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBAgregarU_Click(object sender, EventArgs e)
         {
-            if(TBUbicacion.Text == "")
+            if (TBUbicacion.Text == "")
             {
                 //Mostrando  Mensaje de recomendacion al usuario 
                 MessageBox.Show("El campo ubicacion debe estar completo", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -58,11 +60,17 @@ namespace Resa_Pro.Formularios
                 int Resultado;
                 Resultado = n_salon.AgregarUbicacionGlobal(TBUbicacion.Text);
 
-                if(Resultado == 1)
+                if (Resultado == 1)
                 {
                     MessageBox.Show("La ubicacion se guardo con exito", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    //Limpiando el campo
+
+                    TBUbicacion.Text = "";
+
+
                     //Actualizando el dataSource en el Grid control
+
 
                     GCUbicaciones.DataSource = n_salon.ObtenerUbicacionesGlobales();
 
@@ -79,12 +87,17 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Quitar Ubicacion
+        /// <summary>
+        /// Metodo donde se quita una ubicacion global 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBEliminarU_Click(object sender, EventArgs e)
         {
             int FilasAfectadas;
-             int ID_Ubicacion = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
-             
-               
+            int ID_Ubicacion = Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
+
+
             if (ID_Ubicacion != 0)
             {
 

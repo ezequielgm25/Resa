@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraBars;
-using DevExpress.XtraEditors;
+
+//Usingns del sistema
 using Capas.Infraestructura.Entidades;
 using Capas.Negocio;
 using Capas.Aplicacion;
@@ -126,9 +119,16 @@ namespace Resa_Pro.Formularios
             catch (Exception E)
             {
                 //Mostrando la excepcion al usuario
-                MessageBox.Show(Convert.ToString(E), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Convert.ToString(E.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //Guardando el error en  El XMl de destinado  con los parametros correcpondientes 
                 X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_Usuario.id_Usuario), "Salones", "Crear", Convert.ToString(E));
+
+                //Enviando un email  a la cuenta de soporte la excepcion
+                Email email = new Email();
+                //Enviando
+                email.enviarEmail(E.Message);
+
+                MessageError = E.Message;
             }
             //Agregando la auditoria al  usuario con los parametros correspondientes 
             finally
@@ -139,7 +139,7 @@ namespace Resa_Pro.Formularios
                 e_Auditoria.fecha_Entrada = Fecha_Entrada;
                 e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
                 e_Auditoria.opcion = "Salones";
-                e_Auditoria.tipoOpcion = "Crear";
+                e_Auditoria.tipoOpcion = "Crear" + MessageError;
 
                 //Insertando la auditoria al Usuario correcpondiente
 
@@ -148,6 +148,12 @@ namespace Resa_Pro.Formularios
             }
 
         }
+        #endregion
+
+        #region Declaraciones 
+
+        string MessageError = "";
+
         #endregion
 
         #region Actualizar Salon -
@@ -204,6 +210,13 @@ namespace Resa_Pro.Formularios
                 MessageBox.Show(Convert.ToString(E), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //Guardando el error en  El XMl de destinado  con los parametros correcpondientes 
                 X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_Usuario.id_Usuario), "Salones", "Actualizar", Convert.ToString(E));
+
+                MessageError = E.Message;
+
+                //Enviando un email  a la cuenta de soporte la excepcion
+                Email email = new Email();
+                //Enviando
+                email.enviarEmail(E.Message);
             }
 
             //Agregando la auditoria al  usuario con los parametros correspondientes 
@@ -215,7 +228,7 @@ namespace Resa_Pro.Formularios
                 e_Auditoria.fecha_Entrada = Fecha_Entrada;
                 e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
                 e_Auditoria.opcion = "Salones";
-                e_Auditoria.tipoOpcion = "Actualizar";
+                e_Auditoria.tipoOpcion = "Actualizar" + MessageError;
 
                 //Insertando la auditoria al Usuario correcpondiente
 
@@ -258,9 +271,6 @@ namespace Resa_Pro.Formularios
                     if (dialogResult == DialogResult.Yes)
                     {
 
-
-
-
                         //Variables que recuperara las filas afectadas 
                         FilasAfectadas = n_Salon.EliminarSalon(e_Salon.id_Salon);
 
@@ -295,15 +305,17 @@ namespace Resa_Pro.Formularios
                 }
 
             }
+
             //El catch capturara una excepcion en caso de que ocurra en el codigo ejecutado 
             catch (Exception E)
             {
                 //Se le presenta la excepcion al usuario como un error  
-                MessageBox.Show(Convert.ToString(E), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Convert.ToString(E.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 // Se guarda un el error en el XML destinado a  esa funcion  que aceptara los siguientes paramatros 
                 X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_Usuario.id_Usuario), "Salones", "Eliminar", Convert.ToString(E));
 
+                MessageError = E.Message;
             }
 
             //Finalmente se le agrega una auditoria al usuario completando todos los parametros correspondientes al usuario 
@@ -316,7 +328,7 @@ namespace Resa_Pro.Formularios
                 e_Auditoria.fecha_Entrada = Fecha_Entrada;
                 e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
                 e_Auditoria.opcion = "Salones";
-                e_Auditoria.tipoOpcion = "Eliminar";
+                e_Auditoria.tipoOpcion = "Eliminar" + MessageError;
 
                 //Insertando la auditoria
 

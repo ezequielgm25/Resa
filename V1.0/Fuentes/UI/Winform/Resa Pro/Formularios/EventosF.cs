@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraBars;
 
+//Usings del sistema 
 using Capas.Negocio;
 using Capas.Infraestructura.Entidades;
 using Capas.Aplicacion;
@@ -45,6 +38,8 @@ namespace Resa_Pro.Formularios
         //Xml manager 
         XML_Manager X_m = new XML_Manager();
 
+        //Variable que recogera los errores en el sistema 
+        string MessageError = "";
 
         #endregion
 
@@ -93,7 +88,7 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-        #region marcar Un evento
+        #region Marcar Un evento
         /// <summary>
         /// Evento click del boton agregar  que maneja la funcion de agregar un evento
         /// </summary>
@@ -120,10 +115,14 @@ namespace Resa_Pro.Formularios
             catch (Exception E)
             {
                 
-                MessageBox.Show(Convert.ToString(E), "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(Convert.ToString(E.Message), "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
 
                 //Guardando el error en  El XMl de destinado  con los parametros correcpondientes 
-                X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_Usuario.id_Usuario), "Salones", "Crear", Convert.ToString(E));
+                X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_Usuario.id_Usuario), "Eventos", "Crear", Convert.ToString(E));
+
+                //Mensaje de error
+
+                MessageError = E.Message;
             }
 
             //Agregando una auditoria  al usuario 
@@ -136,7 +135,7 @@ namespace Resa_Pro.Formularios
                 e_Auditoria.fecha_Entrada = Fecha_Entrada;
                 e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
                 e_Auditoria.opcion = "Eventos";
-                e_Auditoria.tipoOpcion = "Agregar";
+                e_Auditoria.tipoOpcion = "Agregar" + MessageError;
 
                 //Insertando la auditoria
 
@@ -150,6 +149,11 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Eliminar Evento
+        /// <summary>
+        /// Evento donde se  elimina  un evento 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBEliminarE_Click(object sender, EventArgs e)
         {
 
@@ -176,11 +180,11 @@ namespace Resa_Pro.Formularios
 
                         if (FilasAfectadas != 1)
                         {
-                            MessageBox.Show("Ocurrio un error al eliminar el evento");
+                            MessageBox.Show("Ocurrio un error al eliminar el evento","Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
                         }
                         else
                         {
-                            MessageBox.Show("El evento se elimino correctamente");
+                            MessageBox.Show("El evento se elimino correctamente", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             GCEventos.DataSource = n_Evento.ObtenerEventos();
 
@@ -195,13 +199,20 @@ namespace Resa_Pro.Formularios
                 }
                 else
                 {
-                    MessageBox.Show(" No hay Evento seleccionado ");
+                    MessageBox.Show(" No hay evento seleccionado ", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }
             catch(Exception E)
             {
-                MessageBox.Show(Convert.ToString(E));
+                MessageBox.Show(Convert.ToString(E.Message) , "Error" , MessageBoxButtons.OK , MessageBoxIcon.Error);
+                //Guardando el error en  El XMl de destinado  con los parametros correcpondientes 
+                X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_Usuario.id_Usuario), "Eventos", "Eliminar", Convert.ToString(E));
+
+                //Mensaje de error 
+
+                MessageError = E.Message;
+
             }
             finally
             {
@@ -210,7 +221,7 @@ namespace Resa_Pro.Formularios
                 e_Auditoria.fecha_Entrada = Fecha_Entrada;
                 e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
                 e_Auditoria.opcion = "Eventos";
-                e_Auditoria.tipoOpcion = "Eliminar";
+                e_Auditoria.tipoOpcion = "Eliminar" + MessageError;
 
                 //insertando la auditoria
 
@@ -222,8 +233,12 @@ namespace Resa_Pro.Formularios
 
         #endregion
 
-
         #region Actualizar Evento 
+        /// <summary>
+        /// Evento click en el boton actualizar donde se gestionara la actualizacion de un evento 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SBActualizarE_Click(object sender, EventArgs e)
         {
             //<Summary>
@@ -252,14 +267,21 @@ namespace Resa_Pro.Formularios
 
                 else
                 {
-                    MessageBox.Show(" No hay un evento seleccionado");
+                    MessageBox.Show(" No hay un evento seleccionado", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
 
 
             }
             catch(Exception E)
             {
-                MessageBox.Show(Convert.ToString(E));
+                MessageBox.Show(Convert.ToString(E.Message), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Guardando el error en  El XMl de destinado  con los parametros correcpondientes 
+                X_m.GuardarEnXMl(Fecha_Entrada, Convert.ToString(e_Usuario.id_Usuario), "Eventos", "Actualizar", Convert.ToString(E));
+
+                //Mensaje de error 
+
+                MessageError = E.Message;
             }
 
             finally
@@ -269,7 +291,7 @@ namespace Resa_Pro.Formularios
                 e_Auditoria.fecha_Entrada = Fecha_Entrada;
                 e_Auditoria.fecha_Salida = Convert.ToString(DateTime.Now);
                 e_Auditoria.opcion = "Eventos";
-                e_Auditoria.tipoOpcion = "Actualizar";
+                e_Auditoria.tipoOpcion = "Actualizar" + MessageError;
 
                 //insertando la auditoria
 
@@ -282,7 +304,11 @@ namespace Resa_Pro.Formularios
         #endregion
 
         #region Visulizar Eventos
-
+        /// <summary>
+        /// Evento click sobre el grid control de  eventos 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GCEventos_DoubleClick(object sender, EventArgs e)
         {
             //<Summary>
@@ -306,7 +332,7 @@ namespace Resa_Pro.Formularios
 
             else
             {
-                MessageBox.Show(" No hay un evento seleccionado");
+                MessageBox.Show(" No hay un evento seleccionado" ,"Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
