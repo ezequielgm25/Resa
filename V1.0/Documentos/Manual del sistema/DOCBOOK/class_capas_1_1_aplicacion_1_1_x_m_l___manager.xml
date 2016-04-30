@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_aplicacion_1_1_x_m_l___manager">
+<title>Capas::Aplicacion::XML_Manager class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_capas_1_1_aplicacion_1_1_x_m_l___manager_1a499e7dc3422d07f4846fef3b0c4438c1">verificarArchivosXMLAplicacion</link> (
+)<para><emphasis>&lt;summary&gt;
+Verificación de los Archivos XML AppConfig y AppError Respectivamente
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_capas_1_1_aplicacion_1_1_x_m_l___manager_1a02506149ab4994e76a6abdc62bf94ca6">CrearXMl</link> (
+string file)<para><emphasis>&lt;summary&gt;
+Metodo para Crear un Xml
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="class_capas_1_1_aplicacion_1_1_x_m_l___manager_1ac8209be80694e517d6490aea5b8bbd24">BuscarElementoArchivoXMl</link> (
+string ParameterNodo, string stringParameterAtributo, string stringParameterArchivoXML)<para><emphasis>&lt;summary&gt;
+Metodo que buscara un contenido de un nodo dentro de un archivo .XML
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="class_capas_1_1_aplicacion_1_1_x_m_l___manager_1a666b5c9e509bc9b4c0315b335ec88971">directorioBaseAplicacion</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo para obtener la direccion basede un Directorio
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_capas_1_1_aplicacion_1_1_x_m_l___manager_1a92b48496849d4c75c3864508bf856379">GuardarEnXMl</link> (
+string Fecha, string ID_Usuario, string opcion, string TipoOpcion, string excepcion)<para><emphasis>&lt;summary&gt;
+Guardar en XMl  un error
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_capas_1_1_aplicacion_1_1_x_m_l___manager_1a90e2204967398b72ba06540f00c504dc">CrearDirectorio</link> (
+string Folder)<para><emphasis>&lt;summary&gt;
+Metodo para la Creacion de un directorio 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="class_capas_1_1_aplicacion_1_1_x_m_l___manager_1a499e7dc3422d07f4846fef3b0c4438c1">
+                <title>void Capas.Aplicacion.XML_Manager.verificarArchivosXMLAplicacion ()</title> <emphasis>&lt;summary&gt;
+Verificación de los Archivos XML AppConfig y AppError Respectivamente
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_aplicacion_1_1_x_m_l___manager_1a02506149ab4994e76a6abdc62bf94ca6">
+                <title>void Capas.Aplicacion.XML_Manager.CrearXMl (string file)</title> <emphasis>&lt;summary&gt;
+Metodo para Crear un Xml
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>file</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_capas_1_1_aplicacion_1_1_x_m_l___manager_1ac8209be80694e517d6490aea5b8bbd24">
+                <title>string Capas.Aplicacion.XML_Manager.BuscarElementoArchivoXMl (string ParameterNodo, string stringParameterAtributo, string stringParameterArchivoXML)</title> <emphasis>&lt;summary&gt;
+Metodo que buscara un contenido de un nodo dentro de un archivo .XML
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ParameterNodo</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>stringParameterAtributo</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>stringParameterArchivoXML</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_aplicacion_1_1_x_m_l___manager_1a666b5c9e509bc9b4c0315b335ec88971">
+                <title>string Capas.Aplicacion.XML_Manager.directorioBaseAplicacion ()</title> <emphasis>&lt;summary&gt;
+Metodo para obtener la direccion basede un Directorio
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_aplicacion_1_1_x_m_l___manager_1a92b48496849d4c75c3864508bf856379">
+                <title>void Capas.Aplicacion.XML_Manager.GuardarEnXMl (string Fecha, string ID_Usuario, string opcion, string TipoOpcion, string excepcion)</title> <emphasis>&lt;summary&gt;
+Guardar en XMl  un error
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Fecha</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>ID_Usuario</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>opcion</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>TipoOpcion</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>excepcion</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_capas_1_1_aplicacion_1_1_x_m_l___manager_1a90e2204967398b72ba06540f00c504dc">
+                <title>void Capas.Aplicacion.XML_Manager.CrearDirectorio (string Folder)</title> <emphasis>&lt;summary&gt;
+Metodo para la Creacion de un directorio 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Folder</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

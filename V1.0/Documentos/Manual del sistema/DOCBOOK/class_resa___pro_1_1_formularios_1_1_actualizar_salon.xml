@@ -1,0 +1,584 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_resa___pro_1_1_formularios_1_1_actualizar_salon">
+<title>Resa_Pro::Formularios::ActualizarSalon class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>E_Salon et_Salon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>N_Salon n_Salon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>E_Servicio e_Servicio</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>N_Servicio n_Servicio</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>E_Inventario e_Inventario</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>N_Inventario n_Inventario</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.ComponentModel.IContainer components<para><emphasis>&lt;summary&gt;
+Required designer variable.
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraBars.Ribbon.RibbonControl ribbon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.GroupControl GCcrearSalon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl labelControl4</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.SimpleButton SBActualizar</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl labelControl1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl labelControl2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl labelControl3</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.TextEdit TENombreS</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.TextEdit TECapacidad</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.GroupControl GCagregarServicio</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.SimpleButton SBQuitarS</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.SimpleButton SBAgregarS</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl labelControl6</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.GroupControl groupControl1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.SimpleButton SBAgregarIV</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.SimpleButton SBQuitarIV</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl labelControl5</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.Windows.Forms.ComboBox CBEstado</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.Windows.Forms.TextBox TBServicio</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.Windows.Forms.TextBox TBInventario</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.Windows.Forms.CheckedListBox CKDListServicios</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.Windows.Forms.CheckedListBox CKDListInventario</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.Windows.Forms.ComboBox CBUbicacion</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.SimpleButton SBUbicaciones</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1affd542b927625c2135862eef8a8d437f">ActualizarSalon</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___salon">E_Salon</link> e_Salon)<para><emphasis>&lt;summary&gt;
+Contructor de la interfaz salon la cual espera una entidad salon como parametro 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1a2f4f210a746bc1019ca0c0469aed5130">SBActualizar_Click</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Evento Click sobre el boton actualizar el cual gestionara la funcion actualizar  
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1aa0c5733c04ac905f485acba64158e8bd">SBAgregarS_Click</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Evento click sobre el boton agregar el cual ejecutara una accion de agregar un servicio a la base de datos 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1ac9e6cf94c9ee99fd8ab6469dc2b77250">SBQuitarS_Click</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Evento click sobre el boton quitar el cual eliminar un servicio de la base  de datos 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1a92f9109f769bfc9e5a8fd9b8f5c979d5">SBAgregarIV_Click</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Evento click Sobre el boton agregar en el cual se gestionara la accion de agregar un inventario al sistema
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1a71e45329554c658783518c1e291cd4cc">SBQuitarIV_Click</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Evento click sobre el boton quitar el cual eliminara un inventario de la base de datos 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1a4227757b4ea8f98e39b5724cebadfe86">SBUbicaciones_Click</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Metodo donde se manejan la session de ubicaciones globales de los salones 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1a99ebb1652304058c7e121ecd843c0527">InitializeComponent</link> (
+)<para><emphasis>&lt;summary&gt;
+Required method for Designer support - do not modify
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1a507a85db3bb22cd91de20c389494fc28">Dispose</link> (
+bool disposing)<para><emphasis>&lt;summary&gt;
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+            <simplesect>
+                <title>System.ComponentModel.IContainer Resa_Pro.Formularios.ActualizarSalon.components</title>                
+                <para>Definition at line 8 of file ActualizarSalon.Designer.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>ActualizarSalon.Designer.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1affd542b927625c2135862eef8a8d437f">
+                <title>Resa_Pro.Formularios.ActualizarSalon.ActualizarSalon (E_Salon e_Salon)</title> <emphasis>&lt;summary&gt;
+Contructor de la interfaz salon la cual espera una entidad salon como parametro 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Salon</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1a2f4f210a746bc1019ca0c0469aed5130">
+                <title>void Resa_Pro.Formularios.ActualizarSalon.SBActualizar_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Evento Click sobre el boton actualizar el cual gestionara la funcion actualizar  
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1aa0c5733c04ac905f485acba64158e8bd">
+                <title>void Resa_Pro.Formularios.ActualizarSalon.SBAgregarS_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Evento click sobre el boton agregar el cual ejecutara una accion de agregar un servicio a la base de datos 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1ac9e6cf94c9ee99fd8ab6469dc2b77250">
+                <title>void Resa_Pro.Formularios.ActualizarSalon.SBQuitarS_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Evento click sobre el boton quitar el cual eliminar un servicio de la base  de datos 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1a92f9109f769bfc9e5a8fd9b8f5c979d5">
+                <title>void Resa_Pro.Formularios.ActualizarSalon.SBAgregarIV_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Evento click Sobre el boton agregar en el cual se gestionara la accion de agregar un inventario al sistema
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1a71e45329554c658783518c1e291cd4cc">
+                <title>void Resa_Pro.Formularios.ActualizarSalon.SBQuitarIV_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Evento click sobre el boton quitar el cual eliminara un inventario de la base de datos 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1a4227757b4ea8f98e39b5724cebadfe86">
+                <title>void Resa_Pro.Formularios.ActualizarSalon.SBUbicaciones_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Metodo donde se manejan la session de ubicaciones globales de los salones 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1a99ebb1652304058c7e121ecd843c0527">
+                <title>void Resa_Pro.Formularios.ActualizarSalon.InitializeComponent ()</title> <emphasis>&lt;summary&gt;
+Required method for Designer support - do not modify
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_actualizar_salon_1a507a85db3bb22cd91de20c389494fc28">
+                <title>override void Resa_Pro.Formularios.ActualizarSalon.Dispose (bool disposing)</title> <emphasis>&lt;summary&gt;
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>disposing</entry>
+                                <entry>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

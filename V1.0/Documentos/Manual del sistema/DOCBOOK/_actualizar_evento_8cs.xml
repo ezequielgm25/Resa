@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_actualizar_evento_8cs">
+    <title>ActualizarEvento.cs File Reference</title>
+        <section>
+            <title> Clases </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_formularios_1_1_actualizar_evento">Resa_Pro::Formularios::ActualizarEvento</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_resa___pro_1_1_formularios">Resa_Pro::Formularios</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_windows_1_1_forms">System::Windows::Forms</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_system_1_1_text_1_1_regular_expressions">System::Text::RegularExpressions</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Descripción detallada</title>
+    <para>Definition in file D:/Resa/V1.0/Fuentes/UI/Winform/Resa Pro/Formularios/ActualizarEvento.cs</para>
+    </simplesect>
+</section>

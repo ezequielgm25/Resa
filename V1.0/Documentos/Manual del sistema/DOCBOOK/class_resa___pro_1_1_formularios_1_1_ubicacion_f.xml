@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_resa___pro_1_1_formularios_1_1_ubicacion_f">
+<title>Resa_Pro::Formularios::UbicacionF class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>N_Salon n_salon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>E_Salon e_Salon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.ComponentModel.IContainer components<para><emphasis>&lt;summary&gt;
+Required designer variable.
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraBars.Ribbon.RibbonControl ribbon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraGrid.GridControl GCUbicaciones</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraGrid.Views.Grid.GridView gridView1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.SimpleButton SBEliminarU</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.SimpleButton SBAgregarU</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl labelControl2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.Windows.Forms.TextBox TBUbicacion</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_formularios_1_1_ubicacion_f_1a3c8a9dda20c26aa777cfdf4cd1841b82">UbicacionF</link> (
+)<para><emphasis>&lt;summary&gt;
+Contructor de la interfaz de ubicaciones globales
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_ubicacion_f_1a66352f3c9d7c20da3ef6a419f362140a">SBAgregarU_Click</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Metodo donde se agrega una ubicacion global
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_ubicacion_f_1a69d9788e4688e44e61235357f904ef2b">SBEliminarU_Click</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Metodo donde se quita una ubicacion global 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_ubicacion_f_1a996b0fa07aa35fd63081171b0b45f0fe">InitializeComponent</link> (
+)<para><emphasis>&lt;summary&gt;
+Required method for Designer support - do not modify
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_resa___pro_1_1_formularios_1_1_ubicacion_f_1a0f5f8c562008398c2dba19f1a9daeefb">Dispose</link> (
+bool disposing)<para><emphasis>&lt;summary&gt;
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+            <simplesect>
+                <title>System.ComponentModel.IContainer Resa_Pro.Formularios.UbicacionF.components</title>                
+                <para>Definition at line 8 of file UbicacionF.Designer.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>UbicacionF.Designer.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_ubicacion_f_1a3c8a9dda20c26aa777cfdf4cd1841b82">
+                <title>Resa_Pro.Formularios.UbicacionF.UbicacionF ()</title> <emphasis>&lt;summary&gt;
+Contructor de la interfaz de ubicaciones globales
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_ubicacion_f_1a66352f3c9d7c20da3ef6a419f362140a">
+                <title>void Resa_Pro.Formularios.UbicacionF.SBAgregarU_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Metodo donde se agrega una ubicacion global
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_ubicacion_f_1a69d9788e4688e44e61235357f904ef2b">
+                <title>void Resa_Pro.Formularios.UbicacionF.SBEliminarU_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Metodo donde se quita una ubicacion global 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_ubicacion_f_1a996b0fa07aa35fd63081171b0b45f0fe">
+                <title>void Resa_Pro.Formularios.UbicacionF.InitializeComponent ()</title> <emphasis>&lt;summary&gt;
+Required method for Designer support - do not modify
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_ubicacion_f_1a0f5f8c562008398c2dba19f1a9daeefb">
+                <title>override void Resa_Pro.Formularios.UbicacionF.Dispose (bool disposing)</title> <emphasis>&lt;summary&gt;
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>disposing</entry>
+                                <entry>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

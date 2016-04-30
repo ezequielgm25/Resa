@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_aplicacion_1_1_conexion_aplicacion">
+<title>Capas::Aplicacion::ConexionAplicacion class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool enlaceDB</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Capas.Data.Conexion Enlace</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_capas_1_1_aplicacion_1_1_conexion_aplicacion_1a1568d05403c132e2f8cd2f38977a7097">PruebaConexion</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo que probara la conexion a la base de datos 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_capas_1_1_aplicacion_1_1_conexion_aplicacion_1a1568d05403c132e2f8cd2f38977a7097">
+                <title>void Capas.Aplicacion.ConexionAplicacion.PruebaConexion ()</title> <emphasis>&lt;summary&gt;
+Metodo que probara la conexion a la base de datos 
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+</section>

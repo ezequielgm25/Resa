@@ -1,0 +1,755 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_negocio_1_1_n___usuario">
+<title>Capas::Negocio::N_Usuario class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>D_Usuario d_Usuario</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>E_Usuario e_Usuario</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1afb1e664079d276eed2e7bf744f8ad1a3">N_Usuario</link> (
+)<para><emphasis>&lt;summary&gt;
+Constructor de la  clase  de  usuario en la capa de negocio
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___usuario">E_Usuario</link> <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1a36183dc27cac943e2a373e68cb46d357">ObtenerUsuario</link> (
+int ID_Usuario)<para><emphasis>&lt;summary&gt;
+Metodo de obtener un usuario Espera un ID de usuario como parametro y retorna una entidad
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1a1276f7216d4377484b29a85564cac8a1">ObtenerUsuarios</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo donde se obtienen los usuarios almacenados en el sistema
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1a9befd164875d61e85fc0559f03687d44">VerficarExistenciaUsuario</link> (
+String Usuario)<para><emphasis>&lt;summary&gt;
+Metodo donde se verifica la existencia de un usuario en el sistema para evitar la repeticion
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1a5ff3740111a05fba07248f91f7bf72dd">InsertarRol</link> (
+String Rol, int ID_GrupoUsuario)<para><emphasis>&lt;summary&gt;
+Metodo donde se inserta un rol a un usuario 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1a344cd68ab6f247416d624cc5127b4b90">InsertarUsuario</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___usuario">E_Usuario</link> e_U)<para><emphasis>&lt;summary&gt;
+Metodo en el cual se inserta un usuario al sistema 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1ae629e60d0dea04041a579b38bd0eb648">InsertarPerfil</link> (
+string perfil, int ID_Usuario)<para><emphasis>&lt;summary&gt;
+Metodo donde se inserta un perfil a un usuario  y se retorna el ID del mismo
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1a39d3b5c59a47dcaf4b3c952178c55e36">InsertarOpcion</link> (
+string Opcion, int ID_Perfil)<para><emphasis>&lt;summary&gt;
+Metodo para insertar una opcion a un usuario y devolver el ID de la misma 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1abc8fe4ad9ef182295310339e5b6dd9e0">InsertarFuncion</link> (
+string Funcion, bool Estado, int ID_Opcion)<para><emphasis>&lt;summary&gt;
+Metodo donde se inserta una funcion a un usuario 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___usuario">E_Usuario</link> <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1a3cdbd7f1738ae4dad80c41ad75e5f37d">ObtenerInformacionDetallada</link> (
+int ID_Usuario)<para><emphasis>&lt;summary&gt;
+Obteniendo Informacion detallada  de un usuario a travez de su ID
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1aa528251c47c6479cd47a9ce1e5544e89">ObtenerPerfil</link> (
+int ID_Usuario)<para><emphasis>&lt;summary&gt;
+Metodo donnde se obtiene El ID del perfil de un usuario 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1ad459e7f1a83db2ae056e3f0311dc86c6">ObtenerIDOpcion</link> (
+string Opcion, int ID_Perfil)<para><emphasis>&lt;summary&gt;
+Metodo donde se obtiene el ID de la opcion de un usuario 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Boolean <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1a410dcc0da59609480d7ecf1a8a9cd8a1">ObtenerFuncion</link> (
+int ID_Opcion, String Funcion)<para><emphasis>&lt;summary&gt;
+Metodo donde se obtiene si una funcion esta activa para un usuario 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1a671a0a70aec636e21d3006b4e734ad7b">ActualizarRol</link> (
+string Rol, int ID_GRupoUsuario, int ID_Rol)<para><emphasis>&lt;summary&gt;
+Metodo donde se actualiza un rol de un usuario 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1a1c57cc6715f2c99bdb81aa9ced2e9a54">ActualizarUsuario</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___usuario">E_Usuario</link> E_U)<para><emphasis>&lt;summary&gt;
+Metodo donde se actualizan las caracteristicas de un usuario 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1ae3e2293fa5e10d24a7c50bd2adc00ada">ActualizarPerfil</link> (
+int ID_Usuario, string perfil)<para><emphasis>&lt;summary&gt;
+Metodo donde se actualiza un perfil de un usuario 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1a6018daa1150195b0263890d03c90cc8d">ActualizarFuncion</link> (
+int ID_Opcion, String Funcion, bool Estado)<para><emphasis>&lt;summary&gt;
+Metodo donde se actualiza la funcion &amp;ndash; se activa o se desactiva una funcion a un usuario &amp;ndash;
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___usuario_1a28bebb4ef5fd33d667b3c67cde23a5b9">EliminarUsuario</link> (
+int ID_Usuario)<para><emphasis>&lt;summary&gt;
+Metodo Donde se elimina un usuario de la base de datos 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1afb1e664079d276eed2e7bf744f8ad1a3">
+                <title>Capas.Negocio.N_Usuario.N_Usuario ()</title> <emphasis>&lt;summary&gt;
+Constructor de la  clase  de  usuario en la capa de negocio
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1a36183dc27cac943e2a373e68cb46d357">
+                <title>E_Usuario Capas.Negocio.N_Usuario.ObtenerUsuario (int ID_Usuario)</title> <emphasis>&lt;summary&gt;
+Metodo de obtener un usuario Espera un ID de usuario como parametro y retorna una entidad
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Usuario</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1a1276f7216d4377484b29a85564cac8a1">
+                <title>DataTable Capas.Negocio.N_Usuario.ObtenerUsuarios ()</title> <emphasis>&lt;summary&gt;
+Metodo donde se obtienen los usuarios almacenados en el sistema
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1a9befd164875d61e85fc0559f03687d44">
+                <title>int Capas.Negocio.N_Usuario.VerficarExistenciaUsuario (String Usuario)</title> <emphasis>&lt;summary&gt;
+Metodo donde se verifica la existencia de un usuario en el sistema para evitar la repeticion
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Usuario</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1a5ff3740111a05fba07248f91f7bf72dd">
+                <title>int Capas.Negocio.N_Usuario.InsertarRol (String Rol, int ID_GrupoUsuario)</title> <emphasis>&lt;summary&gt;
+Metodo donde se inserta un rol a un usuario 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Rol</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>ID_GrupoUsuario</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1a344cd68ab6f247416d624cc5127b4b90">
+                <title>int Capas.Negocio.N_Usuario.InsertarUsuario (E_Usuario e_U)</title> <emphasis>&lt;summary&gt;
+Metodo en el cual se inserta un usuario al sistema 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_U</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1ae629e60d0dea04041a579b38bd0eb648">
+                <title>int Capas.Negocio.N_Usuario.InsertarPerfil (string perfil, int ID_Usuario)</title> <emphasis>&lt;summary&gt;
+Metodo donde se inserta un perfil a un usuario  y se retorna el ID del mismo
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>perfil</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>ID_Usuario</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1a39d3b5c59a47dcaf4b3c952178c55e36">
+                <title>int Capas.Negocio.N_Usuario.InsertarOpcion (string Opcion, int ID_Perfil)</title> <emphasis>&lt;summary&gt;
+Metodo para insertar una opcion a un usuario y devolver el ID de la misma 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Opcion</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>ID_Perfil</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1abc8fe4ad9ef182295310339e5b6dd9e0">
+                <title>int Capas.Negocio.N_Usuario.InsertarFuncion (string Funcion, bool Estado, int ID_Opcion)</title> <emphasis>&lt;summary&gt;
+Metodo donde se inserta una funcion a un usuario 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Funcion</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>Estado</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>ID_Opcion</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1a3cdbd7f1738ae4dad80c41ad75e5f37d">
+                <title>E_Usuario Capas.Negocio.N_Usuario.ObtenerInformacionDetallada (int ID_Usuario)</title> <emphasis>&lt;summary&gt;
+Obteniendo Informacion detallada  de un usuario a travez de su ID
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Usuario</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1aa528251c47c6479cd47a9ce1e5544e89">
+                <title>int Capas.Negocio.N_Usuario.ObtenerPerfil (int ID_Usuario)</title> <emphasis>&lt;summary&gt;
+Metodo donnde se obtiene El ID del perfil de un usuario 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Usuario</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1ad459e7f1a83db2ae056e3f0311dc86c6">
+                <title>int Capas.Negocio.N_Usuario.ObtenerIDOpcion (string Opcion, int ID_Perfil)</title> <emphasis>&lt;summary&gt;
+Metodo donde se obtiene el ID de la opcion de un usuario 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Opcion</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>ID_Perfil</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1a410dcc0da59609480d7ecf1a8a9cd8a1">
+                <title>Boolean Capas.Negocio.N_Usuario.ObtenerFuncion (int ID_Opcion, String Funcion)</title> <emphasis>&lt;summary&gt;
+Metodo donde se obtiene si una funcion esta activa para un usuario 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Opcion</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>Funcion</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1a671a0a70aec636e21d3006b4e734ad7b">
+                <title>int Capas.Negocio.N_Usuario.ActualizarRol (string Rol, int ID_GRupoUsuario, int ID_Rol)</title> <emphasis>&lt;summary&gt;
+Metodo donde se actualiza un rol de un usuario 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Rol</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>ID_GRupoUsuario</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>ID_Rol</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1a1c57cc6715f2c99bdb81aa9ced2e9a54">
+                <title>int Capas.Negocio.N_Usuario.ActualizarUsuario (E_Usuario E_U)</title> <emphasis>&lt;summary&gt;
+Metodo donde se actualizan las caracteristicas de un usuario 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>E_U</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1ae3e2293fa5e10d24a7c50bd2adc00ada">
+                <title>int Capas.Negocio.N_Usuario.ActualizarPerfil (int ID_Usuario, string perfil)</title> <emphasis>&lt;summary&gt;
+Metodo donde se actualiza un perfil de un usuario 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Usuario</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>perfil</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1a6018daa1150195b0263890d03c90cc8d">
+                <title>int Capas.Negocio.N_Usuario.ActualizarFuncion (int ID_Opcion, String Funcion, bool Estado)</title> <emphasis>&lt;summary&gt;
+Metodo donde se actualiza la funcion &amp;ndash; se activa o se desactiva una funcion a un usuario &amp;ndash;
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Opcion</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>Funcion</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>Estado</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___usuario_1a28bebb4ef5fd33d667b3c67cde23a5b9">
+                <title>int Capas.Negocio.N_Usuario.EliminarUsuario (int ID_Usuario)</title> <emphasis>&lt;summary&gt;
+Metodo Donde se elimina un usuario de la base de datos 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Usuario</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+</section>

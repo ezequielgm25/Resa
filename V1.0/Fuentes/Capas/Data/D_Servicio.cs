@@ -53,10 +53,6 @@ namespace Capas.Data
             StoredProcedure = "AgregarServicio";
 
 
-            //Conexion string de modo prueba del sistema
-            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
-
-
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
             // Conectar a la base de datos
@@ -227,9 +223,7 @@ namespace Capas.Data
             StoredProcedure = "InsertarServicioGlobal";
 
 
-            //Conexion string de modo prueba del sistema
-            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
-
+            
             //Command
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 

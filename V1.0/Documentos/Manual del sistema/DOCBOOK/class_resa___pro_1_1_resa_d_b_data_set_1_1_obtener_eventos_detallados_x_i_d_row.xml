@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row">
+<title>Resa_Pro::ResaDBDataSet::ObtenerEventosDetalladosXIDRow class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ObtenerEventosDetalladosXIDDataTable tableObtenerEventosDetalladosXID</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row_1adfc4dbbec632a0541b3c5ecfdaca3595">ObtenerEventosDetalladosXIDRow</link> (
+global::System.Data.DataRowBuilder rb)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row_1adfc4dbbec632a0541b3c5ecfdaca3595">ObtenerEventosDetalladosXIDRow</link> (
+global::System.Data.DataRowBuilder rb)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Represents strongly named DataRow class. /summary&gt; </para>
+    </simplesect>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row_1adfc4dbbec632a0541b3c5ecfdaca3595">
+                <title>Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosXIDRow.ObtenerEventosDetalladosXIDRow (global::System.Data.DataRowBuilder rb)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row_1adfc4dbbec632a0541b3c5ecfdaca3595">
+                <title>Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosXIDRow.ObtenerEventosDetalladosXIDRow (global::System.Data.DataRowBuilder rb)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

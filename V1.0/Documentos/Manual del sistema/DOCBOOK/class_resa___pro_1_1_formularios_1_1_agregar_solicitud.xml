@@ -1,0 +1,697 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_resa___pro_1_1_formularios_1_1_agregar_solicitud">
+<title>Resa_Pro::Formularios::AgregarSolicitud class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>N_Salon n_Salon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>E_Salon e_Salon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>N_Solicitud n_Solicitud</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>E_Solicitud e_Solicitud</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>E_Evento e_Evento</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>N_Evento n_Evento</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>E_Organizador e_Organizador</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>N_Organizador n_Organizador</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>E_Usuario e_UsuarioAU</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.ComponentModel.IContainer components<para><emphasis>&lt;summary&gt;
+Required designer variable.
+&lt;/summary&gt;</emphasis></para></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraBars.Ribbon.RibbonControl ribbon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraGrid.GridControl GCSalones</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraGrid.Views.Grid.GridView gridView1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.GroupControl GCSalon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.GroupControl GCDetallesEvento</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl labelControl5</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl labelControl4</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.Windows.Forms.TextBox TBTopicoE</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.Windows.Forms.TextBox TBTipoE</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl labelControl3</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl labelControl2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.Windows.Forms.TextBox TBDescripcionE</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl labelControl1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.Windows.Forms.TextBox TBTituloE</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl LBLTitulo</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.DateEdit DateEditTInicio</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.GroupControl groupControl1</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.DateEdit DateEditTFinal</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.GroupControl GCOrganizador</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.Windows.Forms.TextBox TBCorreoO</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl labelControl8</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.Windows.Forms.TextBox TBDescripcionO</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl labelControl7</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl labelControl6</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.SimpleButton SBGuardar</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl LBLNombreSalon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.LabelControl labelControl9</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>System.Windows.Forms.ComboBox CBOrganizador</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DevExpress.XtraEditors.SimpleButton SBOrganizador</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1a412476c1dcd5f6c8d56fe23a6ffdf7f0">AgregarSolicitud</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___usuario">E_Usuario</link> e_Usuario)<para><emphasis>&lt;summary&gt;
+Contructor de la clase agregar solicitud la cual espera una entidad de usuario 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1a8e655cd96c4fcb124ff84095c56e0e55">VerificacionFechas</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo que verificara alternativamente al evento Datechange si las fechas tienen algun error
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1a82942b118e0a793b872442f768279496">VEmail</link> (
+String Email)<para><emphasis>&lt;summary&gt;
+Metodo que verifica el email acepta un string como parametro 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1ad05e69a00c11d3cfb1b7d3556662dfb0">GCSalones_Click</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Evento click sobre el grid view de salones en el cual se le cambiara el text al lbl de salones que apunta la solicitud 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1abb48f75a30f68cce5b23d04587d5e108">SBGuardar_Click</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Evento click sobre el boton guardar en el  cual se gestionara el guardado de un solicitud 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1ab4a5d007bc96531aba77d0dba970466b">DateEditTInicio_EditValueChanged</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Evento EditValueChange donde se revisara si las fechas concuerdan o hay algun error
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1ad7928ead7ce643c5acdfd87df7c7156b">DateEditTFinal_EditValueChanged</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Evento EditValueChange donde se revisara si las fechas concuerdan o hay algun error
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1a3b10dc01d3be7691236c4ee2aff6c241">SBOrganizador_Click</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Evento click en el boton organizadores donde se trabaja EL CRUD de los mismos 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1acd7f8d31b73395756d8004ccec64f22b">CBOrganizador_SelectedValueChanged</link> (
+object sender, EventArgs e)<para><emphasis>&lt;summary&gt;
+Evento del combobox de organizadores donde se cambian los valores de los campos 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1a8b72d58756b56999aec901946cda85e5">InitializeComponent</link> (
+)<para><emphasis>&lt;summary&gt;
+Required method for Designer support - do not modify
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1a0bb7825df5bd3bfaf1ff574ffaf92297">Dispose</link> (
+bool disposing)<para><emphasis>&lt;summary&gt;
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+            <simplesect>
+                <title>System.ComponentModel.IContainer Resa_Pro.Formularios.AgregarSolicitud.components</title>                
+                <para>Definition at line 8 of file AgregarSolicitud.Designer.cs</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>AgregarSolicitud.Designer.cs</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1a412476c1dcd5f6c8d56fe23a6ffdf7f0">
+                <title>Resa_Pro.Formularios.AgregarSolicitud.AgregarSolicitud (E_Usuario e_Usuario)</title> <emphasis>&lt;summary&gt;
+Contructor de la clase agregar solicitud la cual espera una entidad de usuario 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Usuario</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1a8e655cd96c4fcb124ff84095c56e0e55">
+                <title>void Resa_Pro.Formularios.AgregarSolicitud.VerificacionFechas ()</title> <emphasis>&lt;summary&gt;
+Metodo que verificara alternativamente al evento Datechange si las fechas tienen algun error
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1a82942b118e0a793b872442f768279496">
+                <title>bool Resa_Pro.Formularios.AgregarSolicitud.VEmail (String Email)</title> <emphasis>&lt;summary&gt;
+Metodo que verifica el email acepta un string como parametro 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Email</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1ad05e69a00c11d3cfb1b7d3556662dfb0">
+                <title>void Resa_Pro.Formularios.AgregarSolicitud.GCSalones_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Evento click sobre el grid view de salones en el cual se le cambiara el text al lbl de salones que apunta la solicitud 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1abb48f75a30f68cce5b23d04587d5e108">
+                <title>void Resa_Pro.Formularios.AgregarSolicitud.SBGuardar_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Evento click sobre el boton guardar en el  cual se gestionara el guardado de un solicitud 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1ab4a5d007bc96531aba77d0dba970466b">
+                <title>void Resa_Pro.Formularios.AgregarSolicitud.DateEditTInicio_EditValueChanged (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Evento EditValueChange donde se revisara si las fechas concuerdan o hay algun error
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1ad7928ead7ce643c5acdfd87df7c7156b">
+                <title>void Resa_Pro.Formularios.AgregarSolicitud.DateEditTFinal_EditValueChanged (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Evento EditValueChange donde se revisara si las fechas concuerdan o hay algun error
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1a3b10dc01d3be7691236c4ee2aff6c241">
+                <title>void Resa_Pro.Formularios.AgregarSolicitud.SBOrganizador_Click (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Evento click en el boton organizadores donde se trabaja EL CRUD de los mismos 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1acd7f8d31b73395756d8004ccec64f22b">
+                <title>void Resa_Pro.Formularios.AgregarSolicitud.CBOrganizador_SelectedValueChanged (object sender, EventArgs e)</title> <emphasis>&lt;summary&gt;
+Evento del combobox de organizadores donde se cambian los valores de los campos 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>sender</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>e</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1a8b72d58756b56999aec901946cda85e5">
+                <title>void Resa_Pro.Formularios.AgregarSolicitud.InitializeComponent ()</title> <emphasis>&lt;summary&gt;
+Required method for Designer support - do not modify
+the contents of this method with the code editor.
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_formularios_1_1_agregar_solicitud_1a0bb7825df5bd3bfaf1ff574ffaf92297">
+                <title>override void Resa_Pro.Formularios.AgregarSolicitud.Dispose (bool disposing)</title> <emphasis>&lt;summary&gt;
+Clean up any resources being used.
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>disposing</entry>
+                                <entry>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

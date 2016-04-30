@@ -37,7 +37,10 @@ namespace Resa_Pro
             //Inicializando los componentes 
             InitializeComponent();
 
-          ;
+            #region verificando XMlS
+            XML_Manager XMlM = new XML_Manager();
+            XMlM.verificarArchivosXMLAplicacion();
+            #endregion
 
             #region  Inicializando variables, objetos y llamadas 
 
@@ -148,6 +151,8 @@ namespace Resa_Pro
 
                 ThreadStart delegadoVerificarXMLS = new ThreadStart(manejadorXMl.verificarArchivosXMLAplicacion);
 
+                
+
                 ThreadStart delegadoVerificarConexion = new ThreadStart(Conexion.PruebaConexion);
 
                 //Instancia de los hilos 
@@ -166,6 +171,8 @@ namespace Resa_Pro
 
                 hiloVerificadorXML.Start();
 
+                intervalo();
+                
                 hiloVerificarConexion.Start();
 
                 #endregion
@@ -184,6 +191,22 @@ namespace Resa_Pro
             }
 
 
+
+        }
+
+        #endregion
+
+        #region Intervalo 
+        /// <summary>
+        /// Metodo que dara un intervalo de tiempo para pasar al otro XML
+        /// </summary>
+        public void intervalo()
+        {
+
+            for(int i = 0; i < 20000; i++)
+            {
+                //No hace nada solo es para perder un intervalo de tiempo
+            }
 
         }
 

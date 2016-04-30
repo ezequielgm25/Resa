@@ -1,0 +1,6 @@
+var namespace_resa___pro_1_1_resa_d_b_data_set_table_adapters =
+[
+    [ "ObtenerEventosDetalladosTableAdapter", "class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter.html", "class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter" ],
+    [ "ObtenerEventosDetalladosXIDTableAdapter", "class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_x_i_d_table_adapter.html", "class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_x_i_d_table_adapter" ],
+    [ "TableAdapterManager", "class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager.html", "class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager" ]
+];

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_data_1_1_d___auditoria">
+<title>Capas::Data::D_Auditoria class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>String StoredProcedure</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int FilasAfectadas</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Conexion conexion</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_capas_1_1_data_1_1_d___auditoria_1a642313c148567cfc3cfe8fae99fe37c7">D_Auditoria</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___auditoria_1ab16ec7f1e3c97d0aeb49ebf8e216e384">InsertarAuditoria</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___auditoria">E_Auditoria</link> e_Au)<para><emphasis>&lt;summary&gt;
+Metodo donde se inserta una auditoria a un usuario  &amp;ndash; Enlazado por su ID &amp;ndash; 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___auditoria_1a642313c148567cfc3cfe8fae99fe37c7">
+                <title>Capas.Data.D_Auditoria.D_Auditoria ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___auditoria_1ab16ec7f1e3c97d0aeb49ebf8e216e384">
+                <title>int Capas.Data.D_Auditoria.InsertarAuditoria (E_Auditoria e_Au)</title> <emphasis>&lt;summary&gt;
+Metodo donde se inserta una auditoria a un usuario  &amp;ndash; Enlazado por su ID &amp;ndash; 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Au</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+</section>

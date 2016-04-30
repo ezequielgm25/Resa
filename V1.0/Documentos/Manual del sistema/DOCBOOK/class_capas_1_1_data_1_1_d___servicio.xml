@@ -1,0 +1,354 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_data_1_1_d___servicio">
+<title>Capas::Data::D_Servicio class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Conexion conexion</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>String StoredProcedure</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int FilasAfectadas</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_capas_1_1_data_1_1_d___servicio_1a4d3b35683a605a4c36b36cf1f47845c1">D_Servicio</link> (
+)<para><emphasis>&lt;summary&gt;
+Contructor de la  clase de data servicio parte logica de la iteracion con la base de datos de los servicios
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___servicio_1af778c18a9f05554f0951d9f2a7ca7b35">AgregarServicio</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___servicio">E_Servicio</link> e_Servicio)<para><emphasis>&lt;summary&gt;
+metodo agregar un servicio el cual inserta un servicio en la base de datos 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_data_1_1_d___servicio_1a36c2b4960c8e41d057ab67c43be1a693">ObtenerServicios</link> (
+int id_Salon)<para><emphasis>&lt;summary&gt;
+Metodo donde se optien los servicios que pertenecen a un sistema 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___servicio_1ac8351f4968168e3605ac25365d950b9e">EliminarServicio</link> (
+int ID_Servicio)<para><emphasis>&lt;summary&gt;
+Metodo donde se elimina un servicio a un  salon
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_data_1_1_d___servicio_1a0f048d438ad5b1d24f77bb6ff97b152a">ObtenerServiciosGlobales</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo donde se obtienen los servicios que seran caracteristicos de los Salones 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___servicio_1a9ae4d5c6449f917f2de59eb2f65e628e">EliminarServicioGlobales</link> (
+int ID_Servicio)<para><emphasis>&lt;summary&gt;
+Metodo donde se elimina un servicio que pertenece a la lista de los servicios caracteristicos de los salones
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___servicio_1a7295fbab34371edb9d8c06540c7b3a73">InsertarServicioGlobal</link> (
+String Servicio)<para><emphasis>&lt;summary&gt;
+Metodo donde se inserta un servicio global el cual pertenecera a la lista de servicios caracteristicos de los salones
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___servicio_1a5690ac5d1e6eb36ca99d4b0ab1b97b32">VerificarExistenciaDeServicio</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___servicio">E_Servicio</link> e_Servicio)<para><emphasis>&lt;summary&gt;
+Metodo donde se verifica la existencia de un servicio en un salon
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___servicio_1a800449ade36090db91375df6603f0adb">EliminarSercvicioXS_ID</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___servicio">E_Servicio</link> e_Servicio)<para><emphasis>&lt;summary&gt;
+Metodo Donde se eliminar un servicio con los parametros de nombre y ID
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___servicio_1a4d3b35683a605a4c36b36cf1f47845c1">
+                <title>Capas.Data.D_Servicio.D_Servicio ()</title> <emphasis>&lt;summary&gt;
+Contructor de la  clase de data servicio parte logica de la iteracion con la base de datos de los servicios
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___servicio_1af778c18a9f05554f0951d9f2a7ca7b35">
+                <title>int Capas.Data.D_Servicio.AgregarServicio (E_Servicio e_Servicio)</title> <emphasis>&lt;summary&gt;
+metodo agregar un servicio el cual inserta un servicio en la base de datos 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Servicio</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___servicio_1a36c2b4960c8e41d057ab67c43be1a693">
+                <title>DataTable Capas.Data.D_Servicio.ObtenerServicios (int id_Salon)</title> <emphasis>&lt;summary&gt;
+Metodo donde se optien los servicios que pertenecen a un sistema 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>id_Salon</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___servicio_1ac8351f4968168e3605ac25365d950b9e">
+                <title>int Capas.Data.D_Servicio.EliminarServicio (int ID_Servicio)</title> <emphasis>&lt;summary&gt;
+Metodo donde se elimina un servicio a un  salon
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Servicio</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___servicio_1a0f048d438ad5b1d24f77bb6ff97b152a">
+                <title>DataTable Capas.Data.D_Servicio.ObtenerServiciosGlobales ()</title> <emphasis>&lt;summary&gt;
+Metodo donde se obtienen los servicios que seran caracteristicos de los Salones 
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___servicio_1a9ae4d5c6449f917f2de59eb2f65e628e">
+                <title>int Capas.Data.D_Servicio.EliminarServicioGlobales (int ID_Servicio)</title> <emphasis>&lt;summary&gt;
+Metodo donde se elimina un servicio que pertenece a la lista de los servicios caracteristicos de los salones
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Servicio</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___servicio_1a7295fbab34371edb9d8c06540c7b3a73">
+                <title>int Capas.Data.D_Servicio.InsertarServicioGlobal (String Servicio)</title> <emphasis>&lt;summary&gt;
+Metodo donde se inserta un servicio global el cual pertenecera a la lista de servicios caracteristicos de los salones
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Servicio</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___servicio_1a5690ac5d1e6eb36ca99d4b0ab1b97b32">
+                <title>int Capas.Data.D_Servicio.VerificarExistenciaDeServicio (E_Servicio e_Servicio)</title> <emphasis>&lt;summary&gt;
+Metodo donde se verifica la existencia de un servicio en un salon
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Servicio</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___servicio_1a800449ade36090db91375df6603f0adb">
+                <title>int Capas.Data.D_Servicio.EliminarSercvicioXS_ID (E_Servicio e_Servicio)</title> <emphasis>&lt;summary&gt;
+Metodo Donde se eliminar un servicio con los parametros de nombre y ID
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Servicio</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+</section>

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_resa___pro_1_1_reportes_1_1_cached_reporte_porcentaje_global_solicitudes">
+<title>Resa_Pro::Reportes::CachedReportePorcentajeGlobalSolicitudes class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_reportes_1_1_cached_reporte_porcentaje_global_solicitudes_1a4687a4d8e4489700845ccab34e0ceeba">CachedReportePorcentajeGlobalSolicitudes</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual CrystalDecisions.CrystalReports.Engine.ReportDocument <link linkend="class_resa___pro_1_1_reportes_1_1_cached_reporte_porcentaje_global_solicitudes_1af46e87a7b483db25b670d893643918ee">CreateReport</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual string <link linkend="class_resa___pro_1_1_reportes_1_1_cached_reporte_porcentaje_global_solicitudes_1ad7ada3f28cbd0aca06b94a1cc8a58ede">GetCustomizedCacheKey</link> (
+RequestContext request)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="class_resa___pro_1_1_reportes_1_1_cached_reporte_porcentaje_global_solicitudes_1a4687a4d8e4489700845ccab34e0ceeba">
+                <title>Resa_Pro.Reportes.CachedReportePorcentajeGlobalSolicitudes.CachedReportePorcentajeGlobalSolicitudes ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_reportes_1_1_cached_reporte_porcentaje_global_solicitudes_1af46e87a7b483db25b670d893643918ee">
+                <title>virtual CrystalDecisions.CrystalReports.Engine.ReportDocument Resa_Pro.Reportes.CachedReportePorcentajeGlobalSolicitudes.CreateReport ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_reportes_1_1_cached_reporte_porcentaje_global_solicitudes_1ad7ada3f28cbd0aca06b94a1cc8a58ede">
+                <title>virtual string Resa_Pro.Reportes.CachedReportePorcentajeGlobalSolicitudes.GetCustomizedCacheKey (RequestContext request)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

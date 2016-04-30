@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_data_1_1_d___solicitud">
+<title>Capas::Data::D_Solicitud class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Conexion conexion</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>String StoredProcedure</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int FilasAfectadas</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_capas_1_1_data_1_1_d___solicitud_1a45bbbeb0f77720e7f8c6ec00d6f4e921">D_Solicitud</link> (
+)<para><emphasis>&lt;summary&gt;
+Contructor de  la  clase de solicitud en la capa de datos 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_data_1_1_d___solicitud_1afe68e2653ff2a615035df2b7c343d5a6">ObtenerSolicitudes</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo obtener solicitudees el cual devolvera un dataTable con los valores retornados de la base de datos 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___solicitud_1a35426c130e1365e5da4858803ac78593">CrearSolicitud</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___solicitud">E_Solicitud</link> e_So)<para><emphasis>&lt;summary&gt;
+Metodo Crear Solicitud el cual espera por parametro una Entidad de solicitud 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___solicitud">E_Solicitud</link> <link linkend="class_capas_1_1_data_1_1_d___solicitud_1a3f02f31bb58de24e4c9ad427951069d9">ObtenerSolicitud</link> (
+int ID_Solicitud)<para><emphasis>&lt;summary&gt;
+Metodo Obtener Solicitud el cual espera un parametro de ID_Solicitud 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___solicitud_1aa7a8088eab0ea8281e446f377ab22762">ActualizarSolicitud</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___solicitud">E_Solicitud</link> e_So)<para><emphasis>&lt;summary&gt;
+Metodo Actualizar solicitud 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___solicitud_1ac9fcb107c03a4e186413a55a310d2a0a">EliminarSolicitud</link> (
+int ID_Solicitud)<para><emphasis>&lt;summary&gt;
+Eliminar Solicitud Evento que acepta un Id solicitud y devuelve las Filas Afectadas 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___solicitud_1a4eb4b811609192ef5554470219e47b9c">AprobarSolicitud</link> (
+int ID_Solicitud, String Usuario)<para><emphasis>&lt;summary&gt;
+Metodo Aprobar Solicitud El cual acepta como parametros un ID_Solicitud y un Usuario 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___solicitud_1a48cdb435b990e46edb01eb1f8d5f9687">DesaprobarSolicitud</link> (
+int ID_Solicitud, String Usuario)<para><emphasis>&lt;summary&gt;
+Desaprobar Solicitud
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___solicitud_1a45bbbeb0f77720e7f8c6ec00d6f4e921">
+                <title>Capas.Data.D_Solicitud.D_Solicitud ()</title> <emphasis>&lt;summary&gt;
+Contructor de  la  clase de solicitud en la capa de datos 
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___solicitud_1afe68e2653ff2a615035df2b7c343d5a6">
+                <title>DataTable Capas.Data.D_Solicitud.ObtenerSolicitudes ()</title> <emphasis>&lt;summary&gt;
+Metodo obtener solicitudees el cual devolvera un dataTable con los valores retornados de la base de datos 
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___solicitud_1a35426c130e1365e5da4858803ac78593">
+                <title>int Capas.Data.D_Solicitud.CrearSolicitud (E_Solicitud e_So)</title> <emphasis>&lt;summary&gt;
+Metodo Crear Solicitud el cual espera por parametro una Entidad de solicitud 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_So</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___solicitud_1a3f02f31bb58de24e4c9ad427951069d9">
+                <title>E_Solicitud Capas.Data.D_Solicitud.ObtenerSolicitud (int ID_Solicitud)</title> <emphasis>&lt;summary&gt;
+Metodo Obtener Solicitud el cual espera un parametro de ID_Solicitud 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Solicitud</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___solicitud_1aa7a8088eab0ea8281e446f377ab22762">
+                <title>int Capas.Data.D_Solicitud.ActualizarSolicitud (E_Solicitud e_So)</title> <emphasis>&lt;summary&gt;
+Metodo Actualizar solicitud 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_So</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___solicitud_1ac9fcb107c03a4e186413a55a310d2a0a">
+                <title>int Capas.Data.D_Solicitud.EliminarSolicitud (int ID_Solicitud)</title> <emphasis>&lt;summary&gt;
+Eliminar Solicitud Evento que acepta un Id solicitud y devuelve las Filas Afectadas 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Solicitud</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___solicitud_1a4eb4b811609192ef5554470219e47b9c">
+                <title>int Capas.Data.D_Solicitud.AprobarSolicitud (int ID_Solicitud, String Usuario)</title> <emphasis>&lt;summary&gt;
+Metodo Aprobar Solicitud El cual acepta como parametros un ID_Solicitud y un Usuario 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Solicitud</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>Usuario</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___solicitud_1a48cdb435b990e46edb01eb1f8d5f9687">
+                <title>int Capas.Data.D_Solicitud.DesaprobarSolicitud (int ID_Solicitud, String Usuario)</title> <emphasis>&lt;summary&gt;
+Desaprobar Solicitud
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Solicitud</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>Usuario</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+</section>

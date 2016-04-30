@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter">
+<title>Resa_Pro::ResaDBDataSetTableAdapters::ObtenerEventosDetalladosTableAdapter class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.SqlClient.SqlDataAdapter _adapter</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.SqlClient.SqlConnection _connection</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.SqlClient.SqlTransaction _transaction</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.SqlClient.SqlCommand[] _commandCollection</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool _clearBeforeFill</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1ad3ebb3e932ab21cb463d66dc796758ef">ObtenerEventosDetalladosTableAdapter</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual int <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1a93545dd967166e541eecafd9b0538e52">Fill</link> (
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table">ResaDBDataSet.ObtenerEventosDetalladosDataTable</link> dataTable)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table">ResaDBDataSet.ObtenerEventosDetalladosDataTable</link> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1a28f8892d41840c5af06f9e5b4fe807ff">GetData</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1ad3ebb3e932ab21cb463d66dc796758ef">ObtenerEventosDetalladosTableAdapter</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual int <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1a93545dd967166e541eecafd9b0538e52">Fill</link> (
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table">ResaDBDataSet.ObtenerEventosDetalladosDataTable</link> dataTable)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table">ResaDBDataSet.ObtenerEventosDetalladosDataTable</link> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1a28f8892d41840c5af06f9e5b4fe807ff">GetData</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1a41db1cd4a75698a655c829706760cd2b">InitAdapter</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1aec605b548b055ff64be0d6eb963fea1b">InitConnection</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1a0f6409316852a948675c9e53e2e91dad">InitCommandCollection</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1a41db1cd4a75698a655c829706760cd2b">InitAdapter</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1aec605b548b055ff64be0d6eb963fea1b">InitConnection</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1a0f6409316852a948675c9e53e2e91dad">InitCommandCollection</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Represents the connection and commands used to retrieve and save data. /summary&gt; </para>
+    </simplesect>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1ad3ebb3e932ab21cb463d66dc796758ef">
+                <title>Resa_Pro.ResaDBDataSetTableAdapters.ObtenerEventosDetalladosTableAdapter.ObtenerEventosDetalladosTableAdapter ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1a93545dd967166e541eecafd9b0538e52">
+                <title>virtual int Resa_Pro.ResaDBDataSetTableAdapters.ObtenerEventosDetalladosTableAdapter.Fill (ResaDBDataSet.ObtenerEventosDetalladosDataTable dataTable)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1a28f8892d41840c5af06f9e5b4fe807ff">
+                <title>virtual ResaDBDataSet.ObtenerEventosDetalladosDataTable Resa_Pro.ResaDBDataSetTableAdapters.ObtenerEventosDetalladosTableAdapter.GetData ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1ad3ebb3e932ab21cb463d66dc796758ef">
+                <title>Resa_Pro.ResaDBDataSetTableAdapters.ObtenerEventosDetalladosTableAdapter.ObtenerEventosDetalladosTableAdapter ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1a93545dd967166e541eecafd9b0538e52">
+                <title>virtual int Resa_Pro.ResaDBDataSetTableAdapters.ObtenerEventosDetalladosTableAdapter.Fill (ResaDBDataSet.ObtenerEventosDetalladosDataTable dataTable)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1a28f8892d41840c5af06f9e5b4fe807ff">
+                <title>virtual ResaDBDataSet.ObtenerEventosDetalladosDataTable Resa_Pro.ResaDBDataSetTableAdapters.ObtenerEventosDetalladosTableAdapter.GetData ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1a41db1cd4a75698a655c829706760cd2b">
+                <title>void Resa_Pro.ResaDBDataSetTableAdapters.ObtenerEventosDetalladosTableAdapter.InitAdapter ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1aec605b548b055ff64be0d6eb963fea1b">
+                <title>void Resa_Pro.ResaDBDataSetTableAdapters.ObtenerEventosDetalladosTableAdapter.InitConnection ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1a0f6409316852a948675c9e53e2e91dad">
+                <title>void Resa_Pro.ResaDBDataSetTableAdapters.ObtenerEventosDetalladosTableAdapter.InitCommandCollection ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1a41db1cd4a75698a655c829706760cd2b">
+                <title>void Resa_Pro.ResaDBDataSetTableAdapters.ObtenerEventosDetalladosTableAdapter.InitAdapter ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1aec605b548b055ff64be0d6eb963fea1b">
+                <title>void Resa_Pro.ResaDBDataSetTableAdapters.ObtenerEventosDetalladosTableAdapter.InitConnection ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter_1a0f6409316852a948675c9e53e2e91dad">
+                <title>void Resa_Pro.ResaDBDataSetTableAdapters.ObtenerEventosDetalladosTableAdapter.InitCommandCollection ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

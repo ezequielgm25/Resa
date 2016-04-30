@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_negocio_1_1_n___auditoria">
+<title>Capas::Negocio::N_Auditoria class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>D_Auditoria d_Auditoria</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>E_Auditoria e_Auditoria</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_capas_1_1_negocio_1_1_n___auditoria_1af47d4cfb7fa621fc448433e411f46f05">N_Auditoria</link> (
+)<para><emphasis>&lt;summary&gt;
+Constructor de la clase auditoria en la capa de negocio
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___auditoria_1a0483b2d0032b6a83c1577acc6d45aaba">InsertarAuditoria</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___auditoria">E_Auditoria</link> e_Au)<para><emphasis>&lt;summary&gt;
+Metodo donde se inserta una auditoria a un usuario 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___auditoria_1af47d4cfb7fa621fc448433e411f46f05">
+                <title>Capas.Negocio.N_Auditoria.N_Auditoria ()</title> <emphasis>&lt;summary&gt;
+Constructor de la clase auditoria en la capa de negocio
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___auditoria_1a0483b2d0032b6a83c1577acc6d45aaba">
+                <title>int Capas.Negocio.N_Auditoria.InsertarAuditoria (E_Auditoria e_Au)</title> <emphasis>&lt;summary&gt;
+Metodo donde se inserta una auditoria a un usuario 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Au</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+</section>

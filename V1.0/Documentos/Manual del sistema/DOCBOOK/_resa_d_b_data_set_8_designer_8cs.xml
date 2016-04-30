@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_resa_d_b_data_set_8_designer_8cs">
+    <title>ResaDBDataSet.Designer.cs File Reference</title>
+        <section>
+            <title> Clases </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set">Resa_Pro::ResaDBDataSet</link></para>
+<para><emphasis>&lt;summary&gt;
+Represents a strongly typed in-memory cache of data.
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table">Resa_Pro::ResaDBDataSet::ObtenerEventosDetalladosDataTable</link></para>
+<para><emphasis>&lt;summary&gt;
+Represents the strongly named DataTable class.
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_data_table">Resa_Pro::ResaDBDataSet::ObtenerEventosDetalladosXIDDataTable</link></para>
+<para><emphasis>&lt;summary&gt;
+Represents the strongly named DataTable class.
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_row">Resa_Pro::ResaDBDataSet::ObtenerEventosDetalladosRow</link></para>
+<para><emphasis>&lt;summary&gt;
+Represents strongly named DataRow class.
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row">Resa_Pro::ResaDBDataSet::ObtenerEventosDetalladosXIDRow</link></para>
+<para><emphasis>&lt;summary&gt;
+Represents strongly named DataRow class.
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_row_change_event">Resa_Pro::ResaDBDataSet::ObtenerEventosDetalladosRowChangeEvent</link></para>
+<para><emphasis>&lt;summary&gt;
+Row event argument class
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row_change_event">Resa_Pro::ResaDBDataSet::ObtenerEventosDetalladosXIDRowChangeEvent</link></para>
+<para><emphasis>&lt;summary&gt;
+Row event argument class
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter">Resa_Pro::ResaDBDataSetTableAdapters::ObtenerEventosDetalladosTableAdapter</link></para>
+<para><emphasis>&lt;summary&gt;
+Represents the connection and commands used to retrieve and save data.
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_x_i_d_table_adapter">Resa_Pro::ResaDBDataSetTableAdapters::ObtenerEventosDetalladosXIDTableAdapter</link></para>
+<para><emphasis>&lt;summary&gt;
+Represents the connection and commands used to retrieve and save data.
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager">Resa_Pro::ResaDBDataSetTableAdapters::TableAdapterManager</link></para>
+<para><emphasis>&lt;summary&gt;
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer">Resa_Pro::ResaDBDataSetTableAdapters::TableAdapterManager::SelfReferenceComparer</link></para>
+<para><emphasis>&lt;summary&gt;
+Used to sort self-referenced table&apos;s rows
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_resa___pro">Resa_Pro</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_resa___pro_1_1_resa_d_b_data_set_table_adapters">Resa_Pro::ResaDBDataSetTableAdapters</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Descripción detallada</title>
+    <para>Definition in file D:/Resa/V1.0/Fuentes/UI/Winform/Resa Pro/ResaDBDataSet.Designer.cs</para>
+    </simplesect>
+</section>

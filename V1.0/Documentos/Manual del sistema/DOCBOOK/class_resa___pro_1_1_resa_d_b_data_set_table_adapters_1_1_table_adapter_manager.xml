@@ -1,0 +1,423 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager">
+<title>Resa_Pro::ResaDBDataSetTableAdapters::TableAdapterManager class Reference</title>
+        <section>
+            <title> Clases </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer">Resa_Pro::ResaDBDataSetTableAdapters::TableAdapterManager::SelfReferenceComparer</link></para>
+<para><emphasis>&lt;summary&gt;
+Used to sort self-referenced table&apos;s rows
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892e">UpdateOrderOption</link> {
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892ea27b77cb15d3da7ded0250d0001bc6755">InsertUpdateDelete</link>= 0,
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892ea894fcc001e51f673d3fb5f3096473dd8">UpdateInsertDelete</link>= 1,
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892ea27b77cb15d3da7ded0250d0001bc6755">InsertUpdateDelete</link>= 0,
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892ea894fcc001e51f673d3fb5f3096473dd8">UpdateInsertDelete</link>= 1
+}</literallayout>
+<para><emphasis>&lt;summary&gt;
+Update Order Option
+ /summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892e">UpdateOrderOption</link> {
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892ea27b77cb15d3da7ded0250d0001bc6755">InsertUpdateDelete</link>= 0,
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892ea894fcc001e51f673d3fb5f3096473dd8">UpdateInsertDelete</link>= 1,
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892ea27b77cb15d3da7ded0250d0001bc6755">InsertUpdateDelete</link>= 0,
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892ea894fcc001e51f673d3fb5f3096473dd8">UpdateInsertDelete</link>= 1
+}</literallayout>
+<para><emphasis>&lt;summary&gt;
+Update Order Option
+ /summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>UpdateOrderOption _updateOrder</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool _backupDataSetBeforeUpdate</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.IDbConnection _connection</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1ae9dd14775dd1cd509cbf27d7cefcd9df">UpdateUpdatedRows</link> (
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set">ResaDBDataSet</link> dataSet, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allChangedRows, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allAddedRows)<para><emphasis>&lt;summary&gt;
+Update rows in top-down order.
+ /summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a54550bd730b12d0b526fd78f8fe8d8ec">UpdateInsertedRows</link> (
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set">ResaDBDataSet</link> dataSet, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allAddedRows)<para><emphasis>&lt;summary&gt;
+Insert rows in top-down order.
+ /summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a05348cb020f3c02bd972b036cde17dfc">UpdateDeletedRows</link> (
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set">ResaDBDataSet</link> dataSet, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allChangedRows)<para><emphasis>&lt;summary&gt;
+Delete rows in bottom-up order.
+ /summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.DataRow[] <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a2008b5cc44526a5570b3151bca63db5f">GetRealUpdatedRows</link> (
+global::System.Data.DataRow[] updatedRows, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allAddedRows)<para><emphasis>&lt;summary&gt;
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+ /summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1ae9dd14775dd1cd509cbf27d7cefcd9df">UpdateUpdatedRows</link> (
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set">ResaDBDataSet</link> dataSet, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allChangedRows, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allAddedRows)<para><emphasis>&lt;summary&gt;
+Update rows in top-down order.
+ /summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a54550bd730b12d0b526fd78f8fe8d8ec">UpdateInsertedRows</link> (
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set">ResaDBDataSet</link> dataSet, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allAddedRows)<para><emphasis>&lt;summary&gt;
+Insert rows in top-down order.
+ /summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a05348cb020f3c02bd972b036cde17dfc">UpdateDeletedRows</link> (
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set">ResaDBDataSet</link> dataSet, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allChangedRows)<para><emphasis>&lt;summary&gt;
+Delete rows in bottom-up order.
+ /summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.DataRow[] <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a2008b5cc44526a5570b3151bca63db5f">GetRealUpdatedRows</link> (
+global::System.Data.DataRow[] updatedRows, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allAddedRows)<para><emphasis>&lt;summary&gt;
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+ /summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual int <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a39946d71f6a19c2bd4695d36921be655">UpdateAll</link> (
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set">ResaDBDataSet</link> dataSet)<para><emphasis>&lt;summary&gt;
+Update all changes to the dataset.
+ /summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual int <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a39946d71f6a19c2bd4695d36921be655">UpdateAll</link> (
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set">ResaDBDataSet</link> dataSet)<para><emphasis>&lt;summary&gt;
+Update all changes to the dataset.
+ /summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1ab23a15a9679d6e74ed428f5f088ad0c9">SortSelfReferenceRows</link> (
+global::System.Data.DataRow[] rows, global::System.Data.DataRelation relation, bool childFirst)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual bool <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a5ff52f0ffe6e71a9b7d102942474295e">MatchTableAdapterConnection</link> (
+global::System.Data.IDbConnection inputConnection)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1ab23a15a9679d6e74ed428f5f088ad0c9">SortSelfReferenceRows</link> (
+global::System.Data.DataRow[] rows, global::System.Data.DataRelation relation, bool childFirst)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual bool <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a5ff52f0ffe6e71a9b7d102942474295e">MatchTableAdapterConnection</link> (
+global::System.Data.IDbConnection inputConnection)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para><link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager">TableAdapterManager</link> is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios /summary&gt; </para>
+    </simplesect>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892e">
+               <title>enum UpdateOrderOption </title>
+               
+               <formalpara>
+                    <title>Valores de enumeraciones:</title>
+                    <variablelist>
+                        <varlistentry xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892ea27b77cb15d3da7ded0250d0001bc6755">
+                            <term>InsertUpdateDelete</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892ea894fcc001e51f673d3fb5f3096473dd8">
+                            <term>UpdateInsertDelete</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892ea27b77cb15d3da7ded0250d0001bc6755">
+                            <term>InsertUpdateDelete</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892ea894fcc001e51f673d3fb5f3096473dd8">
+                            <term>UpdateInsertDelete</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 1870 of file ResaDBDataSet.Designer.cs
+                    <computeroutput><literallayout>
+{
+InsertUpdateDelete= 0, 
+UpdateInsertDelete= 1, 
+InsertUpdateDelete= 0, 
+UpdateInsertDelete= 1, 
+}UpdateOrderOption;
+                    </literallayout></computeroutput>
+                </para>
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892e">
+               <title>enum UpdateOrderOption </title>
+               
+               <formalpara>
+                    <title>Valores de enumeraciones:</title>
+                    <variablelist>
+                        <varlistentry xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892ea27b77cb15d3da7ded0250d0001bc6755">
+                            <term>InsertUpdateDelete</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892ea894fcc001e51f673d3fb5f3096473dd8">
+                            <term>UpdateInsertDelete</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892ea27b77cb15d3da7ded0250d0001bc6755">
+                            <term>InsertUpdateDelete</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                        <varlistentry xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1abf6ec1ff1e1e5cf1cc76a86e56b5892ea894fcc001e51f673d3fb5f3096473dd8">
+                            <term>UpdateInsertDelete</term>
+                            <listitem>
+                                <para></para>
+                            </listitem>
+                        </varlistentry>
+                     </variablelist>
+                </formalpara>
+                <para>Definition at line 1870 of file ResaDBDataSet.Designer.cs
+                    <computeroutput><literallayout>
+{
+InsertUpdateDelete= 0, 
+UpdateInsertDelete= 1, 
+InsertUpdateDelete= 0, 
+UpdateInsertDelete= 1, 
+}UpdateOrderOption;
+                    </literallayout></computeroutput>
+                </para>
+            </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1ae9dd14775dd1cd509cbf27d7cefcd9df">
+                <title>int Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows (ResaDBDataSet dataSet, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allChangedRows, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allAddedRows)</title> <emphasis>&lt;summary&gt;
+Update rows in top-down order.
+ /summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a54550bd730b12d0b526fd78f8fe8d8ec">
+                <title>int Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows (ResaDBDataSet dataSet, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allAddedRows)</title> <emphasis>&lt;summary&gt;
+Insert rows in top-down order.
+ /summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a05348cb020f3c02bd972b036cde17dfc">
+                <title>int Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows (ResaDBDataSet dataSet, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allChangedRows)</title> <emphasis>&lt;summary&gt;
+Delete rows in bottom-up order.
+ /summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a2008b5cc44526a5570b3151bca63db5f">
+                <title>global::System.Data.DataRow [] Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows (global::System.Data.DataRow[] updatedRows, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allAddedRows)</title> <emphasis>&lt;summary&gt;
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+ /summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1ae9dd14775dd1cd509cbf27d7cefcd9df">
+                <title>int Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows (ResaDBDataSet dataSet, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allChangedRows, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allAddedRows)</title> <emphasis>&lt;summary&gt;
+Update rows in top-down order.
+ /summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a54550bd730b12d0b526fd78f8fe8d8ec">
+                <title>int Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows (ResaDBDataSet dataSet, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allAddedRows)</title> <emphasis>&lt;summary&gt;
+Insert rows in top-down order.
+ /summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a05348cb020f3c02bd972b036cde17dfc">
+                <title>int Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows (ResaDBDataSet dataSet, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allChangedRows)</title> <emphasis>&lt;summary&gt;
+Delete rows in bottom-up order.
+ /summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a2008b5cc44526a5570b3151bca63db5f">
+                <title>global::System.Data.DataRow [] Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows (global::System.Data.DataRow[] updatedRows, global::System.Collections.Generic.List&lt; global::System.Data.DataRow &gt; allAddedRows)</title> <emphasis>&lt;summary&gt;
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+ /summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a39946d71f6a19c2bd4695d36921be655">
+                <title>virtual int Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.UpdateAll (ResaDBDataSet dataSet)</title> <emphasis>&lt;summary&gt;
+Update all changes to the dataset.
+ /summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a39946d71f6a19c2bd4695d36921be655">
+                <title>virtual int Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.UpdateAll (ResaDBDataSet dataSet)</title> <emphasis>&lt;summary&gt;
+Update all changes to the dataset.
+ /summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1ab23a15a9679d6e74ed428f5f088ad0c9">
+                <title>virtual void Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.SortSelfReferenceRows (global::System.Data.DataRow[] rows, global::System.Data.DataRelation relation, bool childFirst)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a5ff52f0ffe6e71a9b7d102942474295e">
+                <title>virtual bool Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.MatchTableAdapterConnection (global::System.Data.IDbConnection inputConnection)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1ab23a15a9679d6e74ed428f5f088ad0c9">
+                <title>virtual void Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.SortSelfReferenceRows (global::System.Data.DataRow[] rows, global::System.Data.DataRelation relation, bool childFirst)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1a5ff52f0ffe6e71a9b7d102942474295e">
+                <title>virtual bool Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.MatchTableAdapterConnection (global::System.Data.IDbConnection inputConnection)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

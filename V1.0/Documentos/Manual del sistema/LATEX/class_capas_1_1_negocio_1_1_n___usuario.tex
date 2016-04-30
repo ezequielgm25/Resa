@@ -1,0 +1,417 @@
+\section{Referencia de la Clase Capas.\+Negocio.\+N\+\_\+\+Usuario}
+\label{class_capas_1_1_negocio_1_1_n___usuario}\index{Capas.\+Negocio.\+N\+\_\+\+Usuario@{Capas.\+Negocio.\+N\+\_\+\+Usuario}}
+\subsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf N\+\_\+\+Usuario} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase de usuario en la capa de negocio \end{DoxyCompactList}\item 
+{\bf E\+\_\+\+Usuario} {\bf Obtener\+Usuario} (int I\+D\+\_\+\+Usuario)
+\begin{DoxyCompactList}\small\item\em Metodo de obtener un usuario Espera un ID de usuario como parametro y retorna una entidad \end{DoxyCompactList}\item 
+Data\+Table {\bf Obtener\+Usuarios} ()
+\begin{DoxyCompactList}\small\item\em Metodo donde se obtienen los usuarios almacenados en el sistema \end{DoxyCompactList}\item 
+int {\bf Verficar\+Existencia\+Usuario} (String Usuario)
+\begin{DoxyCompactList}\small\item\em Metodo donde se verifica la existencia de un usuario en el sistema para evitar la repeticion \end{DoxyCompactList}\item 
+int {\bf Insertar\+Rol} (String Rol, int I\+D\+\_\+\+Grupo\+Usuario)
+\begin{DoxyCompactList}\small\item\em Metodo donde se inserta un rol a un usuario \end{DoxyCompactList}\item 
+int {\bf Insertar\+Usuario} ({\bf E\+\_\+\+Usuario} e\+\_\+U)
+\begin{DoxyCompactList}\small\item\em Metodo en el cual se inserta un usuario al sistema \end{DoxyCompactList}\item 
+int {\bf Insertar\+Perfil} (string perfil, int I\+D\+\_\+\+Usuario)
+\begin{DoxyCompactList}\small\item\em Metodo donde se inserta un perfil a un usuario y se retorna el ID del mismo \end{DoxyCompactList}\item 
+int {\bf Insertar\+Opcion} (string Opcion, int I\+D\+\_\+\+Perfil)
+\begin{DoxyCompactList}\small\item\em Metodo para insertar una opcion a un usuario y devolver el ID de la misma \end{DoxyCompactList}\item 
+int {\bf Insertar\+Funcion} (string Funcion, bool Estado, int I\+D\+\_\+\+Opcion)
+\begin{DoxyCompactList}\small\item\em Metodo donde se inserta una funcion a un usuario \end{DoxyCompactList}\item 
+{\bf E\+\_\+\+Usuario} {\bf Obtener\+Informacion\+Detallada} (int I\+D\+\_\+\+Usuario)
+\begin{DoxyCompactList}\small\item\em Obteniendo Informacion detallada de un usuario a travez de su ID \end{DoxyCompactList}\item 
+int {\bf Obtener\+Perfil} (int I\+D\+\_\+\+Usuario)
+\begin{DoxyCompactList}\small\item\em Metodo donnde se obtiene El ID del perfil de un usuario \end{DoxyCompactList}\item 
+int {\bf Obtener\+I\+D\+Opcion} (string Opcion, int I\+D\+\_\+\+Perfil)
+\begin{DoxyCompactList}\small\item\em Metodo donde se obtiene el ID de la opcion de un usuario \end{DoxyCompactList}\item 
+Boolean {\bf Obtener\+Funcion} (int I\+D\+\_\+\+Opcion, String Funcion)
+\begin{DoxyCompactList}\small\item\em Metodo donde se obtiene si una funcion esta activa para un usuario \end{DoxyCompactList}\item 
+int {\bf Actualizar\+Rol} (string Rol, int I\+D\+\_\+\+G\+Rupo\+Usuario, int I\+D\+\_\+\+Rol)
+\begin{DoxyCompactList}\small\item\em Metodo donde se actualiza un rol de un usuario \end{DoxyCompactList}\item 
+int {\bf Actualizar\+Usuario} ({\bf E\+\_\+\+Usuario} E\+\_\+U)
+\begin{DoxyCompactList}\small\item\em Metodo donde se actualizan las caracteristicas de un usuario \end{DoxyCompactList}\item 
+int {\bf Actualizar\+Perfil} (int I\+D\+\_\+\+Usuario, string perfil)
+\begin{DoxyCompactList}\small\item\em Metodo donde se actualiza un perfil de un usuario \end{DoxyCompactList}\item 
+int {\bf Actualizar\+Funcion} (int I\+D\+\_\+\+Opcion, String Funcion, bool Estado)
+\begin{DoxyCompactList}\small\item\em Metodo donde se actualiza la funcion -- se activa o se desactiva una funcion a un usuario -- \end{DoxyCompactList}\item 
+int {\bf Eliminar\+Usuario} (int I\+D\+\_\+\+Usuario)
+\begin{DoxyCompactList}\small\item\em Metodo Donde se elimina un usuario de la base de datos \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentación del constructor y destructor}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!N\+\_\+\+Usuario@{N\+\_\+\+Usuario}}
+\index{N\+\_\+\+Usuario@{N\+\_\+\+Usuario}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{N\+\_\+\+Usuario()}]{\setlength{\rightskip}{0pt plus 5cm}Capas.\+Negocio.\+N\+\_\+\+Usuario.\+N\+\_\+\+Usuario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_afb1e664079d276eed2e7bf744f8ad1a3}
+
+
+Constructor de la clase de usuario en la capa de negocio 
+
+
+
+\subsection{Documentación de las funciones miembro}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Actualizar\+Funcion@{Actualizar\+Funcion}}
+\index{Actualizar\+Funcion@{Actualizar\+Funcion}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Actualizar\+Funcion(int I\+D\+\_\+\+Opcion, String Funcion, bool Estado)}]{\setlength{\rightskip}{0pt plus 5cm}int Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Actualizar\+Funcion (
+\begin{DoxyParamCaption}
+\item[{int}]{I\+D\+\_\+\+Opcion, }
+\item[{String}]{Funcion, }
+\item[{bool}]{Estado}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_a6018daa1150195b0263890d03c90cc8d}
+
+
+Metodo donde se actualiza la funcion -- se activa o se desactiva una funcion a un usuario -- 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em I\+D\+\_\+\+Opcion} & \\
+\hline
+{\em Funcion} & \\
+\hline
+{\em Estado} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Actualizar\+Perfil@{Actualizar\+Perfil}}
+\index{Actualizar\+Perfil@{Actualizar\+Perfil}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Actualizar\+Perfil(int I\+D\+\_\+\+Usuario, string perfil)}]{\setlength{\rightskip}{0pt plus 5cm}int Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Actualizar\+Perfil (
+\begin{DoxyParamCaption}
+\item[{int}]{I\+D\+\_\+\+Usuario, }
+\item[{string}]{perfil}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_ae3e2293fa5e10d24a7c50bd2adc00ada}
+
+
+Metodo donde se actualiza un perfil de un usuario 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em I\+D\+\_\+\+Usuario} & \\
+\hline
+{\em perfil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Actualizar\+Rol@{Actualizar\+Rol}}
+\index{Actualizar\+Rol@{Actualizar\+Rol}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Actualizar\+Rol(string Rol, int I\+D\+\_\+\+G\+Rupo\+Usuario, int I\+D\+\_\+\+Rol)}]{\setlength{\rightskip}{0pt plus 5cm}int Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Actualizar\+Rol (
+\begin{DoxyParamCaption}
+\item[{string}]{Rol, }
+\item[{int}]{I\+D\+\_\+\+G\+Rupo\+Usuario, }
+\item[{int}]{I\+D\+\_\+\+Rol}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_a671a0a70aec636e21d3006b4e734ad7b}
+
+
+Metodo donde se actualiza un rol de un usuario 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Rol} & \\
+\hline
+{\em I\+D\+\_\+\+G\+Rupo\+Usuario} & \\
+\hline
+{\em I\+D\+\_\+\+Rol} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Actualizar\+Usuario@{Actualizar\+Usuario}}
+\index{Actualizar\+Usuario@{Actualizar\+Usuario}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Actualizar\+Usuario(\+E\+\_\+\+Usuario E\+\_\+\+U)}]{\setlength{\rightskip}{0pt plus 5cm}int Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Actualizar\+Usuario (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+\_\+\+Usuario}}]{E\+\_\+U}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_a1c57cc6715f2c99bdb81aa9ced2e9a54}
+
+
+Metodo donde se actualizan las caracteristicas de un usuario 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em E\+\_\+U} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Eliminar\+Usuario@{Eliminar\+Usuario}}
+\index{Eliminar\+Usuario@{Eliminar\+Usuario}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Eliminar\+Usuario(int I\+D\+\_\+\+Usuario)}]{\setlength{\rightskip}{0pt plus 5cm}int Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Eliminar\+Usuario (
+\begin{DoxyParamCaption}
+\item[{int}]{I\+D\+\_\+\+Usuario}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_a28bebb4ef5fd33d667b3c67cde23a5b9}
+
+
+Metodo Donde se elimina un usuario de la base de datos 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em I\+D\+\_\+\+Usuario} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Insertar\+Funcion@{Insertar\+Funcion}}
+\index{Insertar\+Funcion@{Insertar\+Funcion}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Insertar\+Funcion(string Funcion, bool Estado, int I\+D\+\_\+\+Opcion)}]{\setlength{\rightskip}{0pt plus 5cm}int Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Insertar\+Funcion (
+\begin{DoxyParamCaption}
+\item[{string}]{Funcion, }
+\item[{bool}]{Estado, }
+\item[{int}]{I\+D\+\_\+\+Opcion}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_abc8fe4ad9ef182295310339e5b6dd9e0}
+
+
+Metodo donde se inserta una funcion a un usuario 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Funcion} & \\
+\hline
+{\em Estado} & \\
+\hline
+{\em I\+D\+\_\+\+Opcion} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Insertar\+Opcion@{Insertar\+Opcion}}
+\index{Insertar\+Opcion@{Insertar\+Opcion}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Insertar\+Opcion(string Opcion, int I\+D\+\_\+\+Perfil)}]{\setlength{\rightskip}{0pt plus 5cm}int Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Insertar\+Opcion (
+\begin{DoxyParamCaption}
+\item[{string}]{Opcion, }
+\item[{int}]{I\+D\+\_\+\+Perfil}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_a39d3b5c59a47dcaf4b3c952178c55e36}
+
+
+Metodo para insertar una opcion a un usuario y devolver el ID de la misma 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Opcion} & \\
+\hline
+{\em I\+D\+\_\+\+Perfil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Insertar\+Perfil@{Insertar\+Perfil}}
+\index{Insertar\+Perfil@{Insertar\+Perfil}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Insertar\+Perfil(string perfil, int I\+D\+\_\+\+Usuario)}]{\setlength{\rightskip}{0pt plus 5cm}int Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Insertar\+Perfil (
+\begin{DoxyParamCaption}
+\item[{string}]{perfil, }
+\item[{int}]{I\+D\+\_\+\+Usuario}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_ae629e60d0dea04041a579b38bd0eb648}
+
+
+Metodo donde se inserta un perfil a un usuario y se retorna el ID del mismo 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em perfil} & \\
+\hline
+{\em I\+D\+\_\+\+Usuario} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Insertar\+Rol@{Insertar\+Rol}}
+\index{Insertar\+Rol@{Insertar\+Rol}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Insertar\+Rol(\+String Rol, int I\+D\+\_\+\+Grupo\+Usuario)}]{\setlength{\rightskip}{0pt plus 5cm}int Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Insertar\+Rol (
+\begin{DoxyParamCaption}
+\item[{String}]{Rol, }
+\item[{int}]{I\+D\+\_\+\+Grupo\+Usuario}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_a5ff3740111a05fba07248f91f7bf72dd}
+
+
+Metodo donde se inserta un rol a un usuario 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Rol} & \\
+\hline
+{\em I\+D\+\_\+\+Grupo\+Usuario} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Insertar\+Usuario@{Insertar\+Usuario}}
+\index{Insertar\+Usuario@{Insertar\+Usuario}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Insertar\+Usuario(\+E\+\_\+\+Usuario e\+\_\+\+U)}]{\setlength{\rightskip}{0pt plus 5cm}int Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Insertar\+Usuario (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+\_\+\+Usuario}}]{e\+\_\+U}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_a344cd68ab6f247416d624cc5127b4b90}
+
+
+Metodo en el cual se inserta un usuario al sistema 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em e\+\_\+U} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Obtener\+Funcion@{Obtener\+Funcion}}
+\index{Obtener\+Funcion@{Obtener\+Funcion}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Obtener\+Funcion(int I\+D\+\_\+\+Opcion, String Funcion)}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Obtener\+Funcion (
+\begin{DoxyParamCaption}
+\item[{int}]{I\+D\+\_\+\+Opcion, }
+\item[{String}]{Funcion}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_a410dcc0da59609480d7ecf1a8a9cd8a1}
+
+
+Metodo donde se obtiene si una funcion esta activa para un usuario 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em I\+D\+\_\+\+Opcion} & \\
+\hline
+{\em Funcion} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Obtener\+I\+D\+Opcion@{Obtener\+I\+D\+Opcion}}
+\index{Obtener\+I\+D\+Opcion@{Obtener\+I\+D\+Opcion}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Obtener\+I\+D\+Opcion(string Opcion, int I\+D\+\_\+\+Perfil)}]{\setlength{\rightskip}{0pt plus 5cm}int Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Obtener\+I\+D\+Opcion (
+\begin{DoxyParamCaption}
+\item[{string}]{Opcion, }
+\item[{int}]{I\+D\+\_\+\+Perfil}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_ad459e7f1a83db2ae056e3f0311dc86c6}
+
+
+Metodo donde se obtiene el ID de la opcion de un usuario 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Opcion} & \\
+\hline
+{\em I\+D\+\_\+\+Perfil} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Obtener\+Informacion\+Detallada@{Obtener\+Informacion\+Detallada}}
+\index{Obtener\+Informacion\+Detallada@{Obtener\+Informacion\+Detallada}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Obtener\+Informacion\+Detallada(int I\+D\+\_\+\+Usuario)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+\_\+\+Usuario} Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Obtener\+Informacion\+Detallada (
+\begin{DoxyParamCaption}
+\item[{int}]{I\+D\+\_\+\+Usuario}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_a3cdbd7f1738ae4dad80c41ad75e5f37d}
+
+
+Obteniendo Informacion detallada de un usuario a travez de su ID 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em I\+D\+\_\+\+Usuario} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Obtener\+Perfil@{Obtener\+Perfil}}
+\index{Obtener\+Perfil@{Obtener\+Perfil}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Obtener\+Perfil(int I\+D\+\_\+\+Usuario)}]{\setlength{\rightskip}{0pt plus 5cm}int Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Obtener\+Perfil (
+\begin{DoxyParamCaption}
+\item[{int}]{I\+D\+\_\+\+Usuario}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_aa528251c47c6479cd47a9ce1e5544e89}
+
+
+Metodo donnde se obtiene El ID del perfil de un usuario 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em I\+D\+\_\+\+Usuario} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Obtener\+Usuario@{Obtener\+Usuario}}
+\index{Obtener\+Usuario@{Obtener\+Usuario}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Obtener\+Usuario(int I\+D\+\_\+\+Usuario)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+\_\+\+Usuario} Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Obtener\+Usuario (
+\begin{DoxyParamCaption}
+\item[{int}]{I\+D\+\_\+\+Usuario}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_a36183dc27cac943e2a373e68cb46d357}
+
+
+Metodo de obtener un usuario Espera un ID de usuario como parametro y retorna una entidad 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em I\+D\+\_\+\+Usuario} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Obtener\+Usuarios@{Obtener\+Usuarios}}
+\index{Obtener\+Usuarios@{Obtener\+Usuarios}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Obtener\+Usuarios()}]{\setlength{\rightskip}{0pt plus 5cm}Data\+Table Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Obtener\+Usuarios (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_a1276f7216d4377484b29a85564cac8a1}
+
+
+Metodo donde se obtienen los usuarios almacenados en el sistema 
+
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+\index{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}!Verficar\+Existencia\+Usuario@{Verficar\+Existencia\+Usuario}}
+\index{Verficar\+Existencia\+Usuario@{Verficar\+Existencia\+Usuario}!Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario@{Capas\+::\+Negocio\+::\+N\+\_\+\+Usuario}}
+\subsubsection[{Verficar\+Existencia\+Usuario(\+String Usuario)}]{\setlength{\rightskip}{0pt plus 5cm}int Capas.\+Negocio.\+N\+\_\+\+Usuario.\+Verficar\+Existencia\+Usuario (
+\begin{DoxyParamCaption}
+\item[{String}]{Usuario}
+\end{DoxyParamCaption}
+)}\label{class_capas_1_1_negocio_1_1_n___usuario_a9befd164875d61e85fc0559f03687d44}
+
+
+Metodo donde se verifica la existencia de un usuario en el sistema para evitar la repeticion 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Usuario} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Resa/\+V1.\+0/\+Fuentes/\+Capas/\+Negocio/N\+\_\+\+Usuario.\+cs\end{DoxyCompactItemize}

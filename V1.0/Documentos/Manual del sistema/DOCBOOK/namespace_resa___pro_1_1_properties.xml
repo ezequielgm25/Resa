@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespace_resa___pro_1_1_properties">
+<title>Resa_Pro::Properties</title>
+        <section>
+            <title> Clases </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_properties_1_1_resources">Resa_Pro::Properties::Resources</link></para>
+<para><emphasis>&lt;summary&gt;
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+&lt;/summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_properties_1_1_settings">Resa_Pro::Properties::Settings</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

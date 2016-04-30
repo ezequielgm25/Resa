@@ -116,6 +116,7 @@ namespace Capas.Data
 
             //Stored procedure
             StoredProcedure = "ActualizarEvento";
+          
 
             //SQL Command
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
@@ -321,6 +322,7 @@ namespace Capas.Data
             //Stored Procedure 
             StoredProcedure = "ObtenerEventos";
 
+           
             //Comando 
             SqlCommand comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 

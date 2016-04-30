@@ -42,11 +42,11 @@ namespace Capas.Aplicacion
 
                } catch ( DirectoryNotFoundException e)
                {
-                /*
+                
                 //Enviando un email  a la cuenta de soporte la excepcion
                 Email email = new Email();
                 //Enviando
-                email.enviarEmail(e.Message);*/
+                email.enviarEmailSinXMl(e.Message);
             }
              
             
@@ -146,7 +146,7 @@ namespace Capas.Aplicacion
                 //Enviando un email  a la cuenta de soporte la excepcion
                 Email email = new Email();
                 //Enviando
-                email.enviarEmail(IOE.Message);
+                email.enviarEmailSinXMl(IOE.Message);
 
             }
 
@@ -215,13 +215,13 @@ namespace Capas.Aplicacion
             }
             catch ( IOException IOE)
             {
-               /* #region Manejo de errores en la busqueda del contenido del nodo
+               #region Manejo de errores en la busqueda del contenido del nodo
                 //Enviando un email  a la cuenta de soporte la excepcion
                 Email email = new Email();
                 //Enviando
-                email.enviarEmail(IOE.Message);
+                email.enviarEmailSinXMl(IOE.Message);
                 #endregion
-                */
+                
 
             }
 

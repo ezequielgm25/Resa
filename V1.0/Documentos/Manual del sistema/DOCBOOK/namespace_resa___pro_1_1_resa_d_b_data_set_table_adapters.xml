@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespace_resa___pro_1_1_resa_d_b_data_set_table_adapters">
+<title>Resa_Pro::ResaDBDataSetTableAdapters</title>
+        <section>
+            <title> Clases </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter">Resa_Pro::ResaDBDataSetTableAdapters::ObtenerEventosDetalladosTableAdapter</link></para>
+<para><emphasis>&lt;summary&gt;
+Represents the connection and commands used to retrieve and save data.
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_x_i_d_table_adapter">Resa_Pro::ResaDBDataSetTableAdapters::ObtenerEventosDetalladosXIDTableAdapter</link></para>
+<para><emphasis>&lt;summary&gt;
+Represents the connection and commands used to retrieve and save data.
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager">Resa_Pro::ResaDBDataSetTableAdapters::TableAdapterManager</link></para>
+<para><emphasis>&lt;summary&gt;
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

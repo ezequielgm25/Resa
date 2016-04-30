@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_negocio_1_1_n___inventario">
+<title>Capas::Negocio::N_Inventario class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>D_Inventario d_Inventario</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_capas_1_1_negocio_1_1_n___inventario_1ad6a96ab9448d909e09943baf7c6f94dc">N_Inventario</link> (
+)<para><emphasis>&lt;summary&gt;
+Constructor de la clase de inventario en la capa de negocio
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___inventario_1ac381bef4d89060052d8dbe28bc3cdbf7">AgregarInventario</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___inventario">E_Inventario</link> e_Inventario)<para><emphasis>&lt;summary&gt;
+Metodo donde se agrega un inventario a un salon
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_negocio_1_1_n___inventario_1a5d1b043d54477458356490d7e094f242">ObtenerInventarios</link> (
+int id_Salon)<para><emphasis>&lt;summary&gt;
+Metodo donde se obtienen los inventarios de un salon 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___inventario_1a2e3da1b482e3032228da2de85fd0ee95">EliminarInventario</link> (
+int ID_Inventario)<para><emphasis>&lt;summary&gt;
+Metodo donde se elimina un inventario de un salon 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_negocio_1_1_n___inventario_1a8abfb01d3865732837a7f89d86d0bf93">ObtenerInventariosGlobales</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo donde se obtienen los inventarios globales de los salones
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___inventario_1a52380fa1406185898629aca3fa72d83f">EliminarInventarioGlobal</link> (
+int ID_I)<para><emphasis>&lt;summary&gt;
+Metodo donde se elimina un inventario global de la lista 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___inventario_1a54766aaf93e118ea192dfb1934239f8b">InsertarInventarioGlobal</link> (
+String Inventario)<para><emphasis>&lt;summary&gt;
+Metodo donde se inserta un inventario global a la lista 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___inventario_1a8858fa565ba6ff365a47f07bd511637c">VerificarExistenciaDeInventario</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___inventario">E_Inventario</link> e_Inventario)<para><emphasis>&lt;summary&gt;
+Metodo donde se verifica la existencia de un inventario en  un salon 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___inventario_1a08c1d76a836a534c7cc20e36c8838905">EliminarInventarioXS_ID</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___inventario">E_Inventario</link> e_Inventario)<para><emphasis>&lt;summary&gt;
+Metodo donde se elimina un inventario de  u
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___inventario_1ad6a96ab9448d909e09943baf7c6f94dc">
+                <title>Capas.Negocio.N_Inventario.N_Inventario ()</title> <emphasis>&lt;summary&gt;
+Constructor de la clase de inventario en la capa de negocio
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___inventario_1ac381bef4d89060052d8dbe28bc3cdbf7">
+                <title>int Capas.Negocio.N_Inventario.AgregarInventario (E_Inventario e_Inventario)</title> <emphasis>&lt;summary&gt;
+Metodo donde se agrega un inventario a un salon
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Inventario</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___inventario_1a5d1b043d54477458356490d7e094f242">
+                <title>DataTable Capas.Negocio.N_Inventario.ObtenerInventarios (int id_Salon)</title> <emphasis>&lt;summary&gt;
+Metodo donde se obtienen los inventarios de un salon 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>id_Salon</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___inventario_1a2e3da1b482e3032228da2de85fd0ee95">
+                <title>int Capas.Negocio.N_Inventario.EliminarInventario (int ID_Inventario)</title> <emphasis>&lt;summary&gt;
+Metodo donde se elimina un inventario de un salon 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Inventario</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___inventario_1a8abfb01d3865732837a7f89d86d0bf93">
+                <title>DataTable Capas.Negocio.N_Inventario.ObtenerInventariosGlobales ()</title> <emphasis>&lt;summary&gt;
+Metodo donde se obtienen los inventarios globales de los salones
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___inventario_1a52380fa1406185898629aca3fa72d83f">
+                <title>int Capas.Negocio.N_Inventario.EliminarInventarioGlobal (int ID_I)</title> <emphasis>&lt;summary&gt;
+Metodo donde se elimina un inventario global de la lista 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_I</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___inventario_1a54766aaf93e118ea192dfb1934239f8b">
+                <title>int Capas.Negocio.N_Inventario.InsertarInventarioGlobal (String Inventario)</title> <emphasis>&lt;summary&gt;
+Metodo donde se inserta un inventario global a la lista 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Inventario</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___inventario_1a8858fa565ba6ff365a47f07bd511637c">
+                <title>int Capas.Negocio.N_Inventario.VerificarExistenciaDeInventario (E_Inventario e_Inventario)</title> <emphasis>&lt;summary&gt;
+Metodo donde se verifica la existencia de un inventario en  un salon 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Inventario</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___inventario_1a08c1d76a836a534c7cc20e36c8838905">
+                <title>int Capas.Negocio.N_Inventario.EliminarInventarioXS_ID (E_Inventario e_Inventario)</title> <emphasis>&lt;summary&gt;
+Metodo donde se elimina un inventario de  u
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Inventario</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+</section>

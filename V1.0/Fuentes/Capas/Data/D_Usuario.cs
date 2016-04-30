@@ -247,6 +247,8 @@ namespace Capas.Data
             //Stored procedure 
             StoredProcedure = "IngresarUsuario";
 
+          
+
             //SQL Command 
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
@@ -742,6 +744,8 @@ namespace Capas.Data
             //Stored procedure
             StoredProcedure = "ActualizarUsuario";
 
+          
+
             //Command
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
@@ -902,5 +906,7 @@ namespace Capas.Data
 
 
         #endregion
+
+
     }
 }

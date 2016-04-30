@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_negocio_1_1_n___salon">
+<title>Capas::Negocio::N_Salon class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable DataT</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>D_Salon d_Salon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_capas_1_1_negocio_1_1_n___salon_1a82f3b1f58fe19c59eff96aa3f6296d07">N_Salon</link> (
+)<para><emphasis>&lt;summary&gt;
+Contructor de la clase de N_Salon
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_negocio_1_1_n___salon_1ae8dfd9d8353d8614069b42f4981baf84">ObtenerSalones</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo obtener los salones debuelve un DataTable 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___salon_1a19b0b2dad851ab4d34f97f6490d0d520">CrearSalon</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___salon">E_Salon</link> e_s)<para><emphasis>&lt;summary&gt;
+Metodo de crear salon el cual retorna el ID del salon y acepta como parametro una entidad de salon
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___salon_1aee6d6ba909fe60dcad7b4f4f42f6446d">ActualizarSalon</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___salon">E_Salon</link> e_Salon)<para><emphasis>&lt;summary&gt;
+Metoodo de actualizar un salon el cual acepta como parametro una entidad Salon y devuelve  un numero de filas afectadas
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___salon_1a1de1926fa97857b33a3ec4fe7620419a">EliminarSalon</link> (
+int ID_Salon)<para><emphasis>&lt;summary&gt;
+Metodo de eliminar un salon que acepta como parametro un ID_Usuario  y devuelve las filas afectadas 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_negocio_1_1_n___salon_1a5b6713fbb49fb2b88c3b14135ae1cbc2">ObtenerID_NombreDeSalones</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo que obtiene solo dos caracteristicas de los salones &quot;ID&quot; y &quot;Nombre&quot;
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_negocio_1_1_n___salon_1af751c1e640302cd4f4eab9b7e60260e4">ObtenerUbicacionesGlobales</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo donde se obtiene la lista de ubicaciones globales de los salones 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___salon_1a8861a60db83a0f77906a971094111e42">AgregarUbicacionGlobal</link> (
+string Ubicacion)<para><emphasis>&lt;summary&gt;
+Metodo donde se agrega una ubicacion a la lista de ubicaciones globales de los salones
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___salon_1a0afae9769d6689c52e66b1b4f9fe4ad4">EliminarUbicacionGlobal</link> (
+int ID_Ubicacion)<para><emphasis>&lt;summary&gt;
+ Metodo donde se elimina una ubicacion global de la lista 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___salon_1a82f3b1f58fe19c59eff96aa3f6296d07">
+                <title>Capas.Negocio.N_Salon.N_Salon ()</title> <emphasis>&lt;summary&gt;
+Contructor de la clase de N_Salon
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___salon_1ae8dfd9d8353d8614069b42f4981baf84">
+                <title>DataTable Capas.Negocio.N_Salon.ObtenerSalones ()</title> <emphasis>&lt;summary&gt;
+Metodo obtener los salones debuelve un DataTable 
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___salon_1a19b0b2dad851ab4d34f97f6490d0d520">
+                <title>int Capas.Negocio.N_Salon.CrearSalon (E_Salon e_s)</title> <emphasis>&lt;summary&gt;
+Metodo de crear salon el cual retorna el ID del salon y acepta como parametro una entidad de salon
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_s</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___salon_1aee6d6ba909fe60dcad7b4f4f42f6446d">
+                <title>int Capas.Negocio.N_Salon.ActualizarSalon (E_Salon e_Salon)</title> <emphasis>&lt;summary&gt;
+Metoodo de actualizar un salon el cual acepta como parametro una entidad Salon y devuelve  un numero de filas afectadas
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Salon</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___salon_1a1de1926fa97857b33a3ec4fe7620419a">
+                <title>int Capas.Negocio.N_Salon.EliminarSalon (int ID_Salon)</title> <emphasis>&lt;summary&gt;
+Metodo de eliminar un salon que acepta como parametro un ID_Usuario  y devuelve las filas afectadas 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Salon</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___salon_1a5b6713fbb49fb2b88c3b14135ae1cbc2">
+                <title>DataTable Capas.Negocio.N_Salon.ObtenerID_NombreDeSalones ()</title> <emphasis>&lt;summary&gt;
+Metodo que obtiene solo dos caracteristicas de los salones &quot;ID&quot; y &quot;Nombre&quot;
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___salon_1af751c1e640302cd4f4eab9b7e60260e4">
+                <title>DataTable Capas.Negocio.N_Salon.ObtenerUbicacionesGlobales ()</title> <emphasis>&lt;summary&gt;
+Metodo donde se obtiene la lista de ubicaciones globales de los salones 
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___salon_1a8861a60db83a0f77906a971094111e42">
+                <title>int Capas.Negocio.N_Salon.AgregarUbicacionGlobal (string Ubicacion)</title> <emphasis>&lt;summary&gt;
+Metodo donde se agrega una ubicacion a la lista de ubicaciones globales de los salones
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Ubicacion</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___salon_1a0afae9769d6689c52e66b1b4f9fe4ad4">
+                <title>int Capas.Negocio.N_Salon.EliminarUbicacionGlobal (int ID_Ubicacion)</title> <emphasis>&lt;summary&gt;
+ Metodo donde se elimina una ubicacion global de la lista 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Ubicacion</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+</section>

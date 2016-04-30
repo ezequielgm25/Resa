@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_actualizar_solicitudes_f_8_designer_8cs">
+    <title>ActualizarSolicitudesF.Designer.cs File Reference</title>
+        <section>
+            <title> Clases </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_formularios_1_1_actualizar_solicitudes_f">Resa_Pro::Formularios::ActualizarSolicitudesF</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_resa___pro_1_1_formularios">Resa_Pro::Formularios</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Descripción detallada</title>
+    <para>Definition in file D:/Resa/V1.0/Fuentes/UI/Winform/Resa Pro/Formularios/ActualizarSolicitudesF.Designer.cs</para>
+    </simplesect>
+</section>

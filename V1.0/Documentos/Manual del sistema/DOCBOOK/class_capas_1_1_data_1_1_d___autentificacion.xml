@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_data_1_1_d___autentificacion">
+<title>Capas::Data::D_Autentificacion class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int Autentificacion</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>String StoredProcedure</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int FilasAfectadas</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Conexion conexion</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_capas_1_1_data_1_1_d___autentificacion_1a393b38264fecbd70a612345b05d08660">D_Autentificacion</link> (
+)<para><emphasis>&lt;summary&gt;
+Contructor de la clase Autentificacion  &amp;ndash; Manipula la parte de logeo del usuario  &amp;ndash;
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___autentificacion_1a713e0b63387ecc240881d0cd1fc880a5">VerificarUsuario</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___autentificacion">E_Autentificacion</link> E_AutentificacionP)<para><emphasis>&lt;summary&gt;
+Metodo de verificacion de la conexion 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___autentificacion_1a393b38264fecbd70a612345b05d08660">
+                <title>Capas.Data.D_Autentificacion.D_Autentificacion ()</title> <emphasis>&lt;summary&gt;
+Contructor de la clase Autentificacion  &amp;ndash; Manipula la parte de logeo del usuario  &amp;ndash;
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___autentificacion_1a713e0b63387ecc240881d0cd1fc880a5">
+                <title>int Capas.Data.D_Autentificacion.VerificarUsuario (E_Autentificacion E_AutentificacionP)</title> <emphasis>&lt;summary&gt;
+Metodo de verificacion de la conexion 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>E_AutentificacionP</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+</section>

@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Capas.Aplicacion.ConexionAplicacion" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAACAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Aplicacion\ConexionAplicacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Aplicacion.Email" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Aplicacion\Email.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Aplicacion.XML_Manager" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAgAAAAAAAAAAACAEACAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Aplicacion\XML-Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Data.Conexion" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAgAAAgAAAAAAAFAEAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Data\Conexion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Data.D_Auditoria" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Data\D_Auditoria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Data.D_Autentificacion" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAQE=</HashCode>
+      <FileName>Data\D_Autentificacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Data.D_Evento" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gkmAAAAAAAAAAAAAAAAABAAAAAAAAAEAAAAAAAAAEAE=</HashCode>
+      <FileName>Data\D_Evento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Data.D_Inventario" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACACAIAAAAAAAAAAAAAAAAAAAABAAAAACAACQAIAAE=</HashCode>
+      <FileName>Data\D_Inventario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Data.D_Organizador" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACAAECAAQAAABBAAAAAAAAAAAAAAAAAAAAAEACAAAE=</HashCode>
+      <FileName>Data\D_Organizador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Data.D_Salon" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gACAAAAAAAQAAAAAAAQgAABBACAAAAAAgAAAAACAAAE=</HashCode>
+      <FileName>Data\D_Salon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Data.D_Servicio" Collapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gICAAAAAAAAAACAICACAAAAAAEAAAABAAAAAAQAAAAE=</HashCode>
+      <FileName>Data\D_Servicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Data.D_Solicitud" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ggCAAAAIUAAAQAAAAAAAAEAAAAEAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Data\D_Solicitud.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Data.D_Usuario" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>goDAACAgAEAQIAAAQAogCgAAAAQAEAgAAAAAABAAAAE=</HashCode>
+      <FileName>Data\D_Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Infraestructura.Entidades.E_Auditoria" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAACAgAAAAIAIAIAAAgCAAAIAAgAAAACAAAAAACAAg=</HashCode>
+      <FileName>Infraestructura\Entidades\E_Auditoria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Infraestructura.Entidades.E_Autentificacion" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAACAAAAAAAAAAQAAAAEAAAAAAA=</HashCode>
+      <FileName>Infraestructura\Entidades\E_Autentificacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Infraestructura.Entidades.E_Evento" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAABAAAAAAAABAAAAFIAQABAAAAABAEQAAIASAAQAQ=</HashCode>
+      <FileName>Infraestructura\Entidades\E_Evento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Infraestructura.Entidades.E_Inventario" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAgAACAAAAAEAAAAAAAEAAAABAAAAAA=</HashCode>
+      <FileName>Infraestructura\Entidades\E_Inventario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Infraestructura.Entidades.E_Organizador" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABCAAAFAoAABAAAAAAAAABAAAAAAQCA=</HashCode>
+      <FileName>Infraestructura\Entidades\E_Organizador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Infraestructura.Entidades.E_Salon" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAiAAAAAAAAACAgAAAgIAEAAAAAAAAAAAAAAAAAIg=</HashCode>
+      <FileName>Infraestructura\Entidades\E_Salon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Infraestructura.Entidades.E_Servicio" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAIAAAAAAAAAAAAEAAAAFAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Infraestructura\Entidades\E_Servicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Infraestructura.Entidades.E_Solicitud" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAQAAAAEAAAAAAAAEAIAAAASUQAAEEAAAAAA=</HashCode>
+      <FileName>Infraestructura\Entidades\E_Solicitud.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Infraestructura.Entidades.E_Usuario" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAQAAIKEAAACgAACAAAQAgQAAAAEEAACAAg=</HashCode>
+      <FileName>Infraestructura\Entidades\E_Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Negocio.N_Auditoria" Collapsed="true">
+    <Position X="16.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAACAAAAAQAAAAA=</HashCode>
+      <FileName>Negocio\N_Auditoria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Negocio.N_Autentificacion" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAACAAE=</HashCode>
+      <FileName>Negocio\N_Autentificacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Negocio.N_Evento" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkkAAAAAAAAAAAAAAAAABAAACAAAAAEAAAAAAAAAEAA=</HashCode>
+      <FileName>Negocio\N_Evento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Negocio.N_Inventario" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAiAIAAAAAAAAAAAAAAAAAAAABAAAAACEACQAIAAA=</HashCode>
+      <FileName>Negocio\N_Inventario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Negocio.N_Organizador" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAABAAAAQAACAAAAAAAAAAAEAEACAQAA=</HashCode>
+      <FileName>Negocio\N_Organizador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Negocio.N_Salon" Collapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAQgAABBAAAAAAEAgAAAEACAAAA=</HashCode>
+      <FileName>Negocio\N_Salon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Negocio.N_Servicio" Collapsed="true">
+    <Position X="16.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAGAACACAAAAAAECAAABAAAAAAQAAAAA=</HashCode>
+      <FileName>Negocio\N_Servicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Negocio.N_Solicitud" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAIUAAAQAAAAAAAAEAAAAEAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Negocio\N_Solicitud.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Capas.Negocio.N_Usuario" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoBAACAgAAAAIABAQAogCgAAAAQAEAAABAAAABAAQAA=</HashCode>
+      <FileName>Negocio\N_Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

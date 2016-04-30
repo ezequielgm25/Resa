@@ -1,0 +1,224 @@
+\documentclass[twoside]{book}
+
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage[export]{adjustbox} % also loads graphicx
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+
+% NLS support packages
+\usepackage[spanish]{babel}
+% Font selection
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{3ex plus 2ex minus 2ex}
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Generado por Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Generado por Doxygen }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+\usepackage{caption}
+\captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+
+%===== C O N T E N T S =====
+
+\begin{document}
+
+% Titlepage & ToC
+\pagenumbering{roman}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}%
+{\Large Resa \\[1ex]\large 1.\+0 }\\
+\vspace*{1cm}
+{\large Generado por Doxygen 1.8.11}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+
+%--- Begin generated contents ---
+\chapter{Indice de namespaces}
+\input{namespaces}
+\chapter{Indice jerárquico}
+\input{hierarchy}
+\chapter{Índice de clases}
+\input{annotated}
+\chapter{Documentación de namespaces}
+\input{namespace_capas}
+\input{namespace_capas_1_1_aplicacion}
+\input{namespace_capas_1_1_data}
+\input{namespace_capas_1_1_infraestructura}
+\input{namespace_capas_1_1_infraestructura_1_1_entidades}
+\input{namespace_capas_1_1_negocio}
+\input{namespace_resa___pro}
+\input{namespace_resa___pro_1_1_formularios}
+\input{namespace_resa___pro_1_1_properties}
+\input{namespace_resa___pro_1_1_reportes}
+\input{namespace_resa___pro_1_1_resa_d_b_data_set_table_adapters}
+\chapter{Documentación de las clases}
+\input{class_resa___pro_1_1_formularios_1_1_actualizar_evento}
+\input{class_resa___pro_1_1_formularios_1_1_actualizar_salon}
+\input{class_resa___pro_1_1_formularios_1_1_actualizar_solicitudes_f}
+\input{class_resa___pro_1_1_formularios_1_1_actualizar_usuario}
+\input{class_resa___pro_1_1_formularios_1_1_agregar_solicitud}
+\input{class_resa___pro_1_1_reportes_1_1_cached_obtener_porcentaje_solicitudes_salones}
+\input{class_resa___pro_1_1_reportes_1_1_cached_reporte_organizadores}
+\input{class_resa___pro_1_1_reportes_1_1_cached_reporte_porcentaje_global_solicitudes}
+\input{class_resa___pro_1_1_reportes_1_1_cached_reporte_usuarios}
+\input{class_resa___pro_1_1_reportes_1_1_cachedrpteventos}
+\input{class_capas_1_1_data_1_1_conexion}
+\input{class_capas_1_1_aplicacion_1_1_conexion_aplicacion}
+\input{class_resa___pro_1_1_formularios_1_1_crear_evento}
+\input{class_resa___pro_1_1_formularios_1_1_crear_salon_f}
+\input{class_resa___pro_1_1_formularios_1_1_crear_usuario_f}
+\input{class_capas_1_1_data_1_1_d___auditoria}
+\input{class_capas_1_1_data_1_1_d___autentificacion}
+\input{class_capas_1_1_data_1_1_d___evento}
+\input{class_capas_1_1_data_1_1_d___inventario}
+\input{class_capas_1_1_data_1_1_d___organizador}
+\input{class_capas_1_1_data_1_1_d___salon}
+\input{class_capas_1_1_data_1_1_d___servicio}
+\input{class_capas_1_1_data_1_1_d___solicitud}
+\input{class_capas_1_1_data_1_1_d___usuario}
+\input{class_capas_1_1_infraestructura_1_1_entidades_1_1_e___auditoria}
+\input{class_capas_1_1_infraestructura_1_1_entidades_1_1_e___autentificacion}
+\input{class_capas_1_1_infraestructura_1_1_entidades_1_1_e___evento}
+\input{class_capas_1_1_infraestructura_1_1_entidades_1_1_e___inventario}
+\input{class_capas_1_1_infraestructura_1_1_entidades_1_1_e___organizador}
+\input{class_capas_1_1_infraestructura_1_1_entidades_1_1_e___salon}
+\input{class_capas_1_1_infraestructura_1_1_entidades_1_1_e___servicio}
+\input{class_capas_1_1_infraestructura_1_1_entidades_1_1_e___solicitud}
+\input{class_capas_1_1_infraestructura_1_1_entidades_1_1_e___usuario}
+\input{class_capas_1_1_aplicacion_1_1_email}
+\input{class_resa___pro_1_1_formularios_1_1_eventos_f}
+\input{class_resa___pro_1_1_formularios_1_1_loging}
+\input{class_resa___pro_1_1_formularios_1_1_main_screen}
+\input{class_capas_1_1_negocio_1_1_n___auditoria}
+\input{class_capas_1_1_negocio_1_1_n___autentificacion}
+\input{class_capas_1_1_negocio_1_1_n___evento}
+\input{class_capas_1_1_negocio_1_1_n___inventario}
+\input{class_capas_1_1_negocio_1_1_n___organizador}
+\input{class_capas_1_1_negocio_1_1_n___salon}
+\input{class_capas_1_1_negocio_1_1_n___servicio}
+\input{class_capas_1_1_negocio_1_1_n___solicitud}
+\input{class_capas_1_1_negocio_1_1_n___usuario}
+\input{class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table}
+\input{class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_row}
+\input{class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_row_change_event}
+\input{class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_table_adapter}
+\input{class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_data_table}
+\input{class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row}
+\input{class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row_change_event}
+\input{class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_obtener_eventos_detallados_x_i_d_table_adapter}
+\input{class_resa___pro_1_1_reportes_1_1_obtener_porcentaje_solicitudes_salones}
+\input{class_resa___pro_1_1_formularios_1_1_organizadores_f}
+\input{class_resa___pro_1_1_formularios_1_1_repo}
+\input{class_resa___pro_1_1_reportes_1_1_reporte_organizadores}
+\input{class_resa___pro_1_1_reportes_1_1_reporte_porcentaje_global_solicitudes}
+\input{class_resa___pro_1_1_reportes_1_1_reporte_usuarios}
+\input{class_resa___pro_1_1_resa_d_b_data_set}
+\input{class_resa___pro_1_1_reportes_1_1rpteventos}
+\input{class_resa___pro_1_1_formularios_1_1_salones}
+\input{class_resa___pro_1_1_formularios_1_1_solicitudes_f}
+\input{class_resa___pro_1_1_splash}
+\input{class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager}
+\input{class_resa___pro_1_1_formularios_1_1_ubicacion_f}
+\input{class_resa___pro_1_1_formularios_1_1_usuarios_f}
+\input{class_resa___pro_1_1_formularios_1_1_ver_evento}
+\input{class_resa___pro_1_1_formularios_1_1_ver_salon}
+\input{class_resa___pro_1_1_formularios_1_1_ver_solicitud}
+\input{class_capas_1_1_aplicacion_1_1_x_m_l___manager}
+%--- End generated contents ---
+
+% Index
+\backmatter
+\newpage
+\phantomsection
+\clearemptydoublepage
+\addcontentsline{toc}{chapter}{Índice}
+\printindex
+
+\end{document}

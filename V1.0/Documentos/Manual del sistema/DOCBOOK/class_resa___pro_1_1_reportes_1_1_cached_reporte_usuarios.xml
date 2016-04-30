@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_resa___pro_1_1_reportes_1_1_cached_reporte_usuarios">
+<title>Resa_Pro::Reportes::CachedReporteUsuarios class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_reportes_1_1_cached_reporte_usuarios_1a32e6d6ac962dc63d3d1a14bda87704ef">CachedReporteUsuarios</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual CrystalDecisions.CrystalReports.Engine.ReportDocument <link linkend="class_resa___pro_1_1_reportes_1_1_cached_reporte_usuarios_1ab6d11bdaf88864feb025896915b82f8d">CreateReport</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual string <link linkend="class_resa___pro_1_1_reportes_1_1_cached_reporte_usuarios_1a4eee6bb197c9031fe426894116bc34f5">GetCustomizedCacheKey</link> (
+RequestContext request)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="class_resa___pro_1_1_reportes_1_1_cached_reporte_usuarios_1a32e6d6ac962dc63d3d1a14bda87704ef">
+                <title>Resa_Pro.Reportes.CachedReporteUsuarios.CachedReporteUsuarios ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_reportes_1_1_cached_reporte_usuarios_1ab6d11bdaf88864feb025896915b82f8d">
+                <title>virtual CrystalDecisions.CrystalReports.Engine.ReportDocument Resa_Pro.Reportes.CachedReporteUsuarios.CreateReport ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_reportes_1_1_cached_reporte_usuarios_1a4eee6bb197c9031fe426894116bc34f5">
+                <title>virtual string Resa_Pro.Reportes.CachedReporteUsuarios.GetCustomizedCacheKey (RequestContext request)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

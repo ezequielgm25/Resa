@@ -1,0 +1,554 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_resa___pro_1_1_resa_d_b_data_set">
+<title>Resa_Pro::ResaDBDataSet class Reference</title>
+        <section>
+            <title> Clases </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table">Resa_Pro::ResaDBDataSet::ObtenerEventosDetalladosDataTable</link></para>
+<para><emphasis>&lt;summary&gt;
+Represents the strongly named DataTable class.
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_row">Resa_Pro::ResaDBDataSet::ObtenerEventosDetalladosRow</link></para>
+<para><emphasis>&lt;summary&gt;
+Represents strongly named DataRow class.
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_row_change_event">Resa_Pro::ResaDBDataSet::ObtenerEventosDetalladosRowChangeEvent</link></para>
+<para><emphasis>&lt;summary&gt;
+Row event argument class
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_data_table">Resa_Pro::ResaDBDataSet::ObtenerEventosDetalladosXIDDataTable</link></para>
+<para><emphasis>&lt;summary&gt;
+Represents the strongly named DataTable class.
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row">Resa_Pro::ResaDBDataSet::ObtenerEventosDetalladosXIDRow</link></para>
+<para><emphasis>&lt;summary&gt;
+Represents strongly named DataRow class.
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row_change_event">Resa_Pro::ResaDBDataSet::ObtenerEventosDetalladosXIDRowChangeEvent</link></para>
+<para><emphasis>&lt;summary&gt;
+Row event argument class
+ /summary&gt;</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ObtenerEventosDetalladosDataTable tableObtenerEventosDetallados</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ObtenerEventosDetalladosXIDDataTable tableObtenerEventosDetalladosXID</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.SchemaSerializationMode _schemaSerializationMode</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1aba3014fb2e971210fcc04048c44f3811">ResaDBDataSet</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override global::System.Data.DataSet <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1af7904923271593ff532084260454e656">Clone</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>delegate void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a7a78a3c692edba6fb96be693eccf28b9">ObtenerEventosDetalladosRowChangeEventHandler</link> (
+object sender, <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_row_change_event">ObtenerEventosDetalladosRowChangeEvent</link> e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>delegate void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1ae60c6dc2bc58d13bd192172aaf163c76">ObtenerEventosDetalladosXIDRowChangeEventHandler</link> (
+object sender, <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row_change_event">ObtenerEventosDetalladosXIDRowChangeEvent</link> e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1aba3014fb2e971210fcc04048c44f3811">ResaDBDataSet</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override global::System.Data.DataSet <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1af7904923271593ff532084260454e656">Clone</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>delegate void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a7a78a3c692edba6fb96be693eccf28b9">ObtenerEventosDetalladosRowChangeEventHandler</link> (
+object sender, <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_row_change_event">ObtenerEventosDetalladosRowChangeEvent</link> e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>delegate void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1ae60c6dc2bc58d13bd192172aaf163c76">ObtenerEventosDetalladosXIDRowChangeEventHandler</link> (
+object sender, <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row_change_event">ObtenerEventosDetalladosXIDRowChangeEvent</link> e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a2738888f29281a3916144ba75858b97b">ResaDBDataSet</link> (
+global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a90aa5b582a92abad9b6048ec0b69f350">InitializeDerivedDataSet</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override bool <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a1ae80ade950725c6d31dab9a451930ca">ShouldSerializeTables</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override bool <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a8ec113b648b161171a15b573716bf371">ShouldSerializeRelations</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1af6b107ce1956604eda441a315e6fcb54">ReadXmlSerializable</link> (
+global::System.Xml.XmlReader reader)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override global::System.Xml.Schema.XmlSchema <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a63c240e1194fc8bc9334faa718bac9b3">GetSchemaSerializable</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a2738888f29281a3916144ba75858b97b">ResaDBDataSet</link> (
+global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a90aa5b582a92abad9b6048ec0b69f350">InitializeDerivedDataSet</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override bool <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a1ae80ade950725c6d31dab9a451930ca">ShouldSerializeTables</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override bool <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a8ec113b648b161171a15b573716bf371">ShouldSerializeRelations</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1af6b107ce1956604eda441a315e6fcb54">ReadXmlSerializable</link> (
+global::System.Xml.XmlReader reader)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override global::System.Xml.Schema.XmlSchema <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a63c240e1194fc8bc9334faa718bac9b3">GetSchemaSerializable</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a9248c64883af2a9bf9912792a8cc9ae6">InitVars</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a030f22e86cde3fad9c39b31529250fbd">InitVars</link> (
+bool initTable)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a9248c64883af2a9bf9912792a8cc9ae6">InitVars</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a030f22e86cde3fad9c39b31529250fbd">InitVars</link> (
+bool initTable)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a66df9bec513f4230ffcb87839f0b3772">InitClass</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a46e5fc493f41fd60337b86ee05d7d916">ShouldSerializeObtenerEventosDetallados</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a99dac6cef004d9a368147e0ec444b5b8">ShouldSerializeObtenerEventosDetalladosXID</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1ac0efe819e5fe4087681517e33105dc98">SchemaChanged</link> (
+object sender, global::System.ComponentModel.CollectionChangeEventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a66df9bec513f4230ffcb87839f0b3772">InitClass</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a46e5fc493f41fd60337b86ee05d7d916">ShouldSerializeObtenerEventosDetallados</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a99dac6cef004d9a368147e0ec444b5b8">ShouldSerializeObtenerEventosDetalladosXID</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1ac0efe819e5fe4087681517e33105dc98">SchemaChanged</link> (
+object sender, global::System.ComponentModel.CollectionChangeEventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static global::System.Xml.Schema.XmlSchemaComplexType <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a456f7d874acfa80f5919b9d125d3696b">GetTypedDataSetSchema</link> (
+global::System.Xml.Schema.XmlSchemaSet xs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static global::System.Xml.Schema.XmlSchemaComplexType <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1a456f7d874acfa80f5919b9d125d3696b">GetTypedDataSetSchema</link> (
+global::System.Xml.Schema.XmlSchemaSet xs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Represents a strongly typed in-memory cache of data. /summary&gt; </para>
+    </simplesect>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1aba3014fb2e971210fcc04048c44f3811">
+                <title>Resa_Pro.ResaDBDataSet.ResaDBDataSet ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1af7904923271593ff532084260454e656">
+                <title>override global::System.Data.DataSet Resa_Pro.ResaDBDataSet.Clone ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a7a78a3c692edba6fb96be693eccf28b9">
+                <title>delegate void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosRowChangeEventHandler (object sender, ObtenerEventosDetalladosRowChangeEvent e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1ae60c6dc2bc58d13bd192172aaf163c76">
+                <title>delegate void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosXIDRowChangeEventHandler (object sender, ObtenerEventosDetalladosXIDRowChangeEvent e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1aba3014fb2e971210fcc04048c44f3811">
+                <title>Resa_Pro.ResaDBDataSet.ResaDBDataSet ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1af7904923271593ff532084260454e656">
+                <title>override global::System.Data.DataSet Resa_Pro.ResaDBDataSet.Clone ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a7a78a3c692edba6fb96be693eccf28b9">
+                <title>delegate void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosRowChangeEventHandler (object sender, ObtenerEventosDetalladosRowChangeEvent e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1ae60c6dc2bc58d13bd192172aaf163c76">
+                <title>delegate void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosXIDRowChangeEventHandler (object sender, ObtenerEventosDetalladosXIDRowChangeEvent e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a2738888f29281a3916144ba75858b97b">
+                <title>Resa_Pro.ResaDBDataSet.ResaDBDataSet (global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a90aa5b582a92abad9b6048ec0b69f350">
+                <title>override void Resa_Pro.ResaDBDataSet.InitializeDerivedDataSet ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a1ae80ade950725c6d31dab9a451930ca">
+                <title>override bool Resa_Pro.ResaDBDataSet.ShouldSerializeTables ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a8ec113b648b161171a15b573716bf371">
+                <title>override bool Resa_Pro.ResaDBDataSet.ShouldSerializeRelations ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1af6b107ce1956604eda441a315e6fcb54">
+                <title>override void Resa_Pro.ResaDBDataSet.ReadXmlSerializable (global::System.Xml.XmlReader reader)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a63c240e1194fc8bc9334faa718bac9b3">
+                <title>override global::System.Xml.Schema.XmlSchema Resa_Pro.ResaDBDataSet.GetSchemaSerializable ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a2738888f29281a3916144ba75858b97b">
+                <title>Resa_Pro.ResaDBDataSet.ResaDBDataSet (global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a90aa5b582a92abad9b6048ec0b69f350">
+                <title>override void Resa_Pro.ResaDBDataSet.InitializeDerivedDataSet ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a1ae80ade950725c6d31dab9a451930ca">
+                <title>override bool Resa_Pro.ResaDBDataSet.ShouldSerializeTables ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a8ec113b648b161171a15b573716bf371">
+                <title>override bool Resa_Pro.ResaDBDataSet.ShouldSerializeRelations ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1af6b107ce1956604eda441a315e6fcb54">
+                <title>override void Resa_Pro.ResaDBDataSet.ReadXmlSerializable (global::System.Xml.XmlReader reader)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a63c240e1194fc8bc9334faa718bac9b3">
+                <title>override global::System.Xml.Schema.XmlSchema Resa_Pro.ResaDBDataSet.GetSchemaSerializable ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a9248c64883af2a9bf9912792a8cc9ae6">
+                <title>void Resa_Pro.ResaDBDataSet.InitVars ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a030f22e86cde3fad9c39b31529250fbd">
+                <title>void Resa_Pro.ResaDBDataSet.InitVars (bool initTable)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a9248c64883af2a9bf9912792a8cc9ae6">
+                <title>void Resa_Pro.ResaDBDataSet.InitVars ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a030f22e86cde3fad9c39b31529250fbd">
+                <title>void Resa_Pro.ResaDBDataSet.InitVars (bool initTable)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a66df9bec513f4230ffcb87839f0b3772">
+                <title>void Resa_Pro.ResaDBDataSet.InitClass ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a46e5fc493f41fd60337b86ee05d7d916">
+                <title>bool Resa_Pro.ResaDBDataSet.ShouldSerializeObtenerEventosDetallados ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a99dac6cef004d9a368147e0ec444b5b8">
+                <title>bool Resa_Pro.ResaDBDataSet.ShouldSerializeObtenerEventosDetalladosXID ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1ac0efe819e5fe4087681517e33105dc98">
+                <title>void Resa_Pro.ResaDBDataSet.SchemaChanged (object sender, global::System.ComponentModel.CollectionChangeEventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a66df9bec513f4230ffcb87839f0b3772">
+                <title>void Resa_Pro.ResaDBDataSet.InitClass ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a46e5fc493f41fd60337b86ee05d7d916">
+                <title>bool Resa_Pro.ResaDBDataSet.ShouldSerializeObtenerEventosDetallados ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a99dac6cef004d9a368147e0ec444b5b8">
+                <title>bool Resa_Pro.ResaDBDataSet.ShouldSerializeObtenerEventosDetalladosXID ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1ac0efe819e5fe4087681517e33105dc98">
+                <title>void Resa_Pro.ResaDBDataSet.SchemaChanged (object sender, global::System.ComponentModel.CollectionChangeEventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a456f7d874acfa80f5919b9d125d3696b">
+                <title>static global::System.Xml.Schema.XmlSchemaComplexType Resa_Pro.ResaDBDataSet.GetTypedDataSetSchema (global::System.Xml.Schema.XmlSchemaSet xs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1a456f7d874acfa80f5919b9d125d3696b">
+                <title>static global::System.Xml.Schema.XmlSchemaComplexType Resa_Pro.ResaDBDataSet.GetTypedDataSetSchema (global::System.Xml.Schema.XmlSchemaSet xs)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

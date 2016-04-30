@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_data_1_1_conexion">
+<title>Capas::Data::Conexion class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Capas.Aplicacion.XML_Manager XmlFile</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>SqlConnection ResaConexion</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool Brecha</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_capas_1_1_data_1_1_conexion_1a5106cd0b471fb318d2a2e9019df3f399">Conexion</link> (
+)<para><emphasis>&lt;summary&gt;
+Constructor de Conexion 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_capas_1_1_data_1_1_conexion_1ac51ccfd39259f5f54ed1177aac78ebc9">Conectar</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo Conectar que enlaza la conexion a la base de datos 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_capas_1_1_data_1_1_conexion_1ae6df3372cf40cff68f43ca1c132ba51d">Desconectar</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo de desconectar se deselanza la conexion con la base de datos 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_capas_1_1_data_1_1_conexion_1a5106cd0b471fb318d2a2e9019df3f399">
+                <title>Capas.Data.Conexion.Conexion ()</title> <emphasis>&lt;summary&gt;
+Constructor de Conexion 
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_conexion_1ac51ccfd39259f5f54ed1177aac78ebc9">
+                <title>bool Capas.Data.Conexion.Conectar ()</title> <emphasis>&lt;summary&gt;
+Metodo Conectar que enlaza la conexion a la base de datos 
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_conexion_1ae6df3372cf40cff68f43ca1c132ba51d">
+                <title>void Capas.Data.Conexion.Desconectar ()</title> <emphasis>&lt;summary&gt;
+Metodo de desconectar se deselanza la conexion con la base de datos 
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+</section>

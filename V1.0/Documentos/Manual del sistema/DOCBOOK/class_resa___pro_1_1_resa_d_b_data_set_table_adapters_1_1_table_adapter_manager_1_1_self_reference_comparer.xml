@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer">
+<title>Resa_Pro::ResaDBDataSetTableAdapters::TableAdapterManager::SelfReferenceComparer class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.DataRelation _relation</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int _childFirst</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_1ad8f06875e56ae627f3a23a0202b813f4">SelfReferenceComparer</link> (
+global::System.Data.DataRelation relation, bool childFirst)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_1ad8f06875e56ae627f3a23a0202b813f4">SelfReferenceComparer</link> (
+global::System.Data.DataRelation relation, bool childFirst)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.DataRow <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_1a228b0b57fd766dc70da2604f4ac7e267">GetRoot</link> (
+global::System.Data.DataRow row, out int distance)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.DataRow <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_1a228b0b57fd766dc70da2604f4ac7e267">GetRoot</link> (
+global::System.Data.DataRow row, out int distance)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_1a86c4a899c0fd120fbd4099a8aa948107">Compare</link> (
+global::System.Data.DataRow row1, global::System.Data.DataRow row2)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_1a86c4a899c0fd120fbd4099a8aa948107">Compare</link> (
+global::System.Data.DataRow row1, global::System.Data.DataRow row2)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Used to sort self-referenced table&apos;s rows /summary&gt; </para>
+    </simplesect>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_1ad8f06875e56ae627f3a23a0202b813f4">
+                <title>Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer.SelfReferenceComparer (global::System.Data.DataRelation relation, bool childFirst)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_1ad8f06875e56ae627f3a23a0202b813f4">
+                <title>Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer.SelfReferenceComparer (global::System.Data.DataRelation relation, bool childFirst)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_1a228b0b57fd766dc70da2604f4ac7e267">
+                <title>global::System.Data.DataRow Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer.GetRoot (global::System.Data.DataRow row, out int distance)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_1a228b0b57fd766dc70da2604f4ac7e267">
+                <title>global::System.Data.DataRow Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer.GetRoot (global::System.Data.DataRow row, out int distance)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_1a86c4a899c0fd120fbd4099a8aa948107">
+                <title>int Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer.Compare (global::System.Data.DataRow row1, global::System.Data.DataRow row2)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_table_adapters_1_1_table_adapter_manager_1_1_self_reference_comparer_1a86c4a899c0fd120fbd4099a8aa948107">
+                <title>int Resa_Pro.ResaDBDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer.Compare (global::System.Data.DataRow row1, global::System.Data.DataRow row2)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

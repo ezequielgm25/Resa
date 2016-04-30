@@ -54,8 +54,6 @@ namespace Capas.Data
             //Stored procedure
             StoredProcedure = "AgregarInventario";
 
-            //Conexion string de modo prueba del sistema
-            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
 
             //SQL Command
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
@@ -228,8 +226,6 @@ namespace Capas.Data
             StoredProcedure = "InsertarInventarioGlobal";
 
 
-            //Conexion string de modo prueba del sistema
-            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
 
             //Command
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
@@ -257,12 +253,12 @@ namespace Capas.Data
         #endregion
 
         #region verificar existencia del inventario
-       
-         /// <summary>
-         /// Metodo Donde se verifica la existencia de un inventario en un salon
-         /// </summary>
-         /// <param name="e_Inventario"></param>
-         /// <returns></returns>
+
+        /// <summary>
+        /// Metodo Donde se verifica la existencia de un inventario en un salon
+        /// </summary>
+        /// <param name="e_Inventario"></param>
+        /// <returns></returns>
         public int VerificarExistenciaDeInventario(E_Inventario e_Inventario)
         {
 
@@ -312,7 +308,6 @@ namespace Capas.Data
         }
 
         #endregion
-
 
         #region Eliminar Inventario por Nombre y ID 
         /// <summary>

@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_data_1_1_d___organizador">
+<title>Capas::Data::D_Organizador class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Conexion conexion</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>String StoredProcedure</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int FilasAfectadas</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_capas_1_1_data_1_1_d___organizador_1a28572155a2dd61718246c866c3ee0c41">D_Organizador</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___organizador_1afe53f8c7eb38c5d92b273ab796d11473">InsertarOrganizador</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___organizador">E_Organizador</link> e_Or)<para><emphasis>&lt;summary&gt;
+Metodo donde se inserta un organizador al sistema
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___organizador_1ae871d55259e1aff1d2677e2f25c61dd0">ActualizarOrganizador</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___organizador">E_Organizador</link> e_Or)<para><emphasis>&lt;summary&gt;
+Metodo donde se actualizara un organizador en la base de datos 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___organizador">E_Organizador</link> <link linkend="class_capas_1_1_data_1_1_d___organizador_1adc54cae664f181a4130d4190f333c298">ObtenerOrganizador</link> (
+int ID_Evento)<para><emphasis>&lt;summary&gt;
+Metodo en el cual se optienen los organizadores 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_data_1_1_d___organizador_1aeb90fda323509d7169161446deb30bc6">ObteniendoOrganizadoresGlobales</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo Donde se obtienen los organizadores Globales  &amp;ndash; Organizadores que estaran en una tabla como referencia que podran ser manipulados
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___organizador_1a2851df38b12dcfa613709ab84204af2f">AgregandoOrganizadorGlobal</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___organizador">E_Organizador</link> e_Or)<para><emphasis>&lt;summary&gt;
+Metodo donde se agrega un organizador Global a la lista 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___organizador_1aa41616a7c1295a271fb88e520a017233">ActualizarOrganizadorGlobal</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___organizador">E_Organizador</link> e_Or)<para><emphasis>&lt;summary&gt;
+Metodo en el cual se actualiza las caracteristicas de un organizador 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___organizador_1afe85f87073bc165291b5c51eece0344f">EliminarOrganizadorGlobal</link> (
+int ID_Organizador)<para><emphasis>&lt;summary&gt;
+Evento donde se elimina un organizador de la lista de organizadores Globales 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___organizador_1a28572155a2dd61718246c866c3ee0c41">
+                <title>Capas.Data.D_Organizador.D_Organizador ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___organizador_1afe53f8c7eb38c5d92b273ab796d11473">
+                <title>int Capas.Data.D_Organizador.InsertarOrganizador (E_Organizador e_Or)</title> <emphasis>&lt;summary&gt;
+Metodo donde se inserta un organizador al sistema
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Or</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___organizador_1ae871d55259e1aff1d2677e2f25c61dd0">
+                <title>int Capas.Data.D_Organizador.ActualizarOrganizador (E_Organizador e_Or)</title> <emphasis>&lt;summary&gt;
+Metodo donde se actualizara un organizador en la base de datos 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Or</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___organizador_1adc54cae664f181a4130d4190f333c298">
+                <title>E_Organizador Capas.Data.D_Organizador.ObtenerOrganizador (int ID_Evento)</title> <emphasis>&lt;summary&gt;
+Metodo en el cual se optienen los organizadores 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Evento</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___organizador_1aeb90fda323509d7169161446deb30bc6">
+                <title>DataTable Capas.Data.D_Organizador.ObteniendoOrganizadoresGlobales ()</title> <emphasis>&lt;summary&gt;
+Metodo Donde se obtienen los organizadores Globales  &amp;ndash; Organizadores que estaran en una tabla como referencia que podran ser manipulados
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___organizador_1a2851df38b12dcfa613709ab84204af2f">
+                <title>int Capas.Data.D_Organizador.AgregandoOrganizadorGlobal (E_Organizador e_Or)</title> <emphasis>&lt;summary&gt;
+Metodo donde se agrega un organizador Global a la lista 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Or</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___organizador_1aa41616a7c1295a271fb88e520a017233">
+                <title>int Capas.Data.D_Organizador.ActualizarOrganizadorGlobal (E_Organizador e_Or)</title> <emphasis>&lt;summary&gt;
+Metodo en el cual se actualiza las caracteristicas de un organizador 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Or</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___organizador_1afe85f87073bc165291b5c51eece0344f">
+                <title>int Capas.Data.D_Organizador.EliminarOrganizadorGlobal (int ID_Organizador)</title> <emphasis>&lt;summary&gt;
+Evento donde se elimina un organizador de la lista de organizadores Globales 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Organizador</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+</section>

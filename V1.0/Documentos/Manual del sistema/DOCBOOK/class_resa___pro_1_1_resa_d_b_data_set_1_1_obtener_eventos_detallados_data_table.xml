@@ -1,0 +1,594 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table">
+<title>Resa_Pro::ResaDBDataSet::ObtenerEventosDetalladosDataTable class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.DataColumn columnTitulo_Evento</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.DataColumn columnTipo</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.DataColumn columnTopico</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.DataColumn columnNombre</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.DataColumn columnNombre_Salon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.DataColumn columnTiempo_Inicio</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.DataColumn columnTiempo_Final</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a97b7ef59b8cd9c5da182e67001410497">ObtenerEventosDetalladosDataTable</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a198f3ddfe6c1b635638ef9c879df3ad2">AddObtenerEventosDetalladosRow</link> (
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_row">ObtenerEventosDetalladosRow</link> row)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_row">ObtenerEventosDetalladosRow</link> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a0fc2b88bcfe3f863327e9bd491bcc15b">AddObtenerEventosDetalladosRow</link> (
+string Titulo_Evento, string Tipo, string Topico, string Nombre, string Nombre_Salon, System.DateTime Tiempo_Inicio, System.DateTime Tiempo_Final)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override global::System.Data.DataTable <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1ae9642f6af12f7189be4d344f5cb4dce1">Clone</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_row">ObtenerEventosDetalladosRow</link> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a31dc7ef15b8728b9bada4e8f76faa34d">NewObtenerEventosDetalladosRow</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1ac310860831093b380da2193a991dc9a7">RemoveObtenerEventosDetalladosRow</link> (
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_row">ObtenerEventosDetalladosRow</link> row)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a97b7ef59b8cd9c5da182e67001410497">ObtenerEventosDetalladosDataTable</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a198f3ddfe6c1b635638ef9c879df3ad2">AddObtenerEventosDetalladosRow</link> (
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_row">ObtenerEventosDetalladosRow</link> row)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_row">ObtenerEventosDetalladosRow</link> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a0fc2b88bcfe3f863327e9bd491bcc15b">AddObtenerEventosDetalladosRow</link> (
+string Titulo_Evento, string Tipo, string Topico, string Nombre, string Nombre_Salon, System.DateTime Tiempo_Inicio, System.DateTime Tiempo_Final)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override global::System.Data.DataTable <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1ae9642f6af12f7189be4d344f5cb4dce1">Clone</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_row">ObtenerEventosDetalladosRow</link> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a31dc7ef15b8728b9bada4e8f76faa34d">NewObtenerEventosDetalladosRow</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1ac310860831093b380da2193a991dc9a7">RemoveObtenerEventosDetalladosRow</link> (
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_row">ObtenerEventosDetalladosRow</link> row)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1aa1905ce7c860855a9348c9389810e30a">ObtenerEventosDetalladosDataTable</link> (
+global::System.Data.DataTable table)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a43f2cbf54499db93f17c7f2f070eb88f">InitVars</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1aa1905ce7c860855a9348c9389810e30a">ObtenerEventosDetalladosDataTable</link> (
+global::System.Data.DataTable table)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a43f2cbf54499db93f17c7f2f070eb88f">InitVars</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a320b6ea974d03811f552e3c0265d36db">ObtenerEventosDetalladosDataTable</link> (
+global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override global::System.Data.DataTable <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a5c93b95c06c150a244fe0bd9e1ceda50">CreateInstance</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override global::System.Data.DataRow <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a6ae84d0f806cc47a3a0301531ed5fe40">NewRowFromBuilder</link> (
+global::System.Data.DataRowBuilder builder)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override global::System.Type <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1ad0be6a841ce5a65c812e257559f02de5">GetRowType</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a7eb0ac3d59cb0bf36824ff8c6212693e">OnRowChanged</link> (
+global::System.Data.DataRowChangeEventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a2e4ef5f806964ec503ffa37d6686837d">OnRowChanging</link> (
+global::System.Data.DataRowChangeEventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a5b9414c74ff564eb62ae8ac7f2613748">OnRowDeleted</link> (
+global::System.Data.DataRowChangeEventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1aa2c7757a15f0f56a701aeb4497b9b97f">OnRowDeleting</link> (
+global::System.Data.DataRowChangeEventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a320b6ea974d03811f552e3c0265d36db">ObtenerEventosDetalladosDataTable</link> (
+global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override global::System.Data.DataTable <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a5c93b95c06c150a244fe0bd9e1ceda50">CreateInstance</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override global::System.Data.DataRow <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a6ae84d0f806cc47a3a0301531ed5fe40">NewRowFromBuilder</link> (
+global::System.Data.DataRowBuilder builder)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override global::System.Type <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1ad0be6a841ce5a65c812e257559f02de5">GetRowType</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a7eb0ac3d59cb0bf36824ff8c6212693e">OnRowChanged</link> (
+global::System.Data.DataRowChangeEventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a2e4ef5f806964ec503ffa37d6686837d">OnRowChanging</link> (
+global::System.Data.DataRowChangeEventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a5b9414c74ff564eb62ae8ac7f2613748">OnRowDeleted</link> (
+global::System.Data.DataRowChangeEventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>override void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1aa2c7757a15f0f56a701aeb4497b9b97f">OnRowDeleting</link> (
+global::System.Data.DataRowChangeEventArgs e)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a53ab0688f5b4047787296779b5345e6f">InitClass</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a53ab0688f5b4047787296779b5345e6f">InitClass</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static global::System.Xml.Schema.XmlSchemaComplexType <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a78406bdb9aa0f9c051d4551cd1179ae2">GetTypedTableSchema</link> (
+global::System.Xml.Schema.XmlSchemaSet xs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static global::System.Xml.Schema.XmlSchemaComplexType <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a78406bdb9aa0f9c051d4551cd1179ae2">GetTypedTableSchema</link> (
+global::System.Xml.Schema.XmlSchemaSet xs)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Represents the strongly named DataTable class. /summary&gt; </para>
+    </simplesect>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a97b7ef59b8cd9c5da182e67001410497">
+                <title>Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.ObtenerEventosDetalladosDataTable ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a198f3ddfe6c1b635638ef9c879df3ad2">
+                <title>void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.AddObtenerEventosDetalladosRow (ObtenerEventosDetalladosRow row)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a0fc2b88bcfe3f863327e9bd491bcc15b">
+                <title>ObtenerEventosDetalladosRow Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.AddObtenerEventosDetalladosRow (string Titulo_Evento, string Tipo, string Topico, string Nombre, string Nombre_Salon, System.DateTime Tiempo_Inicio, System.DateTime Tiempo_Final)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1ae9642f6af12f7189be4d344f5cb4dce1">
+                <title>override global::System.Data.DataTable Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.Clone ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a31dc7ef15b8728b9bada4e8f76faa34d">
+                <title>ObtenerEventosDetalladosRow Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.NewObtenerEventosDetalladosRow ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1ac310860831093b380da2193a991dc9a7">
+                <title>void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.RemoveObtenerEventosDetalladosRow (ObtenerEventosDetalladosRow row)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a97b7ef59b8cd9c5da182e67001410497">
+                <title>Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.ObtenerEventosDetalladosDataTable ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a198f3ddfe6c1b635638ef9c879df3ad2">
+                <title>void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.AddObtenerEventosDetalladosRow (ObtenerEventosDetalladosRow row)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a0fc2b88bcfe3f863327e9bd491bcc15b">
+                <title>ObtenerEventosDetalladosRow Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.AddObtenerEventosDetalladosRow (string Titulo_Evento, string Tipo, string Topico, string Nombre, string Nombre_Salon, System.DateTime Tiempo_Inicio, System.DateTime Tiempo_Final)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1ae9642f6af12f7189be4d344f5cb4dce1">
+                <title>override global::System.Data.DataTable Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.Clone ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a31dc7ef15b8728b9bada4e8f76faa34d">
+                <title>ObtenerEventosDetalladosRow Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.NewObtenerEventosDetalladosRow ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1ac310860831093b380da2193a991dc9a7">
+                <title>void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.RemoveObtenerEventosDetalladosRow (ObtenerEventosDetalladosRow row)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1aa1905ce7c860855a9348c9389810e30a">
+                <title>Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.ObtenerEventosDetalladosDataTable (global::System.Data.DataTable table)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a43f2cbf54499db93f17c7f2f070eb88f">
+                <title>void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.InitVars ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1aa1905ce7c860855a9348c9389810e30a">
+                <title>Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.ObtenerEventosDetalladosDataTable (global::System.Data.DataTable table)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a43f2cbf54499db93f17c7f2f070eb88f">
+                <title>void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.InitVars ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a320b6ea974d03811f552e3c0265d36db">
+                <title>Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.ObtenerEventosDetalladosDataTable (global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a5c93b95c06c150a244fe0bd9e1ceda50">
+                <title>override global::System.Data.DataTable Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.CreateInstance ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a6ae84d0f806cc47a3a0301531ed5fe40">
+                <title>override global::System.Data.DataRow Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.NewRowFromBuilder (global::System.Data.DataRowBuilder builder)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1ad0be6a841ce5a65c812e257559f02de5">
+                <title>override global::System.Type Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.GetRowType ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a7eb0ac3d59cb0bf36824ff8c6212693e">
+                <title>override void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.OnRowChanged (global::System.Data.DataRowChangeEventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a2e4ef5f806964ec503ffa37d6686837d">
+                <title>override void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.OnRowChanging (global::System.Data.DataRowChangeEventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a5b9414c74ff564eb62ae8ac7f2613748">
+                <title>override void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.OnRowDeleted (global::System.Data.DataRowChangeEventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1aa2c7757a15f0f56a701aeb4497b9b97f">
+                <title>override void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.OnRowDeleting (global::System.Data.DataRowChangeEventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a320b6ea974d03811f552e3c0265d36db">
+                <title>Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.ObtenerEventosDetalladosDataTable (global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a5c93b95c06c150a244fe0bd9e1ceda50">
+                <title>override global::System.Data.DataTable Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.CreateInstance ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a6ae84d0f806cc47a3a0301531ed5fe40">
+                <title>override global::System.Data.DataRow Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.NewRowFromBuilder (global::System.Data.DataRowBuilder builder)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1ad0be6a841ce5a65c812e257559f02de5">
+                <title>override global::System.Type Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.GetRowType ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a7eb0ac3d59cb0bf36824ff8c6212693e">
+                <title>override void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.OnRowChanged (global::System.Data.DataRowChangeEventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a2e4ef5f806964ec503ffa37d6686837d">
+                <title>override void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.OnRowChanging (global::System.Data.DataRowChangeEventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a5b9414c74ff564eb62ae8ac7f2613748">
+                <title>override void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.OnRowDeleted (global::System.Data.DataRowChangeEventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1aa2c7757a15f0f56a701aeb4497b9b97f">
+                <title>override void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.OnRowDeleting (global::System.Data.DataRowChangeEventArgs e)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a53ab0688f5b4047787296779b5345e6f">
+                <title>void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.InitClass ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a53ab0688f5b4047787296779b5345e6f">
+                <title>void Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.InitClass ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a78406bdb9aa0f9c051d4551cd1179ae2">
+                <title>static global::System.Xml.Schema.XmlSchemaComplexType Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.GetTypedTableSchema (global::System.Xml.Schema.XmlSchemaSet xs)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_data_table_1a78406bdb9aa0f9c051d4551cd1179ae2">
+                <title>static global::System.Xml.Schema.XmlSchemaComplexType Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosDataTable.GetTypedTableSchema (global::System.Xml.Schema.XmlSchemaSet xs)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

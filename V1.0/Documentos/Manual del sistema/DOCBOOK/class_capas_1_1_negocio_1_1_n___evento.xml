@@ -1,0 +1,298 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_negocio_1_1_n___evento">
+<title>Capas::Negocio::N_Evento class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable DataT</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>D_Evento d_Evento</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_capas_1_1_negocio_1_1_n___evento_1a536c453ba3a7e4a35c8f8a8c7ccb1338">N_Evento</link> (
+)<para><emphasis>&lt;summary&gt;
+Constructor de la clase de evento en la capa de negocio
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___evento_1a0fae0773393b6138a5c4df60c62ead97">CrearEvento</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___evento">E_Evento</link> e_Ev)<para><emphasis>&lt;summary&gt;
+Metodo donde se guarda un evento en el sistema 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___evento_1ae9e52fdcbf9de1e0e9cf9bb3265cd991">VerificarFechas</link> (
+DateTime FechaInicio, DateTime FechaFinal, int ID_Salon)<para><emphasis>&lt;summary&gt;
+Metodo donde se verifican las fechas insertadas para el evento 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___evento">E_Evento</link> <link linkend="class_capas_1_1_negocio_1_1_n___evento_1a1d41e5035ca6a7bf62727cd09321fc78">ObtenerEvento</link> (
+int ID_Solicitud)<para><emphasis>&lt;summary&gt;
+Metodo donde se obtiene un evento con todas sus caracteristicas 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___evento_1a168786bcdc10184677f97f0e0bb9ca66">ActualizarEvento</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___evento">E_Evento</link> e_Ev)<para><emphasis>&lt;summary&gt;
+Metodo donde se actualiza un evento 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_negocio_1_1_n___evento_1ab5bf5552487fbbaf309fb2d893345216">ObtenerEventos</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo donde se obtienen todos los eventos 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_negocio_1_1_n___evento_1a5c6bf80ec3a45501ee4db55166bb6730">ObtenerEventosDetallados</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo donde se obtienen los eventos  &amp;ndash; los cuales seran presentados en el grid control de la pantalla principal
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_negocio_1_1_n___evento_1aab91e96f351c2b6b8bcdf12c9fdaad49">ObtenerEventosPorID</link> (
+int ID_Salon)<para><emphasis>&lt;summary&gt;
+Metodo donde se obtienen los eventos por ID 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___evento_1a536c453ba3a7e4a35c8f8a8c7ccb1338">
+                <title>Capas.Negocio.N_Evento.N_Evento ()</title> <emphasis>&lt;summary&gt;
+Constructor de la clase de evento en la capa de negocio
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___evento_1a0fae0773393b6138a5c4df60c62ead97">
+                <title>int Capas.Negocio.N_Evento.CrearEvento (E_Evento e_Ev)</title> <emphasis>&lt;summary&gt;
+Metodo donde se guarda un evento en el sistema 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Ev</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___evento_1ae9e52fdcbf9de1e0e9cf9bb3265cd991">
+                <title>int Capas.Negocio.N_Evento.VerificarFechas (DateTime FechaInicio, DateTime FechaFinal, int ID_Salon)</title> <emphasis>&lt;summary&gt;
+Metodo donde se verifican las fechas insertadas para el evento 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>FechaInicio</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>FechaFinal</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>ID_Salon</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___evento_1a1d41e5035ca6a7bf62727cd09321fc78">
+                <title>E_Evento Capas.Negocio.N_Evento.ObtenerEvento (int ID_Solicitud)</title> <emphasis>&lt;summary&gt;
+Metodo donde se obtiene un evento con todas sus caracteristicas 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Solicitud</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___evento_1a168786bcdc10184677f97f0e0bb9ca66">
+                <title>int Capas.Negocio.N_Evento.ActualizarEvento (E_Evento e_Ev)</title> <emphasis>&lt;summary&gt;
+Metodo donde se actualiza un evento 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Ev</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___evento_1ab5bf5552487fbbaf309fb2d893345216">
+                <title>DataTable Capas.Negocio.N_Evento.ObtenerEventos ()</title> <emphasis>&lt;summary&gt;
+Metodo donde se obtienen todos los eventos 
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___evento_1a5c6bf80ec3a45501ee4db55166bb6730">
+                <title>DataTable Capas.Negocio.N_Evento.ObtenerEventosDetallados ()</title> <emphasis>&lt;summary&gt;
+Metodo donde se obtienen los eventos  &amp;ndash; los cuales seran presentados en el grid control de la pantalla principal
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___evento_1aab91e96f351c2b6b8bcdf12c9fdaad49">
+                <title>DataTable Capas.Negocio.N_Evento.ObtenerEventosPorID (int ID_Salon)</title> <emphasis>&lt;summary&gt;
+Metodo donde se obtienen los eventos por ID 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Salon</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+</section>

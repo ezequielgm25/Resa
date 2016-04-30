@@ -277,3 +277,8 @@ Create procedure ObtenerUsuario
 /************************************************************************/ 
 
 
+select * from Solicitudes;
+
+Select * from Eventos;
+
+Select * from Salones

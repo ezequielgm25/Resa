@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_negocio_1_1_n___autentificacion">
+<title>Capas::Negocio::N_Autentificacion class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int ID_Usuario</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int verificacion</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>D_Autentificacion D_Autentificacion</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_capas_1_1_negocio_1_1_n___autentificacion_1a353f19a9e4ed619f48d4424754a32580">N_Autentificacion</link> (
+)<para><emphasis>&lt;summary&gt;
+Constructor de la clase autentificacion en la capa de negocio
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___autentificacion_1ada3b49c71180da355fae2cd275d5b2c8">VerificarUsuario</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___autentificacion">E_Autentificacion</link> E_AutentificacionP)<para><emphasis>&lt;summary&gt;
+Metodo donde se verifica el usuario &amp;ndash; Autentificacion &amp;ndash;
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___autentificacion_1a353f19a9e4ed619f48d4424754a32580">
+                <title>Capas.Negocio.N_Autentificacion.N_Autentificacion ()</title> <emphasis>&lt;summary&gt;
+Constructor de la clase autentificacion en la capa de negocio
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___autentificacion_1ada3b49c71180da355fae2cd275d5b2c8">
+                <title>int Capas.Negocio.N_Autentificacion.VerificarUsuario (E_Autentificacion E_AutentificacionP)</title> <emphasis>&lt;summary&gt;
+Metodo donde se verifica el usuario &amp;ndash; Autentificacion &amp;ndash;
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>E_AutentificacionP</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+</section>

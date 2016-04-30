@@ -56,6 +56,8 @@
     <Compile Include="PruebaSalones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PruebaSolicitudes.cs" />
+    <Compile Include="PruebaEventos.cs" />
+    <Compile Include="PruebaUsuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\V1.0\Fuentes\Capas\Capas.csproj">

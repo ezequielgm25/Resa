@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_obtener_porcentaje_solicitudes_salones_8cs">
+    <title>ObtenerPorcentajeSolicitudesSalones.cs File Reference</title>
+        <section>
+            <title> Clases </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_reportes_1_1_obtener_porcentaje_solicitudes_salones">Resa_Pro::Reportes::ObtenerPorcentajeSolicitudesSalones</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_reportes_1_1_cached_obtener_porcentaje_solicitudes_salones">Resa_Pro::Reportes::CachedObtenerPorcentajeSolicitudesSalones</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_resa___pro_1_1_reportes">Resa_Pro::Reportes</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_crystal_decisions_1_1_shared">CrystalDecisions::Shared</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_crystal_decisions_1_1_report_source">CrystalDecisions::ReportSource</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Descripción detallada</title>
+    <para>Definition in file D:/Resa/V1.0/Fuentes/UI/Winform/Resa Pro/Reportes/ObtenerPorcentajeSolicitudesSalones.cs</para>
+    </simplesect>
+</section>

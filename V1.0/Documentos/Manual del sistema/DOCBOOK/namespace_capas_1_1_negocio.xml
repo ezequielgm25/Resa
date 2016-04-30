@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespace_capas_1_1_negocio">
+<title>Capas::Negocio</title>
+        <section>
+            <title> Clases </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_negocio_1_1_n___auditoria">Capas::Negocio::N_Auditoria</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_negocio_1_1_n___autentificacion">Capas::Negocio::N_Autentificacion</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_negocio_1_1_n___evento">Capas::Negocio::N_Evento</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_negocio_1_1_n___inventario">Capas::Negocio::N_Inventario</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_negocio_1_1_n___organizador">Capas::Negocio::N_Organizador</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_negocio_1_1_n___salon">Capas::Negocio::N_Salon</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_negocio_1_1_n___servicio">Capas::Negocio::N_Servicio</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_negocio_1_1_n___solicitud">Capas::Negocio::N_Solicitud</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_negocio_1_1_n___usuario">Capas::Negocio::N_Usuario</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

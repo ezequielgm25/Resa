@@ -53,7 +53,7 @@ namespace UntPResa
             e_Salon.capacidad = 10;
             e_Salon.estado = "Inactivo";
             e_Salon.ubicacion = "Al lado de juana";
-            e_Salon.id_Salon = 20;
+            e_Salon.id_Salon = 63;
 
             int NoTexpected = 0;
 

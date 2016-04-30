@@ -158,7 +158,7 @@ namespace Resa_Pro.Formularios
                     //Ejecutando el metodo 
                     Resultado = n_Servicio.VerificarExistenciaDeServicio(e_Servicio);
 
-                    MessageBox.Show(Convert.ToString(Resultado));
+                   
                     if (Resultado != 0)
                     {
                         IndexesLista.Add(n);
@@ -182,7 +182,6 @@ namespace Resa_Pro.Formularios
 
 
             #endregion
-
 
             #region Inventarios
 
@@ -322,7 +321,7 @@ namespace Resa_Pro.Formularios
                                 if (Estado == CheckState.Unchecked)
                                 {
 
-                                    MessageBox.Show("Entro");
+                                    
 
                                     Resultado = n_Servicio.VerificarExistenciaDeServicio(e_Servicio);
 
@@ -336,7 +335,7 @@ namespace Resa_Pro.Formularios
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Salso");
+
                                     Resultado = n_Servicio.VerificarExistenciaDeServicio(e_Servicio);
 
                                     if (Resultado != 0)
@@ -388,7 +387,7 @@ namespace Resa_Pro.Formularios
                                 if (Estado == CheckState.Unchecked)
                                 {
 
-                                    MessageBox.Show("Entro");
+                                    
 
                                     Resultado = n_Inventario.VerificarExistenciaDeInventario(e_Inventario);
 
@@ -402,7 +401,7 @@ namespace Resa_Pro.Formularios
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Salso");
+                                    
                                     Resultado = n_Inventario.VerificarExistenciaDeInventario(e_Inventario);
 
                                     if (Resultado != 0)

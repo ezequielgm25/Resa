@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_negocio_1_1_n___organizador">
+<title>Capas::Negocio::N_Organizador class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>D_Organizador d_Organizador</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_capas_1_1_negocio_1_1_n___organizador_1a96adb3b93d39f173512d9930a8e92897">N_Organizador</link> (
+)<para><emphasis>&lt;summary&gt;
+Constructor de la clase en la capa de negocio de organizador
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___organizador_1a2ee53c99577ea00f3b08ffe80f171217">insertarOrganizador</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___organizador">E_Organizador</link> e_Or)<para><emphasis>&lt;summary&gt;
+Metodo donde se inserta un organizador 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___organizador">E_Organizador</link> <link linkend="class_capas_1_1_negocio_1_1_n___organizador_1ad75f396d13d0c690ce4e0374598917d0">Obtenerorganizador</link> (
+int ID_Evento)<para><emphasis>&lt;summary&gt;
+Metodo donde se obtiene un organizador &amp;ndash; todas sus caracteristicas
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___organizador_1a4d2a7a9e72ccf0d87cd0bc5430529126">ActualizarOrganizador</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___organizador">E_Organizador</link> e_Or)<para><emphasis>&lt;summary&gt;
+Metodo donde se actualiza un organizador 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_negocio_1_1_n___organizador_1ad1b5050b1588522b5d3febff1a334a6c">ObtenerOrganizadoresGlobales</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo donde se obtienen los organizadores de la lista de organizadores globales 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___organizador_1a72b5c64989afd407228ed1bb248998ca">InsertarOrganizadorGlobal</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___organizador">E_Organizador</link> e_Or)<para><emphasis>&lt;summary&gt;
+Metodo donde se inserta un organizador global a la lista de organizadores 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___organizador_1aef5d42e5d51a958ef450d4a8841dae42">ActualizarOrganizadorGlobal</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___organizador">E_Organizador</link> e_Or)<para><emphasis>&lt;summary&gt;
+Metodo donde se actualiza un organizador Global 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___organizador_1a102b1f60fb09e03373fff861a61e24b5">EliminarOrganizadorGlobal</link> (
+int ID_Or)<para><emphasis>&lt;summary&gt;
+Metodo donde se elimina un organizador de la lista de organizadores globales 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___organizador_1a96adb3b93d39f173512d9930a8e92897">
+                <title>Capas.Negocio.N_Organizador.N_Organizador ()</title> <emphasis>&lt;summary&gt;
+Constructor de la clase en la capa de negocio de organizador
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___organizador_1a2ee53c99577ea00f3b08ffe80f171217">
+                <title>int Capas.Negocio.N_Organizador.insertarOrganizador (E_Organizador e_Or)</title> <emphasis>&lt;summary&gt;
+Metodo donde se inserta un organizador 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Or</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___organizador_1ad75f396d13d0c690ce4e0374598917d0">
+                <title>E_Organizador Capas.Negocio.N_Organizador.Obtenerorganizador (int ID_Evento)</title> <emphasis>&lt;summary&gt;
+Metodo donde se obtiene un organizador &amp;ndash; todas sus caracteristicas
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Evento</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___organizador_1a4d2a7a9e72ccf0d87cd0bc5430529126">
+                <title>int Capas.Negocio.N_Organizador.ActualizarOrganizador (E_Organizador e_Or)</title> <emphasis>&lt;summary&gt;
+Metodo donde se actualiza un organizador 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Or</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___organizador_1ad1b5050b1588522b5d3febff1a334a6c">
+                <title>DataTable Capas.Negocio.N_Organizador.ObtenerOrganizadoresGlobales ()</title> <emphasis>&lt;summary&gt;
+Metodo donde se obtienen los organizadores de la lista de organizadores globales 
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___organizador_1a72b5c64989afd407228ed1bb248998ca">
+                <title>int Capas.Negocio.N_Organizador.InsertarOrganizadorGlobal (E_Organizador e_Or)</title> <emphasis>&lt;summary&gt;
+Metodo donde se inserta un organizador global a la lista de organizadores 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Or</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___organizador_1aef5d42e5d51a958ef450d4a8841dae42">
+                <title>int Capas.Negocio.N_Organizador.ActualizarOrganizadorGlobal (E_Organizador e_Or)</title> <emphasis>&lt;summary&gt;
+Metodo donde se actualiza un organizador Global 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Or</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___organizador_1a102b1f60fb09e03373fff861a61e24b5">
+                <title>int Capas.Negocio.N_Organizador.EliminarOrganizadorGlobal (int ID_Or)</title> <emphasis>&lt;summary&gt;
+Metodo donde se elimina un organizador de la lista de organizadores globales 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Or</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+</section>

@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_data_1_1_d___salon">
+<title>Capas::Data::D_Salon class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>E_Salon e_Salon</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Conexion conexion</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>String StoredProcedure</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int FilasAfectadas</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_capas_1_1_data_1_1_d___salon_1a23450b76b8970c7cb7820d52bc1bd92a">D_Salon</link> (
+)<para><emphasis>&lt;summary&gt;
+Contructor de la clase 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_data_1_1_d___salon_1af75b36a027dac1ee5cdcca0622819d65">ObtenerSalones</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo ObtenerSalones el cual retornara  una DataTable 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___salon_1a615c169b9611cd3c3fb77d6f68ee34ac">CrearSalon</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___salon">E_Salon</link> e_S)<para><emphasis>&lt;summary&gt;
+Metodo CrearSalon El cual acepta una entidad Salin como parametro y retorna un Id del mismo
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___salon_1a53c2acf3d4cbf9b032dff074e752cd3c">ActualizarSalon</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___salon">E_Salon</link> e_S)<para><emphasis>&lt;summary&gt;
+Metodo donde se actualiza un salon 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___salon_1a7bb79eeadf2a958b52522826d521fc5b">EliminarSalon</link> (
+int ID_Salon)<para><emphasis>&lt;summary&gt;
+Metodo Donde se elimina un salon esperando como parametro un ID
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_data_1_1_d___salon_1afcde03f6f9d2451f1b6d3927b1477386">ObtenerID_NombreDeSalones</link> (
+)<para><emphasis>&lt;summary&gt;
+ Metodo donde se optiene los ID y nombres de todos los salones 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_data_1_1_d___salon_1afa7290dae89762c22487c33672201674">ObtenerUbicacionesGlobales</link> (
+)<para><emphasis>&lt;summary&gt;
+Metodo donde se obtienen las ubicaciones globales  &amp;ndash; Lista de ubicaciones  asignadas a los salones
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___salon_1a53a35af904e5ca9d0a3962f6de9b1bc3">AgregarUbicacionGlobal</link> (
+string Ubicacion)<para><emphasis>&lt;summary&gt;
+Metodo donde se agrega una ubicacion global a la lista 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_data_1_1_d___salon_1a41620611a26d4172e92729363d06c020">EliminarUbicacionGlobal</link> (
+int ID_Ubicacion)<para><emphasis>&lt;summary&gt;
+Metodo donde se elimina una ubicacion global
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___salon_1a23450b76b8970c7cb7820d52bc1bd92a">
+                <title>Capas.Data.D_Salon.D_Salon ()</title> <emphasis>&lt;summary&gt;
+Contructor de la clase 
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___salon_1af75b36a027dac1ee5cdcca0622819d65">
+                <title>DataTable Capas.Data.D_Salon.ObtenerSalones ()</title> <emphasis>&lt;summary&gt;
+Metodo ObtenerSalones el cual retornara  una DataTable 
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___salon_1a615c169b9611cd3c3fb77d6f68ee34ac">
+                <title>int Capas.Data.D_Salon.CrearSalon (E_Salon e_S)</title> <emphasis>&lt;summary&gt;
+Metodo CrearSalon El cual acepta una entidad Salin como parametro y retorna un Id del mismo
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_S</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___salon_1a53c2acf3d4cbf9b032dff074e752cd3c">
+                <title>int Capas.Data.D_Salon.ActualizarSalon (E_Salon e_S)</title> <emphasis>&lt;summary&gt;
+Metodo donde se actualiza un salon 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_S</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___salon_1a7bb79eeadf2a958b52522826d521fc5b">
+                <title>int Capas.Data.D_Salon.EliminarSalon (int ID_Salon)</title> <emphasis>&lt;summary&gt;
+Metodo Donde se elimina un salon esperando como parametro un ID
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Salon</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___salon_1afcde03f6f9d2451f1b6d3927b1477386">
+                <title>DataTable Capas.Data.D_Salon.ObtenerID_NombreDeSalones ()</title> <emphasis>&lt;summary&gt;
+ Metodo donde se optiene los ID y nombres de todos los salones 
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___salon_1afa7290dae89762c22487c33672201674">
+                <title>DataTable Capas.Data.D_Salon.ObtenerUbicacionesGlobales ()</title> <emphasis>&lt;summary&gt;
+Metodo donde se obtienen las ubicaciones globales  &amp;ndash; Lista de ubicaciones  asignadas a los salones
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___salon_1a53a35af904e5ca9d0a3962f6de9b1bc3">
+                <title>int Capas.Data.D_Salon.AgregarUbicacionGlobal (string Ubicacion)</title> <emphasis>&lt;summary&gt;
+Metodo donde se agrega una ubicacion global a la lista 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Ubicacion</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_data_1_1_d___salon_1a41620611a26d4172e92729363d06c020">
+                <title>int Capas.Data.D_Salon.EliminarUbicacionGlobal (int ID_Ubicacion)</title> <emphasis>&lt;summary&gt;
+Metodo donde se elimina una ubicacion global
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Ubicacion</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+</section>

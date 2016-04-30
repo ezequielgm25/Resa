@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Configuraciones>
+  <Support>
+    <EmailFrom>EzequielGarcia0925@gmail.com</EmailFrom>
+    <EmailSubject>soporteezequielgarcia@gmail.com</EmailSubject>
+    <Pop3 />
+    <SMTP>smtp.gmail.com</SMTP>
+    <SSL />
+    <Port>587</Port>
+    <EmailFormat />
+    <HostServer>soporteezequielgarcia@gmail.com</HostServer>
+    <PasswordServer>soporte1234</PasswordServer>
+    <ContactInfo>Ezequiel Garcia Vive en la victoria</ContactInfo>
+    <PhoneContact>829-304-8492</PhoneContact>
+  </Support>
+  <ConnectionString>
+    <SqlServer>Data Source= Ezequiel; Initial Catalog = ResaDB; Integrated Security = true</SqlServer>
+  </ConnectionString>
+</Configuraciones>

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespace_capas_1_1_infraestructura_1_1_entidades">
+<title>Capas::Infraestructura::Entidades</title>
+        <section>
+            <title> Clases </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___auditoria">Capas::Infraestructura::Entidades::E_Auditoria</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___autentificacion">Capas::Infraestructura::Entidades::E_Autentificacion</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___evento">Capas::Infraestructura::Entidades::E_Evento</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___inventario">Capas::Infraestructura::Entidades::E_Inventario</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___organizador">Capas::Infraestructura::Entidades::E_Organizador</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___salon">Capas::Infraestructura::Entidades::E_Salon</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___servicio">Capas::Infraestructura::Entidades::E_Servicio</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___solicitud">Capas::Infraestructura::Entidades::E_Solicitud</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___usuario">Capas::Infraestructura::Entidades::E_Usuario</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

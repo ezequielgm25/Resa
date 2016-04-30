@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row_change_event">
+<title>Resa_Pro::ResaDBDataSet::ObtenerEventosDetalladosXIDRowChangeEvent class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ObtenerEventosDetalladosXIDRow eventRow</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>global::System.Data.DataRowAction eventAction</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row_change_event_1a752d7dfd4b9497819d80878f78f94913">ObtenerEventosDetalladosXIDRowChangeEvent</link> (
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row">ObtenerEventosDetalladosXIDRow</link> row, global::System.Data.DataRowAction action)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row_change_event_1a752d7dfd4b9497819d80878f78f94913">ObtenerEventosDetalladosXIDRowChangeEvent</link> (
+<link linkend="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row">ObtenerEventosDetalladosXIDRow</link> row, global::System.Data.DataRowAction action)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+
+<para>Row event argument class /summary&gt; </para>
+    </simplesect>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row_change_event_1a752d7dfd4b9497819d80878f78f94913">
+                <title>Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosXIDRowChangeEvent.ObtenerEventosDetalladosXIDRowChangeEvent (ObtenerEventosDetalladosXIDRow row, global::System.Data.DataRowAction action)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_resa___pro_1_1_resa_d_b_data_set_1_1_obtener_eventos_detallados_x_i_d_row_change_event_1a752d7dfd4b9497819d80878f78f94913">
+                <title>Resa_Pro.ResaDBDataSet.ObtenerEventosDetalladosXIDRowChangeEvent.ObtenerEventosDetalladosXIDRowChangeEvent (ObtenerEventosDetalladosXIDRow row, global::System.Data.DataRowAction action)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

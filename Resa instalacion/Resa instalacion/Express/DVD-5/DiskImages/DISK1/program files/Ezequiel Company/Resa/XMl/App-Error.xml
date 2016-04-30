@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Errores>
+  <Error>
+    <Fecha />
+    <ID_usuario />
+    <Opcion />
+    <TipoOpcion />
+    <Excepcion />
+  </Error>
+</Errores>

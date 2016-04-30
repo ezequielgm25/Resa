@@ -54,9 +54,7 @@ namespace Capas.Data
             //Asignando el Stored Procedura 
             StoredProcedure = "ObtenerSalones";
 
-            //Conexion string de modo prueba del sistema
-            //conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
-
+          
             //Un se SQL command al que se le pasan el stored procedute la conexion
             SqlCommand comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
             //El tipo de comando
@@ -96,9 +94,7 @@ namespace Capas.Data
 
             //SQl Command --Asignadosele sus correspondientes parametros
 
-            //resaConexion Prueba 
-            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
-
+           
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
             // Conectar a la base de datos
@@ -155,11 +151,7 @@ namespace Capas.Data
             //Asignando el stored procedure 
             StoredProcedure = "ActualizarSalon";
 
-            //Conexion string de modo prueba del sistema
-
-
-            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
-
+        
             //SQl Command con sus correspondientes parametros
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
@@ -203,9 +195,6 @@ namespace Capas.Data
 
             //Asignando el stored procedure 
             StoredProcedure = "EliminarSalon";
-
-            //Conexion string de modo prueba del sistema
-            conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
 
             //Sql commando con sus correspondientes parametros 
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
@@ -281,9 +270,7 @@ namespace Capas.Data
             //Asignando el Stored Procedura 
             StoredProcedure = "ObtenerUbicacionesGlobales";
 
-            //Conexion string de modo prueba del sistema
-            //conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
-
+            
             //Un se SQL command al que se le pasan el stored procedute la conexion
             SqlCommand comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
             //El tipo de comando
@@ -321,9 +308,7 @@ namespace Capas.Data
             StoredProcedure = "AgregarUbicacionGlobal";
             //SQl Command --Asignadosele sus correspondientes parametros
 
-            //resaConexion Prueba 
-            //conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
-
+      
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);
 
             // Conectar a la base de datos
@@ -360,9 +345,6 @@ namespace Capas.Data
 
             //Asignando el stored procedure 
             StoredProcedure = "EliminarUbicacionGlobal";
-
-            //Conexion string de modo prueba del sistema
-            //conexion.resaconexion = new SqlConnection("Data Source = Ezequiel; Initial Catalog = ResaDB; Integrated Security = true");
 
             //Sql commando con sus correspondientes parametros 
             SqlCommand Comando = new SqlCommand(StoredProcedure, conexion.resaconexion);

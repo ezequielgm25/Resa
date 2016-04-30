@@ -1,0 +1,340 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_negocio_1_1_n___servicio">
+<title>Capas::Negocio::N_Servicio class Reference</title>
+        <section>
+            <title>Atributos privados</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>D_Servicio d_Servicio</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_capas_1_1_negocio_1_1_n___servicio_1a7499959a00f8b837d23a6a4e8fe597ee">N_Servicio</link> (
+)<para><emphasis>&lt;summary&gt;
+Constructor del sistema 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___servicio_1ab981daf4986fee05bc986ffedf40912b">AgregarServicio</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___servicio">E_Servicio</link> e_Servicio)<para><emphasis>&lt;summary&gt;
+Metodo donde se agrega un servicio a un salon 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_negocio_1_1_n___servicio_1a2cd034be08190f8c55a4ace7fdac8331">ObtenerServicios</link> (
+int id_Salon)<para><emphasis>&lt;summary&gt;
+Metodo Donde se obtienen los servicios de los salon 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___servicio_1a4de55ccd481b9cb753a89d89d3185c97">EliminarServicio</link> (
+int ID_Servicio)<para><emphasis>&lt;summary&gt;
+metodo donde se elimina un servicio del sistema 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataTable <link linkend="class_capas_1_1_negocio_1_1_n___servicio_1a814ca7fc79fb72df0e79ac33b676b7f2">ObtenerServiciosGlobales</link> (
+)<para><emphasis>&lt;summary&gt;
+Obteniendo los servicios globales se obtiene la lista de servicios globales de los salones 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___servicio_1abbdadbae0c9efc6c9c642fdcbe033d2b">EliminarServicioGlobal</link> (
+int ID_S)<para><emphasis>&lt;summary&gt;
+Metodo donde se eliminar un servicio global osea de la lista de servicios comunes en los salones 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___servicio_1acb132493c3a81887e228da6864e862da">InsertarServicioGlobal</link> (
+String Servicio)<para><emphasis>&lt;summary&gt;
+Metodo donde se inserta un servicio a la lista de servicios globales de los salones
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___servicio_1aa7d0ad246d2fc197626fa661a4428b14">VerificarExistenciaDeServicio</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___servicio">E_Servicio</link> e_Servicio)<para><emphasis>&lt;summary&gt;
+Metodo donde se verifica la existencia de un servicio en un salon
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_capas_1_1_negocio_1_1_n___servicio_1a10e99f6d434ea08bc3ef20a72baf5ae3">EliminarSercvicioXS_ID</link> (
+<link linkend="class_capas_1_1_infraestructura_1_1_entidades_1_1_e___servicio">E_Servicio</link> e_Servicio)<para><emphasis>&lt;summary&gt;
+Metodo donde se elimina un servicio por y ID del salon 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Documentación de los datos miembro</title>
+        </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___servicio_1a7499959a00f8b837d23a6a4e8fe597ee">
+                <title>Capas.Negocio.N_Servicio.N_Servicio ()</title> <emphasis>&lt;summary&gt;
+Constructor del sistema 
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___servicio_1ab981daf4986fee05bc986ffedf40912b">
+                <title>int Capas.Negocio.N_Servicio.AgregarServicio (E_Servicio e_Servicio)</title> <emphasis>&lt;summary&gt;
+Metodo donde se agrega un servicio a un salon 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Servicio</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___servicio_1a2cd034be08190f8c55a4ace7fdac8331">
+                <title>DataTable Capas.Negocio.N_Servicio.ObtenerServicios (int id_Salon)</title> <emphasis>&lt;summary&gt;
+Metodo Donde se obtienen los servicios de los salon 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>id_Salon</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___servicio_1a4de55ccd481b9cb753a89d89d3185c97">
+                <title>int Capas.Negocio.N_Servicio.EliminarServicio (int ID_Servicio)</title> <emphasis>&lt;summary&gt;
+metodo donde se elimina un servicio del sistema 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_Servicio</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___servicio_1a814ca7fc79fb72df0e79ac33b676b7f2">
+                <title>DataTable Capas.Negocio.N_Servicio.ObtenerServiciosGlobales ()</title> <emphasis>&lt;summary&gt;
+Obteniendo los servicios globales se obtiene la lista de servicios globales de los salones 
+&lt;/summary&gt;</emphasis>
+                
+<para><formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___servicio_1abbdadbae0c9efc6c9c642fdcbe033d2b">
+                <title>int Capas.Negocio.N_Servicio.EliminarServicioGlobal (int ID_S)</title> <emphasis>&lt;summary&gt;
+Metodo donde se eliminar un servicio global osea de la lista de servicios comunes en los salones 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>ID_S</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___servicio_1acb132493c3a81887e228da6864e862da">
+                <title>int Capas.Negocio.N_Servicio.InsertarServicioGlobal (String Servicio)</title> <emphasis>&lt;summary&gt;
+Metodo donde se inserta un servicio a la lista de servicios globales de los salones
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>Servicio</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___servicio_1aa7d0ad246d2fc197626fa661a4428b14">
+                <title>int Capas.Negocio.N_Servicio.VerificarExistenciaDeServicio (E_Servicio e_Servicio)</title> <emphasis>&lt;summary&gt;
+Metodo donde se verifica la existencia de un servicio en un salon
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Servicio</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="class_capas_1_1_negocio_1_1_n___servicio_1a10e99f6d434ea08bc3ef20a72baf5ae3">
+                <title>int Capas.Negocio.N_Servicio.EliminarSercvicioXS_ID (E_Servicio e_Servicio)</title> <emphasis>&lt;summary&gt;
+Metodo donde se elimina un servicio por y ID del salon 
+&lt;/summary&gt;</emphasis>
+                
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parámetros                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>e_Servicio</entry>
+                                <entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                <formalpara><title>Devuelve: </title>
+
+<para></para>
+</formalpara>
+</para>
+
+            </section>
+</section>

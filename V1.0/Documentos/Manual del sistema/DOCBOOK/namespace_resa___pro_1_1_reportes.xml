@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespace_resa___pro_1_1_reportes">
+<title>Resa_Pro::Reportes</title>
+        <section>
+            <title> Clases </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_reportes_1_1_cached_obtener_porcentaje_solicitudes_salones">Resa_Pro::Reportes::CachedObtenerPorcentajeSolicitudesSalones</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_reportes_1_1_cached_reporte_organizadores">Resa_Pro::Reportes::CachedReporteOrganizadores</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_reportes_1_1_cached_reporte_porcentaje_global_solicitudes">Resa_Pro::Reportes::CachedReportePorcentajeGlobalSolicitudes</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_reportes_1_1_cached_reporte_usuarios">Resa_Pro::Reportes::CachedReporteUsuarios</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_reportes_1_1_cachedrpteventos">Resa_Pro::Reportes::Cachedrpteventos</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_reportes_1_1_obtener_porcentaje_solicitudes_salones">Resa_Pro::Reportes::ObtenerPorcentajeSolicitudesSalones</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_reportes_1_1_reporte_organizadores">Resa_Pro::Reportes::ReporteOrganizadores</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_reportes_1_1_reporte_porcentaje_global_solicitudes">Resa_Pro::Reportes::ReportePorcentajeGlobalSolicitudes</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_reportes_1_1_reporte_usuarios">Resa_Pro::Reportes::ReporteUsuarios</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_resa___pro_1_1_reportes_1_1rpteventos">Resa_Pro::Reportes::rpteventos</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+</section>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_capas_1_1_aplicacion_1_1_email">
+<title>Capas::Aplicacion::Email class Reference</title>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_capas_1_1_aplicacion_1_1_email_1a82016fc045a8d0e3224f1c96c0129731">enviarEmail</link> (
+String Excepcion)<para><emphasis>&lt;summary&gt;
+Metodo de envio de un correo electronico 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_capas_1_1_aplicacion_1_1_email_1a7fcc159038837e12999c27281229ed83">enviarEmailSinXMl</link> (
+String Excepcion)<para><emphasis>&lt;summary&gt;
+Metodo de envio de un correo electronico 
+&lt;/summary&gt;</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="class_capas_1_1_aplicacion_1_1_email_1a82016fc045a8d0e3224f1c96c0129731">
+                <title>void Capas.Aplicacion.Email.enviarEmail (String Excepcion)</title> <emphasis>&lt;summary&gt;
+Metodo de envio de un correo electronico 
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+            <section xml:id="class_capas_1_1_aplicacion_1_1_email_1a7fcc159038837e12999c27281229ed83">
+                <title>void Capas.Aplicacion.Email.enviarEmailSinXMl (String Excepcion)</title> <emphasis>&lt;summary&gt;
+Metodo de envio de un correo electronico 
+&lt;/summary&gt;</emphasis>
+                
+            </section>
+</section>
